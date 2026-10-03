@@ -6,7 +6,7 @@ function portrait(p,size='thumb'){
  const photo=p.photo,linked=photo?.status==='linked'&&/^(https:\/\/|photos\/[a-z-]+\.jpg$)/.test(photo.url||'');
  const hint=linked?'照片载入中':'照片待核对';
  const layout=['portrait','scene','pair'].includes(photo?.layout)?photo.layout:'portrait';
- const image=linked?`<img data-portrait="${E(p.id)}" src="${E(photo.url)}" alt="${E(p.name)}${layout==='pair'?'，原图右侧人物':''}" width="180" height="220" loading="${size==='hero'?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer">`:'';
+ const image=linked?`<img data-portrait="${E(p.id)}" src="${E(photo.url+(photo.revision?'?v='+encodeURIComponent(photo.revision):''))}" alt="${E(p.name)}${layout==='pair'?'，原图右侧人物':''}" width="180" height="220" loading="${size==='hero'?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer">`:'';
  return `<span class="photo-frame photo-${size} photo-${layout} ${linked?'has-photo':'photo-pending'}">${image}<span class="photo-fallback" aria-hidden="true"><b>${E(p.name[0])}</b><small>${hint}</small></span>${layout==='pair'?'<span class="photo-position-label">右侧人物</span>':''}</span>`;
 }
 function photoCredit(p){const v=p.photo;if(!v)return '<p class="photo-credit">本人物照片尚未建档。</p>';
