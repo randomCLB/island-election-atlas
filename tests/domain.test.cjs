@@ -1,0 +1,14 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const D=require('../public/data.js'),U=require('../public/domain.js');
+test('five cities and every registration snapshot entry is represented',()=>{assert.equal(D.cities.length,5);assert.equal(D.people.length,21);assert.deepEqual(D.cities.map(c=>D.people.filter(p=>p.city===c.id).length),[6,3,3,4,5]);assert.deepEqual(U.validateData(D),[]);});
+test('all five cities have separately dated 2010 and 2022 records',()=>{for(const c of D.cities)for(const year of [2010,2022])assert.ok(D.elections.find(e=>e.city===c.id&&e.year===year));});
+test('partial results do not invent a denominator',()=>{const e=D.elections.find(e=>e.city==='taichung'&&e.year===2022);assert.equal(U.percent(e.rows[0],e),null);});
+test('New Taipei percentage is computed from verified counts, not source typo',()=>{const e=D.elections.find(e=>e.city==='new-taipei'&&e.year===2022);assert.equal(U.percent(e.rows[0],e).toFixed(2),'62.42');});
+test('Taipei 2022 reported shares are not normalized to partial total',()=>{const e=D.elections.find(e=>e.city==='taipei'&&e.year===2022);assert.equal(U.percent(e.rows[0],e),42.29);});
+test('blackout uses explicit Taipei UTC+8 boundaries',()=>{assert.equal(U.blackout(new Date('2026-11-17T15:59:59Z')),false);assert.equal(U.blackout(new Date('2026-11-17T16:00:00Z')),true);assert.equal(U.blackout(new Date('2026-11-28T08:00:01Z')),false);});
+test('incomplete polls rejected and no published polls included',()=>{assert.equal(U.validatePoll({reviewed:true,results:[1]}),false);assert.equal(D.polls.length,0);});
+test('deep links cannot select another city person',()=>{assert.deepEqual(U.route('#/taipei/chiang',D),{city:'taipei',person:'chiang'});assert.deepEqual(U.route('#/tainan/chiang',D),{city:'tainan',person:null});assert.equal(U.route('#/unknown',D).city,'taipei');});
+test('HTML escape prevents source data markup injection',()=>assert.equal(U.esc('<img onerror="x">'), '&lt;img onerror=&quot;x&quot;&gt;'));
+test('bundled map has closed geographic rings and all five cities',()=>{const box={window:{}};vm.runInNewContext(fs.readFileSync(require.resolve('../public/map-data.js'),'utf8'),box);const rows=box.window.MAP_ROWS;assert.equal(rows.length,19);for(const c of D.cities)assert.ok(rows.find(r=>r[0]===c.id));for(const r of rows)for(const ring of r[2].split(';')){const points=ring.split(' ');assert.equal(points[0],points.at(-1));}});
+test('no local dependencies or JS/CSS links are missing',()=>{const html=fs.readFileSync(require.resolve('../public/index.html'),'utf8');for(const m of html.matchAll(/(?:src|href)="([^"#]+\.(?:js|css))"/g))assert.ok(fs.existsSync(require('node:path').resolve(__dirname,'../public',m[1])));});

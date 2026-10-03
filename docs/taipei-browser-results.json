@@ -1,0 +1,14 @@
+{
+  "mode": "local source inlined into about:blank; no terrain network claim",
+  "viewports": {
+    "desktop": {
+      "allChecks": "passed",
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "allChecks": "passed",
+      "horizontalOverflow": false
+    }
+  },
+  "errors": []
+}

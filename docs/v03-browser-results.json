@@ -1,0 +1,43 @@
+{
+  "mode": "same local source inlined; all external requests aborted",
+  "externalPhotoNetworkVerified": false,
+  "viewports": [
+    {
+      "width": 1440,
+      "profiles": 6,
+      "careerTracks": 2,
+      "photoFallback": "passed",
+      "mediaDialog": "passed",
+      "slogans": "passed",
+      "history": "passed",
+      "sources": 100,
+      "deepLink": "passed",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "profiles": 6,
+      "careerTracks": 2,
+      "photoFallback": "passed",
+      "mediaDialog": "passed",
+      "slogans": "passed",
+      "history": "passed",
+      "sources": 100,
+      "deepLink": "passed",
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "profiles": 6,
+      "careerTracks": 2,
+      "photoFallback": "passed",
+      "mediaDialog": "passed",
+      "slogans": "passed",
+      "history": "passed",
+      "sources": 100,
+      "deepLink": "passed",
+      "overflow": false
+    }
+  ],
+  "pageErrors": []
+}

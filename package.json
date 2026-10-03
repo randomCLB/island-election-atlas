@@ -1,0 +1,14 @@
+{
+  "name": "island-election-atlas",
+  "version": "0.4.0",
+  "private": true,
+  "description": "岛屿选战：台湾五都选举互动档案第一稿",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "build": "node scripts/build.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

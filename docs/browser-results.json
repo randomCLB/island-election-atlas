@@ -1,0 +1,14 @@
+{
+  "desktop": {
+    "candidates": 6,
+    "offlineTerrainFallback": "passed",
+    "overflow": false,
+    "deepLink": "passed"
+  },
+  "mobile": {
+    "overflow": false,
+    "cityAndDossier": "passed"
+  },
+  "errors": [],
+  "mode": "local assets inlined into about:blank; localhost navigation blocked by browser policy"
+}

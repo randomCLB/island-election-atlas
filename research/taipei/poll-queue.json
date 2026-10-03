@@ -1,0 +1,36 @@
+{
+  "scope": "Internal research queue. Not a published poll feed.",
+  "checkedAt": "2026-10-02",
+  "records": [{
+    "id": "taipei-xinmin-2026-09-22",
+    "publishable": false,
+    "reviewStatus": "secondary-report-only",
+    "releaseDate": "2026-09-22",
+    "fieldStart": "2026-09-16",
+    "fieldEnd": "2026-09-18",
+    "reportedPopulation": "台北市20岁以上市民；选籍筛选原问卷待核",
+    "reportedCommissioningOrganization": "信民两岸研究协会",
+    "reportedQuestionnaireAnalyst": "戴立安",
+    "reportedExecutor": "毕肯市场研究公司",
+    "reportedSample": {"total": 1076, "landline": 752, "mobile": 324},
+    "reportedMargin": "95%置信水平、正负3.0个百分点；尚未取得原报告及设计效果说明",
+    "reportedResults": [
+      {"name": "蔣萬安", "percent": 41.7},
+      {"name": "沈伯洋", "percent": 40.5},
+      {"name": "郭璽", "percent": 0.7},
+      {"name": "唐新民", "percent": 0.6},
+      {"name": "蕭文乾", "percent": 0.5},
+      {"name": "林志成", "percent": 0.3},
+      {"name": "不投票或废票", "percent": 5.2},
+      {"name": "未明确回答", "percent": 10.6}
+    ],
+    "roundingNote": "二次报道的百分比合计100.1%，保留原报道数值，不强行归一化。",
+    "missing": ["原始完整问卷及候选人提示顺序", "经费来源声明", "抽样框与加权细节", "原始报告及质量控制说明"],
+    "sources": [
+      "https://www.fann.com.tw/news/4033",
+      "https://news.tvbs.com.tw/politics/4025675",
+      "https://www.tstm.tw/Article/Detail/5529"
+    ],
+    "interpretation": "仅保存报道中的调查测量，不转录预测胜者、看好度排序或推算胜率。"
+  }]
+}

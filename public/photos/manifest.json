@@ -1,0 +1,44 @@
+[
+  {
+    "file": "chiang.jpg",
+    "sha256": "9400d1a093bcde87d2349fe99857f9e1d9388bb6fa20c4e15ea313f2386f3255",
+    "width": 480,
+    "height": 640,
+    "bytes": 41535
+  },
+  {
+    "file": "hsiao-w.jpg",
+    "sha256": "49bcb6ee00c6f0124313b3cf9fe123b35270885b5ab1f42276befd95a44268ed",
+    "width": 360,
+    "height": 270,
+    "bytes": 21120
+  },
+  {
+    "file": "kuo.jpg",
+    "sha256": "982987bdbe4c72c4372aeadd0b011393772a74f5dd38599a6d2685c50eb4295c",
+    "width": 268,
+    "height": 400,
+    "bytes": 13777
+  },
+  {
+    "file": "lin-c.jpg",
+    "sha256": "5cde199d655bff382b834952f0099f451587ad957e4c00e89371aa5979253dc1",
+    "width": 300,
+    "height": 388,
+    "bytes": 17111
+  },
+  {
+    "file": "shen.jpg",
+    "sha256": "a12549e5252c60eb77ae2172aa0944f6e045c8ace264859f61a24644b7346c97",
+    "width": 480,
+    "height": 616,
+    "bytes": 45262
+  },
+  {
+    "file": "tang.jpg",
+    "sha256": "09f89b12f12adca8128c1740f9f83b1653be719f4fa9cc9fd6c84958cc73f973",
+    "width": 300,
+    "height": 393,
+    "bytes": 18548
+  }
+]
