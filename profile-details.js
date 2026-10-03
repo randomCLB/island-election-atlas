@@ -3,7 +3,7 @@
 'use strict';
 const E=AtlasDomain.esc;
 function portrait(p,size='thumb'){
- const photo=p.photo,linked=photo?.status==='linked'&&/^(https:\/\/|photos\/[a-z-]+\.jpg$)/.test(photo.url||'');
+ const photo=p.photo,linked=photo?.status==='linked'&&/^(https:\/\/|photos\/[a-z-]+\.(?:jpg|png)$)/.test(photo.url||'');
  const hint=linked?'照片载入中':'照片待核对';
  const layout=['portrait','scene','pair'].includes(photo?.layout)?photo.layout:'portrait';
  const image=linked?`<img data-portrait="${E(p.id)}" src="${E(photo.url+(photo.revision?'?v='+encodeURIComponent(photo.revision):''))}" alt="${E(p.name)}${layout==='pair'?'，原图右侧人物':''}" width="180" height="220" loading="${size==='hero'?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer">`:'';
