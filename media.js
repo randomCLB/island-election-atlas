@@ -3,6 +3,7 @@
 'use strict';
 const E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const profiles={
+ everdant:{name:'常青棋牌休闲馆',badge:'企业创办人自述',status:'interested-source',scope:'企业身份页面；发布日期未明',text:'企业介绍创办人与经营理念的页面，郭玺同时列为麻将最大党主席。',limits:'可用于身份对应，经营成果、社会效果与完整任期需独立材料；未作媒体或党派倾向归类。',evidence:[]},
  doublethink:{name:'台湾民主实验室',badge:'相关机构自述',status:'interested-source',scope:'2023人事声明',text:'研究机构就其成员参选、组织交接及独立性作出的当事方说明。',limits:'人事程序可与法院登记核对；机构自述的中立性及资金情况不能仅凭声明独立认定，未作党派倾向归类。',evidence:[]},
  aneoc:{name:'良心时代运动',badge:'活动主办方记录',status:'interested-source',scope:'受访页面与身份片头；日期未载',text:'活动组织者保存的受访人名录和影音，用于识别当时公开的身份。',limits:'不构成体育成绩认证、雇用任期证明或2026现职确认；本版未作党派倾向归类。',evidence:[]},
  'udn-money':{name:'经济日报',badge:'本文转载平台',status:'platform',scope:'依本篇署名识别原发',text:'本文原发为联合报，经济日报网站承载文章。',limits:'同一集团不同平台的转载仍不是独立采访。',evidence:[]},
