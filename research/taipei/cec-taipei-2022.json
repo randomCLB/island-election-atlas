@@ -1,0 +1,122 @@
+[
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "1",
+    "name": "張家豪",
+    "party": "台灣動物保護黨",
+    "birthROC": "0740111",
+    "votes": 2367,
+    "percentage": "0.17"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "2",
+    "name": "王文娟",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0521028",
+    "votes": 451,
+    "percentage": "0.03"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "3",
+    "name": "鄭匡宇",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0650515",
+    "votes": 386,
+    "percentage": "0.03"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "4",
+    "name": "黃聖峰",
+    "party": "台澎黨",
+    "birthROC": "0680630",
+    "votes": 256,
+    "percentage": "0.02"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "5",
+    "name": "童文薰",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0541111",
+    "votes": 2425,
+    "percentage": "0.18"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "6",
+    "name": "蔣萬安",
+    "party": "中國國民黨",
+    "birthROC": "0671226",
+    "votes": 575590,
+    "percentage": "42.29"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "7",
+    "name": "蘇煥智",
+    "party": "台灣維新",
+    "birthROC": "0450720",
+    "votes": 1851,
+    "percentage": "0.14"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "8",
+    "name": "黃珊珊",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0581018",
+    "votes": 342141,
+    "percentage": "25.14"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "9",
+    "name": "施奉先",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0471209",
+    "votes": 383,
+    "percentage": "0.03"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "10",
+    "name": "唐新民",
+    "party": "共和黨",
+    "birthROC": "0391225",
+    "votes": 316,
+    "percentage": "0.02"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "11",
+    "name": "謝立康",
+    "party": "無黨籍及未經政黨推薦",
+    "birthROC": "0591023",
+    "votes": 227,
+    "percentage": "0.02"
+  },
+  {
+    "year": 2022,
+    "city": "臺北市",
+    "number": "12",
+    "name": "陳時中",
+    "party": "民主進步黨",
+    "birthROC": "0411227",
+    "votes": 434558,
+    "percentage": "31.93"
+  }
+]
