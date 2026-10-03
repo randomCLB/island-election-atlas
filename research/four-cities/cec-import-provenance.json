@@ -1,0 +1,102 @@
+[
+  {
+    "year": 2010,
+    "file": "votedata/votedata/voteData/20101127-五都市長議員及里長/市長/elbase.csv",
+    "sha256": "76712409cf533374bacfb69d1e33eb4db6e3241ff4cb0eaf31454354083f2cae"
+  },
+  {
+    "year": 2010,
+    "file": "votedata/votedata/voteData/20101127-五都市長議員及里長/市長/elcand.csv",
+    "sha256": "53c9e89bbcf06e0dd1f243ea3b7850e189fd5941cca696d5a1c6a62ad522bf07"
+  },
+  {
+    "year": 2010,
+    "file": "votedata/votedata/voteData/20101127-五都市長議員及里長/市長/elctks.csv",
+    "sha256": "497581f915e3b9cdf0ff548c69b4a141501ef1de79b1595280304506d3e0aad8"
+  },
+  {
+    "year": 2010,
+    "file": "votedata/votedata/voteData/20101127-五都市長議員及里長/市長/elpaty.csv",
+    "sha256": "a150f48049d26000d5761911f2361005e9cb5bc962f9101bdedc04677e275e14"
+  },
+  {
+    "year": 2010,
+    "file": "votedata/votedata/voteData/20101127-五都市長議員及里長/市長/elprof.csv",
+    "sha256": "07e4d28806fce27b34d9627ffaf083e4fbcc75755cd1c209ba08923c0b9ff1aa"
+  },
+  {
+    "year": 2014,
+    "file": "votedata/votedata/voteData/2014-103年地方公職人員選舉/直轄市市長/elbase.csv",
+    "sha256": "a8ab7dfe42692c843f3d5e62914f5371a37e42f2c1b348dce4af824c6d791cb8"
+  },
+  {
+    "year": 2014,
+    "file": "votedata/votedata/voteData/2014-103年地方公職人員選舉/直轄市市長/elcand.csv",
+    "sha256": "dd8b3508799aaffe0280e3132bfca43b99dd10e7c692e5881603cd195d357e76"
+  },
+  {
+    "year": 2014,
+    "file": "votedata/votedata/voteData/2014-103年地方公職人員選舉/直轄市市長/elctks.csv",
+    "sha256": "3bf29f9cc6f44005bbe1567429210351d235395cd515064d7d7f40ecad826b67"
+  },
+  {
+    "year": 2014,
+    "file": "votedata/votedata/voteData/2014-103年地方公職人員選舉/直轄市市長/elpaty.csv",
+    "sha256": "3d51702b59ae053c6a85dd784ed1b108fd5ee1a56daf4e965d94fe523cb2daa7"
+  },
+  {
+    "year": 2014,
+    "file": "votedata/votedata/voteData/2014-103年地方公職人員選舉/直轄市市長/elprof.csv",
+    "sha256": "629deb55deb897792089d0bd728d6711b912bf98e7a766f7c096c57cd08f799e"
+  },
+  {
+    "year": 2018,
+    "file": "votedata/votedata/voteData/2018-107年地方公職人員選舉/直轄市市長/elbase.csv",
+    "sha256": "ec4e06be3807d543b37980019a62124b8d9f14b4e15f5deec1c69f7856bb21d8"
+  },
+  {
+    "year": 2018,
+    "file": "votedata/votedata/voteData/2018-107年地方公職人員選舉/直轄市市長/elcand.csv",
+    "sha256": "9d5989aa30e6753e54722d42a979d195d8bcac9cf399cf05424b7001860be9e7"
+  },
+  {
+    "year": 2018,
+    "file": "votedata/votedata/voteData/2018-107年地方公職人員選舉/直轄市市長/elctks.csv",
+    "sha256": "fd8a3b34e4b379daeb3da40cdf45a2df681fc13b556c1b298845f96fefbb1998"
+  },
+  {
+    "year": 2018,
+    "file": "votedata/votedata/voteData/2018-107年地方公職人員選舉/直轄市市長/elpaty.csv",
+    "sha256": "e7ad90fb060181735e4beb96b3592e04aa78a73145e282fe489612bc5d0b88b6"
+  },
+  {
+    "year": 2018,
+    "file": "votedata/votedata/voteData/2018-107年地方公職人員選舉/直轄市市長/elprof.csv",
+    "sha256": "f6b8739d5d0fa74331ebf1fdff1a877f28e4426f444bf8a8282cf2fd16328715"
+  },
+  {
+    "year": 2022,
+    "file": "votedata/votedata/voteData/2022-111年地方公職人員選舉/C1/prv/elbase.csv",
+    "sha256": "100e6945b0a8f17cfe33636acfccf08185794d642f01b37b17d900cf3a56a30d"
+  },
+  {
+    "year": 2022,
+    "file": "votedata/votedata/voteData/2022-111年地方公職人員選舉/C1/prv/elcand.csv",
+    "sha256": "2f9db45b93a54fa1dac4959eb5a0f2232ee2e82b8c32ca4e9f747e8b1e852de3"
+  },
+  {
+    "year": 2022,
+    "file": "votedata/votedata/voteData/2022-111年地方公職人員選舉/C1/prv/elctks.csv",
+    "sha256": "88a7da0408afaa2546a22f66de66d5e181e0be055fb49d120e96eb9b5ab98db0"
+  },
+  {
+    "year": 2022,
+    "file": "votedata/votedata/voteData/2022-111年地方公職人員選舉/C1/prv/elpaty.csv",
+    "sha256": "e7749f23273b0299677781def877724923fd1512565d57e39c8f5bf2a758bed8"
+  },
+  {
+    "year": 2022,
+    "file": "votedata/votedata/voteData/2022-111年地方公職人員選舉/C1/prv/elprof.csv",
+    "sha256": "a5e18f625700466dbd58a65dc85822b1d844a394ea3e1de77eccbeddfd682c39"
+  }
+]
