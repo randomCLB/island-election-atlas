@@ -1,6 +1,6 @@
 # 岛屿选战 v0.4
 
-公开版本：六名台北参选人的本地照片、补充任期与公开言行。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages。资料边界及影像引用说明见 [docs/V04.md](docs/V04.md)。
+公开版本：五都21名登记参选人的页面已有20人的本地照片，王肇民照片待补；已接入四城人物经历及2010—2022年逐届官方票表。竞选口号与表述每人最多三条，保留有辨识度的说法或具体政见，区分本届／往届、原话／摘要。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages。资料边界及影像引用说明见 [docs/V04.md](docs/V04.md)。
 
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 

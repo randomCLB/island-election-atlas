@@ -4,3 +4,10 @@
 @media(max-width:370px){.photo-hero,.photo-hero.photo-scene,.photo-hero.photo-pair{width:90px;height:120px}.profile-hero h2{font-size:23px}.profile-actions .outline-button{font-size:10px}}
 /* Keep the identified speaker visible in the small scene thumbnails. */
 .photo-thumb img[data-portrait="kuo"]{object-position:66% 30%}.photo-thumb img[data-portrait="tang"]{object-position:77% 30%}.photo-thumb img[data-portrait="lin-c"]{object-position:63% 30%}
+
+.photo-thumb img[data-portrait="hsiao-l"]{object-position:23% 30%}
+
+.photo-thumb img[data-portrait="lee"]{object-position:22% 30%}
+.photo-thumb img[data-portrait="su-h"]{object-position:62% 30%}
+.photo-thumb img[data-portrait="hung-f"]{object-position:38% 30%}
+.photo-thumb img[data-portrait="yeh"]{object-fit:contain}
