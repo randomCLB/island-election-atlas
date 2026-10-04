@@ -40,6 +40,7 @@ const profiles={
  'official-cn':{name:'中国大陆公部门资料',badge:'官方立场／机关公告',status:'institutional',scope:'具体发布机关及公告时点',text:'按发布机关名义呈现行政措施或立场。',limits:'与被指对象的回应分开；公告中的政治定性不直接作为网站结论。',evidence:[]},
  party:{name:'政党／当事方',badge:'当事方自述',status:'interested-source',scope:'资料发布时点',text:'用于证明本人或组织如何自我介绍、提出何种主张。',limits:'自述不等于独立事实认证；教育成效、任职、财务等仍需对应原件。',evidence:[]},
  association:{name:'中华民国健美健身协会',badge:'任职机构历史记录',status:'institutional',scope:'协会历任名册；起止年月未载',text:'协会自己的职务历史记录，适用于名册列明的届次和代理身份。',limits:'不将旧职推定为现职，也不以这份名册代替教练聘书或比赛成绩。',evidence:[]},
+ trustdemocracy:{name:'台北市信民两岸研究协会',badge:'民调委托方自行发布',status:'interested-source',scope:'2026-09-22台北市长民调报告',text:'协会为调查出资并在自有网站发布报告及方法说明；这是委托方自发报告，不是独立审计。',limits:'可核对委托方公布的题目、抽样说明和结果；原始访问记录及独立复核材料未收录。',evidence:[]},
  concords:{name:'康和证券集团',badge:'项目合作方年度自述',status:'interested-source',scope:'2014年度社会责任报告中的课程项目',text:'合作方的原始报告，用于核对当时项目安排和被邀请者身份。',limits:'项目规模与学习效果属于报告方自述，不等于独立成效评估，也不证明参与者是该公司雇员。',evidence:[]},
  retailer:{name:'书店／出版资料',badge:'作者或出版方自述',status:'interested-source',scope:'书目所列出版时点',text:'作者简介及内容说明属于出版资料，不是书店独立调查得出的履历认证。',limits:'保留“自述”及未知任期；商品效果宣传不作为研究已证明的事实。',evidence:[]},
  commons:{name:'Wikimedia Commons',badge:'图像档案／授权记录',status:'repository',scope:'具体文件说明页',text:'用于核对图片原作者、文件来源、拍摄时点与许可，不是台湾新闻媒体。',limits:'文件说明的日期不自动等于拍摄日期；本站保留原说明的精度。',evidence:[]},
