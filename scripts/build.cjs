@@ -4,15 +4,19 @@ const root=path.resolve(__dirname,'..'),D=require('../public/data.js'),U=require
 require('../public/taipei-research.js').apply(D);
 const P=require('../public/taipei-profile-data.js');P.apply(D);
 require('../public/four-city-data.js').apply(D);
+require('../public/policy-data.js').apply(D);
+const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
  if(p.photo?.delivery!=='bundled-file'||!['open-license','editorial-quotation'].includes(p.photo.publicationBasis)||!p.photo.credit||!p.photo.note)throw new Error('Missing publication basis: '+p.id);
  if(!/^photos\/[a-z-]+\.(?:jpg|png)$/.test(p.photo.url)||!fs.existsSync(path.join(root,'public',p.photo.url)))throw new Error('Missing bundled portrait: '+p.id);
 }
 const errors=U.validateData(D);if(errors.length)throw new Error(errors.join('\n'));
-// v0.1 has no poll release pipeline. Do not silently ship restricted data in a JS bundle.
-if(D.polls.length)throw new Error('Poll publication is not enabled in v0.1. Implement reviewed build-time filtering and legal review before publishing.');
+for(const p of D.people)for(const x of p.policies)if(!D.policyTopics[x.topic]||!x.text||!x.date||!x.electionYear||!x.sources.length||x.sources.some(s=>!D.sources[s]))throw new Error('Invalid policy: '+p.id);
+for(const p of D.polls)if(!D.people.some(x=>x.city===p.city)||p.sources.some(s=>!D.sources[s])||p.results.some(r=>!D.people.some(x=>x.id===r.person&&x.city===p.city)))throw new Error('Invalid poll references');
 const dist=path.join(root,'dist');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(path.join(root,'public'),dist,{recursive:true});fs.writeFileSync(path.join(dist,'.nojekyll'),'');
+// Remove restricted survey data from release bytes, not only the interface.
+if(U.blackout()){const file=path.join(dist,'election-map-data.js'),pack=M.forRelease();fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
 // GitHub Pages caches scripts; bind each asset URL to its delivered content.
 const htmlPath=path.join(dist,'index.html');
 fs.writeFileSync(htmlPath,fs.readFileSync(htmlPath,'utf8').replace(/((?:src|href)=")([^"#]+\.(?:js|css))(")/g,(_,prefix,file,suffix)=>{

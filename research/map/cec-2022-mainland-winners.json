@@ -1,0 +1,135 @@
+{
+  "yilan": {
+    "name": "林姿妙",
+    "party": "中國國民黨",
+    "votes": 119421,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "hsinchu-county": {
+    "name": "楊文科",
+    "party": "中國國民黨",
+    "votes": 163662,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "miaoli": {
+    "name": "鍾東錦",
+    "party": "無黨籍及未經政黨推薦",
+    "votes": 124603,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "changhua": {
+    "name": "王惠美",
+    "party": "中國國民黨",
+    "votes": 369133,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "nantou": {
+    "name": "許淑華",
+    "party": "中國國民黨",
+    "votes": 154256,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "yunlin": {
+    "name": "張麗善",
+    "party": "中國國民黨",
+    "votes": 207519,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "chiayi-county": {
+    "name": "翁章梁",
+    "party": "民主進步黨",
+    "votes": 171777,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "pingtung": {
+    "name": "周春米",
+    "party": "民主進步黨",
+    "votes": 217537,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "taitung": {
+    "name": "饒慶鈴",
+    "party": "中國國民黨",
+    "votes": 68661,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "hualien": {
+    "name": "徐榛蔚",
+    "party": "中國國民黨",
+    "votes": 96645,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "keelung": {
+    "name": "謝國樑",
+    "party": "中國國民黨",
+    "votes": 96784,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "hsinchu-city": {
+    "name": "高虹安",
+    "party": "台灣民眾黨",
+    "votes": 98121,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "taipei": {
+    "name": "蔣萬安",
+    "party": "中國國民黨",
+    "votes": 575590,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "kaohsiung": {
+    "name": "陳其邁",
+    "party": "民主進步黨",
+    "votes": 766147,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "new-taipei": {
+    "name": "侯友宜",
+    "party": "中國國民黨",
+    "votes": 1152555,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "taichung": {
+    "name": "盧秀燕",
+    "party": "中國國民黨",
+    "votes": 799107,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "tainan": {
+    "name": "黃偉哲",
+    "party": "民主進步黨",
+    "votes": 433684,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "taoyuan": {
+    "name": "張善政",
+    "party": "中國國民黨",
+    "votes": 557572,
+    "source": "map-cec-2022",
+    "date": "2022-11-26"
+  },
+  "chiayi-city": {
+    "name": "黃敏惠",
+    "party": "中國國民黨",
+    "votes": 59874,
+    "source": "map-chiayi-2022",
+    "date": "2022-12-18"
+  }
+}

@@ -7,12 +7,12 @@
 <meta content="noindex,nofollow" name="robots"/><title>岛屿选战 · 山海之间，每一票都有来处</title>
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d191d'/%3E%3Cpath d='M15 43 29 15 36 31 45 22 51 43Z' fill='none' stroke='%23d7b779' stroke-width='3'/%3E%3C/svg%3E" rel="icon"/>
 <link href="styles.css" rel="stylesheet"/><link href="research.css" rel="stylesheet"/>
-<link href="profile-details.css" rel="stylesheet"/></head>
+<link href="profile-details.css" rel="stylesheet"/><link href="policies.css" rel="stylesheet"/></head>
 <body>
 <a class="skip" href="#city-panel">跳到城市资料</a>
 <header class="site-header">
 <a aria-label="岛屿选战首页" class="brand" href="#/taipei"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="M5 35 21 7 28 25 36 16 43 35Z"></path><path d="M10 41H39"></path></svg><span>岛屿选战<small>ISLAND ELECTION ARCHIVE</small></span></a>
-<nav aria-label="主要内容" class="top-nav"><a class="active" href="#atlas">五都地图</a><a href="#history">历届票箱</a><a href="#guide">选举入门</a></nav>
+<nav aria-label="主要内容" class="top-nav"><a class="active" href="#atlas">五都地图</a><a href="#policies">政见对比</a><a href="#history">历届票箱</a><a href="#guide">选举入门</a></nav>
 <button class="text-button source-open">资料与方法 <span aria-hidden="true">↗</span></button>
 </header>
 <main>
@@ -20,9 +20,10 @@
 <div class="map-stage">
 <div class="map-editorial"><div class="eyebrow"><span class="tiny-line"></span> 2026 地方选举 · 五都篇</div><h1>山海之间，<br/>每一票<br/>都有来处<span>。</span></h1><p>先看见一座城。<br/>再认识人、言行，和时间留下的选票。</p><div class="edition">FIELD NOTES <b>01 / 05</b></div></div>
 <div aria-label="地图模式" class="map-toolbar" role="group"><button aria-pressed="true" id="overview-mode">区划概览</button><button aria-pressed="false" id="terrain-mode">三维地形 <span>↗</span></button></div>
+<label class="map-year">地图年份 <select id="map-year" aria-label="地图年份"></select></label>
 <div class="map-canvas"><div aria-label="在线三维地形" hidden="" id="live-map"></div><svg aria-label="台湾本岛县市界概览，点击五座城市查看资料" id="island-map" viewbox="0 0 720 860"></svg></div>
 <div aria-hidden="true" class="map-north">N<span>↑</span></div>
-<div class="map-bottom"><span><i></i> 首期收录五城 <i class="quiet-dot"></i> 其他地区未收录</span><button class="text-button" id="map-reset">全岛视角 ↺</button></div>
+<div class="map-bottom"><span class="party-legend"><span><i class="legend-kmt"></i>国民党</span><span><i class="legend-dpp"></i>民进党</span><span><i></i>其他党派／无党籍</span><span><i class="legend-striped"></i>可能换党</span><span><i class="legend-unknown"></i>该年资料未齐</span></span><button class="text-button" id="map-reset">全岛视角 ↺</button></div>
 <div class="map-attribution"><span id="map-status" role="status">本岛概览 · g0v 2010合并版简化边界 · 非当前精密区划</span></div>
 </div>
 <aside aria-label="所选城市档案" class="city-panel" id="city-panel">
@@ -31,9 +32,11 @@
 <div id="city-heading"></div>
 <div aria-label="城市资料分类" class="panel-tabs" role="tablist"><button aria-controls="panel-content" aria-selected="true" data-tab="candidates" id="tab-candidates" role="tab">参选人</button><button aria-controls="panel-content" aria-selected="false" data-tab="polls" id="tab-polls" role="tab" tabindex="-1">民调与选票</button><button aria-controls="panel-content" aria-selected="false" data-tab="about" id="tab-about" role="tab" tabindex="-1">城市简史</button></div>
 <div aria-labelledby="tab-candidates" id="panel-content" role="tabpanel"></div>
+<div id="map-color-note" class="map-color-note" aria-live="polite"></div>
 <div class="panel-foot">登记快照 2026.09.19 <span>核查至 2026.10.02</span><br/>人物排序沿用资料来源，不代表支持度。</div>
 </aside>
 </section>
+<section class="policy-section" id="policies"><div class="section-heading"><div><div class="eyebrow">POLICY COMPARISON / 竞选政见</div><h2>同一个问题，<br/>不同的人怎么答。</h2></div><p>明确表达过的主张都可收录。<br/>措施、日期、适用届次与出处逐项对照。</p></div><div id="policy-content"></div></section>
 <section class="archive-section" id="history">
 <div class="section-heading"><div><div class="eyebrow">02 / THE BALLOT ARCHIVE</div><h2>今天的城市，<br/>不止一种过去。</h2></div><p>切换年份，分清已经发生的结果与尚未发生的选择。<br/>历史选票不是本届支持率；任命任期不计为选举。</p></div>
 <div class="archive-tools"><div aria-label="历史城市" class="history-cities" id="history-cities"></div><span class="coverage">台北1994—2022八届；其余四城2010—2022四届官方完整票表</span></div>
@@ -43,7 +46,7 @@
 <section class="guide-section" id="guide">
 <div class="guide-intro"><div class="eyebrow">03 / READ BETWEEN THE VOTES</div><h2>看懂选票之前，<br/>先把问题问清楚。</h2><p>这里不替你打分。每一条人物记录，都应能沿着日期找到出处。</p><button class="outline-button source-open">打开资料室 <span>↗</span></button></div>
 <div class="guide-list">
-<details><summary><span>01</span> 政党色为什么不铺满地图？<b>＋</b></summary><p>默认颜色只区分专题覆盖范围与选中城市，不代表政党支持率。票数条中的政党标识对应当次选举；地图面积不能代替选民人数。</p></details>
+<details><summary><span>01</span> 地图的颜色与斜线怎么看？<b>＋</b></summary><p>蓝色是国民党，绿色是民进党，白色是其他党派或无党籍；灰色表示该年资料未齐。历史年份按当届当选党籍；2026以2022当选党籍为底色基准，不追溯覆盖后来的入党、停职或代理变化。斜线只用于披露完整、90天内的支持度调查：不同党派挑战者领先，或概率抽样两方差距不超过报告误差的两倍。会员调查仅在挑战者领先时提示并注明覆盖限制。这是本站观察规则，不是统计胜率；无斜线也不表示稳胜。</p></details>
 <details><summary><span>02</span> 城市改了名字，历史怎么接？<b>＋</b></summary><p>2010年原台北县改制，高雄、台中、台南分别县市合并。旧县与旧市要先分别建档，不能把今天的辖区当作一直存在。<span id="guide-merger-source"></span></p></details>
 <details><summary><span>03</span> “访问过”就是“支持谁”吗？<b>＋</b></summary><p>不是同一件事。人物档案分别记载表态、具体行动及资料日期。城市交流不能自动推导对一国所有政策的态度；没有记录也不代表没有立场。</p></details>
 <details><summary><span>04</span> “争议”与“事实成立”有多远？<b>＋</b></summary><p>指控、回应、调查、起诉及裁判结论必须分开。后续澄清应与最初指控同样醒目。第一稿资料覆盖不均，不以档案条目多少评价任何候选人。</p></details>
@@ -52,7 +55,7 @@
 </main>
 <footer><div class="brand-small">岛屿选战 <span>ISLAND ELECTION ARCHIVE</span></div><p>一个从地理走向人物、从选票走向历史的公共资料原型。</p><span>v0.4 台北公开资料版 · 不提供胜率预测或候选人评分</span></footer>
 <dialog aria-labelledby="dialog-title" id="dossier"><div class="dialog-bar"><span class="eyebrow">PUBLIC RECORD / 人物档案</span><button aria-label="关闭人物档案" id="close-dialog">✕</button></div><div id="dialog-content"></div></dialog>
-<dialog aria-labelledby="sources-title" id="sources-dialog"><div class="dialog-bar"><span class="eyebrow">SOURCE ROOM / 资料室</span><button aria-label="关闭资料室" id="close-sources">✕</button></div><div class="sources-inner"><h2 id="sources-title">证据应当比结论更容易找到。</h2><p class="muted">资料检查日：2026-10-02。每次引用均区分报道日期、原发媒体、转载平台及有出处的媒体背景。倾向描述注明适用时期，不是真假评分。</p><div id="source-list"></div><h3>当前边界与影像说明</h3><p>离线地图根据g0v/twgeojson的CC0数据生成，原始版本为2010年合并后县市概览，经过共享边界简化、量化并仅保留本岛。不用于测绘或证明2026边界精度。台北六人的照片均随网站保存，并保留来源、署名和拍摄日期状态。蒋万安、沈伯洋为GWOIA政府肖像；唐新民来自CC BY 3.0 TW +馆藏文宣。郭玺、林志成的往届公报肖像及蕭文乾的父子合影，以低分辨率资料引用支持原创人物档案，非开放再授权。蕭文乾为合影右侧人物；唐新民为往届档案照。</p><p>三维地形需联网，按需加载MapLibre GL JS 6.11.2和Mapterhorn公开高程瓦片。外部服务失败时保留本地地图；未在本运行环境完成真实瓦片连通验收。</p><h3>民调收录说明</h3><p>本版未发布任何民调数字。民调发布前必须完成方法、日期、题目、样本、经费等字段核对及适用法律复核。预设停发期不是法律意见。未来应在发布产物与数据接口层移除受限资料，不能仅靠界面隐藏。</p></div></dialog>
+<dialog aria-labelledby="sources-title" id="sources-dialog"><div class="dialog-bar"><span class="eyebrow">SOURCE ROOM / 资料室</span><button aria-label="关闭资料室" id="close-sources">✕</button></div><div class="sources-inner"><h2 id="sources-title">证据应当比结论更容易找到。</h2><p class="muted">资料检查日：2026-10-02。每次引用均区分报道日期、原发媒体、转载平台及有出处的媒体背景。倾向描述注明适用时期，不是真假评分。</p><div id="source-list"></div><h3>当前边界与影像说明</h3><p>离线地图根据g0v/twgeojson的CC0数据生成，原始版本为2010年合并后县市概览，经过共享边界简化、量化并仅保留本岛。不用于测绘或证明2026边界精度。台北六人的照片均随网站保存，并保留来源、署名和拍摄日期状态。蒋万安、沈伯洋为GWOIA政府肖像；唐新民来自CC BY 3.0 TW +馆藏文宣。郭玺、林志成的往届公报肖像及蕭文乾的父子合影，以低分辨率资料引用支持原创人物档案，非开放再授权。蕭文乾为合影右侧人物；唐新民为往届档案照。</p><p>三维地形需联网，按需加载MapLibre GL JS 6.11.2和Mapterhorn公开高程瓦片。外部服务失败时保留本地地图；未在本运行环境完成真实瓦片连通验收。</p><h3>民调收录说明</h3><p>本版仅展示披露字段核对后的支持度调查，逐份注明主持人、时间、抽样、母体数、样本、误差与经费。报道摘要与原始问卷有别，会员库调查不能替代全体选民。预设2026年11月18日起至11月28日16时停发；停发期间的构建产物移除民调数据，已打开页面暂停数字与斜线。</p></div></dialog>
 <div class="toast" id="toast" role="status"></div>
 <noscript><div class="noscript">本互动原型需要JavaScript。参选资料可直接查阅<a href="https://www.cna.com.tw/news/aipl/202609045002.aspx">中央社登记名册</a>，历史资料请查<a href="https://db.cec.gov.tw/">中选会资料库</a>。</div></noscript>
-<script defer="" src="data.js"></script><script defer="" src="taipei-data/sources.js"></script><script defer="" src="taipei-data/people.js"></script><script defer="" src="taipei-data/city.js"></script><script defer="" src="taipei-data/elections.js"></script><script defer="" src="taipei-research.js"></script><script defer="" src="taipei-profile-data.js"></script><script defer="" src="domain.js"></script><script defer="" src="four-city-data.js"></script><script defer="" src="media.js"></script><script defer="" src="profile-details.js"></script><script defer="" src="research-ui.js"></script><script defer="" src="map-data.js"></script><script defer="" src="map.js"></script><script defer="" src="app.js"></script></body></html>
+<script defer="" src="data.js"></script><script defer="" src="taipei-data/sources.js"></script><script defer="" src="taipei-data/people.js"></script><script defer="" src="taipei-data/city.js"></script><script defer="" src="taipei-data/elections.js"></script><script defer="" src="taipei-research.js"></script><script defer="" src="taipei-profile-data.js"></script><script defer="" src="domain.js"></script><script defer="" src="four-city-data.js"></script><script defer="" src="policy-data.js"></script><script defer="" src="election-map-data.js"></script><script defer="" src="election-map.js"></script><script defer="" src="media.js"></script><script defer="" src="profile-details.js"></script><script defer="" src="policies.js"></script><script defer="" src="research-ui.js"></script><script defer="" src="map-data.js"></script><script defer="" src="map.js"></script><script defer="" src="app.js"></script></body></html>
