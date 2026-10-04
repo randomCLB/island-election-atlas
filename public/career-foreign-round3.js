@@ -14,6 +14,7 @@ const data={
   'foreign-hung-f-industrial-post':{title:'洪方隆本人LinkedIn公开贴文：高雄信任产业与国际合作构想',url:'https://tw.linkedin.com/in/fang-lung-hung-b4a121121',date:'2026-09-20',kind:'候选人本人公开职业档案贴文',publisherId:'other',checkedAt:'2026-10-04',note:'平台公开索引列出本人署名与贴文日期；本轮直连页面读取失败，内容依据可见索引摘要，仍待页面内复核。只记录高雄城市产业合作构想，不扩写为完整对美政策。'},
   'career-hsiao-l-tvbs-travel':{title:'TVBS：蕭燐洪自述曾任旅行社导游领队、退休约10年',url:'https://news.tvbs.com.tw/politics/2367819',date:'2024-01-15',kind:'具名电视采访；报道转述候选人职业自述',publisherId:'tvbs',checkedAt:'2026-10-04',note:'记者徐慧珠报道并引述蕭燐洪本人。报道说其原在旅行社任导游、领队，至采访时已退休约10年；未列旅行社名称、精确任职起止或雇佣证明。媒体背景依本版TVBS来源卡标示。'},
   'career-hsieh-tainan-council-bio':{title:'臺南市議會：謝龍介議員履歷與经历',url:'https://www.tncc.gov.tw/councilorpage.asp?mainid=791D5A4F-5655-404A-8EF5-D4238A386183',date:'页面最后修改2020-08-25',kind:'地方议会官方候选人/议员履历',publisherId:'official-tw',checkedAt:'2026-10-04',note:'臺南市議會页面列载谢龙介的里长、民代和社团经历；社团职务无起止日期，也未说明是否受雇，故作为服务/社团身份记录，不当作职业工作。'},
+  'foreign-hsiao-l-ftv-2026-education':{title:'民视：蕭燐洪登记参选并谈推广双语教育',url:'https://finance.ftvnews.com.tw/news/detail/2026904U08M1',date:'2026-09-04',kind:'具名候选人采访；媒体记录本人表述',publisherId:'ftv',checkedAt:'2026-10-04',note:'报道引述蕭燐洪称本届参选目的为推广双语教育；未附本人书面政见、课纲细节、师资安排或预算。只记录报道明确归属他的当届主张。'},
   'foreign-hsiao-l-election':{title:'联合报：蕭燐洪2024年选立委及“目标0票”公报说法',url:'https://udn.com/vote2026/story/124652/9732031',date:'2026-09-03',kind:'选举经历报道',publisherId:'udn',checkedAt:'2026-10-04',note:'报道回顾2024登记参选与公报自述；得票数字为新闻转述，本站仅记录参选节点，不转作正式票表。'},
   'foreign-su-h-2026-ltn':{title:'自由时报：苏辉湟登记新北市长并说明七项政见及“台湾优先”',url:'https://news.ltn.com.tw/news/politics/breakingnews/5563372',date:'2026-09-04',kind:'登记现场报道与政见转述',publisherId:'ltn',checkedAt:'2026-10-04',note:'本轮可检索到自由时报原发标题及搜索索引摘要，原文直连未能打开；七项主张及“台湾优先”均按索引摘要记录，后续应以原文或现场影音复核。不是候选人签署的政见书。'},
   'foreign-su-h-2026-ftv':{title:'民视：苏辉湟登记新北市长及首要多重婚姻政见',url:'https://www.ftvnews.com.tw/news/detail/2026904W0654',date:'2026-09-04',kind:'具名登记现场报道',publisherId:'ftv',checkedAt:'2026-10-04',note:'民视记者徐子为报道，并明确将多重婚姻列为其首要政见；报道同时引述自由时报说明“台湾优先”。属于媒体转述，未取得本人原始政见全文或录像。'},
@@ -78,6 +79,7 @@ const data={
    ['economy','加强就业宣导，协助推动就业','就业']
   ].map(([topic,text,label])=>({topic,text,date:'2024年立委公报；投票日2024-01-13',sources:['foreign-hung-l-bulletin'],note:`这是洪丽华参加台中市第2选区立委选举时的区域政见（${label}），不是2026台中市长政见。文字为候选人自填，公报不核验可行性或执行结果。`,type:'往届区域立委政见摘要',electionYear:2024})),
   'hung-f':[{topic:'economy',text:'提出串联高雄半导体、信任产业、亚湾及高雄港，并与台南沙仑资安产业互补；合作对象包括美国等地，领域涵盖区块链、数字身分、金融科技、AI可信度、隐私科技、反诈骗与数字政府。',date:'2026-09-20',sources:['foreign-hung-f-industrial-post'],note:'候选人本人LinkedIn公开贴文的索引摘要；本轮无法直连复核。内容是城市产业合作构想，尚未提供伙伴名单、协议、预算或执行计划。',type:'候选人自述产业合作构想',electionYear:2026}],
+  'hsiao-l':[{topic:'education',text:'将推广双语教育列为2026参选目标。',date:'2026-09-04',sources:['foreign-hsiao-l-ftv-2026-education'],note:'民视具名采访引述蕭燐洪称参选目的为推广双语教育；报道未提供具体课程目标、课纲调整、师资安排或预算，本条只记录当届表达。',type:'媒体具名采访转述；政策细节待补',electionYear:2026}],
   'su-h':[
    ['childcare','主张新北未婚者可登记“一夫二妻”或“一妻二夫”的多重婚姻关系。','多重婚姻'],
    ['education','主张台湾教育以台湾文及英文为主。','教育语言'],
