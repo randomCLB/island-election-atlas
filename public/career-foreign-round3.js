@@ -13,12 +13,17 @@ const data={
   'foreign-kuo-us-pts-20260507':{title:'公视：海鲲号完成操雷发射测试',url:'https://news.pts.org.tw/video/18832',date:'2026-05-07',kind:'公共媒体新闻报道；台船公开测试影片',publisherId:'pts',checkedAt:'2026-10-04',note:'公视报道台船公开影片显示，海鲲号于2026-05-06潜航测试发射2枚操雷；该报道未说明操雷是否来自郭玺所称美方借用设备。'},
   'foreign-hung-f-industrial-post':{title:'洪方隆本人LinkedIn公开贴文：高雄信任产业与国际合作构想',url:'https://tw.linkedin.com/in/fang-lung-hung-b4a121121',date:'2026-09-20',kind:'候选人本人公开职业档案贴文',publisherId:'other',checkedAt:'2026-10-04',note:'平台公开索引列出本人署名与贴文日期；本轮直连页面读取失败，内容依据可见索引摘要，仍待页面内复核。只记录高雄城市产业合作构想，不扩写为完整对美政策。'},
   'career-hsiao-l-tvbs-travel':{title:'TVBS：蕭燐洪自述曾任旅行社导游领队、退休约10年',url:'https://news.tvbs.com.tw/politics/2367819',date:'2024-01-15',kind:'具名电视采访；报道转述候选人职业自述',publisherId:'tvbs',checkedAt:'2026-10-04',note:'记者徐慧珠报道并引述蕭燐洪本人。报道说其原在旅行社任导游、领队，至采访时已退休约10年；未列旅行社名称、精确任职起止或雇佣证明。媒体背景依本版TVBS来源卡标示。'},
+  'career-hsieh-tainan-council-bio':{title:'臺南市議會：謝龍介議員履歷與经历',url:'https://www.tncc.gov.tw/councilorpage.asp?mainid=791D5A4F-5655-404A-8EF5-D4238A386183',date:'页面最后修改2020-08-25',kind:'地方议会官方候选人/议员履历',publisherId:'official-tw',checkedAt:'2026-10-04',note:'臺南市議會页面列载谢龙介的里长、民代和社团经历；社团职务无起止日期，也未说明是否受雇，故作为服务/社团身份记录，不当作职业工作。'},
   'foreign-hsiao-l-election':{title:'联合报：蕭燐洪2024年选立委及“目标0票”公报说法',url:'https://udn.com/vote2026/story/124652/9732031',date:'2026-09-03',kind:'选举经历报道',publisherId:'udn',checkedAt:'2026-10-04',note:'报道回顾2024登记参选与公报自述；得票数字为新闻转述，本站仅记录参选节点，不转作正式票表。'},
   'foreign-su-h-2026-ltn':{title:'自由时报：苏辉湟登记新北市长并说明七项政见及“台湾优先”',url:'https://news.ltn.com.tw/news/politics/breakingnews/5563372',date:'2026-09-04',kind:'登记现场报道与政见转述',publisherId:'ltn',checkedAt:'2026-10-04',note:'本轮可检索到自由时报原发标题及搜索索引摘要，原文直连未能打开；七项主张及“台湾优先”均按索引摘要记录，后续应以原文或现场影音复核。不是候选人签署的政见书。'},
   'foreign-su-h-2026-ftv':{title:'民视：苏辉湟登记新北市长及首要多重婚姻政见',url:'https://www.ftvnews.com.tw/news/detail/2026904W0654',date:'2026-09-04',kind:'具名登记现场报道',publisherId:'ftv',checkedAt:'2026-10-04',note:'民视记者徐子为报道，并明确将多重婚姻列为其首要政见；报道同时引述自由时报说明“台湾优先”。属于媒体转述，未取得本人原始政见全文或录像。'},
  },
  work:{
   tang:[{date:'2022竞选文宣；未列任职年份',organization:'候选人自述的台湾产业与新竹科学园区建设',role:'自称“台湾奇迹締造者”',note:'国立台湾历史博物馆保存的竞选宣传品与馆方说明记录了此自我描述。文宣没有给出雇主、职务、任职期或可核验项目；不视为已证实的园区创办经历。',sources:['v4-tang-culture'],verification:'博物馆收存的候选人宣传品；履历主张未独立核实'}],
+  hsieh:[
+   {date:'议会官网履历列载；起止未载',organization:'台南市海军陆战队退伍军人协会',role:'理事长（社团职务；受雇状态未载）',note:'台南市议会官网履历列为经历；未提供任职年月或雇佣关系，作为社团服务身份收录。',sources:['career-hsieh-tainan-council-bio'],verification:'地方议会官网列载；任期与受雇状态未载'},
+   {date:'议会官网履历列载；起止未载',organization:'中华民国水上救生协会',role:'救生员（服务/资格身份；受雇状态未载）',note:'台南市议会官网履历列为经历；未提供任职年月、证照或雇佣关系，不扩写成受雇救生员工作。',sources:['career-hsieh-tainan-council-bio'],verification:'地方议会官网列载；资格与任期未核'}
+  ],
   yeh:[{date:'起止年份未载；本人叙述',organization:'环保相关工作（太阳能、节能）',role:'从事相关工作',note:'报道转述本人说法；没有列雇主、职称或项目，不代表已核实行业经历或成效。',sources:['career-yeh-repair-report'],verification:'本人说法经新闻转述；公司及任期待补'},{date:'起止年份未载；本人叙述',organization:'手机维修业',role:'曾经营手机维修业务',note:'报道转述本人对经营经历的说明，也提到一宗维修纠纷与检方不起诉结果。店名、营业年份和交易记录尚未核对，不据此判断纠纷责任。',sources:['career-yeh-repair-report'],verification:'本人说法经新闻转述；经营登记及时间待补'}]
  },
  political:{
