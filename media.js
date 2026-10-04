@@ -14,6 +14,7 @@ const profiles={
  doublethink:{name:'台湾民主实验室',badge:'相关机构自述',status:'interested-source',scope:'2023人事声明',text:'研究机构就其成员参选、组织交接及独立性作出的当事方说明。',limits:'人事程序可与法院登记核对；机构自述的中立性及资金情况不能仅凭声明独立认定，未作党派倾向归类。',evidence:[]},
  aneoc:{name:'良心时代运动',badge:'活动主办方记录',status:'interested-source',scope:'受访页面与身份片头；日期未载',text:'活动组织者保存的受访人名录和影音，用于识别当时公开的身份。',limits:'不构成体育成绩认证、雇用任期证明或2026现职确认；本版未作党派倾向归类。',evidence:[]},
  'udn-money':{name:'经济日报',badge:'本文转载平台',status:'platform',scope:'依本篇署名识别原发',text:'本文原发为联合报，经济日报网站承载文章。',limits:'同一集团不同平台的转载仍不是独立采访。',evidence:[]},
+ 'candidate-site':{name:'候选人本人网站',badge:'当事方自述／非媒体倾向评定',status:'interested-source',scope:'候选人网站发布的本人活动与主张',text:'本批引用由候选人本人网站发布的会面纪要和活动发言。',limits:'当事方自述可证明其如何公开表述，不是独立会议记录或政策成效审计；不把旧届、旧职发言当成本届新政见。',evidence:[]},
  nownews:{name:'NOWnews今日新闻',badge:'倾向待核定',status:'not-assessed',scope:'2023年人物报道',text:'本批使用其对苏巧慧早期律师履历的具名人物报道。',limits:'尚未取得足以作该媒体蓝绿归类的独立研究；单篇报道的履历转述不能替代律师公会或雇主原始记录。',evidence:[]},
  cna:{name:'中央社',badge:'国家通讯社／公设背景',status:'institutional',scope:'制度史及2026-06董监事遴聘资料',text:'中央社自述1996年改制为财团法人；2026年涉己报道依据文化部说明记载董监事由行政院遴聘。',limits:'这些是制度关系，不等于中立认证，也不能直接推定每篇报道支持执政党。本版未据此指定蓝绿。',evidence:['media-cna-history','media-cna-2026']},
  pts:{name:'公视新闻',badge:'公共媒体／未作党派定性',status:'institutional',scope:'路透新闻学研究所2024台湾章',text:'该报告将公视列作公共广播媒体。本版呈现公共媒体属性，未以“公营”替代独立的党派倾向研究。',limits:'公共媒体并不天然保证每条信息无误；报道、评论、采访仍须分别阅读。',evidence:['media-risj-2024']},
