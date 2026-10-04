@@ -1,6 +1,6 @@
 # 岛屿选战 v0.4
 
-公开版本：五都21名登记参选人的页面已有20人的本地照片，王肇民照片待补；已接入四城人物经历及2010—2022年逐届官方票表。竞选口号与表述每人最多三条，保留有辨识度的说法或具体政见，区分本届／往届、原话／摘要。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages。资料边界及影像引用说明见 [docs/V04.md](docs/V04.md)。
+当前公开版本：五都21名登记参选人；人物页以“竞选政见”呈现，59条有来源的主张可按议题对比，往届条目单独标示。21人共有76条工作及社会服务记录和53条中美日相关公开记录；仍有23个人物—国家方向没有找到可引用的明确表态，页面不据此推断立场。含候选人自述、转载或未核任期的来源均在条目旁标明。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages；本轮资料增补与来源限制见 [research/career-foreign-round3-2026-10-04.md](research/career-foreign-round3-2026-10-04.md)。
 
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 
