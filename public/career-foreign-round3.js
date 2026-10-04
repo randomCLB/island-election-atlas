@@ -12,6 +12,7 @@ const data={
   'foreign-kuo-us-20260131':{title:'三立新闻《关我什么事》：郭玺谈此前向美军借用的操雷设备',url:'https://www.youtube.com/watch?v=23eDgsZzuc0',date:'2026-01-31',kind:'三立新闻YouTube频道访谈视频；本人说法',publisherId:'setn',checkedAt:'2026-10-04',note:'节目与上传日期依三立新闻官方YouTube频道页面索引。搜索摘要记载郭玺称2025年9月借来的操雷设备因系统整合延误而归还；本轮无法直接读取完整影片逐字稿，需影音复核。'},
   'foreign-kuo-us-pts-20260507':{title:'公视：海鲲号完成操雷发射测试',url:'https://news.pts.org.tw/video/18832',date:'2026-05-07',kind:'公共媒体新闻报道；台船公开测试影片',publisherId:'pts',checkedAt:'2026-10-04',note:'公视报道台船公开影片显示，海鲲号于2026-05-06潜航测试发射2枚操雷；该报道未说明操雷是否来自郭玺所称美方借用设备。'},
   'foreign-hung-f-industrial-post':{title:'洪方隆本人LinkedIn公开贴文：高雄信任产业与国际合作构想',url:'https://tw.linkedin.com/in/fang-lung-hung-b4a121121',date:'2026-09-20',kind:'候选人本人公开职业档案贴文',publisherId:'other',checkedAt:'2026-10-04',note:'平台公开索引列出本人署名与贴文日期；本轮直连页面读取失败，内容依据可见索引摘要，仍待页面内复核。只记录高雄城市产业合作构想，不扩写为完整对美政策。'},
+  'foreign-hung-f-udn-registration':{title:'联合报：洪方隆登记高雄市长并列七类施政问题',url:'https://udn.com/vote2026/story/124652/9734850',date:'2026-09-04',kind:'具名登记现场报道；候选人主张转述',publisherId:'udn',checkedAt:'2026-10-04',note:'记者徐白樱报道并转述洪方隆本人。文中列政治斗争、诈骗、低薪、水患与环境、食安、少子化及司法/公务人员政党化等关注项；这是报道整理的问题清单，并非有量化目标、预算或执行工具的完整方案。'},
   'career-hsiao-l-tvbs-travel':{title:'TVBS：蕭燐洪自述曾任旅行社导游领队、退休约10年',url:'https://news.tvbs.com.tw/politics/2367819',date:'2024-01-15',kind:'具名电视采访；报道转述候选人职业自述',publisherId:'tvbs',checkedAt:'2026-10-04',note:'记者徐慧珠报道并引述蕭燐洪本人。报道说其原在旅行社任导游、领队，至采访时已退休约10年；未列旅行社名称、精确任职起止或雇佣证明。媒体背景依本版TVBS来源卡标示。'},
   'career-hsieh-tainan-council-bio':{title:'臺南市議會：謝龍介議員履歷與经历',url:'https://www.tncc.gov.tw/councilorpage.asp?mainid=791D5A4F-5655-404A-8EF5-D4238A386183',date:'页面最后修改2020-08-25',kind:'地方议会官方候选人/议员履历',publisherId:'official-tw',checkedAt:'2026-10-04',note:'臺南市議會页面列载谢龙介的里长、民代和社团经历；社团职务无起止日期，也未说明是否受雇，故作为服务/社团身份记录，不当作职业工作。'},
   'foreign-hsiao-l-ftv-2026-education':{title:'民视：蕭燐洪登记参选并谈推广双语教育',url:'https://finance.ftvnews.com.tw/news/detail/2026904U08M1',date:'2026-09-04',kind:'具名候选人采访；媒体记录本人表述',publisherId:'ftv',checkedAt:'2026-10-04',note:'报道引述蕭燐洪称本届参选目的为推广双语教育；未附本人书面政见、课纲细节、师资安排或预算。只记录报道明确归属他的当届主张。'},
@@ -78,7 +79,10 @@ const data={
    ['education','针对少子化下十二年国教教师工作安全提出应变政策','教育与教师'],
    ['economy','加强就业宣导，协助推动就业','就业']
   ].map(([topic,text,label])=>({topic,text,date:'2024年立委公报；投票日2024-01-13',sources:['foreign-hung-l-bulletin'],note:`这是洪丽华参加台中市第2选区立委选举时的区域政见（${label}），不是2026台中市长政见。文字为候选人自填，公报不核验可行性或执行结果。`,type:'往届区域立委政见摘要',electionYear:2024})),
-  'hung-f':[{topic:'economy',text:'提出串联高雄半导体、信任产业、亚湾及高雄港，并与台南沙仑资安产业互补；合作对象包括美国等地，领域涵盖区块链、数字身分、金融科技、AI可信度、隐私科技、反诈骗与数字政府。',date:'2026-09-20',sources:['foreign-hung-f-industrial-post'],note:'候选人本人LinkedIn公开贴文的索引摘要；本轮无法直连复核。内容是城市产业合作构想，尚未提供伙伴名单、协议、预算或执行计划。',type:'候选人自述产业合作构想',electionYear:2026}],
+  'hung-f':[
+   {topic:'economy',text:'提出串联高雄半导体、信任产业、亚湾及高雄港，并与台南沙仑资安产业互补；合作对象包括美国等地，领域涵盖区块链、数字身分、金融科技、AI可信度、隐私科技、反诈骗与数字政府。',date:'2026-09-20',sources:['foreign-hung-f-industrial-post'],note:'候选人本人LinkedIn公开贴文的索引摘要；本轮无法直连复核。内容是城市产业合作构想，尚未提供伙伴名单、协议、预算或执行计划。',type:'候选人自述产业合作构想',electionYear:2026},
+   {topic:'accountability',text:'登记采访中列举希望推动改变的问题：政治斗争、诈骗、低薪、水患与环境、食安、少子化，以及司法与公务人员过度政党化。',date:'2026-09-04',sources:['foreign-hung-f-udn-registration'],note:'联合报具名报道转述本人登记现场说法；这是施政问题清单，不是逐项政策承诺。各项缺少原因分析、量化目标、经费及执行工具，不能据此判断成效。',type:'登记采访转述；问题清单，方案待补',electionYear:2026}
+  ],
   'hsiao-l':[{topic:'education',text:'将推广双语教育列为2026参选目标。',date:'2026-09-04',sources:['foreign-hsiao-l-ftv-2026-education'],note:'民视具名采访引述蕭燐洪称参选目的为推广双语教育；报道未提供具体课程目标、课纲调整、师资安排或预算，本条只记录当届表达。',type:'媒体具名采访转述；政策细节待补',electionYear:2026}],
   'su-h':[
    ['childcare','主张新北未婚者可登记“一夫二妻”或“一妻二夫”的多重婚姻关系。','多重婚姻'],
