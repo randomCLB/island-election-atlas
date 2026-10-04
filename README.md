@@ -1,6 +1,6 @@
 # 岛屿选战 v0.4
 
-当前公开版本：五都21名登记参选人；人物页以“竞选政见”呈现，59条有来源的主张可按议题对比，往届条目单独标示。21人共有76条工作及社会服务记录和53条中美日相关公开记录；仍有23个人物—国家方向没有找到可引用的明确表态，页面不据此推断立场。含候选人自述、转载或未核任期的来源均在条目旁标明。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages；本轮资料增补与来源限制见 [research/career-foreign-round3-2026-10-04.md](research/career-foreign-round3-2026-10-04.md)。
+当前版本：五都21名登记参选人；人物页以“竞选政见”呈现，66条有来源的主张可按议题对比，往届条目单独标示。21人共有76条工作及社会服务记录和54条中美日相关公开记录；仍有22个人物—国家方向没有找到可引用的明确表态，页面不据此推断立场。含候选人自述、媒体转述、原文无法直连或未核任期的来源均在条目旁标明。本轮新增政见与来源边界见 [research/career-foreign-round4-2026-10-04.md](research/career-foreign-round4-2026-10-04.md)。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages。
 
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 

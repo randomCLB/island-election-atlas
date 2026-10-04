@@ -8,6 +8,8 @@ const data={
   'foreign-hung-l-bulletin':{title:'中选会公报：洪丽华2024年台中市第2选区立委候选人自填政见',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/113%E5%B9%B4%E7%AC%AC11%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/05%E8%87%BA%E4%B8%AD%E5%B8%82/%E7%AC%AC2%E9%81%B8%E8%88%89%E5%8D%80/%E8%87%BA%E4%B8%AD%E5%B8%82%E7%AB%8B%E5%A7%94%E7%AC%AC2%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:null,kind:'官方选举公报中的候选人自填内容',publisherId:'official-tw',checkedAt:'2026-10-04',note:'资料类型是选举公报，但经历与政见由候选人填报；这里仅作当年主张的原始记录，不作成效或履历审计。'},
   'foreign-kuo-mahjong-interview':{title:'Yahoo承载的郭玺采访：谈麻将在日本、中国等地的法律地位',url:'https://tw.news.yahoo.com/%E5%8F%B0%E7%81%A3%E9%BA%BB%E5%B0%87%E6%9C%80%E5%A4%A7%E9%BB%A8%E4%B8%BB%E5%B8%AD%E9%83%AD%E7%92%BD%E7%95%B0%E8%BB%8D%E7%AA%81%E8%B5%B7-%E5%8F%83%E9%81%B8%E9%AB%98%E9%9B%84%E5%B7%A6%E6%A5%A0%E7%AB%8B%E5%A7%94-%E8%BB%8D%E6%96%B9%E8%83%8C%E6%99%AF%E6%8E%A8%E5%8B%95%E9%BA%BB%E5%B0%87%E5%90%88%E6%B3%95%E5%8C%96-093319072.html',date:'2023-08-23',kind:'具名记者采访；Yahoo承载',publisherId:'yahoo',checkedAt:'2026-10-04',note:'记者韩文明署名；原发媒体本次未确认。受访者以日本、中国等地的麻将合法状态对比台湾禁赌法制；并非外交、安全或整体对外政策。'},
   'foreign-hsiao-l-election':{title:'联合报：蕭燐洪2024年选立委及“目标0票”公报说法',url:'https://udn.com/vote2026/story/124652/9732031',date:'2026-09-03',kind:'选举经历报道',publisherId:'udn',checkedAt:'2026-10-04',note:'报道回顾2024登记参选与公报自述；得票数字为新闻转述，本站仅记录参选节点，不转作正式票表。'},
+  'foreign-su-h-2026-ltn':{title:'自由时报：苏辉湟登记新北市长并说明七项政见及“台湾优先”',url:'https://news.ltn.com.tw/news/politics/breakingnews/5563372',date:'2026-09-04',kind:'登记现场报道与政见转述',publisherId:'ltn',checkedAt:'2026-10-04',note:'本轮可检索到自由时报原发标题及搜索索引摘要，原文直连未能打开；七项主张及“台湾优先”均按索引摘要记录，后续应以原文或现场影音复核。不是候选人签署的政见书。'},
+  'foreign-su-h-2026-ftv':{title:'民视：苏辉湟登记新北市长及首要多重婚姻政见',url:'https://www.ftvnews.com.tw/news/detail/2026904W0654',date:'2026-09-04',kind:'具名登记现场报道',publisherId:'ftv',checkedAt:'2026-10-04',note:'民视记者徐子为报道，并明确将多重婚姻列为其首要政见；报道同时引述自由时报说明“台湾优先”。属于媒体转述，未取得本人原始政见全文或录像。'},
  },
  work:{
   tang:[{date:'2022竞选文宣；未列任职年份',organization:'候选人自述的台湾产业与新竹科学园区建设',role:'自称“台湾奇迹締造者”',note:'国立台湾历史博物馆保存的竞选宣传品与馆方说明记录了此自我描述。文宣没有给出雇主、职务、任职期或可核验项目；不视为已证实的园区创办经历。',sources:['v4-tang-culture'],verification:'博物馆收存的候选人宣传品；履历主张未独立核实'}],
@@ -22,6 +24,7 @@ const data={
  evidence:{
   chang:[{region:'cn',date:'2026-09-19',topic:'两岸旅游、商务与文化交流',text:'张静主张扩大两岸旅游、商务及文化交流，同时提出不得妨碍国家安全的条件；报道还把理由连到高雄观光及服务业收入。',limit:'单篇具名媒体报道，暂未取得完整逐字影音或书面政见；只记录这项交流主张，不推断其他两岸立场。',source:'foreign-chang-cn'}],
   'hung-l':[{region:'cn',date:'2024年立委公报；投票日2024-01-13',topic:'对美中关系的笼统表述',text:'洪丽华在公报中写下“外患~脱陷于美、中之赘”。公报没有分别说明她对中国大陆的具体政策，也没有解释“脱陷”的对象。',limit:'候选人自填的旧届公报，措辞含混；不扩写成支持或反对任何具体两岸方案。',source:'foreign-hung-l-bulletin'},{region:'us',date:'2024年立委公报；投票日2024-01-13',topic:'对美中关系的笼统表述',text:'洪丽华在同一段公报中把外部处境概括为“脱陷于美、中之赘”。没有分别交代对美国政策、军售、经贸或安全合作的看法。',limit:'候选人自填的旧届公报，原句语义含混；不据此归纳具体对美政策。',source:'foreign-hung-l-bulletin'}],
+  'su-h':[{region:'cn',date:'2026-09-04',topic:'“台湾优先”自我定位',text:'登记现场报道转述苏辉湟主张“台湾优先”。目前没有同一材料说明他对两岸交流、国防或制度安排的具体主张。',limit:'这是报道转述的宽泛政治表述，不据此判定其统独立场或具体对陆政策；自由时报原文本轮无法直连，民视为二手转述。',source:'foreign-su-h-2026-ftv'}],
   kuo:[{region:'jp',date:'2023-08-23',topic:'麻将休闲与法律规制比较',text:'郭玺在推动麻将合法化的采访中，以日本等地可合法进行麻将活动，对比台湾把麻将活动归入赌博规制的情形，主张改变对麻将的社会看法与法律处理。',limit:'这是围绕麻将和老人休闲的法律比较；不代表他对日本外交、安全或整体政策的评价。采访由Yahoo承载，原发媒体尚未核实，未取得采访录音。',source:'foreign-kuo-mahjong-interview'}]
  },
  policies:{
@@ -59,7 +62,16 @@ const data={
    ['water','改善空污，增气减煤、汰换老旧锅炉并协助企业更新设备','能源与空污'],
    ['education','针对少子化下十二年国教教师工作安全提出应变政策','教育与教师'],
    ['economy','加强就业宣导，协助推动就业','就业']
-  ].map(([topic,text,label])=>({topic,text,date:'2024年立委公报；投票日2024-01-13',sources:['foreign-hung-l-bulletin'],note:`这是洪丽华参加台中市第2选区立委选举时的区域政见（${label}），不是2026台中市长政见。文字为候选人自填，公报不核验可行性或执行结果。`,type:'往届区域立委政见摘要',electionYear:2024}))
+  ].map(([topic,text,label])=>({topic,text,date:'2024年立委公报；投票日2024-01-13',sources:['foreign-hung-l-bulletin'],note:`这是洪丽华参加台中市第2选区立委选举时的区域政见（${label}），不是2026台中市长政见。文字为候选人自填，公报不核验可行性或执行结果。`,type:'往届区域立委政见摘要',electionYear:2024})),
+  'su-h':[
+   ['childcare','主张新北未婚者可登记“一夫二妻”或“一妻二夫”的多重婚姻关系。','多重婚姻'],
+   ['education','主张台湾教育以台湾文及英文为主。','教育语言'],
+   ['accountability','主张新北市政府与中央定期举行会议，共同处理新北市政。','中央地方协调'],
+   ['accountability','主张不分党派聘请社会贤达及历任新北市长担任市政顾问。','市政顾问'],
+   ['exchange','主张争取国际赛事及国际会议在新北市举办。','国际活动'],
+   ['health','主张增加学校周边及重要交通路口的监视器。','公共安全'],
+   ['transport','主张限制大型车辆行驶市区道路，并划设自行车专用道。','交通安全']
+  ].map(([topic,text,label])=>({topic,text,date:'2026-09-04',sources:label==='多重婚姻'?['foreign-su-h-2026-ltn','foreign-su-h-2026-ftv']:['foreign-su-h-2026-ltn'],note:`自由时报登记报道搜索索引列出的苏辉湟政见（${label}）；民视独立报道只核对了多重婚姻主张。自由时报原文直连本轮失败，未取得本人原始政见书或现场影音；实施权限、法律路径、预算及细则均未在本条核实。`,type:'媒体报道转述；原始政见待核',electionYear:2026}))
  }
 };
 function apply(d){Object.assign(d.sources,data.sources);for(const [id,items] of Object.entries(data.work))d.people.find(p=>p.id===id).workHistory.push(...items);for(const [id,items] of Object.entries(data.political))d.people.find(p=>p.id===id).politicalHistory.push(...items);for(const [id,items] of Object.entries(data.evidence))d.people.find(p=>p.id===id).evidence.push(...items);for(const [id,items] of Object.entries(data.policies))d.people.find(p=>p.id===id).policies.push(...items);d.sources['four-yeh-site']={...d.sources['four-yeh-site'],title:'叶人文竞选网站：候选人团队自述政策',publisherId:'other',checkedAt:'2026-10-04',note:'页面未列发布日期，本站2026-10-04查阅。由候选人团队发布；内容是竞选主张和当事方叙述，不构成独立可行性或成效核验。'};}
