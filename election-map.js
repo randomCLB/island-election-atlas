@@ -2,7 +2,7 @@
 'use strict';
 const U=typeof module!=='undefined'?require('./domain.js'):root.AtlasDomain;
 function partyKey(p){return ['KMT','中國國民黨','中国国民党'].includes(p)?'KMT':['DPP','民主進步黨','民主进步党'].includes(p)?'DPP':p?'other':null;}
-function color(p){return {KMT:'#2879dc',DPP:'#24a967',other:'#f5f5f2'}[partyKey(p)]||'#53636b';}
+function color(p){return {KMT:'#2879dc',DPP:'#24a967',other:'#ffffff'}[partyKey(p)]||'#53636b';}
 function pollsFor(d,city,now=new Date()){
  if(U.blackout(now))return [];
  return d.polls.filter(p=>p.city===city&&U.validatePoll(p)&&p.metric==='support'&&['probability','member-panel'].includes(p.sampling)&&new Date(p.end+'T23:59:59+08:00')<=now&&new Date(p.publishedAt+'T23:59:59+08:00')<=now&&now-new Date(p.end+'T23:59:59+08:00')<=90*86400000).sort((a,b)=>b.end.localeCompare(a.end)||a.id.localeCompare(b.id));
