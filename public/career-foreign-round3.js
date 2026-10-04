@@ -2,6 +2,7 @@
 'use strict';
 const data={
  sources:{
+  'foreign-tang-pts-2022':{title:'公视：唐新民2022竞选影片《十全台北，火山市长》',url:'https://news.pts.org.tw/video/1046',date:null,kind:'公共媒体刊载的候选人竞选影片（候选人自述）',publisherId:'pts',checkedAt:'2026-10-04',note:'公视注明影片发言内容不代表本台立场；页面未列发布日期。只作当事人竞选表述的记录。'},
   'foreign-chang-cn':{title:'Newtalk：张静提出有国安条件的两岸旅游、商务与文化交流',url:'https://newtalk.tw/news/view/2026-09-19/1060783',date:'2026-09-19',kind:'具名竞选政见报道',publisherId:'newtalk',checkedAt:'2026-10-04',note:'报道引述张静本人；提出交流不得妨碍国家安全。此为单篇媒体报道，尚无逐字影音或书面政见原件交叉核验。'},
   'career-yeh-repair-report':{title:'Yahoo承载的台南地方采访：叶人文谈环保工作与手机维修经历',url:'https://tw.news.yahoo.com/%E7%84%A1%E9%BB%A8%E5%8F%B0%E5%8D%97%E5%B8%82%E9%95%B7%E5%8F%83%E9%81%B8%E4%BA%BA%E7%A8%B1%E9%81%AD%E6%81%90%E5%9A%87-%E8%AD%A6-%E5%B7%B2%E5%87%BD%E6%AA%A2%E6%96%B9%E5%81%B5%E8%BE%A6-070647435.html',date:'2026-09-09',kind:'具名地方新闻报道；Yahoo承载，原发待核',publisherId:'yahoo',checkedAt:'2026-10-04',note:'署名记者王俊忠，报道转述叶人文本人。原发媒体和所称环保业务、维修业务的公司资料未核定；纠纷及不起诉内容不作为任何一方责任判断。'},
   'foreign-yeh-prep':{title:'联合报：叶人文自述长期筹备参选及街头艺人服务主张',url:'https://udn.com/news/story/7320/9585656?from=udn-ch1_breaknews-1-0-news',date:'2026-06-24',kind:'具名竞选报道',publisherId:'udn',checkedAt:'2026-10-04',note:'记者万于甄转述本人所述。文中所称“自22岁起准备16年”未附逐年活动或文件，不作独立验证。'},
@@ -24,6 +25,7 @@ const data={
  evidence:{
   chang:[{region:'cn',date:'2026-09-19',topic:'两岸旅游、商务与文化交流',text:'张静主张扩大两岸旅游、商务及文化交流，同时提出不得妨碍国家安全的条件；报道还把理由连到高雄观光及服务业收入。',limit:'单篇具名媒体报道，暂未取得完整逐字影音或书面政见；只记录这项交流主张，不推断其他两岸立场。',source:'foreign-chang-cn'}],
   'hung-l':[{region:'cn',date:'2024年立委公报；投票日2024-01-13',topic:'对美中关系的笼统表述',text:'洪丽华在公报中写下“外患~脱陷于美、中之赘”。公报没有分别说明她对中国大陆的具体政策，也没有解释“脱陷”的对象。',limit:'候选人自填的旧届公报，措辞含混；不扩写成支持或反对任何具体两岸方案。',source:'foreign-hung-l-bulletin'},{region:'us',date:'2024年立委公报；投票日2024-01-13',topic:'对美中关系的笼统表述',text:'洪丽华在同一段公报中把外部处境概括为“脱陷于美、中之赘”。没有分别交代对美国政策、军售、经贸或安全合作的看法。',limit:'候选人自填的旧届公报，原句语义含混；不据此归纳具体对美政策。',source:'foreign-hung-l-bulletin'}],
+  tang:[{region:'us',date:'2022年竞选期间（公视页面未列发布日期）',topic:'“华美国际新创平台”竞选构想',text:'公视刊载的候选人竞选影片中，唐新民把“华美国际新创平台”与台北撓学园区、火山绿电化并列为2022年竞选构想。本人未说明具体美国伙伴、资金或项目。',limit:'只记录候选人影片中的竞选表述；“华美”所指对象不明，不能概括成对美国政府、外交、安全或经贸政策的立场，也不是2026本届新主张。',source:'foreign-tang-pts-2022'}],
   'su-h':[{region:'cn',date:'2026-09-04',topic:'“台湾优先”自我定位',text:'登记现场报道转述苏辉湟主张“台湾优先”。目前没有同一材料说明他对两岸交流、国防或制度安排的具体主张。',limit:'这是报道转述的宽泛政治表述，不据此判定其统独立场或具体对陆政策；自由时报原文本轮无法直连，民视为二手转述。',source:'foreign-su-h-2026-ftv'}],
   kuo:[{region:'jp',date:'2023-08-23',topic:'麻将休闲与法律规制比较',text:'郭玺在推动麻将合法化的采访中，以日本等地可合法进行麻将活动，对比台湾把麻将活动归入赌博规制的情形，主张改变对麻将的社会看法与法律处理。',limit:'这是围绕麻将和老人休闲的法律比较；不代表他对日本外交、安全或整体政策的评价。采访由Yahoo承载，原发媒体尚未核实，未取得采访录音。',source:'foreign-kuo-mahjong-interview'}]
  },
@@ -74,6 +76,6 @@ const data={
   ].map(([topic,text,label])=>({topic,text,date:'2026-09-04',sources:label==='多重婚姻'?['foreign-su-h-2026-ltn','foreign-su-h-2026-ftv']:['foreign-su-h-2026-ltn'],note:`自由时报登记报道搜索索引列出的苏辉湟政见（${label}）；民视独立报道只核对了多重婚姻主张。自由时报原文直连本轮失败，未取得本人原始政见书或现场影音；实施权限、法律路径、预算及细则均未在本条核实。`,type:'媒体报道转述；原始政见待核',electionYear:2026}))
  }
 };
-function apply(d){Object.assign(d.sources,data.sources);for(const [id,items] of Object.entries(data.work))d.people.find(p=>p.id===id).workHistory.push(...items);for(const [id,items] of Object.entries(data.political))d.people.find(p=>p.id===id).politicalHistory.push(...items);for(const [id,items] of Object.entries(data.evidence))d.people.find(p=>p.id===id).evidence.push(...items);for(const [id,items] of Object.entries(data.policies))d.people.find(p=>p.id===id).policies.push(...items);d.sources['four-yeh-site']={...d.sources['four-yeh-site'],title:'叶人文竞选网站：候选人团队自述政策',publisherId:'other',checkedAt:'2026-10-04',note:'页面未列发布日期，本站2026-10-04查阅。由候选人团队发布；内容是竞选主张和当事方叙述，不构成独立可行性或成效核验。'};}
+function apply(d){Object.assign(d.sources,data.sources);for(const [id,items] of Object.entries(data.work))d.people.find(p=>p.id===id).workHistory.push(...items);for(const [id,items] of Object.entries(data.political))d.people.find(p=>p.id===id).politicalHistory.push(...items);for(const [id,items] of Object.entries(data.evidence)){const p=d.people.find(p=>p.id===id);p.evidence.push(...items);for(const item of items)delete p.evidenceCoverage?.[item.region];}for(const [id,items] of Object.entries(data.policies))d.people.find(p=>p.id===id).policies.push(...items);d.sources['four-yeh-site']={...d.sources['four-yeh-site'],title:'叶人文竞选网站：候选人团队自述政策',publisherId:'other',checkedAt:'2026-10-04',note:'页面未列发布日期，本站2026-10-04查阅。由候选人团队发布；内容是竞选主张和当事方叙述，不构成独立可行性或成效核验。'};}
 const api={apply,data};if(typeof module!=='undefined')module.exports=api;else{api.apply(root.ATLAS);root.AtlasCareerForeignRound3=api;}
 })(typeof window==='undefined'?globalThis:window);
