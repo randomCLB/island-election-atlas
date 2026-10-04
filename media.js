@@ -3,6 +3,10 @@
 'use strict';
 const E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const profiles={
+ tku:{name:'淡江时报',badge:'任职大学的校内资料',status:'institutional',scope:'2002、2009人物履历及访问',text:'淡江大学校内媒体发布的任职人物资料与访问，用于追查当时公开的职称。',limits:'校内资料不是独立成效审计，刊载日不等于到职日；未作台湾蓝绿归类。',evidence:[]},
+ peopo:{name:'PeoPo公民新闻',badge:'公民记者稿／倾向待核定',status:'not-assessed',scope:'具体投稿及署名',text:'开放平台的公民记者稿件，保留作者和原访问场景；并非公视新闻编辑部自采稿。',limits:'平台背景不能替代投稿作者立场或事实核查，本版未为投稿者指定蓝绿。',evidence:[]},
+ intellectual:{name:'新大学政论专栏',badge:'访谈或转载／倾向待核定',status:'not-assessed',scope:'依文章作者、原发和刊载资料识别',text:'本人访问文字与标明原发的转载分别处理，保留原发作者、日期及平台身份。',limits:'转载不是独立采访；本版未取得足以给该平台作当前蓝绿定性的研究。',evidence:[]},
+ upmedia:{name:'上报',badge:'倾向待核定',status:'not-assessed',scope:'2017署名采访',text:'本批采用上报陈怡杰的人物访问，经新大学转载，保留原发署名。',limits:'人物自述与任命原件分别标注；尚未完成该媒体倾向的独立核定。',evidence:[]},
  everdant:{name:'常青棋牌休闲馆',badge:'企业创办人自述',status:'interested-source',scope:'企业身份页面；发布日期未明',text:'企业介绍创办人与经营理念的页面，郭玺同时列为麻将最大党主席。',limits:'可用于身份对应，经营成果、社会效果与完整任期需独立材料；未作媒体或党派倾向归类。',evidence:[]},
  doublethink:{name:'台湾民主实验室',badge:'相关机构自述',status:'interested-source',scope:'2023人事声明',text:'研究机构就其成员参选、组织交接及独立性作出的当事方说明。',limits:'人事程序可与法院登记核对；机构自述的中立性及资金情况不能仅凭声明独立认定，未作党派倾向归类。',evidence:[]},
  aneoc:{name:'良心时代运动',badge:'活动主办方记录',status:'interested-source',scope:'受访页面与身份片头；日期未载',text:'活动组织者保存的受访人名录和影音，用于识别当时公开的身份。',limits:'不构成体育成绩认证、雇用任期证明或2026现职确认；本版未作党派倾向归类。',evidence:[]},
