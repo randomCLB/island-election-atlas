@@ -2,7 +2,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
 const D=require('../public/data.js');
 require('../public/taipei-research.js').apply(D);require('../public/taipei-profile-data.js').apply(D);
-for(const f of ['four-city-data','policy-data','career-foreign-round3','career-foreign-round24','career-hung-l-work-claims-round62'])require('../public/'+f+'.js').apply(D);
+for(const f of ['four-city-data','policy-data','career-foreign-round3','career-foreign-round24','career-hung-l-work-claims-round62','career-hung-l-election-round73'])require('../public/'+f+'.js').apply(D);
 
 test('Hung Lihua clothing-work history preserves the conflicting candidate-reported years',()=>{
  const p=D.people.find(x=>x.id==='hung-l'),row=p.workHistory.find(x=>x.organization==='欣雅莉服装行');
@@ -12,6 +12,13 @@ test('Hung Lihua clothing-work history preserves the conflicting candidate-repor
  assert.equal(D.sources['career-hung-l-2018'].publisherId,'official-tw');assert.equal(D.sources['career-hung-l-2024'].publisherId,'official-tw');
  const shop=p.workHistory.find(x=>x.organization==='恒顺村工程行');
  assert.match(shop.date,/公报自述经营16年/);assert.match(shop.note,/未以商号登记或税务资料交叉核实/);
+ const xuan=p.workHistory.find(x=>x.organization==='烜烜莉工程行');
+ assert.match(xuan.date,/民国96—107年经营.*2018-05-28/);
+ assert.match(xuan.note,/候选人自填经历/);assert.match(xuan.note,/不能把2007年写成该商号的已核登记起始日/);
+ assert.match(xuan.verification,/登记日期确认.*较早经营起始暂未确认/);
+ assert.ok(xuan.sources.includes('career-hung-l-business-register-20180528'));
+ assert.ok(xuan.sources.includes('career-hung-l-2018-bulletin-round73'));
+ assert.match(D.sources['career-hung-l-business-register-20180528'].url,/serv\.gcis\.nat\.gov\.tw/);
 });
 
 test('round62 applies idempotently and loads in browser and production build',()=>{

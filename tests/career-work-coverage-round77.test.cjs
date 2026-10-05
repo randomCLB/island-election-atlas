@@ -18,6 +18,10 @@ test('all candidate work-history panels distinguish known unknowns from unchecke
   assert.ok(p.workResearch.sources.length,p.id);
   assert.ok(p.workResearch.sources.every(s=>D.sources[s]),p.id);
  }
+ const hung=D.people.find(p=>p.id==='hung-l').workResearch.note;
+ assert.match(hung,/2018年核准设立节点已确认/);
+ assert.match(hung,/较早经营起始及两者关系未能确认/);
+ assert.match(hung,/尚未查核：相关商号完整沿革/);
 });
 test('round77 adds only missing review notes and loads before profile rendering',()=>{
  const before=JSON.stringify(D.people.map(p=>p.workResearch));R.apply(D);assert.equal(JSON.stringify(D.people.map(p=>p.workResearch)),before);
