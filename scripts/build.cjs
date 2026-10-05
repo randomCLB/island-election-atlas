@@ -43,6 +43,7 @@ require('../public/career-hung-l-work-claims-round62.js').apply(D);
 require('../public/career-su-h-ccp-statement-round63.js').apply(D);
 require('../public/career-su-h-2024-result-round64.js').apply(D);
 require('../public/career-su-h-publisher-round70.js').apply(D);
+require('../public/career-hsiao-l-tour-guide-round71.js').apply(D);
 require('../public/career-ho-work-round65.js').apply(D);
 require('../public/career-yeh-campus-round67.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
