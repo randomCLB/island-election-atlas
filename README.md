@@ -6,6 +6,8 @@
 
 本轮据经济部公司设立登记清册补充王肇民公司登记营业范围，并注明登记范围不证明实际承作项目或工程成果，见[补录说明](research/career-wang-company-scope-round37-2026-10-04.md)。
 
+本轮补录司法院公布的张静律师惩戒决议主文，注明三案案号、2个月停止执行业务及8小时伦理研习要求；公告未列案情理由，故不推断具体行为、刑事责任或当前执业状态。见[补录说明](research/career-chang-discipline-round38-2026-10-04.md)。
+
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 
 以下保留第一稿架构说明；v0.3外链照片与未上线状态已由v0.4替代。
