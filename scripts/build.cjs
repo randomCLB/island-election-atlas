@@ -21,6 +21,7 @@ require('../public/career-chen-tv-timeline-round51.js').apply(D);
 require('../public/career-lai-role-dates-round52.js').apply(D);
 require('../public/career-hsiao-principal-dates-round49.js').apply(D);
 require('../public/career-su-h-community-round36.js').apply(D);
+require('../public/career-su-role-dates-round53.js').apply(D);
 require('../public/career-wang-work-round37.js').apply(D);
 require('../public/career-chang-discipline-round38.js').apply(D);
 require('../public/career-wang-education-round39.js').apply(D);
