@@ -5,6 +5,7 @@ require('../public/taipei-research.js').apply(D);
 const P=require('../public/taipei-profile-data.js');P.apply(D);
 require('../public/four-city-data.js').apply(D);
 require('../public/policy-data.js').apply(D);
+require('../public/policy-wang-empty-round47.js').apply(D);
 require('../public/career-foreign-round3.js').apply(D);
 require('../public/career-foreign-round29.js').apply(D);
 require('../public/career-foreign-round30.js').apply(D);
@@ -29,6 +30,7 @@ if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.ci
 }
 const errors=U.validateData(D);if(errors.length)throw new Error(errors.join('\n'));
 for(const p of D.people)for(const x of p.policies)if(!D.policyTopics[x.topic]||!x.text||!x.date||!x.electionYear||!x.sources.length||x.sources.some(s=>!D.sources[s]))throw new Error('Invalid policy: '+p.id);
+for(const p of D.people)if(p.policyCoverage?.sources?.some(s=>!D.sources[s]))throw new Error('Invalid policy coverage sources: '+p.id);
 for(const p of D.polls)if(!D.people.some(x=>x.city===p.city)||p.sources.some(s=>!D.sources[s])||p.results.some(r=>!D.people.some(x=>x.id===r.person&&x.city===p.city)))throw new Error('Invalid poll references');
 const dist=path.join(root,'dist');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(path.join(root,'public'),dist,{recursive:true});fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 // Remove restricted survey data from release bytes, not only the interface.
