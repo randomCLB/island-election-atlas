@@ -8,6 +8,7 @@ require('../public/policy-data.js').apply(D);
 require('../public/career-foreign-round3.js').apply(D);
 require('../public/career-foreign-round29.js').apply(D);
 require('../public/career-foreign-round30.js').apply(D);
+require('../public/career-foreign-round31.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
