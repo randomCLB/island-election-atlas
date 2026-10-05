@@ -2,6 +2,8 @@
 
 当前版本：五都21名登记参选人；人物页以“竞选政见”呈现，议题比较表共106条有来源记录，其中89条属2026本届表达、17条属往届政见或参选声明，往届项目需开启勾选项查看。21人共有90条工作与社会服务记录、70条从政及参选经历和61条中美日相关公开记录；仍有18个人物—国家方向没有找到可引用的明确表态，页面不据此推断立场。地图本届底色按2022年当选党籍，国民党蓝、民进党绿、其他党派白；台北、新北和高雄依据已收录调查加斜线提示竞争接近或可能翻转，台中有调查但领先差距尚未触发提示。新北最新一份党团委托调查显示苏巧慧39.1%、李四川34.5%，其限制与来源背景已标注。台北调查缺母体总数、台中报道缺主持人及完整选项、高雄采用封闭会员样本，页面逐条标明限制。政见和民调说明分别见 [研究记录](research/policy-map-2026-10-04.md) 与 [张静高雄十项政见补录](research/chang-ching-policy-round22-2026-10-04.md)、[职业及政策补录](research/career-foreign-round4-2026-10-04.md)、[逐届立委任期补录](research/legislative-career-dates-round19-2026-10-04.md)、[叶人文街头表演经历补录](research/career-yeh-busker-round20-2026-10-04.md)、[洪丽华对日表述补录](research/career-hung-l-japan-round21-2026-10-04.md)、[往届公报政见与参选声明补录](research/policy-records-round23-2026-10-04.md)、[洪丽华工作与社会服务补录](research/career-hung-l-work-round24-2026-10-04.md)、[叶人文公司职务补录](research/career-yeh-company-round25-2026-10-04.md)、[苏辉湟里长参选结果补录](research/career-su-h-2022-election-round26-2026-10-04.md)、[洪方隆弱信源政策补录](research/policy-hung-fanglong-round27-2026-10-04.md)、[何欣纯七项政见补录](research/policy-ho-hsinchun-round28-2026-10-04.md)、[王肇民2024年未登记总统拟参选记录](research/career-wang-2024-presidential-record-round29-2026-10-04.md)、[苏辉湟2024年立委参选记录](research/career-su-h-2024-legislative-candidacy-round30-2026-10-04.md)、[唐新民候选人自述经历补录](research/career-tang-work-round31-2026-10-04.md)、[蕭燐洪2024年政见与参选结果补录](research/career-hsiao-l-election-round32-2026-10-04.md)。公开站点采用独立仓库 `randomCLB/island-election-atlas` 的 GitHub Pages。
 
+本轮另以台北市政府卫工处历任首长名册补明李四川该处处长任期为2002-07-16至2006-02-27；见[任期核对说明](research/career-lee-sewer-term-round33-2026-10-04.md)。
+
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 
 以下保留第一稿架构说明；v0.3外链照片与未上线状态已由v0.4替代。
