@@ -24,4 +24,7 @@ test('round80 is idempotent and wired into browser and production builds',()=>{
  assert.ok(html.indexOf('policy-kuo-round80.js')<html.indexOf('app.js'));
  const build=fs.readFileSync(require.resolve('../scripts/build.cjs'),'utf8');
  assert.ok(build.indexOf('policy-kuo-round80.js')>=0);
+ const ui=fs.readFileSync(require.resolve('../public/policies.js'),'utf8');
+ assert.match(ui,/尚未查核：本站尚未记录此候选人的政见查核范围/);
+ assert.match(ui,/已查找仍无法证实的事项会另标“暂未确认”/);
 });
