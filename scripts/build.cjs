@@ -17,6 +17,7 @@ require('../public/career-tainan-chen-anchor-round35.js').apply(D);
 require('../public/career-chen-foreign-round46.js').apply(D);
 require('../public/career-chiang-silicon-valley-round48.js').apply(D);
 require('../public/career-ko-role-dates-round50.js').apply(D);
+require('../public/career-ko-dean-end-round54.js').apply(D);
 require('../public/career-chen-tv-timeline-round51.js').apply(D);
 require('../public/career-lai-role-dates-round52.js').apply(D);
 require('../public/career-hsiao-principal-dates-round49.js').apply(D);
