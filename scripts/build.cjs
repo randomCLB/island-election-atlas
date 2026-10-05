@@ -39,6 +39,7 @@ require('../public/career-ho-term-dates-round60.js').apply(D);
 require('../public/career-legislator-terms-round61.js').apply(D);
 require('../public/career-hung-l-work-claims-round62.js').apply(D);
 require('../public/career-su-h-ccp-statement-round63.js').apply(D);
+require('../public/career-su-h-2024-result-round64.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
