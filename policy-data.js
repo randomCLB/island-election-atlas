@@ -42,8 +42,10 @@ const additionalPeople={
     {topic:'tourism',text:'设置街头艺术文化示范场域，统一管理展演场地并优先保障表演者安全。',date:'发布日期未载；2026-10-04查阅',sources:['four-yeh-site'],note:'候选人网站称过去曾与市府争取展演场地管理；本站仅记录当事方说法，未独立核对十年过程、申请网站成效或未来场域方案。',type:'竞选网站政见及当事方自述',electionYear:2026}
   ]
 };
-Object.assign(pack.topics,{housing:'居住与房屋',environment:'环境与污染回馈'});
+Object.assign(pack.topics,{housing:'居住与房屋',environment:'环境与污染回馈',energy:'能源与空气质量',campaign:'参选声明与投票主张'});
 additionalSources['policy-chang-land-god-sep19']={title:'Newtalk：张静公布高雄十项开源节流与土地公政见',url:'https://newtalk.tw/news/view/2026-09-19/1060783',date:'2026-09-19',checkedAt:'2026-10-04',kind:'政见发表会新闻报道；内容为候选人公开主张',publisherId:'newtalk',note:'报道将该场政见会内容归于张静；未核对完整书面政策文件，实施成效与法制、财务可行性不在报道证明范围。'};
+additionalSources['policy-tang-taipei-2022-bulletin']={title:'中选会：2022年台北市长选举公报（唐新民自填政见）',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/111%E5%B9%B4/%E8%87%BA%E5%8C%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf',date:'2022-11-26',checkedAt:'2026-10-04',kind:'官方选举公报中的候选人自填内容',publisherId:'official-tw',note:'候选人政见原文由中选会公报刊载，部分词语来自扫描件文字辨识，原文不代表机关认可或技术可行性核查。'};
+additionalSources['policy-hsiao-l-tainan-2024-bulletin']={title:'中选会：蕭燐洪2024年台南市第5选区立委选举公报自填政见',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/113%E5%B9%B4%E7%AC%AC11%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/06%E8%87%BA%E5%8D%97%E5%B8%82/%E7%AC%AC5%E9%81%B8%E5%8D%80/%E8%87%BA%E5%8D%97%E5%B8%82%E7%AB%8B%E5%A7%94%E7%AC%AC5.6%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2024-01-13',checkedAt:'2026-10-04',kind:'官方选举公报中的候选人自填内容',publisherId:'official-tw',note:'政见栏目写的是要求选民投给其他候选人的参选声明，并未提出台南市政措施；只作往届参选表态保存。'};
 additionalPeople.chang=[
   {topic:'economy',text:'以高科技产业兼顾生态、生活品质与地方就业，并推动传统产业升级、中小企业振兴及服务业发展。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道摘要候选人主张；未提供具体产业清单、执行工具、预算或就业量化目标。',type:'竞选政见（报道摘要）',electionYear:2026},
   {topic:'exchange',text:'在国家安全不受妨碍的前提下，扩大两岸旅游、商务与文化交流，争取旅宿、餐饮、交通及零售等产业收益。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'保留候选人所述安全条件；具体交流范围、审查机制、预期客量与收益尚未说明。',type:'竞选政见（报道摘要）',electionYear:2026},
@@ -55,6 +57,17 @@ additionalPeople.chang=[
   {topic:'housing',text:'增加社会住宅供给并研议租金减免，同时主张让房价回归市场机制、政府不为房价下跌护盘。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'记录候选人主张；社宅数量、选址、租金资格、财源及所指政府干预措施尚未展开。',type:'竞选政见（报道摘要）',electionYear:2026},
   {topic:'accountability',text:'检讨检举及科技执法产生的罚单制度，并主张取消相关处罚。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道指出此主张涉及现行道路交通法规与中央权限；具体废止范围及替代执法办法未说明。',type:'竞选政见（报道摘要）',electionYear:2026},
   {topic:'environment',text:'向中央争取市区污染源工厂货物税的一定比例回馈，并提出由市府每半年发放每位市民至少3,000元。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'属于向中央争取税收分享的构想；税目、比例、资格、财政估算与环境改善用途待说明。',type:'竞选政见（报道摘要）',electionYear:2026}
+];
+additionalPeople.tang=[
+  {topic:'energy',text:'以“火山绿电化”为方向，提出火山岩浆发电与台湾绿电智慧电网，并把它列为缓解供电、空污及核煤争议的方案。',date:'2022年台北市长选举公报；投票日2022-11-26',sources:['policy-tang-taipei-2022-bulletin'],note:'候选人公报自填主张。其地质安全、发电原理、供电规模、成本和环境效果未由公报证明；“火山岩浆发电”不得写成已经验证的技术。',type:'往届政见（公报摘要）',electionYear:2022},
+  {topic:'transport',text:'提出“环北大都会真空超导极速捷运系统”。',date:'2022年台北市长选举公报；投票日2022-11-26',sources:['policy-tang-taipei-2022-bulletin'],note:'候选人公报自填的工程构想；未附路线、技术文件、经费或可行性评估，不表示工程已经规划或核定。',type:'往届政见（公报摘要）',electionYear:2022},
+  {topic:'economy',text:'提出台北科技园区，并与“华美国际建教平台／新创平台”相连结。',date:'2022年台北市长选举公报；投票日2022-11-26',sources:['policy-tang-taipei-2022-bulletin','color-tang-pts'],note:'候选人公报自填的产业及人才平台构想；扫描件辨识“撓学科技园区”字样，字词可能有OCR误差，未据此补写园区地点、产业类别或组织计划。',type:'往届政见（公报摘要）',electionYear:2022}
+];
+additionalPeople['hsiao-l']=[
+  {topic:'campaign',text:'2024年立委选举公报写明“得票目标为0票”，并请选民把总统票与立委票投给其属意的其他候选人。',date:'2024-01-13',sources:['policy-hsiao-l-tainan-2024-bulletin'],note:'这是上一届公报中的参选及投票声明，不是市政政策，也不代表他对2026台南市长选举的立场。',type:'往届参选声明（非市政政策）',electionYear:2024}
+];
+additionalPeople['hung-l']=[
+  {topic:'health',text:'2024年立委选举公报自填政见：“拒食莱猪、日本核食，保障国民健康。”',date:'2024-01-13',sources:['foreign-hung-l-bulletin'],note:'旧届公报中的食品安全表述，不是2026台中市长平台。原句未说明是个人消费选择或进口管制，也未列产品范围、检测标准和执行办法。',type:'往届政见（本人自填原文）',electionYear:2024}
 ];
 function apply(d){d.policyTopics=pack.topics;Object.assign(d.sources,additionalSources);for(const p of d.people)p.policies=[...(pack.people[p.id]||[]),...(additionalPeople[p.id]||[])];}
 if(typeof module!=='undefined')module.exports={pack,apply};else{root.AtlasPolicyData={pack,apply};apply(root.ATLAS);}
