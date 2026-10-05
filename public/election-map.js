@@ -17,7 +17,7 @@ function assess(d,id,year=2026,now=new Date()){
  const base=partyKey(party);
  if(!base||!result.polls.length)return result;
  result.striped=result.polls.some(p=>{const values=p.results.map(r=>({...r,party:d.people.find(x=>x.id===r.person&&x.city===id)?.party})),same=values.filter(r=>partyKey(r.party)===base),other=values.filter(r=>r.party&&partyKey(r.party)!==base);if(!same.length||!other.length)return false;const incumbent=Math.max(...same.map(r=>r.value)),challenger=Math.max(...other.map(r=>r.value));return challenger>incumbent||(p.sampling==='probability'&&incumbent-challenger<=2*p.margin);});
- result.reason=result.striped?'出现选区可能翻转的竞争信号；斜线不是胜负预测。':'已收录调查未达到本站斜线判定条件；不代表必胜。';
+ result.reason=result.striped?'出现选情可能翻转的竞争信号；斜线不是胜负预测。':'已收录调查未达到本站斜线判定条件；不代表必胜。';
  return result;
 }
 const api={partyKey,color,pollsFor,assess};if(typeof module!=='undefined')module.exports=api;else root.AtlasElectionMap=api;
