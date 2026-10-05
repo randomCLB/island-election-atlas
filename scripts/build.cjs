@@ -7,6 +7,7 @@ require('../public/four-city-data.js').apply(D);
 require('../public/policy-data.js').apply(D);
 require('../public/policy-lai-round78.js').apply(D);
 require('../public/policy-hsieh-round79.js').apply(D);
+require('../public/policy-hsieh-round82.js').apply(D);
 require('../public/policy-kuo-round80.js').apply(D);
 require('../public/policy-kuo-referendum-round55.js').apply(D);
 require('../public/policy-wang-empty-round47.js').apply(D);
