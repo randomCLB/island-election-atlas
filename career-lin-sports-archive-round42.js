@@ -8,5 +8,5 @@ function apply(d){
  const p=d.people.find(x=>x.id==='lin-c');
  if(p&&!p.workHistory.some(x=>x.sources?.includes('career-lin-sports-archive-round42')))p.workHistory.push({date:'报纸刊期：1989-08-01、1994-09-06；原赛事日期未核',organization:'中正杯健美赛（论坛转录《民生报》报道）',role:'林志成名列轻重量级、中重量级第一（候选人身份待核）',note:'同一论坛用户转录两期《民生报》赛果，分别列“林志成”获轻重量级及中重量级第一。候选人2024年公报自述健美参赛年份覆盖这两届，因而有身份关联线索；但未见原报扫描件、官方成绩册或能将报道人物与候选人出生资料相连的字段。此条是低置信度的身份待核记录，不作为独立核实的获奖结论。',sources:['career-lin-sports-archive-round42','v4-lin-bulletin'],verification:'论坛转录旧报；候选人公报自述年份相符，身份及名次均待原件核验'});
 }
-if(typeof module!=='undefined')module.exports={apply,data};else root.AtlasLinSportsArchiveRound42={apply,data};
+if(typeof module!=='undefined')module.exports={apply,data};else{apply(root.ATLAS);root.AtlasLinSportsArchiveRound42={apply};}
 })(typeof window==='undefined'?globalThis:window);
