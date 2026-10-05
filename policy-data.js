@@ -42,6 +42,20 @@ const additionalPeople={
     {topic:'tourism',text:'设置街头艺术文化示范场域，统一管理展演场地并优先保障表演者安全。',date:'发布日期未载；2026-10-04查阅',sources:['four-yeh-site'],note:'候选人网站称过去曾与市府争取展演场地管理；本站仅记录当事方说法，未独立核对十年过程、申请网站成效或未来场域方案。',type:'竞选网站政见及当事方自述',electionYear:2026}
   ]
 };
+Object.assign(pack.topics,{housing:'居住与房屋',environment:'环境与污染回馈'});
+additionalSources['policy-chang-land-god-sep19']={title:'Newtalk：张静公布高雄十项开源节流与土地公政见',url:'https://newtalk.tw/news/view/2026-09-19/1060783',date:'2026-09-19',checkedAt:'2026-10-04',kind:'政见发表会新闻报道；内容为候选人公开主张',publisherId:'newtalk',note:'报道将该场政见会内容归于张静；未核对完整书面政策文件，实施成效与法制、财务可行性不在报道证明范围。'};
+additionalPeople.chang=[
+  {topic:'economy',text:'以高科技产业兼顾生态、生活品质与地方就业，并推动传统产业升级、中小企业振兴及服务业发展。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道摘要候选人主张；未提供具体产业清单、执行工具、预算或就业量化目标。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'exchange',text:'在国家安全不受妨碍的前提下，扩大两岸旅游、商务与文化交流，争取旅宿、餐饮、交通及零售等产业收益。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'保留候选人所述安全条件；具体交流范围、审查机制、预期客量与收益尚未说明。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'transport',text:'主张市府所属捷运、轻轨、公车及船舶全面免费，并免收市府所属景点门票。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'这是候选人提出的免费政策；适用对象、财政成本、票务收入替代与营运影响待完整方案。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'transport',text:'提出交通三箭：打通中博大道、将铁路地下化后的路廊改建为东西向市民大道，并将轻轨地下化为捷运环状线、把原路面改作道路。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道摘要候选人的工程构想；路线、工程阶段、中央地方权限、经费、工期及环境影响均待可行性资料。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'accountability',text:'由高雄银行研议无息或低利贷款，协助市民处理高利率卡债。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'属于候选人提出的研议方向；资格、额度、风险控管、银行治理与财务影响未说明。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'childcare',text:'提出生育补助：第一胎每人10万元，第二胎起每人15万元。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'金额按报道所载；适用资格、发放方式、预算来源及与现行补助如何衔接待完整方案。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'health',text:'提高低收入户及中低收入户保障涵盖比例，让更多弱势市民纳入社会安全网。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道未列出目标比例、认定资格、服务项目与新增预算。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'housing',text:'增加社会住宅供给并研议租金减免，同时主张让房价回归市场机制、政府不为房价下跌护盘。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'记录候选人主张；社宅数量、选址、租金资格、财源及所指政府干预措施尚未展开。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'accountability',text:'检讨检举及科技执法产生的罚单制度，并主张取消相关处罚。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'报道指出此主张涉及现行道路交通法规与中央权限；具体废止范围及替代执法办法未说明。',type:'竞选政见（报道摘要）',electionYear:2026},
+  {topic:'environment',text:'向中央争取市区污染源工厂货物税的一定比例回馈，并提出由市府每半年发放每位市民至少3,000元。',date:'2026-09-19',sources:['policy-chang-land-god-sep19'],note:'属于向中央争取税收分享的构想；税目、比例、资格、财政估算与环境改善用途待说明。',type:'竞选政见（报道摘要）',electionYear:2026}
+];
 function apply(d){d.policyTopics=pack.topics;Object.assign(d.sources,additionalSources);for(const p of d.people)p.policies=[...(pack.people[p.id]||[]),...(additionalPeople[p.id]||[])];}
 if(typeof module!=='undefined')module.exports={pack,apply};else{root.AtlasPolicyData={pack,apply};apply(root.ATLAS);}
 })(typeof window==='undefined'?globalThis:window);
