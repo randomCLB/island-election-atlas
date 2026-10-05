@@ -15,6 +15,7 @@ require('../public/career-foreign-round33.js').apply(D);
 require('../public/career-foreign-round34.js').apply(D);
 require('../public/career-tainan-chen-anchor-round35.js').apply(D);
 require('../public/career-chen-foreign-round46.js').apply(D);
+require('../public/career-chiang-silicon-valley-round48.js').apply(D);
 require('../public/career-su-h-community-round36.js').apply(D);
 require('../public/career-wang-work-round37.js').apply(D);
 require('../public/career-chang-discipline-round38.js').apply(D);
