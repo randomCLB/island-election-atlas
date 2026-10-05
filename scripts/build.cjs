@@ -8,6 +8,7 @@ require('../public/policy-data.js').apply(D);
 require('../public/policy-kuo-referendum-round55.js').apply(D);
 require('../public/policy-wang-empty-round47.js').apply(D);
 require('../public/career-foreign-round3.js').apply(D);
+require('../public/career-foreign-round24.js').apply(D);
 require('../public/career-foreign-round29.js').apply(D);
 require('../public/career-foreign-round30.js').apply(D);
 require('../public/career-foreign-round31.js').apply(D);
@@ -36,6 +37,7 @@ require('../public/career-ko-tv-timeline-round58.js').apply(D);
 require('../public/career-yeh-street-performance-round59.js').apply(D);
 require('../public/career-ho-term-dates-round60.js').apply(D);
 require('../public/career-legislator-terms-round61.js').apply(D);
+require('../public/career-hung-l-work-claims-round62.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
