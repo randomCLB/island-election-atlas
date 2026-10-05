@@ -19,3 +19,5 @@ test('new assets and hook order exist in the HTML',()=>{const html=fs.readFileSy
 test('publication, roster update and image dates are not conflated',()=>{assert.equal(M.resolve('roster',D).publishedAt,'2026-09-04');assert.equal(M.resolve('roster',D).updatedAt,'2026-09-19');assert.match(M.render('v3-chiang-photo',null,D),/图像记录日期/);});
 
 test('Taipei government is not misclassified as a news outlet',()=>{assert.equal(M.resolve('t-chiang-bio',D).publisherId,'official-tw');assert.equal(M.resolve('t-chiang-bio',D).publisherName,'台北市政府');});
+
+test('round32 data loader is a valid script element and loads before the app',()=>{const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');assert.match(html,/src="career-foreign-round31\.js"><\/script><script defer="" src="career-foreign-round32\.js"><\/script>/);assert.ok(html.indexOf('career-foreign-round32.js')<html.indexOf('app.js'));});
