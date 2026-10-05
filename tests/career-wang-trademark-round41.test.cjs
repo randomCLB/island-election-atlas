@@ -5,8 +5,11 @@ const fs=require('node:fs');
 const path=require('node:path');
 const D=structuredClone(require('../public/data.js'));
 for(const f of ['taipei-research','taipei-profile-data','four-city-data','policy-data','career-wang-work-round37','career-wang-education-round39'])require('../public/'+f+'.js').apply(D);
-const R=require('../public/career-wang-trademark-round41.js');R.apply(D);
+const R=require('../public/career-wang-trademark-round41.js');
 const p=D.people.find(x=>x.id==='wang');
+p.workHistory[0].note+=' 商标登记另显示王肇民个人名义的“先得月”标识于2025年注册，指定服务包含营建与工程类项目；此为二级网页转录的智慧财产局资料，只能说明登记内容，不证明实际工程业绩。';
+p.workHistory[0].verification+='；商标登记据二级转录，工程实绩未证';
+R.apply(D);
 test('Wang Zhaomin trademark entry states registered services and evidence limits',()=>{
  const x=p.story.paragraphs.find(x=>x.sources?.includes('career-wang-trademark-round41'));
  assert.ok(x);assert.match(x.text,/2024年5月10日/);assert.match(x.text,/2025年1月16日/);assert.match(x.text,/不证明实际承揽或完成工程/);assert.match(x.text,/二级网页/);
@@ -17,6 +20,6 @@ test('Wang Zhaomin trademark entry states registered services and evidence limit
 test('round41 loader is linked before the app and applies idempotently',()=>{
  const story=JSON.stringify(p.story.paragraphs),history=JSON.stringify(p.workHistory),gaps=JSON.stringify(p.gaps);R.apply(D);
  assert.equal(JSON.stringify(p.story.paragraphs),story);assert.equal(JSON.stringify(p.workHistory),history);assert.equal(JSON.stringify(p.gaps),gaps);
- assert.equal((p.workHistory[0].note.match(/商标登记另显示/g)||[]).length,0);
+ assert.equal((p.workHistory[0].note.match(/商标登记另显示/g)||[]).length,0);assert.equal((p.workHistory[0].verification.match(/商标登记据二级转录/g)||[]).length,0);
  const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');assert.match(html,/career-wang-trademark-round41\.js/);assert.ok(html.indexOf('career-wang-trademark-round41.js')<html.indexOf('app.js'));
 });
