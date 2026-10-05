@@ -50,6 +50,7 @@ require('../public/career-su-h-publisher-round70.js').apply(D);
 require('../public/career-hsiao-l-tour-guide-round71.js').apply(D);
 require('../public/career-ho-work-round65.js').apply(D);
 require('../public/career-yeh-campus-round67.js').apply(D);
+require('../public/career-chang-review-round76.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
