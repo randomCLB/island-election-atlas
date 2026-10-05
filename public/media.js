@@ -60,7 +60,7 @@ function resolve(id,d){const s=d.sources[id];if(!s)return null;let url;try{url=n
  let publisherId=s.originalPublisherId||originOverrides[id]||(url.hostname==='news.cts.com.tw'&&url.pathname.startsWith('/cna/')?'cna':platformId);
  const profile=profiles[publisherId]||profiles.other,platform=profiles[platformId]||profiles.other;
  const platformName=platform.name==='来源机构'?url.hostname:platform.name;
- const publisherName=(publisherId.startsWith('official-')?agencyNames[url.hostname]:null)||(profile.name==='来源机构'?(s.publisherName||url.hostname):profile.name);
+ const publisherName=s.agencyName||(publisherId.startsWith('official-')?agencyNames[url.hostname]:null)||(profile.name==='来源机构'?(s.publisherName||url.hostname):profile.name);
  return {id,source:s,publisherId,platformId,publisherName,platformName,profile,syndicated:publisherId!==platformId,publishedAt:s.publishedAt||s.date||null,updatedAt:s.updatedAt||null,dateLabel:s.dateLabel||'来源日期',checkedAt:s.checkedAt||d.checkedAt||'2026-10-02'};
 }
 function render(id,label,d=root.ATLAS){const m=resolve(id,d);if(!m)return'';const s=m.source;return `<span class="source-citation"><a class="inline-source" href="${E(s.url)}" target="_blank" rel="noopener noreferrer">${E(label||s.title)} ↗</a><span class="source-meta"><span>${E(m.publisherName)}${m.syndicated?' → '+E(m.platformName)+'转载':''}</span><time>${m.publishedAt?E(m.dateLabel)+' '+E(m.publishedAt):'发布日期未明'}</time>${m.updatedAt?'<span>更新 '+E(m.updatedAt)+'</span>':''}<button type="button" class="media-context-button" data-media-profile="${E(m.publisherId)}" aria-haspopup="dialog">${E(m.profile.badge)} ⓘ</button></span></span>`;}
