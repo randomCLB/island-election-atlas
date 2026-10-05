@@ -34,6 +34,7 @@ require('../public/career-tang-channel-round68.js').apply(D);
 require('../public/career-wang-trademark-round41.js').apply(D);
 require('../public/career-wang-review-round69.js').apply(D);
 require('../public/career-lin-sports-archive-round42.js').apply(D);
+require('../public/career-lin-review-round74.js').apply(D);
 require('../public/career-kuo-service-span-round56.js').apply(D);
 require('../public/career-shen-us-city-governance-round57.js').apply(D);
 require('../public/career-ko-tv-timeline-round58.js').apply(D);
