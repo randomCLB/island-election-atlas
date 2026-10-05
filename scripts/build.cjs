@@ -57,6 +57,7 @@ require('../public/career-ho-work-round65.js').apply(D);
 require('../public/career-yeh-campus-round67.js').apply(D);
 require('../public/career-chang-review-round76.js').apply(D);
 require('../public/career-work-coverage-round77.js').apply(D);
+require('../public/career-hung-f-registry-round86.js').apply(D);
 require('../public/career-tang-work-round83.js').apply(D);
 require('../public/foreign-coverage-round84.js').apply(D);
 require('../public/career-political-coverage-round85.js').apply(D);
