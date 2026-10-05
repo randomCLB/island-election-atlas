@@ -35,6 +35,7 @@ require('../public/career-shen-us-city-governance-round57.js').apply(D);
 require('../public/career-ko-tv-timeline-round58.js').apply(D);
 require('../public/career-yeh-street-performance-round59.js').apply(D);
 require('../public/career-ho-term-dates-round60.js').apply(D);
+require('../public/career-legislator-terms-round61.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
