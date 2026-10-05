@@ -15,5 +15,6 @@ test('Lin sports archive clue retains dates, weak source and identity caveat',()
 });
 test('round42 loader is linked before app and applies idempotently',()=>{
  const rows=JSON.stringify(p.workHistory);R.apply(D);assert.equal(JSON.stringify(p.workHistory),rows);
+ const loader=fs.readFileSync(path.join(__dirname,'../public/career-lin-sports-archive-round42.js'),'utf8');assert.match(loader,/else\{apply\(root\.ATLAS\)/);
  const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');assert.match(html,/career-lin-sports-archive-round42\.js/);assert.ok(html.indexOf('career-lin-sports-archive-round42.js')<html.indexOf('app.js'));
 });
