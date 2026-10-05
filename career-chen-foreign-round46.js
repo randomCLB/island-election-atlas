@@ -8,8 +8,9 @@ const sources={
 function apply(d){
  const p=d.people.find(x=>x.id==='chen-t');
  Object.assign(d.sources,sources);
- const tv=p.workHistory.find(x=>x.role==='新闻记者、主播');
- if(tv){if(!tv.sources.includes('four-ly-chen-t'))tv.sources.push('four-ly-chen-t');if(!tv.note.includes('立法院公开履历也列'))tv.note+=' 立法院公开履历也列“地方电视台新闻记者、主播”，但履历由委员研究室提供，仍未载频道名称及任职年月。';tv.verification='立法院公开履历加两篇TVBS报道；任期、频道及雇佣资料未核';}
+ const tvRows=p.workHistory.filter(x=>x.sources?.some(s=>['career-chen-anchor-2025','career-chen-anchor-2008'].includes(s))||x.role==='新闻记者、主播');
+ const tv=tvRows.find(x=>x.sources?.includes('career-chen-anchor-2025'))||tvRows[0];
+ if(tv){for(const row of tvRows)for(const source of row.sources||[])if(!tv.sources.includes(source))tv.sources.push(source);tv.date='毕业后；具体年份未载';tv.organization='台南地方有线电视台（报道未具名）';if(!tv.note.includes('立法院公开履历也列'))tv.note+=' 立法院公开履历也列“新闻记者、主播”，但履历由委员研究室提供，仍未载频道名称及任职年月。';tv.verification='立法院公开履历加两篇TVBS报道；任期、频道及雇佣资料未核';p.workHistory=p.workHistory.filter(x=>!tvRows.includes(x)||x===tv);}
  const chair=p.workHistory.find(x=>x.organization==='凯达格兰基金会'&&x.role==='董事长');
  if(chair&&!chair.sources.includes('career-chen-ketagalan-2022')){chair.date='最迟2022-08-01任；完整任期未载';chair.note+=' 基金会所属学校公告记载2022-08-01董事会由董事长陈亭妃提名校长；只能确定该日已任职，不能推定任期起点或终点。';chair.sources.push('career-chen-ketagalan-2022');chair.verification='立法院履历与基金会所属学校公告；完整任期未核';}
  const records=[
