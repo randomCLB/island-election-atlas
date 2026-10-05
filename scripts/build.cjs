@@ -41,6 +41,7 @@ require('../public/career-yeh-street-performance-round59.js').apply(D);
 require('../public/career-ho-term-dates-round60.js').apply(D);
 require('../public/career-legislator-terms-round61.js').apply(D);
 require('../public/career-hung-l-work-claims-round62.js').apply(D);
+require('../public/career-hung-l-election-round73.js').apply(D);
 require('../public/career-su-h-ccp-statement-round63.js').apply(D);
 require('../public/career-su-h-2024-result-round64.js').apply(D);
 require('../public/career-su-h-publisher-round70.js').apply(D);
