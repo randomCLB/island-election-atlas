@@ -17,5 +17,6 @@ test('Wang Zhaomin trademark entry states registered services and evidence limit
 test('round41 loader is linked before the app and applies idempotently',()=>{
  const story=JSON.stringify(p.story.paragraphs),history=JSON.stringify(p.workHistory),gaps=JSON.stringify(p.gaps);R.apply(D);
  assert.equal(JSON.stringify(p.story.paragraphs),story);assert.equal(JSON.stringify(p.workHistory),history);assert.equal(JSON.stringify(p.gaps),gaps);
+ assert.equal((p.workHistory[0].note.match(/商标登记另显示/g)||[]).length,0);
  const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');assert.match(html,/career-wang-trademark-round41\.js/);assert.ok(html.indexOf('career-wang-trademark-round41.js')<html.indexOf('app.js'));
 });
