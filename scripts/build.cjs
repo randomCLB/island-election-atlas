@@ -11,6 +11,7 @@ require('../public/policy-kuo-round80.js').apply(D);
 require('../public/policy-kuo-referendum-round55.js').apply(D);
 require('../public/policy-wang-empty-round47.js').apply(D);
 require('../public/policy-wang-search-round75.js').apply(D);
+require('../public/policy-taipei-coverage-round81.js').apply(D);
 require('../public/career-foreign-round3.js').apply(D);
 require('../public/career-foreign-round24.js').apply(D);
 require('../public/career-foreign-round29.js').apply(D);
