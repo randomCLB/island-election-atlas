@@ -29,6 +29,7 @@ require('../public/career-wang-work-round37.js').apply(D);
 require('../public/career-chang-discipline-round38.js').apply(D);
 require('../public/career-wang-education-round39.js').apply(D);
 require('../public/career-tang-education-review-round40.js').apply(D);
+require('../public/career-tang-channel-round68.js').apply(D);
 require('../public/career-wang-trademark-round41.js').apply(D);
 require('../public/career-lin-sports-archive-round42.js').apply(D);
 require('../public/career-kuo-service-span-round56.js').apply(D);
