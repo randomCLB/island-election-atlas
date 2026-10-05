@@ -59,6 +59,7 @@ require('../public/career-chang-review-round76.js').apply(D);
 require('../public/career-work-coverage-round77.js').apply(D);
 require('../public/career-tang-work-round83.js').apply(D);
 require('../public/foreign-coverage-round84.js').apply(D);
+require('../public/career-political-coverage-round85.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
