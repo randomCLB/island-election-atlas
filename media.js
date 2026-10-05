@@ -6,7 +6,7 @@ const profiles={
  ithome:{name:'iThome',badge:'科技媒体／党派倾向待核定',status:'not-assessed',scope:'2000署名行业采访',text:'本批采用其电讯企业与网络教育产品的同期采访，身份和发言按当时报道理解。',limits:'未取得足以给该媒体作台湾蓝绿归类的研究；预告的商业安排不等于已完成成果。',evidence:[]},
  tnl:{name:'关键评论网',badge:'本人访问／倾向待核定',status:'not-assessed',scope:'2014署名人物访问',text:'本批采用苏巧慧本人回忆职业选择的访问，保留受访身份及采访日期。',limits:'访问自述不等于任命原件；尚未完成该媒体党派倾向的独立核定。',evidence:[]},
  epoch:{name:'大纪元',badge:'2020自述：反中共／法轮功背景',status:'interested-source',scope:'2020-10-02媒体自述；本批台湾署名报道',text:'大纪元自述创办人John Tang为法轮功信仰者，因反对中共迫害及不满相关报道而创刊。此处标明其自述的背景与创刊动机。',limits:'不将集团创刊自述当作2026台湾版逐篇倾向测量，也未据此指定支持台湾某政党；新闻事实另与原始资料交叉核对。',evidence:['media-epoch-self-2020']},
- tku:{name:'淡江时报',badge:'任职大学的校内资料',status:'institutional',scope:'2002、2009人物履历及访问',text:'淡江大学校内媒体发布的任职人物资料与访问，用于追查当时公开的职称。',limits:'校内资料不是独立成效审计，刊载日不等于到职日；未作台湾蓝绿归类。',evidence:[]},
+ tku:{name:'淡江时报',badge:'任职大学的校内资料',status:'institutional',scope:'2002、2009、2012校报人物履历及任职记录',text:'淡江大学校内媒体发布的任职人物资料与访问，用于追查当时公开的职称。',limits:'校内资料不是独立成效审计，刊载日不等于到职日；未作台湾蓝绿归类。',evidence:[]},
  peopo:{name:'PeoPo公民新闻',badge:'公民记者稿／倾向待核定',status:'not-assessed',scope:'具体投稿及署名',text:'开放平台的公民记者稿件，保留作者和原访问场景；并非公视新闻编辑部自采稿。',limits:'平台背景不能替代投稿作者立场或事实核查，本版未为投稿者指定蓝绿。',evidence:[]},
  intellectual:{name:'新大学政论专栏',badge:'访谈或转载／倾向待核定',status:'not-assessed',scope:'依文章作者、原发和刊载资料识别',text:'本人访问文字与标明原发的转载分别处理，保留原发作者、日期及平台身份。',limits:'转载不是独立采访；本版未取得足以给该平台作当前蓝绿定性的研究。',evidence:[]},
  upmedia:{name:'上报',badge:'倾向待核定',status:'not-assessed',scope:'2017署名采访',text:'本批采用上报陈怡杰的人物访问，经新大学转载，保留原发署名。',limits:'人物自述与任命原件分别标注；尚未完成该媒体倾向的独立核定。',evidence:[]},
