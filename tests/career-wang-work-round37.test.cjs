@@ -1,0 +1,10 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const D=structuredClone(require('../public/data.js'));
+for(const f of ['taipei-research','taipei-profile-data','four-city-data','policy-data','career-foreign-round3','career-foreign-round19','career-foreign-round20','career-foreign-round21','career-foreign-round24','career-foreign-round25','career-foreign-round26','career-foreign-round27','career-foreign-round29','career-foreign-round30','career-foreign-round31','career-foreign-round32','career-foreign-round33','career-foreign-round34','career-tainan-chen-anchor-round35','career-su-h-community-round36'])require('../public/'+f+'.js').apply(D);
+require('../public/career-wang-work-round37.js').apply(D);
+const p=D.people.find(x=>x.id==='wang');
+test('Wang Zhaomin work record distinguishes registered construction scope from completed work',()=>{const x=p.workHistory.find(x=>x.sources?.includes('career-wang-company-register'));assert.ok(x);assert.match(x.note,/住宅及大楼开发租售、投资兴建公共建设、工业厂房开发租售/);assert.match(x.note,/不证明他实际承作过这些项目/);assert.match(x.verification,/登记营业范围非工程实绩/);assert.ok(x.sources.every(s=>D.sources[s]));});
+test('round37 career update is loaded before the app',()=>{const html=fs.readFileSync(require('node:path').join(__dirname,'../public/index.html'),'utf8');assert.match(html,/career-wang-work-round37\.js/);assert.ok(html.indexOf('career-wang-work-round37.js')<html.indexOf('src="app.js'));});

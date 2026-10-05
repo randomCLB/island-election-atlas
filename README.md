@@ -4,6 +4,8 @@
 
 本轮以台北市政府卫工处历任首长名册补明李四川该处处长任期，并据中央社与国民党官网补入党务任命、回任新北副市长、获任高雄副市长安排及台北副市长离职生效日；不把任命消息冒充完整任期。见[履历与日期核对说明](research/career-lee-sewer-term-round33-2026-10-04.md)。 本轮另补[林志成候选人自述的健力与健美经历](research/career-lin-sports-round34-2026-10-04.md)，赛事结果尚无原始记录独立核验。另据两篇TVBS报道补充[陈亭妃早年地方电视台记者、主播经历](research/career-chen-anchor-round35-2026-10-04.md)，频道名称和任职年月仍未核实。
 
+本轮据经济部公司设立登记清册补充王肇民公司登记营业范围，并注明登记范围不证明实际承作项目或工程成果，见[补录说明](research/career-wang-company-scope-round37-2026-10-04.md)。
+
 构建公开产物：`ATLAS_PUBLIC_RELEASE=1 npm run build`。产物在 `dist/`，发布分支为 `gh-pages`。
 
 以下保留第一稿架构说明；v0.3外链照片与未上线状态已由v0.4替代。
