@@ -8,14 +8,14 @@ for(const f of ['taipei-research','taipei-profile-data','four-city-data','policy
 const R=require('../public/career-su-h-community-round36.js');R.apply(D);
 const p=D.people.find(x=>x.id==='su-h');
 test('Su Huihuang 2024 self-reported community and civic roles are dated and bounded',()=>{
- const rows=p.workHistory.filter(x=>x.sources?.includes('career-su-h-community-round36'));
- assert.equal(rows.length,3);
- assert.deepEqual(rows.map(x=>x.organization),['新北市立丹凤高中','新北市立金山高中','台湾国等社团']);
- assert.ok(rows.every(x=>x.date==='2024年公报列载；任期未载'&&x.verification.includes('未作独立')));
- assert.match(rows[2].note,/未逐一列出社团名称/);
- const club=p.politicalHistory.find(x=>x.sources?.includes('career-su-h-community-round36'));
+ const rows=p.workHistory.filter(x=>x.sources?.includes('language-su-h-bulletin'));
+ assert.equal(rows.length,2);
+ const parents=rows.find(x=>x.role.includes('家长委员')),volunteer=rows.find(x=>x.organization==='台湾国等社团');
+ assert.ok(parents);assert.match(parents.note,/分别列出新北市立丹凤高中、金山高中/);assert.match(parents.verification,/非任职机构证明/);
+ assert.ok(volunteer);assert.match(volunteer.note,/未逐一列出组织/);
+ const club=p.politicalHistory.find(x=>x.sources?.includes('language-su-h-bulletin')&&x.organization==='小英之友会');
  assert.ok(club);assert.equal(club.organization,'小英之友会');assert.match(club.note,/不写成公职或政党党职/);
- assert.equal(D.sources['career-su-h-community-round36'].publisherId,'official-tw');
+ assert.equal(D.sources['language-su-h-bulletin'].publisherId,'official-tw');
 });
 test('round36 loader is linked before the app and profile renderer',()=>{
  const html=fs.readFileSync(path.join(__dirname,'../public/index.html'),'utf8');
