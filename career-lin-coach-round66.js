@@ -1,6 +1,6 @@
 (function(root){
 'use strict';
-const source={title:'蘋果日報：雙斧魔王怒劈司法院（論壇保存轉載）',url:'https://www.astromalon.com/viewthread.php?action=printable&tid=6656',date:'2011-09-06（原報導刊期；論壇保存頁同日）',kind:'蘋果日報舊報導的論壇保存轉載；非原報頁',publisherId:'other',checkedAt:'2026-10-05',note:'論壇頁保留原文並連回已失效的蘋果日報原網址。報導稱一名45歲林志成於2010年任台灣世界健美先生代表隊總教練，並記載健美協會職務。年齡與2024中選會公報所列候選人出生年月相近，運動項目及協會經歷也相符，但轉載沒有出生年月等唯一識別資料；此經歷按低置信度、身份待核線索呈現，原始任命名冊尚未取得。'};
+const source={title:'蘋果日報：雙斧魔王怒劈司法院（論壇保存轉載）',url:'https://www.astromalon.com/viewthread.php?action=printable&tid=6656',date:'2011-09-06（原報導刊期；論壇保存頁同日）',kind:'蘋果日報舊報導的論壇保存轉載；非原報頁',publisherId:'other',checkedAt:'2026-10-05',note:'論壇頁保留原文並連回已失效的蘋果日報原網址。報導稱一名45歲林志成於2010年任台灣世界健美先生代表隊總教練，並記載健美協會職務。2024年中選會公報所列出生日期由候選人自填；若為同一人，2011-09-06時應為46歲，與報導年齡相差一歲。該轉載沒有出生年月等唯一識別資料；此經歷按低置信度、身份待核線索呈現，原始任命名冊尚未取得。'};
 function apply(d){
  d.sources['career-lin-coach-round66']=source;
  const p=d.people.find(x=>x.id==='lin-c');
