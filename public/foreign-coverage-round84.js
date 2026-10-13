@@ -6,7 +6,8 @@ function apply(d){
   if(!p.evidenceCoverage)continue;
   for(const [region,review] of Object.entries(p.evidenceCoverage)){
    if(!labels[region]||(p.evidence||[]).some(x=>x.region===region))continue;
-   const note='暂未确认：截至所列查核范围，尚未找到'+p.name+'对'+labels[region]+'的明确表态；不能据此推断中立、赞成或反对。尚未查核：个人社群完整历史贴文、全部直播与影片、未收录的公开发言及政见会／辩论记录尚未逐项审阅。';
+   const note='暂未确认：截至2026-10-13的定向检索，以候选人姓名搭配'+labels[region]+'、两岸／外交／交流等词，查可索引的政见、新闻、采访及候选人资料页，仍未找到可直接归属'+p.name+'的明确表态；不能据此推断中立、赞成或反对。尚未查核：个人社群完整历史贴文、全部直播与影片、未收录的公开发言及政见会／辩论记录尚未逐项审阅。';
+   review.checkedAt='2026-10-13';
    if(review.note!==note)review.note=note;
   }
  }

@@ -11,6 +11,8 @@ test('reviewed gaps distinguish unresolved positions from channels not yet revie
  const p=D.people.find(x=>x.id==='lin-c');
  for(const region of ['cn','us','jp']){
   const r=p.evidenceCoverage[region];
+  assert.equal(r.checkedAt,'2026-10-13');
+  assert.match(r.note,/定向检索/);
   assert.match(r.note,/暂未确认：/);assert.match(r.note,/尚未查核：/);
   assert.ok(r.sources.every(id=>D.sources[id]));
  }
