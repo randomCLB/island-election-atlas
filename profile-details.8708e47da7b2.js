@@ -1,0 +1,22 @@
+/* Portraits and separate career tracks. */
+(function(){
+'use strict';
+const E=AtlasDomain.esc;
+function portrait(p,size='thumb'){
+ const photo=p.photo,linked=photo&&/^(https:\/\/|photos\/[a-z-]+\.(?:jpg|png)$)/.test(photo.url||'');
+ const hint=linked?'照片载入中':p.photoCoverage?.label==='暂未确认'?'照片暂未确认':'照片待补';
+ const layout=['portrait','scene','pair'].includes(photo?.layout)?photo.layout:'portrait';
+ const image=linked?`<img data-portrait="${E(p.id)}" src="${E(photo.url+(photo.revision?'?v='+encodeURIComponent(photo.revision):''))}" alt="${E(p.name)}${layout==='pair'?'，原图右侧人物':''}" width="180" height="220" loading="${size==='hero'?'eager':'lazy'}" decoding="async" referrerpolicy="no-referrer">`:'';
+ return `<span class="photo-frame photo-${size} photo-${layout} ${linked?'has-photo':'photo-pending'}">${image}<span class="photo-fallback" aria-hidden="true"><b>${E(p.name[0])}</b><small>${hint}</small></span>${layout==='pair'?'<span class="photo-position-label">右侧人物</span>':''}</span>`;
+}
+function photoCredit(p){const v=p.photo;if(!v){const c=p.photoCoverage;return c?`<div class="photo-credit"><p><b>照片状态：${E(c.label||'尚未查核')}</b> · ${E(c.note)}</p>${AtlasMedia.refs(c.sources)}</div>`:'<p class="photo-credit">本人物照片尚未建档。</p>';}
+ return `<div class="photo-credit"><p>${v.credit?'照片：'+E(v.credit)+' · ':''}${v.capturedAt?'图像记录日期 '+E(v.capturedAt):'拍摄日期未核定'}${v.license?' · '+E(v.license):''}</p><p>${E(v.note)}</p>${AtlasMedia.render(v.source,'照片来源与原图说明')}</div>`;
+}
+function careerRows(items,review){const rows=items.map(x=>`<article class="career-event"><time>${E(x.date)}</time><h5>${E(x.role)}</h5><div class="career-organization">${E(x.organization)}</div><p>${E(x.note)}</p><span class="career-verification">${E(x.verification)}</span><div class="source-line">${AtlasMedia.refs(x.sources)}</div></article>`).join('');const status=review?`<div class="career-empty"><p><strong>${review.label==='尚未查核'?'履历查核状态：尚未查核':'履历查核状态：暂未确认'}</strong> · ${E(review.note)}</p><p>${E(review.footer||`查阅日期 ${review.checkedAt}；未找到可独立确认的资料，不等于没有相关经历。`)}</p>${AtlasMedia.refs(review.sources)}</div>`:`<div class="career-empty"><p><strong>履历查核状态：尚未查核</strong> · 目前没有这项空档的查核记录。</p><p>尚未查核不代表没有工作经历。</p></div>`;return rows?rows+(review?status:''):status;}
+function careers(p){if(!p.workHistory||!p.politicalHistory)return'';
+ return `<section class="career-section"><div class="eyebrow">WORK & PUBLIC OFFICE / 两条经历线</div><h3>做过什么工作，走过哪些政治岗位。</h3><p class="career-intro">${E(p.careerNote)} 年份不明的条目按类型收录，不表示确定先后。</p><div class="career-columns"><div class="career-column"><h4>工作经历 <span>${p.workHistory.length}条</span></h4>${careerRows(p.workHistory,p.workResearch)}</div><div class="career-column"><h4>从政经历 <span>${p.politicalHistory.length}条</span></h4>${careerRows(p.politicalHistory,p.politicalResearch)}</div></div></section>`;
+}
+document.addEventListener('load',e=>{const img=e.target;if(!(img instanceof HTMLImageElement)||!img.hasAttribute('data-portrait'))return;img.closest('.photo-frame')?.classList.add('photo-loaded');},true);
+document.addEventListener('error',e=>{const img=e.target;if(!(img instanceof HTMLImageElement)||!img.hasAttribute('data-portrait'))return;img.hidden=true;const box=img.closest('.photo-frame');if(box){box.classList.add('photo-unavailable');box.classList.remove('photo-loaded');box.querySelector('.photo-fallback small').textContent='照片未载入';}},true);
+window.AtlasProfiles={portrait,photoCredit,careers};
+})();
