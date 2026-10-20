@@ -1,4 +1,5 @@
 'use strict';
+require('./build-taipei-guide.cjs');
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),D=require('../public/data.js'),U=require('../public/domain.js');
 require('../public/taipei-research.js').apply(D);
@@ -79,11 +80,13 @@ const dist=path.join(root,'dist');fs.rmSync(dist,{recursive:true,force:true});fs
 // Remove restricted survey data from release bytes, not only the interface.
 if(U.blackout()){const file=path.join(dist,'election-map-data.js'),pack=M.forRelease();fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
 // GitHub Pages may keep an old asset when only its query string changes.
-const htmlPath=path.join(dist,'index.html');
+for(const htmlName of ['index.html','taipei.html']){
+const htmlPath=path.join(dist,htmlName);
 fs.writeFileSync(htmlPath,fs.readFileSync(htmlPath,'utf8').replace(/((?:src|href)=")([^"#]+\.(?:js|css))(")/g,(_,prefix,file,suffix)=>{
  const digest=require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(dist,file))).digest('hex').slice(0,12);
  const ext=path.extname(file),fingerprinted=file.slice(0,-ext.length)+'.'+digest+ext;
  fs.copyFileSync(path.join(dist,file),path.join(dist,fingerprinted));
  return prefix+fingerprinted+suffix;
 }));
+}
 console.log('Built static site: '+dist);

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d191d">
+  <meta name="description" content="给外地人的台北选举导览：十二行政区的生活与产业、人口结构、历届分区选票、区域立委及市议员选区，逐项附上日期与官方来源。">
+  <title>台北十二区 · 岛屿选战</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d191d'/%3E%3Cpath d='M15 43 29 15 36 31 45 22 51 43Z' fill='none' stroke='%23d7b779' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="taipei-guide.css">
+  <script defer src="taipei-guide-data.js"></script>
+  <script defer src="taipei-guide-map.js"></script>
+  <script defer src="taipei-guide.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#district-dossier">跳到行政区资料</a>
+  <header class="site-header">
+    <a class="brand" href="index.html#/taipei" aria-label="返回岛屿选战五都地图"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 35 21 7 28 25 36 16 43 35Z M10 41H39"/></svg><span>岛屿选战<small>ISLAND ELECTION ARCHIVE</small></span></a>
+    <nav aria-label="专题导航"><a href="#explore" class="active">十二区导览</a><a href="#ballots">历届选票</a><a href="#representation">谁代表这里</a><a href="#method">资料与方法</a></nav>
+    <a class="back-link" href="index.html#/taipei">五都地图 <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="explore" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> TAIPEI FIELD GUIDE / 2026</p>
+        <h1 id="page-title">台北，<br>不止一种<br><em>日常。</em></h1>
+        <p class="hero-intro">从老街到科技园，从山城到商业中心。<br>先认识人们生活的地方，再读懂选票。</p>
+        <div class="hero-rule"></div>
+        <p class="hero-note">写给不住在台北、<br>也想看懂台北选战的你。</p>
+        <div class="geography-counts" aria-label="台北选区概览"><span><b>12</b>行政区</span><span><b>08</b>区域立委选区</span><span><b>06</b>一般议员选区</span></div>
+        <p class="micro">另有全市平地、山地原住民议员选区。<br>三套边界，用途各不相同。</p>
+      </div>
+      <div class="map-stage">
+        <div class="map-topline"><span class="eyebrow">点击地图，走进一个区</span><span class="map-north" aria-label="上方为北">N ↑</span></div>
+        <div class="map-modes" role="group" aria-label="选择地图图层"><button data-map-mode="district" aria-pressed="true">认识城区</button><button data-map-mode="age" aria-pressed="false">人口年龄</button><button data-map-mode="votes" aria-pressed="false">2022 市长票</button></div>
+        <svg id="taipei-map" viewBox="0 0 760 620" role="group" aria-label="台北十二行政区互动地图"></svg>
+        <div id="map-legend" class="map-legend"></div>
+        <div class="map-reading" id="map-reading" aria-live="polite"></div>
+        <p class="map-source">区界：台北市民政局 2022-09-15 版，经投影显示。<a href="https://data.gov.tw/dataset/121199" target="_blank" rel="noopener noreferrer">数据与授权 ↗</a></p>
+      </div>
+    </section>
+
+    <div class="district-bar"><span class="eyebrow">选择一个区</span><div id="district-options" role="group" aria-label="选择行政区"></div><a href="#compare">两区对照 ↓</a><nav class="district-section-links" aria-label="本区阅读导航"><a href="#district-dossier">地方背景</a><a href="#ballots">历届选票</a><a href="#representation">地方代表</a><a href="#compare">两区对照</a></nav></div>
+
+    <section class="dossier section-wrap" id="district-dossier" aria-labelledby="district-title">
+      <div class="dossier-heading"><div><p class="eyebrow" id="district-kicker">01 / THE PLACE BEHIND THE VOTES</p><h2 id="district-title"></h2><p class="district-deck" id="district-deck"></p></div><div class="district-tools"><button type="button" id="copy-district">复制本区链接 ↗</button><span>资料核对 <time datetime="2026-10-20">2026.10.20</time></span></div></div>
+      <div class="metrics" id="district-metrics"></div>
+      <p class="metric-source">户籍人口及年龄：2026 年 9 月；人口变化与 2025 年 9 月相比。<a href="https://data.taipei/dataset/detail?id=6a1dbb4e-e99c-4e67-ab09-f6d83852dc99" target="_blank" rel="noopener noreferrer">人口来源 ↗</a> <a href="https://data.taipei/dataset/detail?id=64c8a3a0-3b9a-4f49-a13a-fb1eb2ffa4b1" target="_blank" rel="noopener noreferrer">年龄来源 ↗</a></p>
+      <div class="place-columns"><article class="place-story" id="district-story"></article><aside class="economic-notes" id="district-economy" aria-label="经济与产业背景"></aside></div>
+      <div class="issue-heading"><div><p class="eyebrow">THE QUESTIONS TO FOLLOW</p><h3>从这一区，看今年的公共议题。</h3></div><p>已发生的背景，与值得追问的问题分开写。<br>这里的观察问题，不是居民民意调查。</p></div>
+      <div class="issue-list" id="district-issues"></div>
+    </section>
+
+    <section class="ballot-section section-wrap" id="ballots" aria-labelledby="ballots-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / HOW THE DISTRICT VOTED</p><h2 id="ballots-title">同一个地方，<br>不只一种投票。</h2></div><p>市长、总统、政党票分别看。<br>上次领先多少，与今年谁会赢，是两回事。</p></div>
+      <div class="ballot-controls"><div id="election-options" role="group" aria-label="选择选举届次"></div><label for="ballot-comparison">对照 <select id="ballot-comparison" aria-label="选择选票对照地区"></select></label></div>
+      <div class="election-caption" id="election-caption"></div>
+      <div class="ballot-columns" id="ballot-results"></div>
+      <div class="history-strip" id="history-strip" aria-label="三届市长选举在本区的领先情况"></div>
+      <details class="method-detail"><summary>这些票数，应该怎样读？</summary><p>这里的“本区最高票”只是将全市选举按行政区统计，行政区并不各自选一位市长或总统。得票率的分母是同一地区、同一票种的全部有效票；投票率的分母是当届选举人数。领先差由前两名票数差除以全部有效票计算。候选人百分比保留官方原值：2014、2018 年来源采用小数两位截尾，其余届次四舍五入；全市加总比较统一由票数计算，末位可能与旧表相差 0.01 个百分点。多组选举不能直接把不同候选人的票当作可转移的票，也不能从区级数字推断某类居民或个人的选择。</p><p>政党票与区域立委票是两张不同的票；跨届候选人、联盟与投票率会变化。2024 的立委结果请看下方对应的立委选区，不将整席票数伪装成某个行政区的票。</p></details>
+    </section>
+
+    <section class="representation section-wrap" id="representation" aria-labelledby="representation-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / THREE MAPS, DIFFERENT JOBS</p><h2 id="representation-title">住在这里，<br>由谁代表？</h2></div><p>行政区用于认识地方。<br>立委与市议员，要沿着各自的选区找。</p></div>
+      <div class="representation-context" id="representation-context"></div>
+      <div class="representatives" id="representative-list"></div>
+      <article class="council-box" id="council-info"></article>
+      <div class="responsibility-grid"><article><span>市长与市府</span><p>市政执行、交通与公共设施、都市计划及地方服务；大型建设可能需要中央协作。</p></article><article><span>市议员</span><p>审议市府预算与自治法规、质询和监督施政；一般议员是多人竞争多个席次。</p></article><article><span>立法委员</span><p>国家法律、中央预算与中央行政监督；可协调地方问题，但不直接代替市府执行工程。</p></article><article><span>区长与里长</span><p>台北区长由市长依法任用；里长由选举产生，负责基层联系和协助公共事务，两者不要混淆。</p></article></div>
+      <p class="micro responsibility-source"><a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0040003" target="_blank" rel="noopener noreferrer">地方制度法 ↗</a> · <a href="https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=161&amp;pid=10" target="_blank" rel="noopener noreferrer">立法院职权说明 ↗</a></p>
+    </section>
+
+    <section class="compare-section section-wrap" id="compare" aria-labelledby="compare-title"><div class="section-heading"><div><p class="eyebrow">04 / PUT TWO PLACES SIDE BY SIDE</p><h2 id="compare-title">隔一条河、几站捷运，<br>差异在哪里？</h2></div><label for="compare-district">与当前区对照 <select id="compare-district"></select></label></div><div class="table-scroll" id="comparison-table"></div><p class="micro">对照用来发现值得继续了解的问题，不据此给居民贴政治标签。各列采用自己的统计年度，不能混算。</p></section>
+
+    <section class="election-now section-wrap" id="election-now" aria-labelledby="now-title"><div><p class="eyebrow">2026 / WHAT IS HAPPENING NOW</p><h2 id="now-title">这一届，走到哪一步？</h2></div><div id="current-election"></div><div id="council-overview" class="council-overview"></div></section>
+
+    <section class="method-section section-wrap" id="method" aria-labelledby="method-title"><div class="section-heading"><div><p class="eyebrow">THE SOURCE NOTEBOOK</p><h2 id="method-title">每个数字，<br>都有时间与出处。</h2></div><p>基础数据以官方统计和原始选举结果为主。<br>解释负责提出问题，不替选民回答。</p></div><div class="method-grid"><article><h3>人口，不等于选民。</h3><p>户籍人口包含未成年人，也不等于实际居住或白天工作的人。选民人数使用当届选务统计，产业家数不能当作本区选民职业分布。</p></article><article><h3>所得，不等于工资或 GDP。</h3><p>所得统计保留资料年与申报单位。申报所得会包含不同来源，也不等于每个居民的收入或家庭可支配所得；本页不编造“行政区 GDP”。</p></article><article><h3>地图，不替换选区。</h3><p>十二行政区使用民政局 2022-09-15 区界资料。立委边界以第 11 届官方范围说明为准；士林、松山、中正须继续查到里。</p></article><article><h3>历史，不是本届民调。</h3><p>历史得票、人口结构与公共建设不能推算当前支持率。议题问题为编辑整理；无分区民调支持的地方，不声称某一议题是居民的“最关心”。</p></article></div><details class="source-notebook"><summary>打开资料目录与更新说明 <span>＋</span></summary><div id="source-index"></div></details></section>
+  </main>
+
+  <footer><a href="index.html#/taipei">岛屿选战 <small>ISLAND ELECTION ARCHIVE</small></a><p>台北十二区 · 给外地人的地方选举导览<br>核对至 2026.10.20 · 不提供候选人评分或胜率预测</p><a href="#explore">回到地图 ↑</a></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">互动导览需要 JavaScript。原始资料可在<a href="https://db.cec.gov.tw/">中选会选举资料库</a>及<a href="https://data.taipei/">台北市资料大平台</a>查阅。</div></noscript>
+</body>
+</html>

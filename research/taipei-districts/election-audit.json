@@ -1,0 +1,307 @@
+{
+  "checkedAt": "2026-10-20",
+  "dataFile": "/workspace/scratch/ebfb68906020/research/taipei-election-research.json",
+  "sha256": "93ebffca6b95b8957a732b2c49260fa918c2cf2fcbb07fd41b4284012481295d",
+  "status": "pass",
+  "elections": [
+    {
+      "id": "cec-C1-00-2022",
+      "geography": "administrativeDistrict",
+      "rows": 12,
+      "candidatesChecked": 144,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1360951,
+        "invalidVotes": 11228,
+        "votesCast": 1372179,
+        "eligibleVoters": 2026769
+      },
+      "cityTurnout": 67.7,
+      "cityTurnoutCalculated": 67.70278211281108,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/05cc7b904c7a30cc7c88d5b10898c98e/C/00_000_00_000_0000.json",
+      "cityRawSha256": "745f1349b12d7cb050d02181ff93a57229453ced33a13d59482917023889b59c",
+      "percentageRule": "rounded2"
+    },
+    {
+      "id": "cec-C1-00-2018",
+      "geography": "administrativeDistrict",
+      "rows": 12,
+      "candidatesChecked": 60,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1413870,
+        "invalidVotes": 13355,
+        "votesCast": 1427225,
+        "eligibleVoters": 2164155
+      },
+      "cityTurnout": 65.95,
+      "cityTurnoutCalculated": 65.94837245945877,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/a0222f6529a3ff2192a1a04f209eaac3/C/00_000_00_000_0000.json",
+      "cityRawSha256": "54094c4dceb99996fa5fde8581817dd9c4bf3d6448b274c3c0c52037a88ae700",
+      "percentageRule": "truncated2"
+    },
+    {
+      "id": "cec-C1-00-2014",
+      "geography": "administrativeDistrict",
+      "rows": 12,
+      "candidatesChecked": 84,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1494046,
+        "invalidVotes": 18678,
+        "votesCast": 1512724,
+        "eligibleVoters": 2146939
+      },
+      "cityTurnout": 70.46,
+      "cityTurnoutCalculated": 70.45957057932247,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/45ca615ee3ff7b12238c79783524bd8f/C/00_000_00_000_0000.json",
+      "cityRawSha256": "0a48c585d125fe55729e4a5a29af5e2c6f3c2e812967a1f9ef4fcd901945180f",
+      "percentageRule": "truncated2"
+    },
+    {
+      "id": "cec-P0-00-2024",
+      "geography": "administrativeDistrict",
+      "rows": 12,
+      "candidatesChecked": 36,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1542011,
+        "invalidVotes": 10581,
+        "votesCast": 1552592,
+        "eligibleVoters": 2090062
+      },
+      "cityTurnout": 74.28,
+      "cityTurnoutCalculated": 74.28449490972038,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/P0/00/4d83db17c1707e3defae5dc4d4e9c800/C/00_000_00_000_0000.json",
+      "cityRawSha256": "fadab86e5b54d4191478b7ba38ff6b544ed84c94b11934f1e7c76542c28bba39",
+      "percentageRule": "rounded2"
+    },
+    {
+      "id": "cec-L0-L1-2024",
+      "geography": "legislativeConstituency",
+      "rows": 8,
+      "candidatesChecked": 53,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1504080,
+        "invalidVotes": 30722,
+        "votesCast": 1534802,
+        "eligibleVoters": 2067577
+      },
+      "cityTurnout": 74.23,
+      "cityTurnoutCalculated": 74.23191494198281,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/L0/L1/9c96a2080bfc199c590ec54f3a2bda7b/C/00_000_00_000_0000.json",
+      "cityRawSha256": "26a531510b784e47417c5d74e05827db9806d4155ce238c99e211a0221e03bad",
+      "percentageRule": "rounded2"
+    },
+    {
+      "id": "cec-L0-L4-2024",
+      "geography": "administrativeDistrict",
+      "rows": 12,
+      "candidatesChecked": 192,
+      "allCandidateCountsAndPartiesMatchSource": true,
+      "allCandidateSumsMatchOfficialValidVotes": true,
+      "sumsMatchIndependentOfficialCityTotals": true,
+      "cityTotals": {
+        "validVotes": 1531957,
+        "invalidVotes": 19525,
+        "votesCast": 1551482,
+        "eligibleVoters": 2093097
+      },
+      "cityTurnout": 74.12,
+      "cityTurnoutCalculated": 74.12375059540958,
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/L0/L4/e753a8e7a7bcc09fa51d1aea0024a843/C/00_000_00_000_0000.json",
+      "cityRawSha256": "749aa151ec0eca70af14af83a55dcc5ce010e354b699694a28677c1a691c5ba3",
+      "percentageRule": "rounded2"
+    }
+  ],
+  "boundaries": {
+    "officialCsvMatch": true,
+    "fullAdministrativeDistricts": [
+      "北投區",
+      "大同區",
+      "中山區",
+      "內湖區",
+      "南港區",
+      "萬華區",
+      "大安區",
+      "信義區",
+      "文山區"
+    ],
+    "splitAdministrativeDistricts": {
+      "士林區": [
+        {
+          "constituency": 1,
+          "villages": 13
+        },
+        {
+          "constituency": 2,
+          "villages": 38
+        }
+      ],
+      "松山區": [
+        {
+          "constituency": 3,
+          "villages": 20
+        },
+        {
+          "constituency": 7,
+          "villages": 13
+        }
+      ],
+      "中正區": [
+        {
+          "constituency": 5,
+          "villages": 21
+        },
+        {
+          "constituency": 8,
+          "villages": 10
+        }
+      ]
+    },
+    "splitVillagesDisjoint": true,
+    "all12AdministrativeDistrictsCovered": true
+  },
+  "incumbents": [
+    {
+      "constituency": 1,
+      "name": "吳思瑤",
+      "party": "民主進步黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46769",
+      "retrievalRef": "turn63view1",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 2,
+      "name": "王世堅",
+      "party": "民主進步黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46758",
+      "retrievalRef": "turn63view2",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 3,
+      "name": "王鴻薇",
+      "party": "中國國民黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46762",
+      "retrievalRef": "turn64view0",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 4,
+      "name": "李彥秀",
+      "party": "中國國民黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46773",
+      "retrievalRef": "turn64view1",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 5,
+      "name": "吳沛憶",
+      "party": "民主進步黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46766",
+      "retrievalRef": "turn63view3",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 6,
+      "name": "羅智強",
+      "party": "中國國民黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46859",
+      "retrievalRef": "turn64view3",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 7,
+      "name": "徐巧芯",
+      "party": "中國國民黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46796",
+      "retrievalRef": "turn64view2",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    },
+    {
+      "constituency": 8,
+      "name": "賴士葆",
+      "party": "中國國民黨",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46848",
+      "retrievalRef": "turn64view4",
+      "currentProfileConfirmed": true,
+      "evidence": "本屆立委、第11屆、對應臺北市選區、113年2月1日到職及第11屆第6會期委員會資料均已讀取。",
+      "matches2024OfficialWinner": true
+    }
+  ],
+  "recalls2025": [
+    {
+      "constituency": 4,
+      "name": "李彥秀",
+      "date": "2025-07-26",
+      "result": "否決",
+      "officialRawResultCode": "N"
+    },
+    {
+      "constituency": 6,
+      "name": "羅智強",
+      "date": "2025-07-26",
+      "result": "否決",
+      "officialRawResultCode": "N"
+    },
+    {
+      "constituency": 7,
+      "name": "徐巧芯",
+      "date": "2025-07-26",
+      "result": "否決",
+      "officialRawResultCode": "N"
+    },
+    {
+      "constituency": 8,
+      "name": "賴士葆",
+      "date": "2025-07-26",
+      "result": "否決",
+      "officialRawResultCode": "N"
+    },
+    {
+      "constituency": 3,
+      "name": "王鴻薇",
+      "date": "2025-07-26",
+      "result": "否決",
+      "officialRawResultCode": "N"
+    }
+  ],
+  "recallSources": [
+    "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+    "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf",
+    "https://web.cec.gov.tw/api/file/ca20ab2a-3804-4001-b753-f63716fc97fa.pdf"
+  ],
+  "notes": [
+    "2014與2018候選人百分比官方截尾至小數二位，並非資料誤差；各列總票數完全一致。",
+    "2024區域立委以完整8選區為單位，其人口及選舉人數不應作為行政區統計。",
+    "2024三種選票分別使用官方選舉人數；總統2,090,062、區域立委2,067,577、政黨票2,093,097，禁止共用分母。",
+    "8位現任狀態由立法院本屆個人頁及第6會期資料確認；單純2024當選資料不作為現任的唯一依據。",
+    "2025正式罷免投票共5案全部否決，不表述為另外3席從未遭提出罷免。"
+  ]
+}
