@@ -1,0 +1,1409 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-20",
+  "city": "臺北市",
+  "cityDemographics": {
+    "population": 2418872,
+    "households": 1084946,
+    "elderly65Plus": 601237,
+    "elderlyPct": 24.86,
+    "children0to14": 281133,
+    "childrenPct": 11.62,
+    "populationChangeYoY": -24119,
+    "populationChangeYoYPct": -0.99,
+    "villages": 456
+  },
+  "sources": {
+    "population": {
+      "title": "台北市民政局：各行政区人口与户数（2026年9月）",
+      "url": "https://data.taipei/dataset/detail?id=6a1dbb4e-e99c-4e67-ab09-f6d83852dc99",
+      "dataDate": "2026-09",
+      "download": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=9681db4c-fb1b-4a23-9013-e74483b6b046"
+    },
+    "age": {
+      "title": "台北市民政局：各区人口数按年龄分（2026年9月）",
+      "url": "https://data.taipei/dataset/detail?id=64c8a3a0-3b9a-4f49-a13a-fb1eb2ffa4b1",
+      "dataDate": "2026-09",
+      "download": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=edf9a589-7095-4f18-995f-f8657c0d8c1a"
+    },
+    "income": {
+      "title": "财政部：2023年度综税综合所得总额各区里统计分析表",
+      "url": "https://data.gov.tw/dataset/17983",
+      "dataDate": "2023",
+      "download": "https://www.fia.gov.tw/WEB/fia/ias/ias112/112_165-A.csv"
+    },
+    "companies": {
+      "title": "台北市商业处：公司登记报表（行业别及行政区，家数）",
+      "url": "https://data.taipei/dataset/detail?id=544c7e21-e18a-4904-9f32-15fae2e30acc",
+      "pageUpdatedAt": "2026-09-23",
+      "download": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=f3020aa3-6e38-4410-ad96-42105ee76e4c"
+    },
+    "businesses": {
+      "title": "台北市商业处：商业登记报表（行业别及行政区，家数）",
+      "url": "https://data.taipei/dataset/detail?id=d32fe131-6965-47e3-9433-7352a2ff2681",
+      "pageUpdatedAt": "2026-09-23",
+      "download": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=6a64d3b3-42b7-4f39-9b17-61a52ed9374e"
+    },
+    "songshan_profile": {
+      "title": "台北市税捐稽征处：松山辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=8C90F85C95C47044&s=58CCAE2F705E035A"
+    },
+    "songshan_commerce": {
+      "title": "台北市商业处：松山区商圈",
+      "url": "https://www.tcooc.gov.taipei/cp.aspx?n=D6636C188A8ADC8E&s=19F16D8A577EC750"
+    },
+    "xinyi_profile": {
+      "title": "台北市税捐稽征处：信义辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=DC9CF13BAE89276F&s=EE2158A5E13A42D7"
+    },
+    "daan_commerce": {
+      "title": "台北市商业处：大安区商圈",
+      "url": "https://www.tcooc.gov.taipei/cp.aspx?n=D6636C188A8ADC8E&s=928F0FB82A0806B0"
+    },
+    "daan_profile": {
+      "title": "台北市大安区公所：地理环境",
+      "url": "https://dado.gov.taipei/cp.aspx?n=3AEE45E5F69CAC7E"
+    },
+    "zhongshan_commerce": {
+      "title": "台北市商业处：中山区商圈",
+      "url": "https://www.tcooc.gov.taipei/cp.aspx?n=D6636C188A8ADC8E&s=7FC17913F132F1F0"
+    },
+    "zhongzheng_profile": {
+      "title": "台北市税捐稽征处：中正辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=A20B80BF1438A625&s=88D965AF5B5D6306&sms=AC8D8735B4932537"
+    },
+    "datong_profile": {
+      "title": "台北市大同区户政事务所：沿革与发展核心",
+      "url": "https://dthr.gov.taipei/cp.aspx?n=7030AA08EDCAA8E7&s=9070DC77151202A3"
+    },
+    "datong_commerce": {
+      "title": "台北市商业处：大同区商圈",
+      "url": "https://www.tcooc.gov.taipei/cp.aspx?n=d6636c188a8adc8e&s=5C92A65B34ECDB21"
+    },
+    "wanhua_commerce": {
+      "title": "台北市商业处：万华区商圈",
+      "url": "https://www.tcooc.gov.taipei/cp.aspx?n=D6636C188A8ADC8E&s=73CBE562C2DE564B"
+    },
+    "wanhua_profile": {
+      "title": "台北市万华区公所：地理环境与民生物资市场",
+      "url": "https://whdo.gov.taipei/cp.aspx?n=B38E014921AFCD29"
+    },
+    "wenshan_profile": {
+      "title": "台北市文山区公所：区内概况",
+      "url": "https://wsdo.gov.taipei/cp.aspx?n=1441ECF359ECFC59"
+    },
+    "wenshan_education": {
+      "title": "台北市税捐稽征处：文山辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=44EF992CF3ECD921&s=7FAB9D849ABF4A60&sms=2EC51872E17B9D57"
+    },
+    "nangang_profile": {
+      "title": "台北市税捐稽征处：南港辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=0CD883D96C9BC80A&s=96D33D8D94D3D0BE"
+    },
+    "east_gateway": {
+      "title": "台北市都市发展局：东区门户计划",
+      "url": "https://udd.gov.taipei/major-task/f3gxcu9-10669"
+    },
+    "neihu_profile": {
+      "title": "台北市税捐稽征处：内湖辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=A3AC8A04CD529B99&s=CE2DC1D94C255EB1"
+    },
+    "shilin_profile": {
+      "title": "台北市税捐稽征处：士林辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=47C38791C1C66F0F&s=0B56456439043C4F&sms=F4069249A7A7CB9B"
+    },
+    "beitou_profile": {
+      "title": "台北市北投区公所：地理环境概述",
+      "url": "https://btdo.gov.taipei/News_Content.aspx?n=7D7EDC0B5D930FE8&s=1E5B4B51ACD612F8&sms=C287455B73D24EC8"
+    },
+    "beitou_tourism": {
+      "title": "台北市税捐稽征处：北投辖区简介",
+      "url": "https://tpctax.gov.taipei/News_Content.aspx?n=52C944A41C52CCA2&s=DF05448432A45A92&sms=1D0634729E1C200F"
+    },
+    "minsheng_metro": {
+      "title": "台北市捷运工程局：民生汐止线说明",
+      "url": "https://www.dorts.gov.taipei/cp.aspx?n=640DFDDFA9B8FEA8",
+      "statusNote": "台北市段仍以官方综合规划进度为准，不能当作已通车线路"
+    },
+    "east_ring": {
+      "title": "台北市捷运工程局：环状线东环段路线说明",
+      "url": "https://www.dorts.gov.taipei/cp.aspx?n=F47E41B6C8884DC6",
+      "statusNote": "规划/建设路线与现有营运路线应分色展示"
+    },
+    "south_ring": {
+      "title": "台北市捷运工程局：环状线北环及南环路线说明",
+      "url": "https://www.dorts.gov.taipei/cp.aspx?n=7CEEE7ECF48CE83F"
+    },
+    "south_ring_works": {
+      "title": "捷运南环段Y03站2026年5月交通维持改道公告",
+      "url": "https://www.dorts.gov.taipei/News_Content_table.aspx?n=41977EB83537C82B&s=A74ED1102F9C6C46",
+      "eventDate": "2026-05-15"
+    },
+    "nanjichang": {
+      "title": "台北市都市更新处：南机场一二三期整宅公办都市更新案",
+      "url": "https://uro.gov.taipei/News_Content.aspx?n=D29C05A6ADA5DA39&s=700D37F2C3DA5AB6&sms=F1038874837B0DFB"
+    },
+    "dazhi": {
+      "title": "台北市都市发展局：基泰大直安置与重建进度说明",
+      "url": "https://udd.gov.taipei/events/fhqekzq-21362",
+      "eventDate": "2026-09-17",
+      "sourcePerspective": "市府说明；不代表受灾住户或开发商的完整观点"
+    },
+    "shezidao": {
+      "title": "明日社子岛：开发大事纪",
+      "url": "https://shezidao.gov.taipei/cp.aspx?n=833C7F5655B0E776",
+      "sourcePerspective": "市府计划与程序记录；安置争议另需居民意见原始材料"
+    },
+    "shezidao_resettlement": {
+      "title": "台北市都市发展局：社子岛开发与安置方案说明",
+      "url": "https://english.udd.gov.taipei/News_Content.aspx?n=DD9CEC17A97FBC64&s=7852224940AA0ECC&sms=72544237BBE4C5F6",
+      "pageUpdatedAt": "2026-02-13",
+      "sourcePerspective": "市府对开发必要性与安置方案的主张"
+    },
+    "beishike": {
+      "title": "台北市产业发展局：科技走廊与北投士林科技园区",
+      "url": "https://doed.gov.taipei/News_Content.aspx?n=73330FECE1158864&s=2DF701E460565B64&sms=C03F9F89DEA8E3E6"
+    },
+    "urban_renewal": {
+      "title": "台北市防灾型都市更新细部计划（2024年公展文件）",
+      "url": "https://udd.gov.taipei/assets/xzkYTnuFJo5WQqR6vdAmft/attachs/%E7%B4%B0%E9%83%A8%E8%A8%88%E7%95%AB%E6%9B%B8.pdf",
+      "publicationDate": "2024-11-13",
+      "note": "老旧建物背景；不能把屋龄直接等同危险建物。表3未清晰列观察日期，未采其比率作为当前区级指标。"
+    }
+  },
+  "dataNotes": [
+    "人口为2026年9月户籍人口，既不是实际常住人口，也不是2026选举的选举人数。",
+    "65岁以上、0—14岁人数从官方逐岁年龄资料加总，比例以同区同月户籍人口为分母。同比比较2025年9月。",
+    "税务所得采用2023（民国112）年官方每区“合计”行的综合所得总额中位数；单位为新台币/纳税单位/年，非个人薪资、非家庭可支配所得。不含政府移转支出、免税与分离课税所得，不应直接当作贫富差距或贫困指标。",
+    "公司与商号登记为2026-09-23更新版本，原CSV没有统计月字段，因此不据发布时间猜测统计月。登记地点、行业与家数不能直接替代实际就业地、居民职业或产值。",
+    "地方画像是对公开地理、商业和建设资料的编辑归纳。议题是供外地读者比较政策的观察问题，不宣称是当地选民民意或关注度排行。",
+    "涉及开发和争议的官方资料只证明市府计划、程序或立场，不代表所有住户、经营者或开发商观点。",
+    "轨道规划、施工及营运应明确区分；未来就业和经济效益不能写成已经发生的事实。"
+  ],
+  "districts": [
+    {
+      "id": "songshan",
+      "name": "松山區",
+      "tagline": "成熟住宅社区，夹在商务轴线与河岸之间",
+      "profile": "认识松山，可以先分清民生社区与南京东路、八德路沿线：前者是住宅与社区商圈，后者聚集商务和商业活动。饶河街、慈祐宫一带又有另一种传统商圈生活。看这里的选举，不宜只用“台北中心区”概括；商业通行、住宅安静、老社区更新与高龄生活设施会在同一片街区相遇。",
+      "industry": "南京东路与八德路的商业活动、民生社区的餐饮零售和服务，构成不同尺度的经济空间。公司登记统计可看经营主体分布，不代表每天在此工作的总人数。",
+      "profileSourceIds": [
+        "songshan_profile",
+        "songshan_commerce"
+      ],
+      "issues": [
+        {
+          "title": "民生汐止线与日常接驳",
+          "background": "官方规划路线沿民生西、东路等道路，经过松山。台北市段仍需按实际规划与审查进度理解。",
+          "question": "比较候选人时，能否分清中央审查、市府设计和施工责任？轨道完成前，公车、步行接驳与无障碍如何改善？",
+          "sourceIds": [
+            "minsheng_metro"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        },
+        {
+          "title": "老社区更新与生活尺度",
+          "background": "松山有成片成熟住宅社区；更新、耐震与公共空间需要一起看。",
+          "question": "更新是否说明安置、建筑安全、绿荫与人行空间的处理，而不只报出新增楼地板面积？",
+          "sourceIds": [
+            "songshan_commerce",
+            "urban_renewal"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        },
+        {
+          "title": "高龄与育儿服务如何同时补齐",
+          "background": "2026年9月65岁以上占25.63%，0—14岁占13.31%。",
+          "question": "长照、日间照顾、托育与安全通学是否能落到社区可步行到达的位置？",
+          "sourceIds": [
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000010",
+      "demographics": {
+        "date": "2026-09",
+        "population": 185700,
+        "households": 81318,
+        "elderly65Plus": 47588,
+        "elderlyPct": 25.63,
+        "children0to14": 24718,
+        "childrenPct": 13.31,
+        "populationChangeYoY": -1765,
+        "populationChangeYoYPct": -0.94,
+        "villages": 33,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 69735,
+        "taxIncomeMedianNTD": 758000,
+        "taxIncomeMeanNTD": 1558000,
+        "taxIncomeQ1NTD": 330000,
+        "taxIncomeQ3NTD": 1677000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 20263,
+        "registeredBusinesses": 6251,
+        "companyTopIndustries": [
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 3993,
+            "sharePct": 19.71
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 3273,
+            "sharePct": 16.15
+          },
+          {
+            "industry": "製造業",
+            "count": 2661,
+            "sharePct": 13.13
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 2617,
+            "sharePct": 12.92
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "xinyi",
+      "name": "信義區",
+      "tagline": "金融商圈的光亮，旁边是既有住宅与山边生活",
+      "profile": "信义区有市府、市议会、世贸和101周边的商务核心，也有永春、吴兴街与四兽山一侧的住宅生活。大型商办的天际线并不能代表整区的住房条件。2026年9月65岁以上人口占26.82%，因此“最现代的商圈”与“需要照顾的老社区”必须同时放进画面。",
+      "industry": "企业总部、金融商务、百货零售、会展和文化设施，是这一带可辨认的经济地标；游客、上班族和设籍居民的活动范围并不相同。",
+      "profileSourceIds": [
+        "xinyi_profile",
+        "age"
+      ],
+      "issues": [
+        {
+          "title": "大型商圈与住宅交通",
+          "background": "商业、行政与文化设施集中，东环段规划也经永春、象山等节点。",
+          "question": "大型活动及商业人流增加时，捷运转乘、行人穿越和住宅街道如何分配空间？",
+          "sourceIds": [
+            "xinyi_profile",
+            "east_ring"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        },
+        {
+          "title": "高龄住宅与都市更新",
+          "background": "该区高龄人口比例超过全市平均；老龄化不能从101周边的街景判断。",
+          "question": "老公寓的耐震、电梯及照顾服务，是否有明确预算和可追踪进度？",
+          "sourceIds": [
+            "age",
+            "urban_renewal"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        },
+        {
+          "title": "商圈收益如何连到社区服务",
+          "background": "金融商务核心与周边居住空间并存。",
+          "question": "比较建设方案时，除了游客消费与招商，是否解释住宅区公共空间、公共服务和施工期间影响？",
+          "sourceIds": [
+            "xinyi_profile"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000020",
+      "demographics": {
+        "date": "2026-09",
+        "population": 199198,
+        "households": 91105,
+        "elderly65Plus": 53434,
+        "elderlyPct": 26.82,
+        "children0to14": 19428,
+        "childrenPct": 9.75,
+        "populationChangeYoY": -2608,
+        "populationChangeYoYPct": -1.29,
+        "villages": 41,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 73634,
+        "taxIncomeMedianNTD": 642000,
+        "taxIncomeMeanNTD": 1228000,
+        "taxIncomeQ1NTD": 294000,
+        "taxIncomeQ3NTD": 1370000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 20102,
+        "registeredBusinesses": 4913,
+        "companyTopIndustries": [
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 4261,
+            "sharePct": 21.2
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 3516,
+            "sharePct": 17.49
+          },
+          {
+            "industry": "製造業",
+            "count": 2770,
+            "sharePct": 13.78
+          },
+          {
+            "industry": "營建工程業",
+            "count": 2365,
+            "sharePct": 11.76
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "daan",
+      "name": "大安區",
+      "tagline": "大学、东区商业与密集住宅交织",
+      "profile": "大安把东区百货商圈、师大等大学周边生活和大量住宅放在同一行政区内。这里人口规模大，2026年9月有27.96万人；65岁以上与0—14岁分别占26.55%和14.00%。区级较高的报税所得中位数只是整体背景，不能据此假定每个住户的生活条件，也不能代表学生与未设籍租客的处境。",
+      "industry": "东区百货和餐饮、大学周边店铺、专业服务业，是不同的观察入口。商业处资料明确记述师大周边由学校带动的餐饮、服饰与咖啡店聚集。",
+      "profileSourceIds": [
+        "daan_commerce",
+        "daan_profile",
+        "age",
+        "income"
+      ],
+      "issues": [
+        {
+          "title": "校园、商圈与安静住宅",
+          "background": "大学周边商业和住宅巷弄紧密相邻。",
+          "question": "候选人如何平衡店家经营、夜间噪音、行人安全与居民日常使用？",
+          "sourceIds": [
+            "daan_commerce"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "住房更新与租住负担",
+          "background": "税务中位数较高不等于没有租客或居住安全需求。",
+          "question": "更新方案是否区分所有权人、租户与学生的处境，并说明过渡安置和可负担住居？",
+          "sourceIds": [
+            "income",
+            "urban_renewal"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        },
+        {
+          "title": "两端年龄的公共空间",
+          "background": "高龄人口与儿童人口均有相当规模。",
+          "question": "通学路线、人行道、托育和高龄照顾能否以同一生活圈统筹，而非各做一个点？",
+          "sourceIds": [
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000030",
+      "demographics": {
+        "date": "2026-09",
+        "population": 279617,
+        "households": 121045,
+        "elderly65Plus": 74246,
+        "elderlyPct": 26.55,
+        "children0to14": 39143,
+        "childrenPct": 14.0,
+        "populationChangeYoY": -3036,
+        "populationChangeYoYPct": -1.07,
+        "villages": 53,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 105270,
+        "taxIncomeMedianNTD": 828000,
+        "taxIncomeMeanNTD": 1653000,
+        "taxIncomeQ1NTD": 346000,
+        "taxIncomeQ3NTD": 1884000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 31309,
+        "registeredBusinesses": 7387,
+        "companyTopIndustries": [
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 7004,
+            "sharePct": 22.37
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 5654,
+            "sharePct": 18.06
+          },
+          {
+            "industry": "製造業",
+            "count": 4006,
+            "sharePct": 12.8
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 3515,
+            "sharePct": 11.23
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "zhongshan",
+      "name": "中山區",
+      "tagline": "传统商务与观光街区，连接大直新开发地带",
+      "profile": "中山的范围比中山站商圈大得多：南侧有南京东路、松江路及林森、晴光等商务与餐饮街区，跨过基隆河还有大直一带。官方商圈资料记录了大直大型零售和饭店进驻的发展。不同生活圈面对的建设强度和街道使用并不一样，整区平均数字很容易把这些差别抹平。",
+      "industry": "办公室、饭店、餐饮及专业服务密集；大直的大型零售和商业开发又形成另一层经济空间。2026-09-23更新版公司登记表中，中山的公司家数为十二区最多，但登记地址不等于全部实际工作场所。",
+      "profileSourceIds": [
+        "zhongshan_commerce",
+        "companies"
+      ],
+      "issues": [
+        {
+          "title": "大直工安之后的监督与安置",
+          "background": "市府2026年9月说明仍涉及基泰大直塌陷户安置、补偿与更新程序。该说明是市府立场，需配合住户资料理解。",
+          "question": "谁对施工安全与损邻负责？安置费用、重建时程和住户参与能否公开追踪？",
+          "sourceIds": [
+            "dazhi"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        },
+        {
+          "title": "商务与夜间生活的边界",
+          "background": "餐饮、饭店和住宅在多个中山商圈交织。",
+          "question": "夜间噪音、垃圾清运与人行空间如何兼顾居民和店家，是否有具体街段方案？",
+          "sourceIds": [
+            "zhongshan_commerce"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "跨河生活圈的交通",
+          "background": "东环段规划经过大直；民生汐止线规划经过中山的民生路廊。",
+          "question": "新路线与现有公车、步行接驳怎么衔接？是否区分规划目标与已经完成的工程？",
+          "sourceIds": [
+            "east_ring",
+            "minsheng_metro"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        }
+      ],
+      "code": "63000040",
+      "demographics": {
+        "date": "2026-09",
+        "population": 210441,
+        "households": 103910,
+        "elderly65Plus": 54560,
+        "elderlyPct": 25.93,
+        "children0to14": 21638,
+        "childrenPct": 10.28,
+        "populationChangeYoY": -2013,
+        "populationChangeYoYPct": -0.95,
+        "villages": 42,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 80695,
+        "taxIncomeMedianNTD": 679000,
+        "taxIncomeMeanNTD": 1347000,
+        "taxIncomeQ1NTD": 299000,
+        "taxIncomeQ3NTD": 1477000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 37960,
+        "registeredBusinesses": 8656,
+        "companyTopIndustries": [
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 7057,
+            "sharePct": 18.59
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 6068,
+            "sharePct": 15.99
+          },
+          {
+            "industry": "製造業",
+            "count": 5309,
+            "sharePct": 13.99
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 5136,
+            "sharePct": 13.53
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "zhongzheng",
+      "name": "中正區",
+      "tagline": "中央机关与车站门户，也有需要更新的日常住宅",
+      "profile": "中正有总统府、行政院、立法院等中央机关，也有博物馆、书店街与文教设施。但它并不只是一张“政治中心”的明信片：南机场整建住宅及周边更新，把住房安全、安置和公共交通带到具体居民生活里。看这里的选举，要区分中央机关的政治新闻和市府能直接处理的住宅、街道与社区服务。",
+      "industry": "公共机构和文教设施构成区域背景，商业与专业服务则沿街道展开；中央机关存在，不代表本区每位居民都在公部门工作。",
+      "profileSourceIds": [
+        "zhongzheng_profile",
+        "nanjichang"
+      ],
+      "issues": [
+        {
+          "title": "南机场整宅更新与原地生活",
+          "background": "官方公办更新范围涉及中正区捷运LG03站与南机场整宅及周边，也包含部分万华更新地区。",
+          "question": "耐震安全、原住户安置、租户处境与生活服务，是否都有明确安排？行政区边界外的影响是否也被处理？",
+          "sourceIds": [
+            "nanjichang"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        },
+        {
+          "title": "大型机关与居民的街道",
+          "background": "中央机关、文教设施与商业街道并存。",
+          "question": "在大型活动或交通管制下，居民通行、行人安全和公共空间能否获得具体保障？",
+          "sourceIds": [
+            "zhongzheng_profile"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "育儿与高龄服务的双重需求",
+          "background": "2026年9月0—14岁占14.91%，65岁以上占24.31%。",
+          "question": "教育、托育与长照资源如何按实际生活圈配置？候选人是否说明服务容量和使用条件？",
+          "sourceIds": [
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000050",
+      "demographics": {
+        "date": "2026-09",
+        "population": 142673,
+        "households": 65870,
+        "elderly65Plus": 34690,
+        "elderlyPct": 24.31,
+        "children0to14": 21273,
+        "childrenPct": 14.91,
+        "populationChangeYoY": -1804,
+        "populationChangeYoYPct": -1.25,
+        "villages": 31,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 51918,
+        "taxIncomeMedianNTD": 778000,
+        "taxIncomeMeanNTD": 1473000,
+        "taxIncomeQ1NTD": 334000,
+        "taxIncomeQ3NTD": 1717000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 16846,
+        "registeredBusinesses": 4788,
+        "companyTopIndustries": [
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 3460,
+            "sharePct": 20.54
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 2707,
+            "sharePct": 16.07
+          },
+          {
+            "industry": "製造業",
+            "count": 2301,
+            "sharePct": 13.66
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 2028,
+            "sharePct": 12.04
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "datong",
+      "name": "大同區",
+      "tagline": "大稻埕与大龙峒，老商业的更新与保存",
+      "profile": "大同包含大稻埕、大龙峒等较早发展的街区；迪化街的茶叶、南北货、药材、布料，与赤峰街的餐饮和新店铺呈现不同经济层次。这里值得看的是老产业如何继续经营，以及历史街区在观光与更新之下怎么保有日常生活，不能只把街景“文青化”当成全区状态。",
+      "industry": "传统批发零售与特色商圈是鲜明线索。官方资料记录迪化街的干货、药材与布业，以及赤峰街从汽配五金向新型店铺转变。",
+      "profileSourceIds": [
+        "datong_profile",
+        "datong_commerce"
+      ],
+      "issues": [
+        {
+          "title": "历史街区保存与更新",
+          "background": "大稻埕历史街区与既有商业活动相连。",
+          "question": "修复、消防和无障碍改善能否保留老店与住户，而不只提高观光展示价值？",
+          "sourceIds": [
+            "datong_commerce"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "批发、观光与街道空间",
+          "background": "传统批发、夜市和特色店铺使用同一片街道。",
+          "question": "卸货、行人、观光人潮与居民通行怎么安排，是否有清楚时段与空间设计？",
+          "sourceIds": [
+            "datong_commerce"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "捷运规划如何服务既有社区",
+          "background": "民生汐止线规划起点在民生西路与重庆北路口，经过大同并连接既有线路。",
+          "question": "规划、审查、施工和营运各阶段分别走到哪里？施工前的公交和高龄接驳如何改善？",
+          "sourceIds": [
+            "minsheng_metro",
+            "age"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        }
+      ],
+      "code": "63000060",
+      "demographics": {
+        "date": "2026-09",
+        "population": 115605,
+        "households": 54748,
+        "elderly65Plus": 28499,
+        "elderlyPct": 24.65,
+        "children0to14": 12717,
+        "childrenPct": 11.0,
+        "populationChangeYoY": -1216,
+        "populationChangeYoYPct": -1.04,
+        "villages": 25,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 41641,
+        "taxIncomeMedianNTD": 587000,
+        "taxIncomeMeanNTD": 1044000,
+        "taxIncomeQ1NTD": 271000,
+        "taxIncomeQ3NTD": 1229000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 13009,
+        "registeredBusinesses": 4775,
+        "companyTopIndustries": [
+          {
+            "industry": "批發及零售業",
+            "count": 2571,
+            "sharePct": 19.76
+          },
+          {
+            "industry": "製造業",
+            "count": 2437,
+            "sharePct": 18.73
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 2211,
+            "sharePct": 17.0
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 1525,
+            "sharePct": 11.72
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "wanhua",
+      "name": "萬華區",
+      "tagline": "西门观光、艋舺生活与全城的民生批发市场",
+      "profile": "万华不能只用西门町来代表。北侧流行文化与观光商圈、龙山寺及艋舺老街区、南侧民生批发与住宅生活，是不同的观察面。2026年9月65岁以上人口占27.14%，为十二区最高，0—14岁占7.92%；把照顾、居住和商圈经营放在一起看，比用单一“老城区”标签更有解释力。",
+      "industry": "西门町的文化消费、艋舺服饰和传统店铺，以及农产、渔产与环南等市场，服务的对象从游客到全城市民都有。批发物流的经济角色与观光角色应分别呈现。",
+      "profileSourceIds": [
+        "wanhua_commerce",
+        "wanhua_profile",
+        "age"
+      ],
+      "issues": [
+        {
+          "title": "高龄照顾能否走进巷弄",
+          "background": "本区65岁以上比例为2026年9月十二区最高。",
+          "question": "日间照顾、送餐、无障碍与就医接驳是否覆盖实际居住街区，而不只统计全区据点总数？",
+          "sourceIds": [
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        },
+        {
+          "title": "市场物流与社区环境",
+          "background": "区内有农渔畜产运销及环南等市场设施，是全市民生供应的重要节点。",
+          "question": "市场改善如何处理卸货车流、噪音、卫生与邻近居民生活？店家搬迁与经营衔接是否可追踪？",
+          "sourceIds": [
+            "wanhua_profile"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "观光与住宅更新的收益分配",
+          "background": "西门、艋舺和既有住宅空间面对不同的经营与生活需求。",
+          "question": "观光建设、老屋安全和公共服务是否一起推进？有没有把租户、小店与高龄住户纳入更新安排？",
+          "sourceIds": [
+            "wanhua_commerce",
+            "urban_renewal"
+          ],
+          "responsibility": "市府都发、更新及建管机关分别处理规划、更新与建筑管理；实施者及产权关系人承担各自责任。市议员监督地方执行，立委处理相关国家法规。"
+        }
+      ],
+      "code": "63000070",
+      "demographics": {
+        "date": "2026-09",
+        "population": 167175,
+        "households": 81709,
+        "elderly65Plus": 45365,
+        "elderlyPct": 27.14,
+        "children0to14": 13247,
+        "childrenPct": 7.92,
+        "populationChangeYoY": -1849,
+        "populationChangeYoYPct": -1.09,
+        "villages": 36,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 54408,
+        "taxIncomeMedianNTD": 518000,
+        "taxIncomeMeanNTD": 872000,
+        "taxIncomeQ1NTD": 246000,
+        "taxIncomeQ3NTD": 1045000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 6259,
+        "registeredBusinesses": 5905,
+        "companyTopIndustries": [
+          {
+            "industry": "製造業",
+            "count": 1236,
+            "sharePct": 19.75
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 1144,
+            "sharePct": 18.28
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 939,
+            "sharePct": 15.0
+          },
+          {
+            "industry": "營建工程業",
+            "count": 839,
+            "sharePct": 13.4
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "wenshan",
+      "name": "文山區",
+      "tagline": "景美与木栅，两套生活圈连接大学与山地休闲",
+      "profile": "文山由原景美和木栅合并而来，不能只看一条捷运线或一所大学。景美、木栅的住宅生活，与政大等学校、动物园、猫空茶园各有不同的交通和服务节奏。山地与溪流又让部分地区的可达性不同于市中心，区内的东西向联系很值得作为选举承诺的检验入口。",
+      "industry": "文教、社区零售、餐饮及山地休闲旅游并存；猫空的茶产业是实际地方产业线索。学校和观光点带来的人流，不等于设籍人口或选民人数。",
+      "profileSourceIds": [
+        "wenshan_profile",
+        "wenshan_education"
+      ],
+      "issues": [
+        {
+          "title": "南环段施工与日常通勤",
+          "background": "南环段经过动物园、政大及木栅路廊；2026年有Y03站施工改道公告。",
+          "question": "建设时程之外，工期中的车道、公车、通学安全与店家经营如何安排？",
+          "sourceIds": [
+            "south_ring",
+            "south_ring_works"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        },
+        {
+          "title": "住宅生活圈的公共服务",
+          "background": "区内包含景美和木栅多个生活圈，山地与溪流影响通达。",
+          "question": "托育、长照和社区设施是否能让不同地带方便抵达，还是只有全区平均数量？",
+          "sourceIds": [
+            "wenshan_profile",
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        },
+        {
+          "title": "猫空与山地观光的承载",
+          "background": "猫空茶园、动物园与周边山林形成休闲活动空间。",
+          "question": "观光接驳、周末交通、环境维护与在地经营能否一起解决？",
+          "sourceIds": [
+            "wenshan_profile"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        }
+      ],
+      "code": "63000080",
+      "demographics": {
+        "date": "2026-09",
+        "population": 252102,
+        "households": 111325,
+        "elderly65Plus": 57746,
+        "elderlyPct": 22.91,
+        "children0to14": 28497,
+        "childrenPct": 11.3,
+        "populationChangeYoY": -1889,
+        "populationChangeYoYPct": -0.74,
+        "villages": 43,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 90343,
+        "taxIncomeMedianNTD": 663000,
+        "taxIncomeMeanNTD": 1177000,
+        "taxIncomeQ1NTD": 299000,
+        "taxIncomeQ3NTD": 1422000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 4729,
+        "registeredBusinesses": 3714,
+        "companyTopIndustries": [
+          {
+            "industry": "營建工程業",
+            "count": 969,
+            "sharePct": 20.49
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 891,
+            "sharePct": 18.84
+          },
+          {
+            "industry": "製造業",
+            "count": 707,
+            "sharePct": 14.95
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 643,
+            "sharePct": 13.6
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "nangang",
+      "name": "南港區",
+      "tagline": "从工业地带转向交通、生技与会展门户",
+      "profile": "南港最容易看见产业转型：原有工业地带逐步连接铁路与捷运枢纽、软件、会展、生技及流行音乐设施。都市发展局的东区门户计划覆盖全区。值得观察的是“大型建设”怎样转成居民的交通便利和生活服务；2026年9月，南港是十二区中唯一户籍人口较上年同月增加的区，但不能把人口变化直接归因于某个建设。",
+      "industry": "软件与会展、生技、交通转运及文化设施是规划与现有发展相连的产业线索。计划书中的未来效益或工作机会，必须与已经实现的数据分开。",
+      "profileSourceIds": [
+        "nangang_profile",
+        "east_gateway",
+        "population"
+      ],
+      "issues": [
+        {
+          "title": "交通枢纽与最后一段路",
+          "background": "东区门户计划把交通转运与产业园区串联。",
+          "question": "车站到住宅、园区及周边社区是否有可步行与可接驳的连续路线，而不只是更多大型站体？",
+          "sourceIds": [
+            "east_gateway"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "新开发与既有社区能否一起受益",
+          "background": "都市更新、公共住宅与产业建设都是东区门户计划内容。",
+          "question": "招商与住房增加时，学校、托育、公园和公共服务如何配套？施工和租住成本的影响由谁处理？",
+          "sourceIds": [
+            "east_gateway"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "产业转型的实绩怎么核对",
+          "background": "软件、会展、生技与文化设施承担不同发展目标。",
+          "question": "就业、公共空间、交通改善的承诺，是否区分“规划目标”“已完工设施”和“实际使用效果”？",
+          "sourceIds": [
+            "east_gateway",
+            "companies"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        }
+      ],
+      "code": "63000090",
+      "demographics": {
+        "date": "2026-09",
+        "population": 111371,
+        "households": 50313,
+        "elderly65Plus": 25380,
+        "elderlyPct": 22.79,
+        "children0to14": 11838,
+        "childrenPct": 10.63,
+        "populationChangeYoY": 326,
+        "populationChangeYoYPct": 0.29,
+        "villages": 20,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 40036,
+        "taxIncomeMedianNTD": 613000,
+        "taxIncomeMeanNTD": 1144000,
+        "taxIncomeQ1NTD": 285000,
+        "taxIncomeQ3NTD": 1300000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 4842,
+        "registeredBusinesses": 2153,
+        "companyTopIndustries": [
+          {
+            "industry": "製造業",
+            "count": 1145,
+            "sharePct": 23.65
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 848,
+            "sharePct": 17.51
+          },
+          {
+            "industry": "營建工程業",
+            "count": 673,
+            "sharePct": 13.9
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 607,
+            "sharePct": 12.54
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "neihu",
+      "name": "內湖區",
+      "tagline": "科技与企业办公聚落，也是一大片住宅生活",
+      "profile": "内湖的辨识度来自科技园区与企业办公，但区内也有住宅、山坡和湖泊环境。南侧跨基隆河与松山、南港连接，园区通勤和居民出行会在相同路网上交会。2026年9月65岁以上占21.33%，为十二区最低；这只表示年龄结构相对较年轻，绝不等于没有照顾或老屋需求。",
+      "industry": "内湖科技园区聚集资讯通讯、企业总部与物流等活动。公司登记行业分类不能直接当作园区雇员的职业，更不能把所有居民都视为科技从业者。",
+      "profileSourceIds": [
+        "neihu_profile",
+        "beishike",
+        "age"
+      ],
+      "issues": [
+        {
+          "title": "园区通勤与住宅交通",
+          "background": "东环段规划沿瑞光路、旧宗路等路廊，串联内湖与其他行政区。",
+          "question": "轨道建设、公车接驳与路口改善如何配合？上下班尖峰与社区日常出行是否分别有方案？",
+          "sourceIds": [
+            "east_ring",
+            "neihu_profile"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        },
+        {
+          "title": "产业园区周边的生活服务",
+          "background": "工作空间与住宅社区紧邻，日间活动人口与户籍人口并非同一统计。",
+          "question": "托育、餐饮、步行与公共空间的容量，是否同时考虑居民与通勤者？",
+          "sourceIds": [
+            "neihu_profile",
+            "population"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        },
+        {
+          "title": "新交通承诺如何验收",
+          "background": "民生汐止线与东环段都有经过内湖的规划。",
+          "question": "候选人是否明确指出工程权限、审查阶段、短期替代措施与公开进度，而不是只给出通车口号？",
+          "sourceIds": [
+            "minsheng_metro",
+            "east_ring"
+          ],
+          "responsibility": "市府交通与捷运机关负责地方规划、施工和交通维持；中央负责相关核定或补助。议员监督地方预算，立委处理中央层面的监督与协调。"
+        }
+      ],
+      "code": "63000100",
+      "demographics": {
+        "date": "2026-09",
+        "population": 265437,
+        "households": 112233,
+        "elderly65Plus": 56612,
+        "elderlyPct": 21.33,
+        "children0to14": 34301,
+        "childrenPct": 12.92,
+        "populationChangeYoY": -2948,
+        "populationChangeYoYPct": -1.1,
+        "villages": 39,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 99517,
+        "taxIncomeMedianNTD": 707000,
+        "taxIncomeMeanNTD": 1318000,
+        "taxIncomeQ1NTD": 321000,
+        "taxIncomeQ3NTD": 1536000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 15667,
+        "registeredBusinesses": 4908,
+        "companyTopIndustries": [
+          {
+            "industry": "製造業",
+            "count": 3456,
+            "sharePct": 22.06
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 2804,
+            "sharePct": 17.9
+          },
+          {
+            "industry": "金融及保險業",
+            "count": 2180,
+            "sharePct": 13.91
+          },
+          {
+            "industry": "營建工程業",
+            "count": 1870,
+            "sharePct": 11.94
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "shilin",
+      "name": "士林區",
+      "tagline": "天母、社子与山地街区，差异大于一个区名",
+      "profile": "士林横跨社子、传统市街、天母和山地等生活空间；故宫、士林观光与山林资源只是其中一面。这里尤其适合在行政区以下再辨认生活圈：河岸开发、住宅环境、观光交通和山地服务，放进一张区级平均表就会失去差别。社子岛的开发与安置，更是理解土地、住房和公共建设关系的具体入口。",
+      "industry": "观光休闲、地方商业与既有产业空间并存；不同地带与台北科技走廊的连接也不一样。避免用天母街景或夜市游客替代整区经济状况。",
+      "profileSourceIds": [
+        "shilin_profile",
+        "shezidao",
+        "beishike"
+      ],
+      "issues": [
+        {
+          "title": "社子岛开发、安置与居民参与",
+          "background": "官方大事纪记录2026年的安置计划审议等程序；市府主张先安置后拆迁。该主张需与住户及经营者实际处境共同核对。",
+          "question": "不同产权、租住及经营身份会获得什么安排？程序、负担、文化保存和居民参与能否公开比较？",
+          "sourceIds": [
+            "shezidao",
+            "shezidao_resettlement"
+          ],
+          "responsibility": "市府负责开发、安置与地方程序；涉及征收须有中央审议。市议员监督市政，立委可就中央程序及法规进行监督与协调。"
+        },
+        {
+          "title": "生活圈之间的交通差距",
+          "background": "士林面积大，涵盖河岸、都市住宅和山地。",
+          "question": "市街、天母、社子与山地的公交、就医和学校可达性，是否被分别检查？",
+          "sourceIds": [
+            "shilin_profile"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "观光与高龄社区的日常",
+          "background": "故宫、山林与观光空间在区内；2026年9月65岁以上占26.09%。",
+          "question": "游客交通、人行设施和社区照顾如何衔接，避免只看热门景点的使用体验？",
+          "sourceIds": [
+            "shilin_profile",
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000110",
+      "demographics": {
+        "date": "2026-09",
+        "population": 255580,
+        "households": 109580,
+        "elderly65Plus": 66670,
+        "elderlyPct": 26.09,
+        "children0to14": 27457,
+        "childrenPct": 10.74,
+        "populationChangeYoY": -3115,
+        "populationChangeYoYPct": -1.2,
+        "villages": 51,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 91645,
+        "taxIncomeMedianNTD": 621000,
+        "taxIncomeMeanNTD": 1200000,
+        "taxIncomeQ1NTD": 285000,
+        "taxIncomeQ3NTD": 1332000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 8038,
+        "registeredBusinesses": 4860,
+        "companyTopIndustries": [
+          {
+            "industry": "製造業",
+            "count": 1629,
+            "sharePct": 20.27
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 1484,
+            "sharePct": 18.46
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 1234,
+            "sharePct": 15.35
+          },
+          {
+            "industry": "營建工程業",
+            "count": 1020,
+            "sharePct": 12.69
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    },
+    {
+      "id": "beitou",
+      "name": "北投區",
+      "tagline": "温泉、医疗与科技开发，落在山麓和平原之间",
+      "profile": "北投同时有温泉与山地休闲、石牌一带医疗资源，以及关渡平原和北投士林科技园区的发展。官方地理资料将它区分为火山群、山麓台地与关渡平原三种地形。看这里的建设承诺，需要追问不同生活空间如何受影响，不能用“科技新城”或“温泉观光”一个词覆盖整个区。",
+      "industry": "温泉观光、医疗服务与科技产业发展是不同线索。园区招商的金额或厂商数，应与已经形成的就业、交通和居民服务分别展示。",
+      "profileSourceIds": [
+        "beitou_profile",
+        "beitou_tourism",
+        "beishike"
+      ],
+      "issues": [
+        {
+          "title": "北士科开发与生活配套",
+          "background": "产业局资料将北投士林科技园区列入科技走廊，并提到周边医疗与教育资源。",
+          "question": "产业进驻怎样与通勤、住房、公共空间及社区服务配套？承诺的经济效益有没有对应实际进度？",
+          "sourceIds": [
+            "beishike"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "平原、山麓与生态空间",
+          "background": "关渡平原、山麓与阳明山相关空间共同构成北投。",
+          "question": "开发、排水、生态保护与休闲利用如何权衡？是否公开具体范围与监测依据？",
+          "sourceIds": [
+            "beitou_profile",
+            "beitou_tourism"
+          ],
+          "responsibility": "以市府及相关地方主管机关的规划执行为主；市议员监督地方预算和进度。涉及中央法令、补助或跨市事项时，再看立委及中央机关的角色。"
+        },
+        {
+          "title": "医疗资源附近也要看照顾可达性",
+          "background": "区内拥有大型医疗机构及山地社区，高龄人口也有相当规模。",
+          "question": "有医院不等于每个社区都容易就医；接驳、长期照顾和在地老化支持是否落实到不同地带？",
+          "sourceIds": [
+            "beishike",
+            "age"
+          ],
+          "responsibility": "市府社会、卫生、教育等机关依服务项目执行；市议员监督地方预算与服务容量。中央制度和补助另由相关机关及立委监督。"
+        }
+      ],
+      "code": "63000120",
+      "demographics": {
+        "date": "2026-09",
+        "population": 233973,
+        "households": 101790,
+        "elderly65Plus": 56447,
+        "elderlyPct": 24.13,
+        "children0to14": 26876,
+        "childrenPct": 11.49,
+        "populationChangeYoY": -2202,
+        "populationChangeYoYPct": -0.93,
+        "villages": 42,
+        "sourceIds": [
+          "population",
+          "age"
+        ]
+      },
+      "income": {
+        "incomeTaxYear": 2023,
+        "taxUnits": 82195,
+        "taxIncomeMedianNTD": 622000,
+        "taxIncomeMeanNTD": 1129000,
+        "taxIncomeQ1NTD": 284000,
+        "taxIncomeQ3NTD": 1323000,
+        "sourceIds": [
+          "income"
+        ]
+      },
+      "businessStats": {
+        "versionUpdatedAt": "2026-09-23",
+        "registeredCompanies": 4745,
+        "registeredBusinesses": 3959,
+        "companyTopIndustries": [
+          {
+            "industry": "製造業",
+            "count": 915,
+            "sharePct": 19.28
+          },
+          {
+            "industry": "批發及零售業",
+            "count": 796,
+            "sharePct": 16.78
+          },
+          {
+            "industry": "營建工程業",
+            "count": 784,
+            "sharePct": 16.52
+          },
+          {
+            "industry": "專業/科學及技術服務業",
+            "count": 758,
+            "sharePct": 15.97
+          }
+        ],
+        "sourceIds": [
+          "companies",
+          "businesses"
+        ]
+      },
+      "issuesLabel": "可据此观察的公共议题（编辑分析，非民调排名）"
+    }
+  ]
+}

@@ -1,0 +1,6147 @@
+{
+  "checkedAt": "2026-10-20",
+  "source": "中央選舉委員會選舉資料庫",
+  "methodology": {
+    "voteShare": "候選人得票數 / 該層級全部有效票，使用官方公布百分比；不按前三名重算。",
+    "winner": "districtLeader 為該行政區最高票，不代表在該區另行選出市長；officialElected 為選舉整體當選人。",
+    "turnout": "投票數 / 選舉人數。戶籍人口不等於選舉人數。",
+    "presidential": "正副總統同組票數在原始JSON重複列出；僅保留總統候選人一列並附搭檔，避免票數加倍。",
+    "officialPercentagePrecision": "2014、2018市長原始官方得票率採小數二位截尾；2022、2024檔案為小數二位四捨五入。share 保留原始公布值；marginPoints 以完整票數與有效票分母計算。",
+    "aggregation": "跨區投票率以各區投票數總和除以各區選舉人數總和計算，不直接平均百分比；不同種類選舉各有其官方選舉人數，不能共用人口或分母。"
+  },
+  "elections": [
+    {
+      "id": "cec-C1-00-2022",
+      "year": 2022,
+      "date": "2022-11-26",
+      "type": "mayor",
+      "title": "111年直轄市長選舉",
+      "geography": "administrativeDistrict",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/C1/00/05cc7b904c7a30cc7c88d5b10898c98e/D/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/05cc7b904c7a30cc7c88d5b10898c98e/D/63_000_00_000_0000.json",
+      "themeId": "05cc7b904c7a30cc7c88d5b10898c98e",
+      "districts": [
+        {
+          "name": "松山區",
+          "code": "010",
+          "validVotes": 103919,
+          "invalidVotes": 803,
+          "votesCast": 104722,
+          "eligibleVoters": 151159,
+          "turnout": 69.28,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 47295,
+              "share": 45.51,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 32098,
+              "share": 30.89,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 23938,
+              "share": 23.04,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 158,
+              "share": 0.15,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 151,
+              "share": 0.15,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 144,
+              "share": 0.14,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 48,
+              "share": 0.05,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 25,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 19,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 18,
+              "share": 0.02,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 16,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 9,
+              "share": 0.01,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 15197,
+          "marginPoints": 14.6239
+        },
+        {
+          "name": "信義區",
+          "code": "020",
+          "validVotes": 114325,
+          "invalidVotes": 890,
+          "votesCast": 115215,
+          "eligibleVoters": 170907,
+          "turnout": 67.41,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 52032,
+              "share": 45.51,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 34433,
+              "share": 30.12,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 27202,
+              "share": 23.79,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 181,
+              "share": 0.16,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 177,
+              "share": 0.15,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 129,
+              "share": 0.11,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 57,
+              "share": 0.05,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 37,
+              "share": 0.03,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 23,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 20,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 19,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 15,
+              "share": 0.01,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 17599,
+          "marginPoints": 15.3938
+        },
+        {
+          "name": "大安區",
+          "code": "030",
+          "validVotes": 149952,
+          "invalidVotes": 1088,
+          "votesCast": 151040,
+          "eligibleVoters": 223525,
+          "turnout": 67.57,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 69266,
+              "share": 46.19,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 44992,
+              "share": 30.0,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 34803,
+              "share": 23.21,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 253,
+              "share": 0.17,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 253,
+              "share": 0.17,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 228,
+              "share": 0.15,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 40,
+              "share": 0.03,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 31,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 30,
+              "share": 0.02,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 26,
+              "share": 0.02,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 21,
+              "share": 0.01,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 9,
+              "share": 0.01,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 24274,
+          "marginPoints": 16.1878
+        },
+        {
+          "name": "中山區",
+          "code": "040",
+          "validVotes": 117402,
+          "invalidVotes": 952,
+          "votesCast": 118354,
+          "eligibleVoters": 176271,
+          "turnout": 67.14,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 50224,
+              "share": 42.78,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 40233,
+              "share": 34.27,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 26244,
+              "share": 22.35,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 216,
+              "share": 0.18,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 181,
+              "share": 0.15,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 161,
+              "share": 0.14,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 29,
+              "share": 0.02,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 28,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 27,
+              "share": 0.02,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 21,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 20,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 18,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 9991,
+          "marginPoints": 8.5101
+        },
+        {
+          "name": "中正區",
+          "code": "050",
+          "validVotes": 77230,
+          "invalidVotes": 599,
+          "votesCast": 77829,
+          "eligibleVoters": 115582,
+          "turnout": 67.34,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 33503,
+              "share": 43.38,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 23459,
+              "share": 30.38,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 19746,
+              "share": 25.57,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 154,
+              "share": 0.2,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 149,
+              "share": 0.19,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 117,
+              "share": 0.15,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 25,
+              "share": 0.03,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 23,
+              "share": 0.03,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 17,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 13,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 12,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 12,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 10044,
+          "marginPoints": 13.0053
+        },
+        {
+          "name": "大同區",
+          "code": "060",
+          "validVotes": 65863,
+          "invalidVotes": 571,
+          "votesCast": 66434,
+          "eligibleVoters": 98209,
+          "turnout": 67.65,
+          "candidates": [
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 26530,
+              "share": 40.28,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 21700,
+              "share": 32.95,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 17263,
+              "share": 26.21,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 110,
+              "share": 0.17,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 102,
+              "share": 0.15,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 85,
+              "share": 0.13,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 16,
+              "share": 0.02,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 16,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 14,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 13,
+              "share": 0.02,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 10,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 4,
+              "share": 0.01,
+              "ballotNumber": 9,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "陳時中",
+          "marginVotes": 4830,
+          "marginPoints": 7.3334
+        },
+        {
+          "name": "萬華區",
+          "code": "070",
+          "validVotes": 97893,
+          "invalidVotes": 1061,
+          "votesCast": 98954,
+          "eligibleVoters": 148984,
+          "turnout": 66.42,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 39140,
+              "share": 39.98,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 33214,
+              "share": 33.93,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 24849,
+              "share": 25.38,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 197,
+              "share": 0.2,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 184,
+              "share": 0.19,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 125,
+              "share": 0.13,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 41,
+              "share": 0.04,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 40,
+              "share": 0.04,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 40,
+              "share": 0.04,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 23,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 20,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 20,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 5926,
+          "marginPoints": 6.0535
+        },
+        {
+          "name": "文山區",
+          "code": "080",
+          "validVotes": 142410,
+          "invalidVotes": 1117,
+          "votesCast": 143527,
+          "eligibleVoters": 210341,
+          "turnout": 68.24,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 69020,
+              "share": 48.47,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 36413,
+              "share": 25.57,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 35893,
+              "share": 25.2,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 379,
+              "share": 0.27,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 250,
+              "share": 0.18,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 234,
+              "share": 0.16,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 48,
+              "share": 0.03,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 43,
+              "share": 0.03,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 42,
+              "share": 0.03,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 34,
+              "share": 0.02,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 33,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 21,
+              "share": 0.01,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 32607,
+          "marginPoints": 22.8966
+        },
+        {
+          "name": "南港區",
+          "code": "090",
+          "validVotes": 62580,
+          "invalidVotes": 507,
+          "votesCast": 63087,
+          "eligibleVoters": 94414,
+          "turnout": 66.82,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 25261,
+              "share": 40.37,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 18716,
+              "share": 29.91,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 18246,
+              "share": 29.16,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 97,
+              "share": 0.16,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 81,
+              "share": 0.13,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 69,
+              "share": 0.11,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 27,
+              "share": 0.04,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 27,
+              "share": 0.04,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 19,
+              "share": 0.03,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 18,
+              "share": 0.03,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 10,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 9,
+              "share": 0.01,
+              "ballotNumber": 9,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 6545,
+          "marginPoints": 10.4586
+        },
+        {
+          "name": "內湖區",
+          "code": "100",
+          "validVotes": 148858,
+          "invalidVotes": 1094,
+          "votesCast": 149952,
+          "eligibleVoters": 220493,
+          "turnout": 68.01,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 60842,
+              "share": 40.87,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 44466,
+              "share": 29.87,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 42726,
+              "share": 28.7,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 202,
+              "share": 0.14,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 201,
+              "share": 0.14,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 171,
+              "share": 0.11,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 112,
+              "share": 0.08,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 41,
+              "share": 0.03,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 28,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 26,
+              "share": 0.02,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 24,
+              "share": 0.02,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 19,
+              "share": 0.01,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 16376,
+          "marginPoints": 11.0011
+        },
+        {
+          "name": "士林區",
+          "code": "110",
+          "validVotes": 148459,
+          "invalidVotes": 1412,
+          "votesCast": 149871,
+          "eligibleVoters": 219458,
+          "turnout": 68.29,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 55874,
+              "share": 37.64,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 55435,
+              "share": 37.34,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 35999,
+              "share": 24.25,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 441,
+              "share": 0.3,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 253,
+              "share": 0.17,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 211,
+              "share": 0.14,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 72,
+              "share": 0.05,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 41,
+              "share": 0.03,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 36,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 35,
+              "share": 0.02,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 34,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 28,
+              "share": 0.02,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 439,
+          "marginPoints": 0.2957
+        },
+        {
+          "name": "北投區",
+          "code": "120",
+          "validVotes": 132060,
+          "invalidVotes": 1134,
+          "votesCast": 133194,
+          "eligibleVoters": 197426,
+          "turnout": 67.47,
+          "candidates": [
+            {
+              "name": "蔣萬安",
+              "party": "中國國民黨",
+              "votes": 51433,
+              "share": 38.95,
+              "ballotNumber": 6,
+              "officialElected": true
+            },
+            {
+              "name": "陳時中",
+              "party": "民主進步黨",
+              "votes": 46309,
+              "share": 35.07,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "黃珊珊",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 33492,
+              "share": 25.36,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張家豪",
+              "party": "台灣動物保護黨",
+              "votes": 218,
+              "share": 0.17,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "童文薰",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 204,
+              "share": 0.15,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "蘇煥智",
+              "party": "台灣維新",
+              "votes": 177,
+              "share": 0.13,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "王文娟",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 56,
+              "share": 0.04,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "鄭匡宇",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 49,
+              "share": 0.04,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "黃聖峰",
+              "party": "台澎黨",
+              "votes": 35,
+              "share": 0.03,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "唐新民",
+              "party": "共和黨",
+              "votes": 34,
+              "share": 0.03,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "施奉先",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 33,
+              "share": 0.02,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "謝立康",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 20,
+              "share": 0.02,
+              "ballotNumber": 11,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "蔣萬安",
+          "marginVotes": 5124,
+          "marginPoints": 3.8801
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=C1&legisId=00&themeId=05cc7b904c7a30cc7c88d5b10898c98e&dataLevel=D&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    },
+    {
+      "id": "cec-C1-00-2018",
+      "year": 2018,
+      "date": "2018-11-24",
+      "type": "mayor",
+      "title": "107年直轄市長選舉",
+      "geography": "administrativeDistrict",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/C1/00/a0222f6529a3ff2192a1a04f209eaac3/D/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/a0222f6529a3ff2192a1a04f209eaac3/D/63_000_00_000_0000.json",
+      "themeId": "a0222f6529a3ff2192a1a04f209eaac3",
+      "districts": [
+        {
+          "name": "松山區",
+          "code": "010",
+          "validVotes": 106795,
+          "invalidVotes": 957,
+          "votesCast": 107752,
+          "eligibleVoters": 164413,
+          "turnout": 65.54,
+          "candidates": [
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 46353,
+              "share": 43.4,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 42315,
+              "share": 39.62,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 17285,
+              "share": 16.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 425,
+              "share": 0.39,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 417,
+              "share": 0.39,
+              "ballotNumber": 5,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "丁守中",
+          "marginVotes": 4038,
+          "marginPoints": 3.7811
+        },
+        {
+          "name": "信義區",
+          "code": "020",
+          "validVotes": 122290,
+          "invalidVotes": 1172,
+          "votesCast": 123462,
+          "eligibleVoters": 185510,
+          "turnout": 66.55,
+          "candidates": [
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 53812,
+              "share": 44.0,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 47620,
+              "share": 38.94,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 19849,
+              "share": 16.23,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 509,
+              "share": 0.41,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 500,
+              "share": 0.4,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "丁守中",
+          "marginVotes": 6192,
+          "marginPoints": 5.0634
+        },
+        {
+          "name": "大安區",
+          "code": "030",
+          "validVotes": 158137,
+          "invalidVotes": 1392,
+          "votesCast": 159529,
+          "eligibleVoters": 245341,
+          "turnout": 65.02,
+          "candidates": [
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 72311,
+              "share": 45.72,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 60940,
+              "share": 38.53,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 23646,
+              "share": 14.95,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 658,
+              "share": 0.41,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 582,
+              "share": 0.36,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "丁守中",
+          "marginVotes": 11371,
+          "marginPoints": 7.1906
+        },
+        {
+          "name": "中山區",
+          "code": "040",
+          "validVotes": 121756,
+          "invalidVotes": 1171,
+          "votesCast": 122927,
+          "eligibleVoters": 189977,
+          "turnout": 64.71,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 50582,
+              "share": 41.54,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 46732,
+              "share": 38.38,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 23476,
+              "share": 19.28,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 490,
+              "share": 0.4,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 476,
+              "share": 0.39,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 3850,
+          "marginPoints": 3.1621
+        },
+        {
+          "name": "中正區",
+          "code": "050",
+          "validVotes": 81024,
+          "invalidVotes": 715,
+          "votesCast": 81739,
+          "eligibleVoters": 124493,
+          "turnout": 65.66,
+          "candidates": [
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 33896,
+              "share": 41.83,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 33748,
+              "share": 41.65,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 12631,
+              "share": 15.58,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 377,
+              "share": 0.46,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 372,
+              "share": 0.45,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "丁守中",
+          "marginVotes": 148,
+          "marginPoints": 0.1827
+        },
+        {
+          "name": "大同區",
+          "code": "060",
+          "validVotes": 69905,
+          "invalidVotes": 793,
+          "votesCast": 70698,
+          "eligibleVoters": 104629,
+          "turnout": 67.57,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 31660,
+              "share": 45.29,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 20745,
+              "share": 29.67,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 16895,
+              "share": 24.16,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 339,
+              "share": 0.48,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 266,
+              "share": 0.38,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 10915,
+          "marginPoints": 15.614
+        },
+        {
+          "name": "萬華區",
+          "code": "070",
+          "validVotes": 104187,
+          "invalidVotes": 1224,
+          "votesCast": 105411,
+          "eligibleVoters": 159707,
+          "turnout": 66.0,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 43379,
+              "share": 41.63,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 38520,
+              "share": 36.97,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 21397,
+              "share": 20.53,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 465,
+              "share": 0.44,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 426,
+              "share": 0.4,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 4859,
+          "marginPoints": 4.6637
+        },
+        {
+          "name": "文山區",
+          "code": "080",
+          "validVotes": 145421,
+          "invalidVotes": 1398,
+          "votesCast": 146819,
+          "eligibleVoters": 219782,
+          "turnout": 66.8,
+          "candidates": [
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 68549,
+              "share": 47.13,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 56463,
+              "share": 38.82,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 18989,
+              "share": 13.05,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 710,
+              "share": 0.48,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 710,
+              "share": 0.48,
+              "ballotNumber": 5,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "丁守中",
+          "marginVotes": 12086,
+          "marginPoints": 8.311
+        },
+        {
+          "name": "南港區",
+          "code": "090",
+          "validVotes": 66782,
+          "invalidVotes": 671,
+          "votesCast": 67453,
+          "eligibleVoters": 98837,
+          "turnout": 68.25,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 29071,
+              "share": 43.53,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 26271,
+              "share": 39.33,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 10829,
+              "share": 16.21,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 324,
+              "share": 0.48,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 287,
+              "share": 0.42,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 2800,
+          "marginPoints": 4.1927
+        },
+        {
+          "name": "內湖區",
+          "code": "100",
+          "validVotes": 150070,
+          "invalidVotes": 1258,
+          "votesCast": 151328,
+          "eligibleVoters": 229197,
+          "turnout": 66.03,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 65589,
+              "share": 43.7,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 61546,
+              "share": 41.01,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 21747,
+              "share": 14.49,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 639,
+              "share": 0.42,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 549,
+              "share": 0.36,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 4043,
+          "marginPoints": 2.6941
+        },
+        {
+          "name": "士林區",
+          "code": "110",
+          "validVotes": 153436,
+          "invalidVotes": 1473,
+          "votesCast": 154909,
+          "eligibleVoters": 235226,
+          "turnout": 65.86,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 63216,
+              "share": 41.2,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 55938,
+              "share": 36.45,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 33108,
+              "share": 21.57,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 653,
+              "share": 0.42,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 521,
+              "share": 0.33,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 7278,
+          "marginPoints": 4.7433
+        },
+        {
+          "name": "北投區",
+          "code": "120",
+          "validVotes": 134067,
+          "invalidVotes": 1131,
+          "votesCast": 135198,
+          "eligibleVoters": 207043,
+          "turnout": 65.3,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 56080,
+              "share": 41.82,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "丁守中",
+              "party": "中國國民黨",
+              "votes": 52423,
+              "share": 39.1,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "姚文智",
+              "party": "民主進步黨",
+              "votes": 24490,
+              "share": 18.26,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李錫錕",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 577,
+              "share": 0.43,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "吳蕚洋",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 497,
+              "share": 0.37,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 3657,
+          "marginPoints": 2.7277
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=C1&legisId=00&themeId=a0222f6529a3ff2192a1a04f209eaac3&dataLevel=D&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    },
+    {
+      "id": "cec-C1-00-2014",
+      "year": 2014,
+      "date": "2014-11-29",
+      "type": "mayor",
+      "title": "103年直轄市長選舉",
+      "geography": "administrativeDistrict",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/C1/00/45ca615ee3ff7b12238c79783524bd8f/D/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/C1/00/45ca615ee3ff7b12238c79783524bd8f/D/63_000_00_000_0000.json",
+      "themeId": "45ca615ee3ff7b12238c79783524bd8f",
+      "districts": [
+        {
+          "name": "松山區",
+          "code": "010",
+          "validVotes": 115120,
+          "invalidVotes": 1311,
+          "votesCast": 116431,
+          "eligibleVoters": 164934,
+          "turnout": 70.59,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 62271,
+              "share": 54.09,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 50476,
+              "share": 43.84,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1254,
+              "share": 1.08,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 667,
+              "share": 0.57,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 201,
+              "share": 0.17,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 144,
+              "share": 0.12,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 107,
+              "share": 0.09,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 11795,
+          "marginPoints": 10.2458
+        },
+        {
+          "name": "信義區",
+          "code": "020",
+          "validVotes": 129910,
+          "invalidVotes": 1694,
+          "votesCast": 131604,
+          "eligibleVoters": 186507,
+          "turnout": 70.56,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 70023,
+              "share": 53.9,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 57216,
+              "share": 44.04,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1442,
+              "share": 1.1,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 648,
+              "share": 0.49,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 236,
+              "share": 0.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 187,
+              "share": 0.14,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 158,
+              "share": 0.12,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 12807,
+          "marginPoints": 9.8584
+        },
+        {
+          "name": "大安區",
+          "code": "030",
+          "validVotes": 166029,
+          "invalidVotes": 1908,
+          "votesCast": 167937,
+          "eligibleVoters": 245905,
+          "turnout": 68.29,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 86931,
+              "share": 52.35,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 75755,
+              "share": 45.62,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1690,
+              "share": 1.01,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1034,
+              "share": 0.62,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 312,
+              "share": 0.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 174,
+              "share": 0.1,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 133,
+              "share": 0.08,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 11176,
+          "marginPoints": 6.7314
+        },
+        {
+          "name": "中山區",
+          "code": "040",
+          "validVotes": 128072,
+          "invalidVotes": 1538,
+          "votesCast": 129610,
+          "eligibleVoters": 187419,
+          "turnout": 69.16,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 76588,
+              "share": 59.8,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 49112,
+              "share": 38.34,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1188,
+              "share": 0.92,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 649,
+              "share": 0.5,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 229,
+              "share": 0.17,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 155,
+              "share": 0.12,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 151,
+              "share": 0.11,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 27476,
+          "marginPoints": 21.4536
+        },
+        {
+          "name": "中正區",
+          "code": "050",
+          "validVotes": 86516,
+          "invalidVotes": 1032,
+          "votesCast": 87548,
+          "eligibleVoters": 125692,
+          "turnout": 69.65,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 47785,
+              "share": 55.23,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 36936,
+              "share": 42.69,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 919,
+              "share": 1.06,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 502,
+              "share": 0.58,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 160,
+              "share": 0.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 143,
+              "share": 0.16,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 71,
+              "share": 0.08,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 10849,
+          "marginPoints": 12.5399
+        },
+        {
+          "name": "大同區",
+          "code": "060",
+          "validVotes": 74824,
+          "invalidVotes": 974,
+          "votesCast": 75798,
+          "eligibleVoters": 104936,
+          "turnout": 72.23,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 50187,
+              "share": 67.07,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 23306,
+              "share": 31.14,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 677,
+              "share": 0.9,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 320,
+              "share": 0.42,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 128,
+              "share": 0.17,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 123,
+              "share": 0.16,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 83,
+              "share": 0.11,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 26881,
+          "marginPoints": 35.9256
+        },
+        {
+          "name": "萬華區",
+          "code": "070",
+          "validVotes": 112111,
+          "invalidVotes": 1458,
+          "votesCast": 113569,
+          "eligibleVoters": 160531,
+          "turnout": 70.75,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 66883,
+              "share": 59.65,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 43221,
+              "share": 38.55,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1024,
+              "share": 0.91,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 520,
+              "share": 0.46,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 173,
+              "share": 0.15,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 146,
+              "share": 0.13,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 144,
+              "share": 0.12,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 23662,
+          "marginPoints": 21.1059
+        },
+        {
+          "name": "文山區",
+          "code": "080",
+          "validVotes": 148660,
+          "invalidVotes": 1923,
+          "votesCast": 150583,
+          "eligibleVoters": 213946,
+          "turnout": 70.38,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 74230,
+              "share": 49.93,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 71027,
+              "share": 47.77,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1829,
+              "share": 1.23,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 955,
+              "share": 0.64,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 274,
+              "share": 0.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 184,
+              "share": 0.12,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 161,
+              "share": 0.1,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 3203,
+          "marginPoints": 2.1546
+        },
+        {
+          "name": "南港區",
+          "code": "090",
+          "validVotes": 67970,
+          "invalidVotes": 966,
+          "votesCast": 68936,
+          "eligibleVoters": 96480,
+          "turnout": 71.45,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 39558,
+              "share": 58.19,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 26899,
+              "share": 39.57,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 865,
+              "share": 1.27,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 343,
+              "share": 0.5,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 124,
+              "share": 0.18,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 98,
+              "share": 0.14,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 83,
+              "share": 0.12,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 12659,
+          "marginPoints": 18.6244
+        },
+        {
+          "name": "內湖區",
+          "code": "100",
+          "validVotes": 155467,
+          "invalidVotes": 1914,
+          "votesCast": 157381,
+          "eligibleVoters": 222513,
+          "turnout": 70.73,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 87990,
+              "share": 56.59,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 64161,
+              "share": 41.26,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1884,
+              "share": 1.21,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 837,
+              "share": 0.53,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 260,
+              "share": 0.16,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 211,
+              "share": 0.13,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 124,
+              "share": 0.07,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 23829,
+          "marginPoints": 15.3274
+        },
+        {
+          "name": "士林區",
+          "code": "110",
+          "validVotes": 166093,
+          "invalidVotes": 2075,
+          "votesCast": 168168,
+          "eligibleVoters": 233525,
+          "turnout": 72.01,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 103891,
+              "share": 62.54,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 59095,
+              "share": 35.57,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1617,
+              "share": 0.97,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 820,
+              "share": 0.49,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 294,
+              "share": 0.17,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 190,
+              "share": 0.11,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 186,
+              "share": 0.11,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 44796,
+          "marginPoints": 26.9704
+        },
+        {
+          "name": "北投區",
+          "code": "120",
+          "validVotes": 143274,
+          "invalidVotes": 1885,
+          "votesCast": 145159,
+          "eligibleVoters": 204551,
+          "turnout": 70.96,
+          "candidates": [
+            {
+              "name": "柯文哲",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 87646,
+              "share": 61.17,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "連勝文",
+              "party": "中國國民黨",
+              "votes": 52728,
+              "share": 36.8,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "趙衍慶",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1509,
+              "share": 1.05,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "馮光遠",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 785,
+              "share": 0.54,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李宏信",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 235,
+              "share": 0.16,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳永昌",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 195,
+              "share": 0.13,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳汝斌",
+              "party": "三等國民公義人權自救黨",
+              "votes": 176,
+              "share": 0.12,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "柯文哲",
+          "marginVotes": 34918,
+          "marginPoints": 24.3715
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=C1&legisId=00&themeId=45ca615ee3ff7b12238c79783524bd8f&dataLevel=D&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    },
+    {
+      "id": "cec-P0-00-2024",
+      "year": 2024,
+      "date": "2024-01-13",
+      "type": "president",
+      "title": "第16任總統副總統選舉",
+      "geography": "administrativeDistrict",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/P0/00/4d83db17c1707e3defae5dc4d4e9c800/D/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/P0/00/4d83db17c1707e3defae5dc4d4e9c800/D/63_000_00_000_0000.json",
+      "themeId": "4d83db17c1707e3defae5dc4d4e9c800",
+      "districts": [
+        {
+          "name": "松山區",
+          "code": "010",
+          "validVotes": 117322,
+          "invalidVotes": 744,
+          "votesCast": 118066,
+          "eligibleVoters": 157451,
+          "turnout": 74.99,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 47452,
+              "share": 40.45,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 43780,
+              "share": 37.32,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 26090,
+              "share": 22.24,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 3672,
+          "marginPoints": 3.1298
+        },
+        {
+          "name": "信義區",
+          "code": "020",
+          "validVotes": 129842,
+          "invalidVotes": 896,
+          "votesCast": 130738,
+          "eligibleVoters": 176622,
+          "turnout": 74.02,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 53076,
+              "share": 40.88,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 46634,
+              "share": 35.92,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 30132,
+              "share": 23.21,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 6442,
+          "marginPoints": 4.9614
+        },
+        {
+          "name": "大安區",
+          "code": "030",
+          "validVotes": 171244,
+          "invalidVotes": 1171,
+          "votesCast": 172415,
+          "eligibleVoters": 235194,
+          "turnout": 73.31,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 72954,
+              "share": 42.6,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 62381,
+              "share": 36.43,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 35909,
+              "share": 20.97,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 10573,
+          "marginPoints": 6.1742
+        },
+        {
+          "name": "中山區",
+          "code": "040",
+          "validVotes": 133254,
+          "invalidVotes": 840,
+          "votesCast": 134094,
+          "eligibleVoters": 183218,
+          "turnout": 73.19,
+          "candidates": [
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 54448,
+              "share": 40.86,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 48579,
+              "share": 36.46,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 30227,
+              "share": 22.68,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "賴清德",
+          "marginVotes": 5869,
+          "marginPoints": 4.4044
+        },
+        {
+          "name": "中正區",
+          "code": "050",
+          "validVotes": 88207,
+          "invalidVotes": 605,
+          "votesCast": 88812,
+          "eligibleVoters": 119777,
+          "turnout": 74.15,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 34733,
+              "share": 39.38,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 32196,
+              "share": 36.5,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 21278,
+              "share": 24.12,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 2537,
+          "marginPoints": 2.8762
+        },
+        {
+          "name": "大同區",
+          "code": "060",
+          "validVotes": 74106,
+          "invalidVotes": 478,
+          "votesCast": 74584,
+          "eligibleVoters": 100585,
+          "turnout": 74.15,
+          "candidates": [
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 34270,
+              "share": 46.24,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 21351,
+              "share": 28.81,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 18485,
+              "share": 24.94,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "賴清德",
+          "marginVotes": 12919,
+          "marginPoints": 17.4331
+        },
+        {
+          "name": "萬華區",
+          "code": "070",
+          "validVotes": 109771,
+          "invalidVotes": 871,
+          "votesCast": 110642,
+          "eligibleVoters": 151758,
+          "turnout": 72.91,
+          "candidates": [
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 43369,
+              "share": 39.51,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 38905,
+              "share": 35.44,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 27497,
+              "share": 25.05,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "賴清德",
+          "marginVotes": 4464,
+          "marginPoints": 4.0666
+        },
+        {
+          "name": "文山區",
+          "code": "080",
+          "validVotes": 161064,
+          "invalidVotes": 1103,
+          "votesCast": 162167,
+          "eligibleVoters": 216272,
+          "turnout": 74.98,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 70844,
+              "share": 43.98,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 50345,
+              "share": 31.26,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 39875,
+              "share": 24.76,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 20499,
+          "marginPoints": 12.7272
+        },
+        {
+          "name": "南港區",
+          "code": "090",
+          "validVotes": 71653,
+          "invalidVotes": 506,
+          "votesCast": 72159,
+          "eligibleVoters": 96085,
+          "turnout": 75.1,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 26529,
+              "share": 37.02,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 26117,
+              "share": 36.45,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 19007,
+              "share": 26.53,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 412,
+          "marginPoints": 0.575
+        },
+        {
+          "name": "內湖區",
+          "code": "100",
+          "validVotes": 170717,
+          "invalidVotes": 1089,
+          "votesCast": 171806,
+          "eligibleVoters": 226473,
+          "turnout": 75.86,
+          "candidates": [
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 64781,
+              "share": 37.95,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 61339,
+              "share": 35.93,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 44597,
+              "share": 26.12,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "侯友宜",
+          "marginVotes": 3442,
+          "marginPoints": 2.0162
+        },
+        {
+          "name": "士林區",
+          "code": "110",
+          "validVotes": 166048,
+          "invalidVotes": 1187,
+          "votesCast": 167235,
+          "eligibleVoters": 224797,
+          "turnout": 74.39,
+          "candidates": [
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 71869,
+              "share": 43.28,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 56397,
+              "share": 33.96,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 37782,
+              "share": 22.75,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "賴清德",
+          "marginVotes": 15472,
+          "marginPoints": 9.3178
+        },
+        {
+          "name": "北投區",
+          "code": "120",
+          "validVotes": 148783,
+          "invalidVotes": 1091,
+          "votesCast": 149874,
+          "eligibleVoters": 201830,
+          "turnout": 74.26,
+          "candidates": [
+            {
+              "name": "賴清德",
+              "party": "民主進步黨",
+              "votes": 61151,
+              "share": 41.1,
+              "ballotNumber": 2,
+              "officialElected": true,
+              "runningMate": "蕭美琴"
+            },
+            {
+              "name": "侯友宜",
+              "party": "中國國民黨",
+              "votes": 51657,
+              "share": 34.72,
+              "ballotNumber": 3,
+              "officialElected": false,
+              "runningMate": "趙少康"
+            },
+            {
+              "name": "柯文哲",
+              "party": "台灣民眾黨",
+              "votes": 35975,
+              "share": 24.18,
+              "ballotNumber": 1,
+              "officialElected": false,
+              "runningMate": "吳欣盈"
+            }
+          ],
+          "districtLeader": "賴清德",
+          "marginVotes": 9494,
+          "marginPoints": 6.3811
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=P0&legisId=00&themeId=4d83db17c1707e3defae5dc4d4e9c800&dataLevel=D&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    },
+    {
+      "id": "cec-L0-L1-2024",
+      "year": 2024,
+      "date": "2024-01-13",
+      "type": "legislator",
+      "title": "第11屆立法委員選舉",
+      "geography": "legislativeConstituency",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/L0/L1/9c96a2080bfc199c590ec54f3a2bda7b/A/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/L0/L1/9c96a2080bfc199c590ec54f3a2bda7b/A/63_000_00_000_0000.json",
+      "themeId": "9c96a2080bfc199c590ec54f3a2bda7b",
+      "districts": [
+        {
+          "name": "臺北市第01選區",
+          "code": "01",
+          "validVotes": 194738,
+          "invalidVotes": 3800,
+          "votesCast": 198538,
+          "eligibleVoters": 267166,
+          "turnout": 74.31,
+          "candidates": [
+            {
+              "name": "吳思瑤",
+              "party": "民主進步黨",
+              "votes": 91958,
+              "share": 47.22,
+              "ballotNumber": 1,
+              "officialElected": true
+            },
+            {
+              "name": "張斯綱",
+              "party": "中國國民黨",
+              "votes": 71837,
+              "share": 36.89,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "侯漢廷",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 28510,
+              "share": 14.64,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "陳執中",
+              "party": "臺灣雙語無法黨",
+              "votes": 950,
+              "share": 0.49,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "賴宗育",
+              "party": "人民民主黨",
+              "votes": 836,
+              "share": 0.43,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "胡金城",
+              "party": "人民最大黨",
+              "votes": 255,
+              "share": 0.13,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "許盛鋒",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 231,
+              "share": 0.12,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "張臺勝",
+              "party": "人民最大黨",
+              "votes": 161,
+              "share": 0.08,
+              "ballotNumber": 5,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "吳思瑤",
+          "marginVotes": 20121,
+          "marginPoints": 10.3323
+        },
+        {
+          "name": "臺北市第02選區",
+          "code": "02",
+          "validVotes": 184373,
+          "invalidVotes": 4702,
+          "votesCast": 189075,
+          "eligibleVoters": 254827,
+          "turnout": 74.2,
+          "candidates": [
+            {
+              "name": "王世堅",
+              "party": "民主進步黨",
+              "votes": 111605,
+              "share": 60.53,
+              "ballotNumber": 3,
+              "officialElected": true
+            },
+            {
+              "name": "游淑慧",
+              "party": "中國國民黨",
+              "votes": 69754,
+              "share": 37.83,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "何梅娟",
+              "party": "人民最大黨",
+              "votes": 1741,
+              "share": 0.94,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "熊嘉玲",
+              "party": "制度救世島",
+              "votes": 968,
+              "share": 0.53,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "郭啟源",
+              "party": "中華統一促進黨",
+              "votes": 305,
+              "share": 0.17,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "王世堅",
+          "marginVotes": 41851,
+          "marginPoints": 22.6991
+        },
+        {
+          "name": "臺北市第03選區",
+          "code": "03",
+          "validVotes": 200027,
+          "invalidVotes": 4976,
+          "votesCast": 205003,
+          "eligibleVoters": 277328,
+          "turnout": 73.92,
+          "candidates": [
+            {
+              "name": "王鴻薇",
+              "party": "中國國民黨",
+              "votes": 105050,
+              "share": 52.52,
+              "ballotNumber": 5,
+              "officialElected": true
+            },
+            {
+              "name": "謝佩芬",
+              "party": "民主進步黨",
+              "votes": 89850,
+              "share": 44.92,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "陳源發",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1851,
+              "share": 0.93,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "楊時睿",
+              "party": "台灣維新",
+              "votes": 1378,
+              "share": 0.69,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "陳一郎",
+              "party": "臺灣雙語無法黨",
+              "votes": 1107,
+              "share": 0.55,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "余新造",
+              "party": "人民最大黨",
+              "votes": 596,
+              "share": 0.3,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "高士恩",
+              "party": "制度救世島",
+              "votes": 195,
+              "share": 0.1,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "王鴻薇",
+          "marginVotes": 15200,
+          "marginPoints": 7.599
+        },
+        {
+          "name": "臺北市第04選區",
+          "code": "04",
+          "validVotes": 236669,
+          "invalidVotes": 3894,
+          "votesCast": 240563,
+          "eligibleVoters": 318085,
+          "turnout": 75.63,
+          "candidates": [
+            {
+              "name": "李彥秀",
+              "party": "中國國民黨",
+              "votes": 112743,
+              "share": 47.64,
+              "ballotNumber": 1,
+              "officialElected": true
+            },
+            {
+              "name": "高嘉瑜",
+              "party": "民主進步黨",
+              "votes": 95241,
+              "share": 40.24,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "吳欣岱",
+              "party": "台灣基進",
+              "votes": 26382,
+              "share": 11.15,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "林秋彤",
+              "party": "台灣整復師聯盟工黨",
+              "votes": 1881,
+              "share": 0.79,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "黃啟彬",
+              "party": "制度救世島",
+              "votes": 422,
+              "share": 0.18,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "李彥秀",
+          "marginVotes": 17502,
+          "marginPoints": 7.3951
+        },
+        {
+          "name": "臺北市第05選區",
+          "code": "05",
+          "validVotes": 168140,
+          "invalidVotes": 3142,
+          "votesCast": 171282,
+          "eligibleVoters": 233914,
+          "turnout": 73.22,
+          "candidates": [
+            {
+              "name": "吳沛憶",
+              "party": "民主進步黨",
+              "votes": 66932,
+              "share": 39.81,
+              "ballotNumber": 7,
+              "officialElected": true
+            },
+            {
+              "name": "鍾小平",
+              "party": "中國國民黨",
+              "votes": 57634,
+              "share": 34.28,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "于美人",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 38913,
+              "share": 23.14,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "李慧曦",
+              "party": "司法改革黨",
+              "votes": 1502,
+              "share": 0.89,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "孫智麗",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 1489,
+              "share": 0.89,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "張華特",
+              "party": "台灣麻將最大黨",
+              "votes": 692,
+              "share": 0.41,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "蘇諍",
+              "party": "經濟黨",
+              "votes": 472,
+              "share": 0.28,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "陳燕玉",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 194,
+              "share": 0.12,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "許敬民",
+              "party": "合一行動聯盟",
+              "votes": 174,
+              "share": 0.1,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "林志成",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 138,
+              "share": 0.08,
+              "ballotNumber": 4,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "吳沛憶",
+          "marginVotes": 9298,
+          "marginPoints": 5.5299
+        },
+        {
+          "name": "臺北市第06選區",
+          "code": "06",
+          "validVotes": 166106,
+          "invalidVotes": 4435,
+          "votesCast": 170541,
+          "eligibleVoters": 233123,
+          "turnout": 73.15,
+          "candidates": [
+            {
+              "name": "羅智強",
+              "party": "中國國民黨",
+              "votes": 87973,
+              "share": 52.96,
+              "ballotNumber": 4,
+              "officialElected": true
+            },
+            {
+              "name": "苗博雅",
+              "party": "社會民主黨",
+              "votes": 74375,
+              "share": 44.78,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "崔建章",
+              "party": "臺灣雙語無法黨",
+              "votes": 2202,
+              "share": 1.33,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "張雪卿",
+              "party": "制度救世島",
+              "votes": 896,
+              "share": 0.54,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "朱翊銘",
+              "party": "台灣維新",
+              "votes": 660,
+              "share": 0.4,
+              "ballotNumber": 5,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "羅智強",
+          "marginVotes": 13598,
+          "marginPoints": 8.1863
+        },
+        {
+          "name": "臺北市第07選區",
+          "code": "07",
+          "validVotes": 170509,
+          "invalidVotes": 3143,
+          "votesCast": 173652,
+          "eligibleVoters": 234816,
+          "turnout": 73.95,
+          "candidates": [
+            {
+              "name": "徐巧芯",
+              "party": "中國國民黨",
+              "votes": 89727,
+              "share": 52.62,
+              "ballotNumber": 2,
+              "officialElected": true
+            },
+            {
+              "name": "許淑華",
+              "party": "民主進步黨",
+              "votes": 76113,
+              "share": 44.64,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "陳韋安",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 3286,
+              "share": 1.93,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "羅丹",
+              "party": "台灣維新",
+              "votes": 1073,
+              "share": 0.63,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "李承龍",
+              "party": "中華愛國同心黨",
+              "votes": 310,
+              "share": 0.18,
+              "ballotNumber": 1,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "徐巧芯",
+          "marginVotes": 13614,
+          "marginPoints": 7.9843
+        },
+        {
+          "name": "臺北市第08選區",
+          "code": "08",
+          "validVotes": 183518,
+          "invalidVotes": 2630,
+          "votesCast": 186148,
+          "eligibleVoters": 248318,
+          "turnout": 74.96,
+          "candidates": [
+            {
+              "name": "賴士葆",
+              "party": "中國國民黨",
+              "votes": 87099,
+              "share": 47.46,
+              "ballotNumber": 2,
+              "officialElected": true
+            },
+            {
+              "name": "王閔生",
+              "party": "民主進步黨",
+              "votes": 59490,
+              "share": 32.42,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "張其祿",
+              "party": "台灣民眾黨",
+              "votes": 28335,
+              "share": 15.44,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "賴宣任",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 6374,
+              "share": 3.47,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "劉佩玲",
+              "party": "台灣維新",
+              "votes": 1122,
+              "share": 0.61,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "夏萬浪",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 761,
+              "share": 0.41,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "張維學",
+              "party": "無黨籍及未經政黨推薦",
+              "votes": 201,
+              "share": 0.11,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "胡之壯",
+              "party": "興中同盟會",
+              "votes": 136,
+              "share": 0.07,
+              "ballotNumber": 8,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "賴士葆",
+          "marginVotes": 27609,
+          "marginPoints": 15.0443
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=L0&legisId=L1&themeId=9c96a2080bfc199c590ec54f3a2bda7b&dataLevel=A&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    },
+    {
+      "id": "cec-L0-L4-2024",
+      "year": 2024,
+      "date": "2024-01-13",
+      "type": "partyList",
+      "title": "第11屆立法委員選舉",
+      "geography": "administrativeDistrict",
+      "sourceUrl": "https://db.cec.gov.tw/static/elections/data/tickets/ELC/L0/L4/e753a8e7a7bcc09fa51d1aea0024a843/D/63_000_00_000_0000.json",
+      "profileSourceUrl": "https://db.cec.gov.tw/static/elections/data/profiles/ELC/L0/L4/e753a8e7a7bcc09fa51d1aea0024a843/D/63_000_00_000_0000.json",
+      "themeId": "e753a8e7a7bcc09fa51d1aea0024a843",
+      "districts": [
+        {
+          "name": "松山區",
+          "code": "010",
+          "validVotes": 116735,
+          "invalidVotes": 1181,
+          "votesCast": 117916,
+          "eligibleVoters": 157709,
+          "turnout": 74.77,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 46613,
+              "share": 39.93,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 37993,
+              "share": 32.55,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 24025,
+              "share": 20.58,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 3465,
+              "share": 2.97,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 963,
+              "share": 0.82,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 914,
+              "share": 0.78,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 594,
+              "share": 0.51,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 574,
+              "share": 0.49,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 564,
+              "share": 0.48,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 310,
+              "share": 0.27,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 245,
+              "share": 0.21,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 208,
+              "share": 0.18,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 99,
+              "share": 0.08,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 67,
+              "share": 0.06,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 63,
+              "share": 0.05,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 38,
+              "share": 0.03,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 8620,
+          "marginPoints": 7.3842
+        },
+        {
+          "name": "信義區",
+          "code": "020",
+          "validVotes": 128957,
+          "invalidVotes": 1692,
+          "votesCast": 130649,
+          "eligibleVoters": 176904,
+          "turnout": 73.85,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 52304,
+              "share": 40.56,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 40634,
+              "share": 31.51,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 27131,
+              "share": 21.04,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 3602,
+              "share": 2.79,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1057,
+              "share": 0.82,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1048,
+              "share": 0.81,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 711,
+              "share": 0.55,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 635,
+              "share": 0.49,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 613,
+              "share": 0.48,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 286,
+              "share": 0.22,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 282,
+              "share": 0.22,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 271,
+              "share": 0.21,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 176,
+              "share": 0.14,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 85,
+              "share": 0.07,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 64,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 58,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 11670,
+          "marginPoints": 9.0495
+        },
+        {
+          "name": "大安區",
+          "code": "030",
+          "validVotes": 170375,
+          "invalidVotes": 1782,
+          "votesCast": 172157,
+          "eligibleVoters": 235543,
+          "turnout": 73.09,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 70798,
+              "share": 41.55,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 53287,
+              "share": 31.28,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 33797,
+              "share": 19.84,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 5132,
+              "share": 3.01,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1499,
+              "share": 0.88,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1378,
+              "share": 0.81,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 1055,
+              "share": 0.62,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 932,
+              "share": 0.55,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 892,
+              "share": 0.52,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 544,
+              "share": 0.32,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 417,
+              "share": 0.24,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 278,
+              "share": 0.16,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 134,
+              "share": 0.08,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 91,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 80,
+              "share": 0.05,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 61,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 17511,
+          "marginPoints": 10.2779
+        },
+        {
+          "name": "中山區",
+          "code": "040",
+          "validVotes": 132475,
+          "invalidVotes": 1517,
+          "votesCast": 133992,
+          "eligibleVoters": 183524,
+          "turnout": 73.01,
+          "candidates": [
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 47807,
+              "share": 36.09,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 47507,
+              "share": 35.86,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 27948,
+              "share": 21.1,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 3752,
+              "share": 2.83,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1106,
+              "share": 0.83,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1084,
+              "share": 0.82,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 729,
+              "share": 0.55,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 717,
+              "share": 0.54,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 546,
+              "share": 0.41,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 347,
+              "share": 0.26,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 315,
+              "share": 0.24,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 233,
+              "share": 0.18,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 160,
+              "share": 0.12,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 80,
+              "share": 0.06,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 72,
+              "share": 0.05,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 72,
+              "share": 0.05,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "民主進步黨",
+          "marginVotes": 300,
+          "marginPoints": 0.2265
+        },
+        {
+          "name": "中正區",
+          "code": "050",
+          "validVotes": 87677,
+          "invalidVotes": 1041,
+          "votesCast": 88718,
+          "eligibleVoters": 119927,
+          "turnout": 73.98,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 33720,
+              "share": 38.46,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 27560,
+              "share": 31.43,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 19786,
+              "share": 22.57,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 2679,
+              "share": 3.06,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 872,
+              "share": 0.99,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 729,
+              "share": 0.83,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 499,
+              "share": 0.57,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 478,
+              "share": 0.55,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 444,
+              "share": 0.51,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 238,
+              "share": 0.27,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 224,
+              "share": 0.26,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 171,
+              "share": 0.2,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 112,
+              "share": 0.13,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 88,
+              "share": 0.1,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 46,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 31,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 6160,
+          "marginPoints": 7.0258
+        },
+        {
+          "name": "大同區",
+          "code": "060",
+          "validVotes": 73568,
+          "invalidVotes": 956,
+          "votesCast": 74524,
+          "eligibleVoters": 100739,
+          "turnout": 73.98,
+          "candidates": [
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 30494,
+              "share": 41.45,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 21077,
+              "share": 28.65,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 16777,
+              "share": 22.8,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 2066,
+              "share": 2.81,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 668,
+              "share": 0.91,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 609,
+              "share": 0.83,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 459,
+              "share": 0.62,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 455,
+              "share": 0.62,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 212,
+              "share": 0.29,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 194,
+              "share": 0.26,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 188,
+              "share": 0.26,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 153,
+              "share": 0.21,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 83,
+              "share": 0.11,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 49,
+              "share": 0.07,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 42,
+              "share": 0.06,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 42,
+              "share": 0.06,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "民主進步黨",
+          "marginVotes": 9417,
+          "marginPoints": 12.8004
+        },
+        {
+          "name": "萬華區",
+          "code": "070",
+          "validVotes": 108620,
+          "invalidVotes": 1998,
+          "votesCast": 110618,
+          "eligibleVoters": 152004,
+          "turnout": 72.77,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 38511,
+              "share": 35.45,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 38390,
+              "share": 35.34,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 24354,
+              "share": 22.42,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 2471,
+              "share": 2.27,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 904,
+              "share": 0.83,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 840,
+              "share": 0.77,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 555,
+              "share": 0.51,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 541,
+              "share": 0.5,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 470,
+              "share": 0.43,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 398,
+              "share": 0.37,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 312,
+              "share": 0.29,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 308,
+              "share": 0.28,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 296,
+              "share": 0.27,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 136,
+              "share": 0.13,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 78,
+              "share": 0.07,
+              "ballotNumber": 15,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 56,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 121,
+          "marginPoints": 0.1114
+        },
+        {
+          "name": "文山區",
+          "code": "080",
+          "validVotes": 160126,
+          "invalidVotes": 1997,
+          "votesCast": 162123,
+          "eligibleVoters": 216561,
+          "turnout": 74.86,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 69087,
+              "share": 43.15,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 42558,
+              "share": 26.58,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 36061,
+              "share": 22.52,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 4609,
+              "share": 2.88,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 2115,
+              "share": 1.32,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1413,
+              "share": 0.88,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 1036,
+              "share": 0.65,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 841,
+              "share": 0.53,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 774,
+              "share": 0.48,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 492,
+              "share": 0.31,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 432,
+              "share": 0.27,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 300,
+              "share": 0.19,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 161,
+              "share": 0.1,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 111,
+              "share": 0.07,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 71,
+              "share": 0.04,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 65,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 26529,
+          "marginPoints": 16.5676
+        },
+        {
+          "name": "南港區",
+          "code": "090",
+          "validVotes": 71082,
+          "invalidVotes": 1124,
+          "votesCast": 72206,
+          "eligibleVoters": 96174,
+          "turnout": 75.08,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 26180,
+              "share": 36.83,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 22467,
+              "share": 31.61,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 17183,
+              "share": 24.17,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 1943,
+              "share": 2.73,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 606,
+              "share": 0.85,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 602,
+              "share": 0.85,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 597,
+              "share": 0.84,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 385,
+              "share": 0.54,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 339,
+              "share": 0.48,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 227,
+              "share": 0.32,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 165,
+              "share": 0.23,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 158,
+              "share": 0.22,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 68,
+              "share": 0.1,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 61,
+              "share": 0.09,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 54,
+              "share": 0.08,
+              "ballotNumber": 15,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 47,
+              "share": 0.07,
+              "ballotNumber": 13,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 3713,
+          "marginPoints": 5.2235
+        },
+        {
+          "name": "內湖區",
+          "code": "100",
+          "validVotes": 169618,
+          "invalidVotes": 2091,
+          "votesCast": 171709,
+          "eligibleVoters": 226794,
+          "turnout": 75.71,
+          "candidates": [
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 63972,
+              "share": 37.72,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 52674,
+              "share": 31.05,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 40472,
+              "share": 23.86,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 5139,
+              "share": 3.03,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1510,
+              "share": 0.89,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 1445,
+              "share": 0.85,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1388,
+              "share": 0.82,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 824,
+              "share": 0.49,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 754,
+              "share": 0.44,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 434,
+              "share": 0.26,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 337,
+              "share": 0.2,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 293,
+              "share": 0.17,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 118,
+              "share": 0.07,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 106,
+              "share": 0.06,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 82,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 70,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "中國國民黨",
+          "marginVotes": 11298,
+          "marginPoints": 6.6608
+        },
+        {
+          "name": "士林區",
+          "code": "110",
+          "validVotes": 164978,
+          "invalidVotes": 2136,
+          "votesCast": 167114,
+          "eligibleVoters": 225171,
+          "turnout": 74.22,
+          "candidates": [
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 63688,
+              "share": 38.6,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 54693,
+              "share": 33.15,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 34225,
+              "share": 20.75,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 4419,
+              "share": 2.68,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 1931,
+              "share": 1.17,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1432,
+              "share": 0.87,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1412,
+              "share": 0.86,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 882,
+              "share": 0.53,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 687,
+              "share": 0.42,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 454,
+              "share": 0.28,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 366,
+              "share": 0.22,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 333,
+              "share": 0.2,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 177,
+              "share": 0.11,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 110,
+              "share": 0.07,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 85,
+              "share": 0.05,
+              "ballotNumber": 15,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 84,
+              "share": 0.05,
+              "ballotNumber": 13,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "民主進步黨",
+          "marginVotes": 8995,
+          "marginPoints": 5.4522
+        },
+        {
+          "name": "北投區",
+          "code": "120",
+          "validVotes": 147746,
+          "invalidVotes": 2010,
+          "votesCast": 149756,
+          "eligibleVoters": 202047,
+          "turnout": 74.12,
+          "candidates": [
+            {
+              "name": "民主進步黨",
+              "party": "民主進步黨",
+              "votes": 53882,
+              "share": 36.47,
+              "ballotNumber": 6,
+              "officialElected": false
+            },
+            {
+              "name": "中國國民黨",
+              "party": "中國國民黨",
+              "votes": 50542,
+              "share": 34.21,
+              "ballotNumber": 9,
+              "officialElected": false
+            },
+            {
+              "name": "台灣民眾黨",
+              "party": "台灣民眾黨",
+              "votes": 32630,
+              "share": 22.09,
+              "ballotNumber": 12,
+              "officialElected": false
+            },
+            {
+              "name": "時代力量",
+              "party": "時代力量",
+              "votes": 3966,
+              "share": 2.68,
+              "ballotNumber": 8,
+              "officialElected": false
+            },
+            {
+              "name": "小民參政歐巴桑聯盟",
+              "party": "小民參政歐巴桑聯盟",
+              "votes": 1429,
+              "share": 0.97,
+              "ballotNumber": 1,
+              "officialElected": false
+            },
+            {
+              "name": "台灣綠黨",
+              "party": "台灣綠黨",
+              "votes": 1383,
+              "share": 0.94,
+              "ballotNumber": 2,
+              "officialElected": false
+            },
+            {
+              "name": "親民黨",
+              "party": "親民黨",
+              "votes": 997,
+              "share": 0.67,
+              "ballotNumber": 14,
+              "officialElected": false
+            },
+            {
+              "name": "台灣基進",
+              "party": "台灣基進",
+              "votes": 824,
+              "share": 0.56,
+              "ballotNumber": 4,
+              "officialElected": false
+            },
+            {
+              "name": "新黨",
+              "party": "新黨",
+              "votes": 630,
+              "share": 0.43,
+              "ballotNumber": 11,
+              "officialElected": false
+            },
+            {
+              "name": "臺灣雙語無法黨",
+              "party": "臺灣雙語無法黨",
+              "votes": 431,
+              "share": 0.29,
+              "ballotNumber": 3,
+              "officialElected": false
+            },
+            {
+              "name": "司法改革黨",
+              "party": "司法改革黨",
+              "votes": 336,
+              "share": 0.23,
+              "ballotNumber": 10,
+              "officialElected": false
+            },
+            {
+              "name": "台灣團結聯盟",
+              "party": "台灣團結聯盟",
+              "votes": 327,
+              "share": 0.22,
+              "ballotNumber": 16,
+              "officialElected": false
+            },
+            {
+              "name": "中華統一促進黨",
+              "party": "中華統一促進黨",
+              "votes": 116,
+              "share": 0.08,
+              "ballotNumber": 5,
+              "officialElected": false
+            },
+            {
+              "name": "制度救世島",
+              "party": "制度救世島",
+              "votes": 110,
+              "share": 0.07,
+              "ballotNumber": 7,
+              "officialElected": false
+            },
+            {
+              "name": "台灣維新",
+              "party": "台灣維新",
+              "votes": 82,
+              "share": 0.06,
+              "ballotNumber": 13,
+              "officialElected": false
+            },
+            {
+              "name": "人民最大黨",
+              "party": "人民最大黨",
+              "votes": 61,
+              "share": 0.04,
+              "ballotNumber": 15,
+              "officialElected": false
+            }
+          ],
+          "districtLeader": "民主進步黨",
+          "marginVotes": 3340,
+          "marginPoints": 2.2606
+        }
+      ],
+      "viewSourceUrl": "https://db.cec.gov.tw/ElecTable/Election/ElecTickets?dataType=tickets&typeId=ELC&subjectId=L0&legisId=L4&themeId=e753a8e7a7bcc09fa51d1aea0024a843&dataLevel=D&prvCode=63&cityCode=000&areaCode=00&deptCode=000&liCode=0000"
+    }
+  ],
+  "legislativeBoundaries": [
+    {
+      "id": 1,
+      "name": "臺北市第1選舉區",
+      "scope": "北投區、士林區－天母里、三玉里、天福里、天祿里、天壽里、天山里、天和里、天玉里、德行里、德華里、忠誠里、蘭雅里、蘭興里等13里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "北投區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "士林區",
+          "villages": [
+            "天母里",
+            "三玉里",
+            "天福里",
+            "天祿里",
+            "天壽里",
+            "天山里",
+            "天和里",
+            "天玉里",
+            "德行里",
+            "德華里",
+            "忠誠里",
+            "蘭雅里",
+            "蘭興里"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "臺北市第2選舉區",
+      "scope": "大同區、士林區－仁勇里、義信里、福林里、福德里、福志里、舊佳里、福佳里、後港里、福中里、前港里、百齡里、承德里、福華里、明勝里、福順里、富光里、葫蘆里、葫東里、社子里、社新里、社園里、永倫里、福安里、富洲里、岩山里、名山里、聖山里、芝山里、東山里、永福里、公館里、新安里、陽明里、菁山里、平等里、溪山里、翠山里、臨溪里等38里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "大同區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "士林區",
+          "villages": [
+            "仁勇里",
+            "義信里",
+            "福林里",
+            "福德里",
+            "福志里",
+            "舊佳里",
+            "福佳里",
+            "後港里",
+            "福中里",
+            "前港里",
+            "百齡里",
+            "承德里",
+            "福華里",
+            "明勝里",
+            "福順里",
+            "富光里",
+            "葫蘆里",
+            "葫東里",
+            "社子里",
+            "社新里",
+            "社園里",
+            "永倫里",
+            "福安里",
+            "富洲里",
+            "岩山里",
+            "名山里",
+            "聖山里",
+            "芝山里",
+            "東山里",
+            "永福里",
+            "公館里",
+            "新安里",
+            "陽明里",
+            "菁山里",
+            "平等里",
+            "溪山里",
+            "翠山里",
+            "臨溪里"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "臺北市第3選舉區",
+      "scope": "中山區、松山區－精忠里、東光里、龍田里、東昌里、東勢里、中華里、民有里、民福里、松基里、莊敬里、東榮里、新益里、新東里、介壽里、三民里、富錦里、富泰里、自強里、鵬程里、安平里等20里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "中山區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "松山區",
+          "villages": [
+            "精忠里",
+            "東光里",
+            "龍田里",
+            "東昌里",
+            "東勢里",
+            "中華里",
+            "民有里",
+            "民福里",
+            "松基里",
+            "莊敬里",
+            "東榮里",
+            "新益里",
+            "新東里",
+            "介壽里",
+            "三民里",
+            "富錦里",
+            "富泰里",
+            "自強里",
+            "鵬程里",
+            "安平里"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "臺北市第4選舉區",
+      "scope": "內湖區、南港區",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "內湖區",
+        "南港區"
+      ],
+      "partialDistricts": []
+    },
+    {
+      "id": 5,
+      "name": "臺北市第5選舉區",
+      "scope": "萬華區、中正區－南門里、新營里、龍福里、南福里、愛國里、廈安里、忠勤里、永功里、永昌里、龍興里、龍光里、黎明里、光復里、建國里、東門里、幸福里、梅花里、幸市里、文北里、文祥里、三愛里等21里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "萬華區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "中正區",
+          "villages": [
+            "南門里",
+            "新營里",
+            "龍福里",
+            "南福里",
+            "愛國里",
+            "廈安里",
+            "忠勤里",
+            "永功里",
+            "永昌里",
+            "龍興里",
+            "龍光里",
+            "黎明里",
+            "光復里",
+            "建國里",
+            "東門里",
+            "幸福里",
+            "梅花里",
+            "幸市里",
+            "文北里",
+            "文祥里",
+            "三愛里"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "臺北市第6選舉區",
+      "scope": "大安區",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "大安區"
+      ],
+      "partialDistricts": []
+    },
+    {
+      "id": 7,
+      "name": "臺北市第7選舉區",
+      "scope": "信義區、松山區－慈祐里、吉祥里、新聚里、復盛里、中正里、中崙里、美仁里、吉仁里、敦化里、復源里、復建里、復勢里、福成里等13里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "信義區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "松山區",
+          "villages": [
+            "慈祐里",
+            "吉祥里",
+            "新聚里",
+            "復盛里",
+            "中正里",
+            "中崙里",
+            "美仁里",
+            "吉仁里",
+            "敦化里",
+            "復源里",
+            "復建里",
+            "復勢里",
+            "福成里"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "臺北市第8選舉區",
+      "scope": "文山區、中正區－水源里、富水里、文盛里、林興里、河堤里、螢圃里、網溪里、板溪里、頂東里、螢雪里等10里",
+      "sourceUrl": "https://data.cec.gov.tw/第11屆立法委員選舉區範圍/立法委員選舉區範圍.csv",
+      "fullDistricts": [
+        "文山區"
+      ],
+      "partialDistricts": [
+        {
+          "district": "中正區",
+          "villages": [
+            "水源里",
+            "富水里",
+            "文盛里",
+            "林興里",
+            "河堤里",
+            "螢圃里",
+            "網溪里",
+            "板溪里",
+            "頂東里",
+            "螢雪里"
+          ]
+        }
+      ]
+    }
+  ],
+  "legislators": [
+    {
+      "constituency": 1,
+      "name": "吳思瑤",
+      "party": "民主進步黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46769",
+      "votes2024": 91958,
+      "share2024": 47.22,
+      "marginVotes2024": 20121,
+      "marginPoints2024": 10.3323
+    },
+    {
+      "constituency": 2,
+      "name": "王世堅",
+      "party": "民主進步黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46758",
+      "votes2024": 111605,
+      "share2024": 60.53,
+      "marginVotes2024": 41851,
+      "marginPoints2024": 22.6991
+    },
+    {
+      "constituency": 3,
+      "name": "王鴻薇",
+      "party": "中國國民黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46762",
+      "votes2024": 105050,
+      "share2024": 52.52,
+      "marginVotes2024": 15200,
+      "marginPoints2024": 7.599,
+      "recall2025": {
+        "date": "2025-07-26",
+        "result": "否決",
+        "sourceUrl": "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+        "noticeUrl": "https://web.cec.gov.tw/central/article/60914",
+        "themeId": "311d8c20907b317ae5465e173178fd04",
+        "officialResultPdfUrl": "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf"
+      }
+    },
+    {
+      "constituency": 4,
+      "name": "李彥秀",
+      "party": "中國國民黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46773",
+      "votes2024": 112743,
+      "share2024": 47.64,
+      "marginVotes2024": 17502,
+      "marginPoints2024": 7.3951,
+      "recall2025": {
+        "date": "2025-07-26",
+        "result": "否決",
+        "sourceUrl": "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+        "noticeUrl": "https://web.cec.gov.tw/central/article/60914",
+        "themeId": "36557b8f4d88e849c9b39e020a732027",
+        "officialResultPdfUrl": "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf"
+      }
+    },
+    {
+      "constituency": 5,
+      "name": "吳沛憶",
+      "party": "民主進步黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46766",
+      "votes2024": 66932,
+      "share2024": 39.81,
+      "marginVotes2024": 9298,
+      "marginPoints2024": 5.5299
+    },
+    {
+      "constituency": 6,
+      "name": "羅智強",
+      "party": "中國國民黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46859",
+      "votes2024": 87973,
+      "share2024": 52.96,
+      "marginVotes2024": 13598,
+      "marginPoints2024": 8.1863,
+      "recall2025": {
+        "date": "2025-07-26",
+        "result": "否決",
+        "sourceUrl": "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+        "noticeUrl": "https://web.cec.gov.tw/central/article/60914",
+        "themeId": "a3c0367ad73079f85efe6df0094b684e",
+        "officialResultPdfUrl": "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf"
+      }
+    },
+    {
+      "constituency": 7,
+      "name": "徐巧芯",
+      "party": "中國國民黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46796",
+      "votes2024": 89727,
+      "share2024": 52.62,
+      "marginVotes2024": 13614,
+      "marginPoints2024": 7.9843,
+      "recall2025": {
+        "date": "2025-07-26",
+        "result": "否決",
+        "sourceUrl": "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+        "noticeUrl": "https://web.cec.gov.tw/central/article/60914",
+        "themeId": "ec7731f7cf33e55ba4689d4da9791096",
+        "officialResultPdfUrl": "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf"
+      }
+    },
+    {
+      "constituency": 8,
+      "name": "賴士葆",
+      "party": "中國國民黨",
+      "office": "第11屆立法委員",
+      "servingSince": "2024-02-01",
+      "status": "現任",
+      "statusCheckedAt": "2026-10-20",
+      "sourceUrl": "https://www.ly.gov.tw/Pages/List.aspx?nodeid=46848",
+      "votes2024": 87099,
+      "share2024": 47.46,
+      "marginVotes2024": 27609,
+      "marginPoints2024": 15.0443,
+      "recall2025": {
+        "date": "2025-07-26",
+        "result": "否決",
+        "sourceUrl": "https://db.cec.gov.tw/static/elections/list/RCL_L0.json",
+        "noticeUrl": "https://web.cec.gov.tw/central/article/60914",
+        "themeId": "41d812e3c23d026f5c5f280b43800d28",
+        "officialResultPdfUrl": "https://web.cec.gov.tw/api/file/3e4bed87-b440-4fb4-9b7f-3cf3cab59cae.pdf"
+      }
+    }
+  ],
+  "councilConstituencies": [
+    {
+      "id": 1,
+      "name": "第1選舉區",
+      "districts": [
+        "北投區",
+        "士林區"
+      ],
+      "seats": 12,
+      "reservedWomenSeats": 3,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 2,
+      "name": "第2選舉區",
+      "districts": [
+        "內湖區",
+        "南港區"
+      ],
+      "seats": 9,
+      "reservedWomenSeats": 2,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 3,
+      "name": "第3選舉區",
+      "districts": [
+        "松山區",
+        "信義區"
+      ],
+      "seats": 9,
+      "reservedWomenSeats": 2,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 4,
+      "name": "第4選舉區",
+      "districts": [
+        "中山區",
+        "大同區"
+      ],
+      "seats": 8,
+      "reservedWomenSeats": 2,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 5,
+      "name": "第5選舉區",
+      "districts": [
+        "中正區",
+        "萬華區"
+      ],
+      "seats": 8,
+      "reservedWomenSeats": 2,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 6,
+      "name": "第6選舉區",
+      "districts": [
+        "大安區",
+        "文山區"
+      ],
+      "seats": 13,
+      "reservedWomenSeats": 3,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 7,
+      "name": "第7選舉區",
+      "districts": [],
+      "scope": "臺北市之平地原住民",
+      "seats": 1,
+      "reservedWomenSeats": 0,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    },
+    {
+      "id": 8,
+      "name": "第8選舉區",
+      "districts": [],
+      "scope": "臺北市之山地原住民",
+      "seats": 1,
+      "reservedWomenSeats": 0,
+      "electionYear": 2026,
+      "sourceUrl": "https://web.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "sourcePage": 3
+    }
+  ],
+  "nextLocalElection": {
+    "date": "2026-11-28",
+    "time": "08:00–16:00",
+    "timezone": "Asia/Taipei",
+    "offices": [
+      "市長",
+      "市議員",
+      "里長"
+    ],
+    "sourceUrl": "https://web.cec.gov.tw/central/article/63626",
+    "note": "立法委員不是這次地方選舉的改選職位；立委資料用於理解地方代表與政治脈絡。"
+  },
+  "interpretationNotes": [
+    "行政區服務日常人口統計；立委選區選國會議員；市議員選區監督市政，三種邊界不能互相替代。",
+    "士林、松山、中正被立委選區拆開，查立委時需確認里；相同區名的區級得票不能硬套成完整立委選區結果。",
+    "歷史票型是該次選舉結果，不是居民永久政治身分；市長、總統、立委候選人票與政黨票應分開切換。",
+    "多席次市議員選舉中，同黨也可能競爭席次，須看個人得票及當年名額；不能拿市長全區最高票直接推算議員席次。",
+    "人口、房價、產業等地區統計只能提供公共議題背景，不應由整體相關性推斷個人投票動機。"
+  ]
+}

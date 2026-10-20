@@ -1,0 +1,1143 @@
+{
+  "asOf": "2026-10-20",
+  "electionDate": "2026-11-28",
+  "electionHoursLocal": "08:00–16:00 Asia/Taipei",
+  "councilSeatTotal": 61,
+  "regionalCouncilSeats": 59,
+  "indigenousCouncilSeats": 2,
+  "registrationCount": 98,
+  "afterEligibilityReviewCount": 97,
+  "registrationSequenceIsNotBallotNumber": true,
+  "ballotDrawDate": "2026-10-23",
+  "councilGroups": [
+    {
+      "id": 1,
+      "name": "臺北市第1選舉區",
+      "districts": [
+        "北投區",
+        "士林區"
+      ],
+      "type": "regional",
+      "seats2026": 12,
+      "registeredCount": 20,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 20,
+      "candidates": [
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "謝閔弘",
+          "party": "時代力量",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "李文",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "陳彥廷",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "鍾佩玲",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "紀建漢",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "陳賢蔚",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "林世宗",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "黃瀞瑩",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "林揚庭",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "陳慈慧",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "陳重文",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "陳怡潔",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "林杏兒",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 14,
+          "ballotNumber": null,
+          "name": "張斯綱",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 15,
+          "ballotNumber": null,
+          "name": "賴苡任",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 16,
+          "ballotNumber": null,
+          "name": "汪志冰",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 17,
+          "ballotNumber": null,
+          "name": "劉致妤",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 18,
+          "ballotNumber": null,
+          "name": "林延鳳",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 19,
+          "ballotNumber": null,
+          "name": "侯漢廷",
+          "party": "新黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 1,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 20,
+          "ballotNumber": null,
+          "name": "林聖峰",
+          "party": "天宙和平統一家庭黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "臺北市第2選舉區",
+      "districts": [
+        "內湖區",
+        "南港區"
+      ],
+      "type": "regional",
+      "seats2026": 9,
+      "registeredCount": 13,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 13,
+      "candidates": [
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "吳欣岱",
+          "party": "台灣基進",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "李明賢",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "陳冠安",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "高嘉瑜",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "王孝維",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "游淑慧",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "何孟樺",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "陳宥丞",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "何恕懷",
+          "party": "新黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "闕枚莎",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "陳又新",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "吳世正",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 2,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "黃啟彬",
+          "party": "永久和平自然法",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "臺北市第3選舉區",
+      "districts": [
+        "松山區",
+        "信義區"
+      ],
+      "type": "regional",
+      "seats2026": 9,
+      "registeredCount": 13,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 13,
+      "candidates": [
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "鄧樂強",
+          "party": "台灣基進",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "詹為元",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "張文潔",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "郭凡",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "李明璇",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "秦慧珠",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "洪健益",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "戴錫欽",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "許甫",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "左曉明",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "許淑華",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "林柏勛",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 3,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "許原榮",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "臺北市第4選舉區",
+      "districts": [
+        "中山區",
+        "大同區"
+      ],
+      "type": "regional",
+      "seats2026": 8,
+      "registeredCount": 14,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 14,
+      "candidates": [
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "朱政騏",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "顏若芳",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "賴俊翰",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "熊羿",
+          "party": "勞動黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "李易儒",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "陳炳甫",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "林子揚",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "柳采葳",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "林亮君",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "葉林傳",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "黃麗香",
+          "party": "台聯黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "林珍羽",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "陳怡君",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 4,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 14,
+          "ballotNumber": null,
+          "name": "李惠暄",
+          "party": "小民參政歐巴桑聯盟",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "臺北市第5選舉區",
+      "districts": [
+        "中正區",
+        "萬華區"
+      ],
+      "type": "regional",
+      "seats2026": 8,
+      "registeredCount": 14,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 14,
+      "candidates": [
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "張銘祐",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "吳志剛",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "鍾小平",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "陳力新",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "王振庭",
+          "party": "台灣綠黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "洪婉臻",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "吳怡萱",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "應佳妤",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "劉耀仁",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "張延廷",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "徐立信",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "馬郁雯",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "郭昭巖",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 5,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 14,
+          "ballotNumber": null,
+          "name": "譚傳紹",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "臺北市第6選舉區",
+      "districts": [
+        "大安區",
+        "文山區"
+      ],
+      "type": "regional",
+      "seats2026": 13,
+      "registeredCount": 19,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 1,
+      "afterEligibilityReviewCount": 18,
+      "candidates": [
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "李道翔",
+          "party": "左翼聯盟",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "陳峙穎",
+          "party": "時代力量",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-01",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "李奇峯",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 4,
+          "ballotNumber": null,
+          "name": "簡舒培",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 5,
+          "ballotNumber": null,
+          "name": "楊植斗",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 6,
+          "ballotNumber": null,
+          "name": "陳聖文",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 7,
+          "ballotNumber": null,
+          "name": "游智彬",
+          "party": "新黨",
+          "eligibilityStatus": "disqualified_2026_10_16"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 8,
+          "ballotNumber": null,
+          "name": "耿葳",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 9,
+          "ballotNumber": null,
+          "name": "徐弘庭",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 10,
+          "ballotNumber": null,
+          "name": "苗博雅",
+          "party": "社會民主黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 11,
+          "ballotNumber": null,
+          "name": "陳錦祥",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 12,
+          "ballotNumber": null,
+          "name": "李柏毅",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 13,
+          "ballotNumber": null,
+          "name": "鍾沛君",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 14,
+          "ballotNumber": null,
+          "name": "劉品妡",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 15,
+          "ballotNumber": null,
+          "name": "張志豪",
+          "party": "台灣民眾黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 16,
+          "ballotNumber": null,
+          "name": "曾獻瑩",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 17,
+          "ballotNumber": null,
+          "name": "王欣儀",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 18,
+          "ballotNumber": null,
+          "name": "王閔生",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 6,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 19,
+          "ballotNumber": null,
+          "name": "張維學",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "臺北市第7選舉區",
+      "districts": [
+        "臺北市平地原住民"
+      ],
+      "type": "indigenous",
+      "seats2026": 1,
+      "registeredCount": 2,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 2,
+      "candidates": [
+        {
+          "councilDistrict": 7,
+          "registrationDate": "2026-08-31",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "李芳儒",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 7,
+          "registrationDate": "2026-09-03",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "林筱薇 Icyang Tamana",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "臺北市第8選舉區",
+      "districts": [
+        "臺北市山地原住民"
+      ],
+      "type": "indigenous",
+      "seats2026": 1,
+      "registeredCount": 3,
+      "registeredCountAsOf": "2026-09-08",
+      "knownDisqualifiedCount": 0,
+      "afterEligibilityReviewCount": 3,
+      "candidates": [
+        {
+          "councilDistrict": 8,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 1,
+          "ballotNumber": null,
+          "name": "林家豪",
+          "party": "民主進步黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 8,
+          "registrationDate": "2026-09-02",
+          "registrationSequence": 2,
+          "ballotNumber": null,
+          "name": "李傅鈺婷",
+          "party": "中國國民黨",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        },
+        {
+          "councilDistrict": 8,
+          "registrationDate": "2026-09-04",
+          "registrationSequence": 3,
+          "ballotNumber": null,
+          "name": "孔垂崢 Haisul Islituan",
+          "party": "無",
+          "eligibilityStatus": "registered_no_disqualification_in_2026_10_16_announcement"
+        }
+      ]
+    }
+  ],
+  "mayorCandidates": [
+    {
+      "name": "郭璽",
+      "party": "台灣麻將最大黨",
+      "registrationDate": "2026-08-31",
+      "registrationSequence": 1,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    },
+    {
+      "name": "沈伯洋",
+      "party": "民主進步黨",
+      "registrationDate": "2026-09-02",
+      "registrationSequence": 2,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    },
+    {
+      "name": "蕭文乾",
+      "party": "臺灣SoR無法黨",
+      "registrationDate": "2026-09-02",
+      "registrationSequence": 3,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    },
+    {
+      "name": "唐新民",
+      "party": "三勢團結促進聯盟",
+      "registrationDate": "2026-09-03",
+      "registrationSequence": 4,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    },
+    {
+      "name": "蔣萬安",
+      "party": "中國國民黨",
+      "registrationDate": "2026-09-04",
+      "registrationSequence": 5,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    },
+    {
+      "name": "林志成",
+      "party": "無",
+      "registrationDate": "2026-09-04",
+      "registrationSequence": 6,
+      "ballotNumber": null,
+      "status": "eligible_2026_10_16",
+      "eligibilitySourceUrl": "https://web.cec.gov.tw/central/article/65213"
+    }
+  ],
+  "eligibilityNote": "依2026-09-08登記冊98人，扣除中選會2026-10-16公告臺北市第6選舉區游智彬資格不符1人，得97人。這是來源交叉整理數；後續以正式候選人名單及裁決更新。第6選舉區由19登記人減為18人。",
+  "sources": {
+    "registration": {
+      "url": "https://web.cec.gov.tw/mect/article/64448",
+      "pdf": "https://web.cec.gov.tw/api/file/94bd36a5-66c3-4773-b125-500c422d98af.pdf",
+      "published": "2026-09-08",
+      "webRef": "turn13view1"
+    },
+    "seats": {
+      "url": "https://www.cec.gov.tw/central/article/63626",
+      "pdf": "https://www.cec.gov.tw/api/file/45d8e965-f63a-46d5-b636-7d81e47cf4d1.pdf",
+      "published": "2026-08-20",
+      "page": 3,
+      "webRef": "turn44view0"
+    },
+    "eligibility": {
+      "url": "https://web.cec.gov.tw/central/article/65213",
+      "published": "2026-10-16",
+      "webRef": "turn30search0"
+    },
+    "mayorRegistration": {
+      "url": "https://web.cec.gov.tw/mect/article/64441",
+      "pdf": "https://web.cec.gov.tw/api/file/7d199a34-2eb9-47df-9059-4992778b0b8f.pdf",
+      "published": "2026-09-04",
+      "webRef": "turn10view0"
+    },
+    "calendar": {
+      "url": "https://web.cec.gov.tw/central/article/61722",
+      "pdf": "https://web.cec.gov.tw/api/file/ae5afeb2-03b0-4616-b934-80ea020c1ac0.pdf",
+      "webRef": "turn49view0"
+    }
+  },
+  "timeline": [
+    {
+      "date": "2026-08-31",
+      "endDate": "2026-09-04",
+      "label": "受理候選人登記",
+      "status": "completed"
+    },
+    {
+      "date": "2026-10-16",
+      "label": "候選資格審定",
+      "status": "completed"
+    },
+    {
+      "date": "2026-10-23",
+      "label": "號次抽籤",
+      "status": "scheduled"
+    },
+    {
+      "date": "2026-11-12",
+      "label": "公告市長候選人名單",
+      "status": "scheduled"
+    },
+    {
+      "date": "2026-11-17",
+      "label": "公告議員候選人名單",
+      "status": "scheduled"
+    },
+    {
+      "date": "2026-11-28",
+      "label": "投票與開票",
+      "status": "scheduled"
+    }
+  ]
+}
