@@ -6,3 +6,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 body:has(dialog[open]){overflow:hidden}.map-label{pointer-events:bounding-box}
+
+.district-guide-link{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:14px 15px;margin:-7px 0 20px;border:1px solid #647860;background:#2c413536;color:var(--gold)}.district-guide-link b{font-size:13px;font-weight:500;display:block}.district-guide-link small{font-size:9px;color:var(--muted);display:block;margin-top:4px}.district-guide-link>span:last-child{font-size:20px}.district-guide-link:hover{background:#334c3f77}
