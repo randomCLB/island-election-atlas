@@ -55,6 +55,24 @@ test('Taipei current-affairs notes distinguish the new poll from debate expectat
   assert.match(page,/不据此推断现任市长或本届其他候选人的责任/);
 });
 
+test('Twelve-district charts use dated comparable fields and retain all districts',()=>{
+  const charts=Guide.districtChartSeries(D);
+  assert.deepEqual(charts.map(x=>x.id),['population','elderly','income','mayor-margin']);
+  for(const chart of charts){
+    assert.equal(chart.rows.length,12,chart.id);
+    assert.equal(chart.rows[0].width,100,chart.id+' largest bar');
+    assert.deepEqual(chart.rows.map(x=>x.value),[...chart.rows.map(x=>x.value)].sort((a,b)=>b-a),chart.id+' rank order');
+  }
+  assert.equal(charts[0].period,'2026.09');
+  assert.equal(charts[1].source[0],'age');
+  assert.equal(charts[2].period,'2023');
+  assert.equal(charts[3].period,'2022');
+  assert.match(charts[3].sourceUrl,/db\.cec\.gov\.tw/);
+  assert.ok(charts[3].rows.some(x=>x.name==='大同'&&x.detail.startsWith('陳時中')));
+  assert.match(page,/id="district-charts"/);
+  assert.match(page,/id="district-chart-grid"/);
+});
+
 test('city comparisons match separately retrieved official totals and weight turnout by voters',()=>{
   for(const election of D.elections){
     const verified=audit.elections.find(e=>e.id===election.id);
