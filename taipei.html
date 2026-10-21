@@ -7,10 +7,10 @@
   <meta name="description" content="给外地人的台北选举导览：十二行政区的生活与产业、人口结构、历届分区选票、区域立委及市议员选区，逐项附上日期与官方来源。">
   <title>台北十二区 · 岛屿选战</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d191d'/%3E%3Cpath d='M15 43 29 15 36 31 45 22 51 43Z' fill='none' stroke='%23d7b779' stroke-width='3'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="taipei-guide.3d290a4c5ed0.css">
+  <link rel="stylesheet" href="taipei-guide.9d519271e1b0.css">
   <script defer src="taipei-guide-data.2efb93074191.js"></script>
   <script defer src="taipei-guide-map.3ab902958255.js"></script>
-  <script defer src="taipei-guide.fb121f54d0d3.js"></script>
+  <script defer src="taipei-guide.0c8f139854ed.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#district-dossier">跳到行政区资料</a>
@@ -41,7 +41,13 @@
       </div>
     </section>
 
-    <div class="district-bar"><span class="eyebrow">选择一个区</span><div id="district-options" role="group" aria-label="选择行政区"></div><a href="#compare">两区对照 ↓</a><nav class="district-section-links" aria-label="本区阅读导航"><a href="#district-dossier">地方背景</a><a href="#ballots">历届选票</a><a href="#representation">地方代表</a><a href="#compare">两区对照</a></nav></div>
+    <div class="district-bar"><span class="eyebrow">选择一个区</span><div id="district-options" role="group" aria-label="选择行政区"></div><a href="#district-charts">十二个区图表 ↓</a><a href="#compare">两区对照 ↓</a><nav class="district-section-links" aria-label="本区阅读导航"><a href="#district-dossier">地方背景</a><a href="#ballots">历届选票</a><a href="#representation">地方代表</a><a href="#district-charts">十二个区图表</a><a href="#compare">两区对照</a></nav></div>
+
+    <section class="district-charts-section section-wrap" id="district-charts" aria-labelledby="district-charts-title">
+      <div class="section-heading"><div><p class="eyebrow">12 DISTRICTS / AT A GLANCE</p><h2 id="district-charts-title">十二个区，<br>四把尺看差异。</h2></div><p>点任一区名就切换下方档案。<br>每张图独立比较，不跨图比条形长度。</p></div>
+      <div class="district-chart-grid" id="district-chart-grid"></div>
+      <p class="chart-note">人口与年龄为 2026 年 9 月户籍资料；所得为 2023 年综合所得申报的纳税单位中位数，不代表居民薪资；选举图为 2022 年市长票前两名差距，不是本届民调。蓝、绿条表示当届领先者所属政党。</p>
+    </section>
 
     <section class="dossier section-wrap" id="district-dossier" aria-labelledby="district-title">
       <div class="dossier-heading"><div><p class="eyebrow" id="district-kicker">01 / THE PLACE BEHIND THE VOTES</p><h2 id="district-title"></h2><p class="district-deck" id="district-deck"></p></div><div class="district-tools"><button type="button" id="copy-district">复制本区链接 ↗</button><span>资料核对 <time datetime="2026-10-20">2026.10.20</time></span></div></div>

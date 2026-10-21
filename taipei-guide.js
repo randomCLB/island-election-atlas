@@ -11,6 +11,20 @@
   const signed=n=>(n>0?'+':n<0?'−':'')+Math.abs(n).toFixed(2);
   function partyName(p){return {'中國國民黨':'国民党','民主進步黨':'民进党','台灣民眾黨':'民众党','無黨籍及未經政黨推薦':'无党籍','無':'无党籍','新黨':'新党','時代力量':'时代力量'}[p]||p;}
   function partyColor(p){return /中國國民黨/.test(p)?'#7eacc4':/民主進步黨/.test(p)?'#83ba9e':/台灣民眾黨/.test(p)?'#83c8c3':/無黨籍|^無$/.test(p)?'#c4c9ba':'#b9a184';}
+  function districtChartSeries(data){
+    const mayor=data.elections.find(x=>x.type==='mayor'&&x.year===2022);
+    const specs=[
+      {id:'population',title:'户籍人口',period:'2026.09',unit:'人',source:['population'],value:d=>d.demographics.population,format:n=>number(n)},
+      {id:'elderly',title:'65 岁以上人口占比',period:'2026.09',unit:'%',source:['age'],value:d=>d.demographics.elderlyPct,format:n=>`${Number(n).toFixed(2)}%`},
+      {id:'income',title:'报税所得中位数',period:'2023',unit:'万元／纳税单位／年',source:['income'],value:d=>d.income.taxIncomeMedianNTD,format:n=>`${(Number(n)/10000).toFixed(1)} 万`},
+      {id:'mayor-margin',title:'市长票领先幅度',period:'2022',unit:'百分点',source:[],sourceUrl:mayor.viewSourceUrl||mayor.sourceUrl,value:d=>mayor.districts.find(r=>r.name===d.name).marginPoints,format:n=>`${Number(n).toFixed(2)} 个百分点`,detail:d=>{const row=mayor.districts.find(r=>r.name===d.name);return `${row.districtLeader} +${Number(row.marginPoints).toFixed(2)}`;},color:d=>{const row=mayor.districts.find(r=>r.name===d.name);return partyColor(row.candidates.find(c=>c.name===row.districtLeader).party);}}
+    ];
+    return specs.map(spec=>{
+      const rows=data.districts.map(d=>({districtId:d.id,name:d.displayName,value:spec.value(d),color:spec.color?.(d)||'#d7b779',detail:spec.detail?.(d)||spec.format(spec.value(d))})).sort((a,b)=>b.value-a.value);
+      const max=Math.max(...rows.map(r=>r.value));
+      return {...spec,rows:rows.map(r=>({...r,width:100*r.value/max,ariaValue:spec.id==='mayor-margin'?`${r.detail} 个百分点领先`:r.detail}))};
+    });
+  }
   function aggregateElection(election){
     if(election.geography!=='administrativeDistrict')throw new Error('Only administrative-district results may be aggregated for this comparison.');
     const result={name:'臺北市全市',validVotes:0,invalidVotes:0,votesCast:0,eligibleVoters:0,candidates:[]},byName=new Map();
@@ -97,6 +111,10 @@
         return `<article class="issue"><span class="issue-number">0${i+1}</span><h4>${e(x.title)}</h4><p>${e(x.background)}</p><p class="question"><span>可以继续追问</span>${e(x.question)}</p><p class="responsibility">谁负责：${e(x.responsibility)}</p>${perspectives.length?`<p class="micro">来源视角：${e(perspectives.join('；'))}</p>`:''}${sourceLinks(x.sourceIds)}</article>`;
       }).join('');
     }
+    function renderDistrictCharts(){
+      const charts=districtChartSeries(D);
+      $('#district-chart-grid').innerHTML=charts.map(chart=>`<article class="district-chart"><div class="district-chart-heading"><h3>${e(chart.title)}</h3><span>${e(chart.period)} · ${e(chart.unit)}</span></div><ol>${chart.rows.map(row=>`<li><button class="chart-row" data-district="${e(row.districtId)}" aria-label="选择${e(row.name)}区，${e(chart.title)}：${e(row.ariaValue)}"><span class="chart-name">${e(row.name)}区</span><span class="chart-track" aria-hidden="true"><span class="chart-fill" style="width:${row.width.toFixed(2)}%;background:${e(row.color)}"></span></span><span class="chart-value">${e(row.detail)}</span></button></li>`).join('')}</ol>${sourceLinks(chart.source)}${chart.sourceUrl?`<div class="source-links">${link(chart.sourceUrl,'中选会 2022 年台北市长结果表')}</div>`:''}</article>`).join('');
+    }
     function voteRows(candidates){return candidates.map(c=>`<div class="ballot-row"><div class="ballot-row-header"><span class="ballot-name">${e(c.name)} <small>${e(partyName(c.party))}</small></span><b>${percent(c.share)}%</b></div><div class="bar-track"><i style="width:${Math.max(0,Math.min(100,c.share))}%;background:${partyColor(c.party)}"></i></div><div class="vote-count">${number(c.votes)} 票</div></div>`).join('');}
     function resultCard(row,title,wholeCity=false){
       const first=row.candidates.slice(0,3),rest=row.candidates.slice(3);
@@ -177,7 +195,7 @@
     $('#ballot-comparison').addEventListener('change',event=>{state.compare=event.target.value;saveRoute();renderBallots();});
     $('#compare-district').addEventListener('change',event=>{state.peer=event.target.value;saveRoute();renderComparison();});
     window.addEventListener('popstate',()=>{Object.assign(state,readRoute(location.href,D));renderAll();});
-    initControls();saveRoute(false);renderAll();renderCurrent();renderCouncilOverview();renderSources();
+    initControls();saveRoute(false);renderAll();renderDistrictCharts();renderCurrent();renderCouncilOverview();renderSources();
   }
-  return {aggregateElection,constituenciesForDistrict,readRoute,partyColor,start};
+  return {aggregateElection,constituenciesForDistrict,districtChartSeries,readRoute,partyColor,start};
 });
