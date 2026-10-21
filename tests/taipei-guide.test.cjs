@@ -47,6 +47,8 @@ test('Taipei current-affairs notes distinguish the new poll from debate expectat
   assert.match(page,/ELECTION WATCH \/ UPDATED 2026\.10\.21/);
   assert.match(page,/沈伯洋 50\.3%、蒋万安 33\.3%/);
   assert.match(page,/TVBS 10 月 3、5—7 日市话调查为蒋万安 49%、沈伯洋 41%/);
+  assert.match(page,/TVBS 民调中心 10 月 20 日另发声明/);
+  assert.match(page,/不能单凭这组差异判定信民结果无效/);
   assert.match(page,/不是投票支持度/);
   assert.match(page,/案件尚未终局/);
   assert.match(page,/不等于刑事二审无罪或推翻一审判决/);
