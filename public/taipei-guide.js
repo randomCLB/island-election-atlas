@@ -114,6 +114,13 @@
     function renderDistrictCharts(){
       const charts=districtChartSeries(D);
       $('#district-chart-grid').innerHTML=charts.map(chart=>`<article class="district-chart"><div class="district-chart-heading"><h3>${e(chart.title)}</h3><span>${e(chart.period)} · ${e(chart.unit)}</span></div><ol>${chart.rows.map(row=>`<li><button class="chart-row" data-district="${e(row.districtId)}" aria-label="选择${e(row.name)}区，${e(chart.title)}：${e(row.ariaValue)}"><span class="chart-name">${e(row.name)}区</span><span class="chart-track" aria-hidden="true"><span class="chart-fill" style="width:${row.width.toFixed(2)}%;background:${e(row.color)}"></span></span><span class="chart-value">${e(row.detail)}</span></button></li>`).join('')}</ol>${sourceLinks(chart.source)}${chart.sourceUrl?`<div class="source-links">${link(chart.sourceUrl,'中选会 2022 年台北市长结果表')}</div>`:''}</article>`).join('');
+      updateDistrictChartSelection();
+    }
+    function updateDistrictChartSelection(){
+      $$('.chart-row').forEach(row=>{
+        const selected=row.dataset.district===state.district;
+        row.classList.toggle('selected',selected);row.setAttribute('aria-pressed',String(selected));
+      });
     }
     function voteRows(candidates){return candidates.map(c=>`<div class="ballot-row"><div class="ballot-row-header"><span class="ballot-name">${e(c.name)} <small>${e(partyName(c.party))}</small></span><b>${percent(c.share)}%</b></div><div class="bar-track"><i style="width:${Math.max(0,Math.min(100,c.share))}%;background:${partyColor(c.party)}"></i></div><div class="vote-count">${number(c.votes)} 票</div></div>`).join('');}
     function resultCard(row,title,wholeCity=false){
@@ -179,7 +186,7 @@
     }
     function renderAll(){
       $$('[data-district]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.district===state.district)));
-      renderMap();renderDossier();renderBallots();renderRepresentation();renderComparison();
+      renderMap();renderDossier();renderBallots();renderRepresentation();renderComparison();updateDistrictChartSelection();
     }
     function changeDistrict(id){if(!D.districts.some(d=>d.id===id)||state.district===id)return;state.district=id;if(state.compare===id)state.compare='city';if(state.peer===id)state.peer=id==='neihu'?'wanhua':'neihu';saveRoute();renderAll();}
     document.addEventListener('click',async event=>{
