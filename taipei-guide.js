@@ -9,6 +9,8 @@
   const number=n=>Number(n).toLocaleString('en-US');
   const percent=n=>Number(n).toFixed(2);
   const signed=n=>(n>0?'+':n<0?'−':'')+Math.abs(n).toFixed(2);
+  const DISTRICT_COLORS={songshan:'#a6cee3',xinyi:'#1f78b4',daan:'#b2df8a',zhongshan:'#33a02c',zhongzheng:'#fb9a99',datong:'#e31a1c',wanhua:'#fdbf6f',wenhu:'#ff7f00',nangang:'#cab2d6',neihu:'#6a3d9a',shilin:'#ffff99',beitou:'#b15928'};
+  const districtColor=id=>DISTRICT_COLORS[id]||'#d7b779';
   function partyName(p){return {'中國國民黨':'国民党','民主進步黨':'民进党','台灣民眾黨':'民众党','無黨籍及未經政黨推薦':'无党籍','無':'无党籍','新黨':'新党','時代力量':'时代力量'}[p]||p;}
   function partyColor(p){return /中國國民黨/.test(p)?'#7eacc4':/民主進步黨/.test(p)?'#83ba9e':/台灣民眾黨/.test(p)?'#83c8c3':/無黨籍|^無$/.test(p)?'#c4c9ba':'#b9a184';}
   function districtChartSeries(data){
@@ -17,10 +19,10 @@
       {id:'population',title:'户籍人口',period:'2026.09',unit:'人',source:['population'],value:d=>d.demographics.population,format:n=>number(n)},
       {id:'elderly',title:'65 岁以上人口占比',period:'2026.09',unit:'%',source:['age'],value:d=>d.demographics.elderlyPct,format:n=>`${Number(n).toFixed(2)}%`},
       {id:'income',title:'报税所得中位数',period:'2023',unit:'万元／纳税单位／年',source:['income'],value:d=>d.income.taxIncomeMedianNTD,format:n=>`${(Number(n)/10000).toFixed(1)} 万`},
-      {id:'mayor-margin',title:'市长票领先幅度',period:'2022',unit:'百分点',source:[],sourceUrl:mayor.viewSourceUrl||mayor.sourceUrl,value:d=>mayor.districts.find(r=>r.name===d.name).marginPoints,format:n=>`${Number(n).toFixed(2)} 个百分点`,detail:d=>{const row=mayor.districts.find(r=>r.name===d.name);return `${row.districtLeader} +${Number(row.marginPoints).toFixed(2)}`;},color:d=>{const row=mayor.districts.find(r=>r.name===d.name);return partyColor(row.candidates.find(c=>c.name===row.districtLeader).party);}}
+      {id:'mayor-margin',title:'市长票领先幅度',period:'2022',unit:'百分点',source:[],sourceUrl:mayor.viewSourceUrl||mayor.sourceUrl,value:d=>mayor.districts.find(r=>r.name===d.name).marginPoints,format:n=>`${Number(n).toFixed(2)} 个百分点`,detail:d=>{const row=mayor.districts.find(r=>r.name===d.name);return `${row.districtLeader} +${Number(row.marginPoints).toFixed(2)}`;}}
     ];
     return specs.map(spec=>{
-      const rows=data.districts.map(d=>({districtId:d.id,name:d.displayName,value:spec.value(d),color:spec.color?.(d)||'#d7b779',detail:spec.detail?.(d)||spec.format(spec.value(d))})).sort((a,b)=>b.value-a.value);
+      const rows=data.districts.map(d=>({districtId:d.id,name:d.displayName,value:spec.value(d),color:districtColor(d.id),detail:spec.detail?.(d)||spec.format(spec.value(d))})).sort((a,b)=>b.value-a.value);
       const max=Math.max(...rows.map(r=>r.value));
       return {...spec,rows:rows.map(r=>({...r,width:100*r.value/max,ariaValue:spec.id==='mayor-margin'?`${r.detail} 个百分点领先`:r.detail}))};
     });
@@ -79,7 +81,7 @@
       if(state.mapMode==='age'){
         const t=(d.demographics.elderlyPct-21)/(28-21),from=[41,71,72],to=[210,183,127];return '#'+from.map((v,i)=>Math.round(v+(to[i]-v)*t).toString(16).padStart(2,'0')).join('');
       }
-      return d.id===state.district?'#7e916c':['#334f49','#3e5c53','#476453','#354e49'][D.districts.indexOf(d)%4];
+      return districtColor(d.id);
     }
     function renderMap(){
       const d=district();
@@ -91,7 +93,7 @@
         $(`[data-label="${x.id}"]`).classList.toggle('selected',selected);
       }
       $$('[data-map-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapMode===state.mapMode)));
-      $('#map-legend').innerHTML=state.mapMode==='age'?'<span>2026.09 · 65 岁以上</span><span>21% <i class="gradient"></i> 28%</span>':state.mapMode==='votes'?'<span><i style="background:#7eacc4"></i>国民党候选人在该区最高票</span><span><i style="background:#83ba9e"></i>民进党候选人在该区最高票</span>':'<span><i style="background:#7e916c"></i>当前所选行政区</span><span>面积显示地理大小，不代表人口或票数</span>';
+      $('#map-legend').innerHTML=state.mapMode==='age'?'<span>2026.09 · 65 岁以上</span><span>21% <i class="gradient"></i> 28%</span>':state.mapMode==='votes'?'<span><i style="background:#7eacc4"></i>国民党候选人在该区最高票</span><span><i style="background:#83ba9e"></i>民进党候选人在该区最高票</span>':'<span>每区固定一种颜色，下方图表沿用</span><span>面积显示地理大小，不代表人口或票数</span>';
       const row=D.elections.find(r=>r.year===2022&&r.type==='mayor').districts.find(r=>r.name===d.name);
       const extra=state.mapMode==='age'?`65 岁以上 ${percent(d.demographics.elderlyPct)}% · 全市 ${percent(D.cityDemographics.elderlyPct)}%`:state.mapMode==='votes'?`2022 本区最高票 ${row.districtLeader} · 领先 ${percent(row.marginPoints)} 个百分点`:d.tagline;
       $('#map-reading').innerHTML=`<span class="map-reading-name">${e(d.displayName)}</span><p>${e(extra)}<br>户籍人口 ${number(d.demographics.population)} 人 · 2026.09</p><a href="#district-dossier">展开资料 ↓</a>`;
@@ -113,6 +115,7 @@
     }
     function renderDistrictCharts(){
       const charts=districtChartSeries(D);
+      $('#district-color-legend').innerHTML=D.districts.map(d=>`<span><i style="background:${districtColor(d.id)}"></i>${e(d.displayName)}区</span>`).join('');
       $('#district-chart-grid').innerHTML=charts.map(chart=>`<article class="district-chart"><div class="district-chart-heading"><h3>${e(chart.title)}</h3><span>${e(chart.period)} · ${e(chart.unit)}</span></div><ol>${chart.rows.map(row=>`<li><button class="chart-row" data-district="${e(row.districtId)}" aria-label="选择${e(row.name)}区，${e(chart.title)}：${e(row.ariaValue)}"><span class="chart-name">${e(row.name)}区</span><span class="chart-track" aria-hidden="true"><span class="chart-fill" style="width:${row.width.toFixed(2)}%;background:${e(row.color)}"></span></span><span class="chart-value">${e(row.detail)}</span></button></li>`).join('')}</ol>${sourceLinks(chart.source)}${chart.sourceUrl?`<div class="source-links">${link(chart.sourceUrl,'中选会 2022 年台北市长结果表')}</div>`:''}</article>`).join('');
       updateDistrictChartSelection();
     }
