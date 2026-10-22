@@ -63,6 +63,9 @@ test('Twelve-district charts use dated comparable fields and retain all district
     assert.equal(chart.rows[0].width,100,chart.id+' largest bar');
     assert.deepEqual(chart.rows.map(x=>x.value),[...chart.rows.map(x=>x.value)].sort((a,b)=>b-a),chart.id+' rank order');
   }
+  const colorByDistrict=new Map(charts[0].rows.map(row=>[row.districtId,row.color]));
+  assert.equal(new Set(colorByDistrict.values()).size,12,'every district has its own color');
+  for(const chart of charts)for(const row of chart.rows)assert.equal(row.color,colorByDistrict.get(row.districtId),chart.id+' reuses district color');
   assert.equal(charts[0].period,'2026.09');
   assert.equal(charts[1].source[0],'age');
   assert.equal(charts[2].period,'2023');
@@ -70,6 +73,7 @@ test('Twelve-district charts use dated comparable fields and retain all district
   assert.match(charts[3].sourceUrl,/db\.cec\.gov\.tw/);
   assert.ok(charts[3].rows.some(x=>x.name==='大同'&&x.detail.startsWith('陳時中')));
   assert.match(page,/id="district-charts"/);
+  assert.match(page,/id="district-color-legend"/);
   assert.match(page,/id="district-chart-grid"/);
 });
 
