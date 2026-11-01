@@ -4,6 +4,8 @@
 
 新增[台北十二区地方选举导览](https://randomclb.github.io/island-election-atlas/taipei.html)，从真实行政区地图查看人口、年龄、所得与登记产业、36 条地方议题观察问题、六组历史选举资料，以及区域立委和 2026 市议员选区与参选名单。资料核对至 2026-10-20；议题是有来源的编辑分析，尚未覆盖每位市议员参选人的逐条政见与个人表现比较。
 
+台北专题另收录[沈伯洋竞选团队的 HEART 政策岛](https://puma.taipei/heart-island)，并从 2026-11-01 起记录其公开页面快照；首次记录无法与旧版比较，具体变动仅在取得后续快照后注明。见[逐次更新记录](research/taipei/heart-policy-island-update-log.md)。
+
 本地运行 `npm start` 后打开 `http://127.0.0.1:4173/taipei.html`；可用 `?district=zhongshan` 分享指定行政区。数据年份、完整票数分母、候选资格阶段及快照更新流程见[台北十二区维护与来源说明](docs/TAIPEI-DISTRICTS.md)。
 
 ## 五都人物与资料
