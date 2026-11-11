@@ -67,6 +67,7 @@ require('../public/career-political-coverage-round85.js').apply(D);
 require('../public/foreign-hung-f-coverage-round88.js').apply(D);
 require('../public/profile-coverage-wang-round89.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
+require('../public/county-model.js').apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
  if(p.photo?.delivery!=='bundled-file'||!['open-license','editorial-quotation'].includes(p.photo.publicationBasis)||!p.photo.credit||!p.photo.note)throw new Error('Missing publication basis: '+p.id);
@@ -78,7 +79,10 @@ for(const p of D.people)if(p.policyCoverage?.sources?.some(s=>!D.sources[s]))thr
 for(const p of D.polls)if(!D.people.some(x=>x.city===p.city)||p.sources.some(s=>!D.sources[s])||p.results.some(r=>!D.people.some(x=>x.id===r.person&&x.city===p.city)))throw new Error('Invalid poll references');
 const dist=path.join(root,'dist');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(path.join(root,'public'),dist,{recursive:true});fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 // Remove restricted survey data from release bytes, not only the interface.
-if(U.blackout()){const file=path.join(dist,'election-map-data.js'),pack=M.forRelease();fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
+if(U.blackout()){
+ const page=path.join(dist,'index.html');
+ fs.writeFileSync(page,fs.readFileSync(page,'utf8').replace(/<section[^>]* id="six-city-polls"[^>]*>[\s\S]*?<\/section>/,''));
+ const file=path.join(dist,'election-map-data.js'),pack=M.forRelease();fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
 // GitHub Pages may keep an old asset when only its query string changes.
 for(const htmlName of ['index.html','taipei.html']){
 const htmlPath=path.join(dist,htmlName);
