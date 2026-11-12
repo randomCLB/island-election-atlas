@@ -2546,6 +2546,17 @@ function apply(d){
  linYunlinCurrent.countyBrief.work='2018年选举公报列其自1994年起开业并任牙医诊所院长；2022年公报自列正云牙医诊所开业负责人。牙医师公会2026年4月活动名单亦将林佳瑜列为正云牙医诊所负责医师；该名单不能确认此后任职现况。';
  linYunlinCurrent.countyBrief.extraBioSources=[...(linYunlinCurrent.countyBrief.extraBioSources||[]),'county-lin-yunlin-dental-association-202604'];
  const linForum=linYunlinCurrent.policies.find(x=>x.sources?.includes('county-yunlin-forum-20261109'));if(linForum){linForum.text='林佳瑜认为科技创新及社会福利的推动来自民间，政府不是唯一推动力量，公部门应以服务为角色；他认为云林科技发展将跟随全球趋势。';linForum.sources.push('county-lin-yunlin-forum-udn-20261110');linForum.note='这是政见会录影中对政府角色的观点；报道未列具体科技或福利项目、预算与执行时程。完整政见会预计11月18日起播出。';}
+ d.sources['county-migrant-policy-cna-20261103']={title:'桃竹苗三名候选人提出新住民政见',url:'https://www.cna.com.tw/news/aipl/202611030133.aspx',date:'2026-11-03',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道候选人记者会'};
+ d.sources['county-wen-nantou-family-20261108']={title:'温世政提出妇幼与新住民政策',url:'https://org-today.line-apps.com/tw/v3/article/XYpRzXO',date:'2026-11-08',checkedAt:'2026-11-12',publisherId:'ltn',publisherName:'自由时报（LINE TODAY转载）',kind:'媒体报道候选人座谈会'};
+ for(const [city,name,topic,text,source,date,note] of [
+  ['taoyuan','黃世杰','labor','黄世杰提出新二代产业实习与就业计划，并为新住民提供创业陪伴及微型贷款辅导。','county-migrant-policy-cna-20261103','2026-11-03','具体行业、保障方式、资格及经费暂未确认。'],
+  ['taoyuan','黃世杰','accountability','黄世杰提出1999市民专线结合AI及真人进行三方通译，并设立新住民事务协调机制。','county-migrant-policy-cna-20261103','2026-11-03','语种、人员配置、预算和实施时程暂未确认。'],
+  ['hsinchu-city','莊競程','accountability','庄竞程提出提高市府新住民照顾辅导委员会的新住民代表比例，并让1999专线提供越南语及印尼语服务。','county-migrant-policy-cna-20261103','2026-11-03','代表比例、服务时段及人员配置暂未确认。'],
+  ['hsinchu-city','莊競程','labor','庄竞程提出设置新住民创业陪跑团及单一窗口，协助处理商登、食品安全、税务与融资等事项。','county-migrant-policy-cna-20261103','2026-11-03','申请资格、团队规模及预算暂未确认。'],
+  ['miaoli','陳品安','accountability','陈品安提出成立跨局处的新住民发展中心，增加专责服务人力与资源。','county-migrant-policy-cna-20261103','2026-11-03','组织架构、经费及实施时间暂未确认。'],
+  ['nantou','温世政','childcare','温世政提出以每1万人设一处托育中心为目标，并以草屯约10万人口估算至少10处。','county-wen-nantou-family-20261108','2026-11-08','这是候选人目标和人口估算，中心规模、现有设施如何纳入、预算及时程暂未确认。'],
+  ['nantou','温世政','labor','温世政提出为新住民设多语言服务中心，并提供求职或创业技能培训及创业租金补贴。','county-wen-nantou-family-20261108','2026-11-08','报道未列语种、补贴金额、资格及实施时间。']
+ ]){const candidate=d.people.find(p=>p.city===city&&p.name===name);if(!candidate)throw new Error('Missing candidate: '+name);if(!candidate.policies.some(x=>x.sources?.includes(source)&&x.text===text))candidate.policies.push({topic,text,type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date,sources:[source],note});}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
