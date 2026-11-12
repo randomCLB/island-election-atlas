@@ -2181,6 +2181,8 @@ function apply(d){
  ];
  for(const r of changhuaWelfare){const p=d.people.find(x=>x.city==='changhua'&&x.name===r.name);if(!p)throw new Error('Missing candidate: '+r.name);if(!p.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))p.policies.push({topic:'health',text:r.text,type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-11（报道日）',sources:['county-chen-changhua-welfare-20261111'],note:r.note});}
  const foreign=[
+  {city:'hsinchu-city',name:'高虹安',region:'cn',key:'county-kao-china-pastry-20210324',date:'2021-03-24',title:'高虹安质询台湾糕饼对大陆出口',url:'https://ec.ltn.com.tw/article/breakingnews/3477539',publisherId:'ltn',publisherName:'自由时报',kind:'媒体报道立法院质询及官员答复',topic:'食品对大陆出口限制',text:'高虹安任立委时转述小三通物流业者称，台湾凤梨酥一度无法经小三通出货，并要求经济部门掌握对糕饼出口的潜在影响。',limit:'这是2021年质询时转述的业者说法；经济部门当时表示会了解，不能据此认定现行规定或报道中的限制原因已获独立证实。'},
+
   {city:'yilan',name:'林國漳',region:'cn',key:'county-lin-yilan-cross-strait-20260423',date:'2026-04-23',title:'林国漳回应国民党主席与中共领导人会面',url:'https://news.cts.com.tw/cts/politics/202604/202604233023336.html',publisherId:'other',publisherName:'华视新闻（公股媒体）',kind:'电视新闻采访候选人',topic:'两岸会面与主权',text:'林国漳回应国民党主席郑丽文与中共领导人习近平会面时，批评国民党未顾及台湾主权、未征询台湾民众意见，并质疑会面是否符合台湾及宜兰人的利益。',limit:'这是针对该次会面的本人政治判断；不能扩大为他反对一切两岸交流。'},
   {city:'yilan',name:'吳宗憲',region:'jp',key:'county-wu-yilan-japan-fishing-20260606',date:'2026-06-06（报道日）',title:'吴宗宪谈日菲海域划界与宜兰渔权',url:'https://udn.com/news/story/6656/9549973',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人及立委的协调会',topic:'日菲海域划界与渔业',text:'吴宗宪忧虑日本与菲律宾的专属经济区划界谈判影响宜兰传统渔场，要求渔业署盘点作业海域与鱼种，提出护渔对策并向外交部反映风险。',limit:'对影响范围及政府回应的批评属于本人判断；报道记录的是谈判启动时的担忧，不能视为后续划界结果或实际侵权结论。'},
 
@@ -2383,6 +2385,10 @@ function apply(d){
   if(r.anchor==='hl-wei-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'jp',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'提出花莲与日本离岛直航',text:r.text,limit:'候选人公开提案，资料库提供原发链接；航线可行性及跨境审批仍待确认。',source:excerpt});
   if(r.anchor==='km-li-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'建议评估增加两岸直航',text:'李文良建议在安全、对等与市场需求前提下，由中央评估恢复或增加台湾本岛与大陆主要城市的直航航点及班次。',limit:'候选人提出评估建议，不代表已核准航线或其全部两岸立场。',source:excerpt});
   if(r.anchor==='lc-tsao-tourism'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'争取大陆游客赴马祖',text:'曹尔元提出吸引大陆游客赴马祖旅游，并向中央争取跨区域旅游开放。',limit:'资料库摘录的候选人主张；具体政策可行性和原发日期须另核。',source:excerpt});
+ }
+ for(const [name,regions,refs] of [['許智富',['cn','us'],['county-hsu-penghu-japan-2019']],['陳盡川',['us','jp'],['county-chen-jinchuan-career-20200608']]]){
+  const p=d.people.find(x=>x.city==='penghu'&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.evidenceCoverage=p.evidenceCoverage||{};
+  for(const region of regions)if(!p.evidence.some(x=>x.region===region)&&!p.evidenceCoverage[region]){const label=region==='cn'?'中国大陆／两岸':region==='us'?'美国':'日本';p.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'以候选人姓名、澎湖及「'+label+'」检索公开网页，并查看所列本人资料；本次未找到可明确归属于本人的相关政策观点。',note:'个人社群及全部影片尚未逐一查核；同名者或其他受访人的发言不归给本人。',sources:refs};}
  }
  d.sources['county-foreign-review-changhua-chen']={title:'彰化县议会陈重嘉议员介绍',url:'https://www.chcc.gov.tw/member/details.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C142',date:'议会网站（日期未列）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'彰化县议会',kind:'议员资料；留学经历不能推断政策立场'};
  d.sources['county-foreign-review-kinmen-20261112']={title:'金门县长候选人资料',url:'https://blindvote.app/bio/kinmen',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
