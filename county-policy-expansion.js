@@ -2279,6 +2279,8 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'taitung',name:'吳秀華',source:'county-wu-taitung-family-20261112',title:'吴秀华公布妇幼与托育政策',url:'https://udn.com/news/story/124652/9874639',date:'2026-11-12',publisherId:'udn',publisherName:'联合报',items:[['childcare','吴秀华提出生育津贴第一胎5万元、第二胎6万元、第三胎以上8万元，并分阶段推动一乡镇市一公托，增加临时及弹性托育。'],['health','吴秀华提出扩大产检交通补助、提供新手父母心理咨询，并升级月嫂媒合、月子餐及到宅母婴照护。'],['accountability','吴秀华提出扩大纵谷、海岸及南回妇女保护据点，提供法律协助、保密咨询与庇护转介。'],['economy','吴秀华规划女力学院及新住民希望学苑，提供职业训练、法律权益与创业辅导，并设置妇女创业梦想基金。']]},
+  {city:'taitung',name:'陳瑩',source:'county-chen-taitung-education-20260923',title:'陈莹提出原民及城乡交流教育方案',url:'https://udn.com/vote2026/story/124652/9772660',date:'2026-09-23',publisherId:'udn',publisherName:'联合报',items:[['education','陈莹提出结合台东山海及多元文化，推动跨县市、跨城乡与跨族群游学，深化原住民族教育与母语；并补助教师AI工具与进修，增加民间课后陪伴支持。']]},
   {city:'hsinchu-county',name:'徐欣瑩',source:'county-hsu-hsinchu-education-20261110',title:'徐欣莹提出学区预测及通学政策',url:'https://www.cna.com.tw/news/aloc/202611100229.aspx',date:'2026-11-10',publisherId:'cna',publisherName:'中央社',items:[['education','徐欣莹提出整合户政、学籍及住宅开发资料，预测学区就学需求，提前规划校舍与增班；并推动偏乡跨校共学、远距教学及师资共享。'],['transport','徐欣莹提出「幸福通学专车」，整合公车、校车及偏乡接驳，改善通学安全。']]},
   {city:'hsinchu-county',name:'鄭朝方',source:'county-cheng-hsinchu-markets-20261110',title:'郑朝方提出新竹县特色市集计划',url:'https://www.cna.com.tw/news/aloc/202611100229.aspx',date:'2026-11-10',publisherId:'cna',publisherName:'中央社',items:[['economy','郑朝方提出将竹北市集经验推广到全县13乡镇市，优先评估竹东车站周边及竹北、新丰滨海公共空间，规划固定档期并提供品牌辅导与招商媒合。']]},
   {city:'hsinchu-county',name:'鄭朝方',source:'county-cheng-hsinchu-jianshi-20260917',title:'郑朝方提出尖石道路及阅读资源方案',url:'https://www.cna.com.tw/news/aloc/202609170259.aspx',date:'2026-09-17',publisherId:'cna',publisherName:'中央社',items:[['transport','郑朝方提出盘点尖石后山边坡防护与路面状况，并补强夜间照明。'],['education','郑朝方规划在尖石打造结合自然环境及部落文化的「山林系图书馆」，增加儿童阅读与文化传承空间。']]},
@@ -2304,6 +2306,10 @@ function apply(d){
   for(const [topic,text] of r.items)if(!person.policies.some(x=>x.sources?.includes(r.source)&&x.topic===topic))person.policies.push({topic,text,type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:r.date,sources:[r.source],note:'属于候选人提出的方案；预算、合法性及执行条件须另核。'});
   person.policyCoverage=null;
  }
+ d.sources['county-wang-taitung-agriculture-20260912']={title:'王志伟说明农业升级方案',url:'https://udn.com/news/story/124652/9749859',date:'2026-09-12',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人政见'};
+ const wangTt=d.people.find(p=>p.city==='taitung'&&p.name==='王志偉');if(!wangTt)throw new Error('Missing candidate: 王志偉');
+ const wangAgriculture=wangTt.policies.find(p=>p.topic==='economy'&&p.sources?.includes('county-wang-taitung-20260912'));
+ if(wangAgriculture){wangAgriculture.text='王志伟提出订定农渔产品等级、对顶级品保价收购，并规划100架无人机提供喷药及施肥代工，由政府补助一半作业成本。';if(!wangAgriculture.sources.includes('county-wang-taitung-agriculture-20260912'))wangAgriculture.sources.push('county-wang-taitung-agriculture-20260912');}
  d.sources['county-chen-taitung-japan-20250411']={title:'台东数字游牧活动及台日合作意向书',url:'https://ws.ndc.gov.tw/Download.ashx?icon=.pdf&n=5ZyL55m85pyDMTE0MDQxMeaWsOiBnueovy3pgYrniafoh7rngaMg6Ie65p2x5ZWf6Iiq5YSA5byPIOebm%2BWkp%2BiIieihjCDlnIvnmbzmnIPkv4PmiJDoh7rml6XnsL3nvbLmlbjkvY3pgYrniaflkIjkvZzmhI%2FlkJHmm7gucGRm&u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvNjIwMi8zODk1NC83NDIzZjc1NC00MmY4LTQ2ZWEtOWIwYS1jZTkzYjQ4YmZmZDEucGRm',date:'2025-04-11',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国家发展委员会',kind:'官方活动新闻稿'};
  const chen=d.people.find(x=>x.city==='taitung'&&x.name==='陳瑩');
  if(!chen)throw new Error('Missing candidate: 陳瑩');
