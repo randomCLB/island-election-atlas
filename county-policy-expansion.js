@@ -2595,6 +2595,15 @@ function apply(d){
  const wuYilanCareer=d.people.find(p=>p.city==='yilan'&&p.name==='吳宗憲');if(!wuYilanCareer?.countyBrief)throw new Error('Missing candidate: 吳宗憲');
  wuYilanCareer.countyBrief.work='中央社2020年报道，吴宗宪历任南投、士林和桃园地检署检察官，并曾任检肃黑金专组检察官；2020年3月25日宣誓接任新北市政府法制局长。各地检署任职起止年月暂未确认。';
  wuYilanCareer.countyBrief.extraBioSource='county-wu-yilan-prosecutor-20200325';
+ d.sources['county-tsai-chiayi-bio-cna']={title:'2026县市长参选人资料：蔡易余',url:'https://www.cna.com.tw/tag/34862/',date:'候选人资料汇编，更新时间未列',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'候选人资料汇编'};
+ d.sources['county-tsai-chiayi-career-cec2012']={title:'2012年嘉义县立委选举公报：蔡易余经历',url:'https://web.cec.gov.tw/api/file/cbfbb933-f5df-4e55-a7a1-275ec2ea36c6.pdf',date:'2012年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人自行填报的往届经历'};
+ const tsaiChiayiWork=d.people.find(p=>p.city==='chiayi-county'&&p.name==='蔡易餘');if(!tsaiChiayiWork?.countyBrief)throw new Error('Missing candidate: 蔡易餘');
+ tsaiChiayiWork.countyBrief.work='2012年选举公报自列曾任万国法律事务所执业律师、蔡易余律师事务所主持人、新台湾国策智库助理研究员及嘉义之音电台主持人；中央社候选人资料另列台湾啤酒篮球队领队及数位汇流发展协会理事长。各职务起止年月及现况暂未确认。';
+ tsaiChiayiWork.countyBrief.extraBioSource='county-tsai-chiayi-career-cec2012';tsaiChiayiWork.countyBrief.extraBioSources=[...(tsaiChiayiWork.countyBrief.extraBioSources||[]),'county-tsai-chiayi-bio-cna'];
+ d.sources['county-chen-changhua-profile-20260626']={title:'陈素月谈文化工作及从政经历',url:'https://www.fountmedia.io/article/395987',date:'2026-06-26',checkedAt:'2026-11-12',publisherId:'other',publisherName:'放言（倾向待核定）',kind:'媒体转述候选人电台专访'};
+ const chenChanghuaWork=d.people.find(p=>p.city==='changhua'&&p.name==='陳素月');if(!chenChanghuaWork?.countyBrief)throw new Error('Missing candidate: 陳素月');
+ chenChanghuaWork.countyBrief.work='本人在电台专访中回忆，研究所毕业后曾任台北县立文化中心约聘研究员，随家人搬回彰化后辞职，并协助翁金珠竞选；另曾任国立空中大学讲师、大叶大学兼任讲师、拓展文教基金会执行长及立委国会助理。各项职务起止年月暂未确认。';
+ chenChanghuaWork.countyBrief.extraBioSources=[...(chenChanghuaWork.countyBrief.extraBioSources||[]),'county-chen-changhua-profile-20260626'];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
