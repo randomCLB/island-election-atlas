@@ -1880,7 +1880,10 @@ function apply(d){
  linYl.policyCoverage={checkedAt:'2026-11-12',note:'已查2026年公办政见会录影报道，收录其对科技和公部门角色的观点；具体执行方案仍待确认，完整政见会预计11月18日起播出。',sources:['county-yunlin-forum-20261109']};
  d.sources['county-wu-yunlin-huwei-2024']={title:'2024年虎尾镇长补选选举公报',url:'https://web.cec.gov.tw/api/file/fe16dcd5-1269-4ca1-b021-50844fd7d176.pdf',date:'2024年补选选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'云林县选举委员会',kind:'候选人自行填报的经历与往届政见'};
  if(!wuYl.policies.some(x=>x.sources?.includes('county-wu-yunlin-huwei-2024')))wuYl.policies.push({topic:'health',text:'吴炳辉在2024年虎尾镇长补选公报提出按区域建立长照网络，结合托老、增加公立幼儿园及托幼互助，并提出青银共居。',type:'往届补选政见（2024年选举公报）',basis:'campaign',electionYear:2024,date:'2024年补选选举公报',sources:['county-wu-yunlin-huwei-2024'],note:'这是虎尾镇长补选时的构想，本届县长选举是否沿用、经费及服务规模暂未确认。'});
- linYl.countyBrief.work='2018年選舉公報列其自1994年起開業並任牙醫診所院長；其後任職狀況待核';linYl.countyBrief.extraBioSource='county-lin-yunlin-career-cec2018';
+ d.sources['county-lin-yunlin-career-cec2022']={title:'2022年云林县长选举公报',url:'https://eebulletin.cec.gov.tw/111/12%E9%9B%B2%E6%9E%97%E7%B8%A3/01%E7%B8%A3%E9%95%B7/%E9%9B%B2%E6%9E%97%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf',date:'2022年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'云林县选举委员会',kind:'候选人自行填报的经历'};
+ linYl.countyBrief.work='2018年选举公报列其自1994年起开业并任牙医诊所院长；2022年公报自列正云牙医诊所开业负责人。现职及任职结束时间暂未确认。';linYl.countyBrief.extraBioSource='county-lin-yunlin-career-cec2022';
+ d.sources['county-lin-yunlin-care-20221107']={title:'云林县长参选人政见发表聚焦长照',url:'https://www.cna.com.tw/news/aipl/202211070082.aspx',date:'2022-11-07',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'新闻报道往届政见发表会'};
+ if(!linYl.policies.some(x=>x.sources?.includes('county-lin-yunlin-care-20221107')))linYl.policies.push({topic:'health',text:'林佳瑜在2022年县长政见发表会认为，应把长期照顾视为健康产业，使长照融入生活，并通过产业链创造工作机会。',type:'往届施政观点（2022年政见会）',basis:'campaign',electionYear:2022,date:'2022-11-07',sources:['county-lin-yunlin-care-20221107'],note:'这是往届观点，报道未列具体执行方案；本届是否沿用暂未确认。'});
  if(!linYl.policies.some(x=>x.sources?.includes('county-lin-yunlin-career-cec2018')))linYl.policies.push(
   {topic:'health',text:'林佳瑜在2018年选举公报提出居家长照和居家照护，提到让义工与培训人员参与，并以「长照4.0」描述其构想。',type:'往届竞选政见（2018年选举公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-lin-yunlin-career-cec2018'],note:'这是2018年主张，公报未列出经费、服务规模和执行细节；本届是否沿用暂未确认。'},
   {topic:'water',text:'林佳瑜在2018年选举公报提到当年8月下旬大雨，追问地方水文资源、应变能力及整体治水规划。',type:'往届竞选政见（2018年选举公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-lin-yunlin-career-cec2018'],note:'公报主要提出治理问题，并未列出可核实的工程方案；本届是否沿用暂未确认。'}
@@ -2310,6 +2313,8 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'yunlin',name:'吳炳輝',source:'county-wu-yunlin-forum-20261110',title:'云林县长候选人政见会录影报道',url:'https://udn.com/vote2026/story/124652/9867798',date:'2026-11-10（报道日）',publisherId:'udn',publisherName:'联合报',items:[['accountability','吴炳辉在县长政见会录影中主张扫除地方黑道势力，让各行业有更多发展机会；具体措施与执行机制待说明。']]},
+  {city:'yunlin',name:'張嘉郡',source:'county-chang-yunlin-industry-20261110',title:'云林县长候选人政见会录影报道',url:'https://udn.com/vote2026/story/124652/9867798',date:'2026-11-10（报道日）',publisherId:'udn',publisherName:'联合报',items:[['economy','张嘉郡提出设立次世代巨型垂直整合科学园区，推动农业、工商与科技并进；选址、财源与具体产业配置待说明。'],['health','张嘉郡提出长者健保免费并活用敬老卡点数；适用对象、点数额度与经费待说明。']]},
   {city:'taitung',name:'王志偉',source:'county-wang-taitung-education-farming-20260912',title:'王志伟提出教育及农机与品种政策',url:'https://udn.com/news/amp/story/124652/9749859',date:'2026-09-12',publisherId:'udn',publisherName:'联合报',items:[['education','王志伟提出依学生性向与志向，引导进入理工、军警、护理及农业等领域，并鼓励就读农校、投入在地农业；课程和经费待说明。'],['agriculture','王志伟提出成立农机合作社，争取中央及县府补助大型农机使用，并由县府购买热带水果新品种，免费授权县民栽种；品种、资格和经费待说明。']]},
 
   {city:'chiayi-county',name:'蔡易餘',source:'county-chiayi-rural-water-20261112',title:'蔡易余争取偏乡接自来水并提出大埔交通方案',url:'https://udn.com/news/story/124652/9872860',date:'2026-11-12（报道日）',publisherId:'udn',publisherName:'联合报',items:[['water','蔡易余表示将与立委推动修正偏乡自来水接管标准，降低大埔山区居民接管困难；调整标准须经相关主管机关依法处理。'],['transport','蔡易余提出拓宽台三线、争取台82线快速道路延伸，以改善大埔对外交通；路线、经费与核定时间尚待说明。']]},
