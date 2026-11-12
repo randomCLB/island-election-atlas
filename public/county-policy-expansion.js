@@ -2540,6 +2540,12 @@ function apply(d){
   {topic:'economy',text:'陈玉珍提出青年创业种子天使基金和青年返乡实习，并发展酒糟牛羊产业链。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'资金规模、申请资格与配套机制暂未确认。'},
   {topic:'tourism',text:'陈玉珍提出发展音乐、运动及夜间观光，以增加旅客在金门停留的时间。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'具体活动、预算及执行时程暂未确认；预期效果并非已实现成果。'}
  );
+ d.sources['county-lin-yunlin-dental-association-202604']={title:'2026年口腔健康活动参与院所名单',url:'https://www.cda.org.tw/cda/get_attachment?aid=f62332ae9c075327019d6607b6fc00f8&fid=014',date:'2026-04（名单活动期间）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中华民国牙医师公会全国联合会（专业团体）',kind:'牙医专业团体公开院所名单'};
+ d.sources['county-lin-yunlin-forum-udn-20261110']={title:'云林县长公办政见会录影报道',url:'https://udn.com/vote2026/story/124652/9867798',date:'2026-11-10（报道日）',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道公办政见会录影'};
+ const linYunlinCurrent=d.people.find(x=>x.city==='yunlin'&&x.name==='林佳瑜');if(!linYunlinCurrent?.countyBrief)throw new Error('Missing candidate: 林佳瑜');
+ linYunlinCurrent.countyBrief.work='2018年选举公报列其自1994年起开业并任牙医诊所院长；2022年公报自列正云牙医诊所开业负责人。牙医师公会2026年4月活动名单亦将林佳瑜列为正云牙医诊所负责医师；该名单不能确认此后任职现况。';
+ linYunlinCurrent.countyBrief.extraBioSources=[...(linYunlinCurrent.countyBrief.extraBioSources||[]),'county-lin-yunlin-dental-association-202604'];
+ const linForum=linYunlinCurrent.policies.find(x=>x.sources?.includes('county-yunlin-forum-20261109'));if(linForum){linForum.text='林佳瑜认为科技创新及社会福利的推动来自民间，政府不是唯一推动力量，公部门应以服务为角色；他认为云林科技发展将跟随全球趋势。';linForum.sources.push('county-lin-yunlin-forum-udn-20261110');linForum.note='这是政见会录影中对政府角色的观点；报道未列具体科技或福利项目、预算与执行时程。完整政见会预计11月18日起播出。';}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
