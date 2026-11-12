@@ -2625,6 +2625,11 @@ function apply(d){
  const changKinmenCareer=d.people.find(p=>p.city==='kinmen'&&p.name==='張國威');if(!changKinmenCareer?.countyBrief)throw new Error('Missing candidate: 張國威');
  changKinmenCareer.countyBrief.work='中央社2026年候选人资料列二毛旅行社董事长、光华园光华文创餐厅董事长；任职起止年月及后续现况暂未确认。';
  changKinmenCareer.countyBrief.extraBioSources=[...(changKinmenCareer.countyBrief.extraBioSources||[]),'county-chang-kuowei-career-cna-20260904'];
+ d.sources['county-hsu-penghu-thesis-2018']={title:'许智富硕士论文：西屿乡观光发展策略',url:'https://ethesys.lis.nsysu.edu.tw/ETD-db/ETD-search-c/view_etd?URN=etd-0801118-163010',date:'2018-09-01（论文缴交）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国立中山大学博硕士论文系统',kind:'大学学位论文摘要'};
+ const hsuPenghuBio=d.people.find(p=>p.city==='penghu'&&p.name==='許智富');if(!hsuPenghuBio?.countyBrief)throw new Error('Missing candidate: 許智富');
+ hsuPenghuBio.countyBrief.education='国立屏东师范学院体育系；国立中山大学公共事务管理研究所硕士。2018年论文从地方行销角度研究西屿观光，透过资料分析与访谈提出公私沟通及闲置空间利用等建议；这是当时研究，不等于本届竞选承诺。';
+ hsuPenghuBio.countyBrief.office='本人校友刊物自述2014年出任西屿乡公所秘书、2018年任澎湖县副县长，曾兼任县府民政处长，后任建设处长；各职务离任年月暂未确认。';
+ hsuPenghuBio.countyBrief.extraBioSources=[...(hsuPenghuBio.countyBrief.extraBioSources||[]),'county-hsu-penghu-thesis-2018'];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
