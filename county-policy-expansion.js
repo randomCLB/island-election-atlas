@@ -1785,6 +1785,19 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chen-penghu-career-cec2014']={title:'2014年澎湖县议员选举公报：陈振中',url:'https://eebulletin.cec.gov.tw/103/18%E6%BE%8E%E6%B9%96%E7%B8%A3/%E9%84%89%E5%B8%82%E9%95%B7/%E6%BE%8E%E6%B9%96%E7%B8%A3%E8%A5%BF%E5%B6%BC%E9%84%89%E9%95%B7.pdf',date:'2014年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'澎湖县选举委员会',kind:'候选人自行填报的经历'};
+ const chenPh=d.people.find(p=>p.city==='penghu'&&p.name==='陳振中');if(!chenPh?.countyBrief)throw new Error('Missing biography: 陳振中');
+ chenPh.countyBrief.work='2014年選舉公報列曾任業務經理、村幹事、澎湖縣政府人事助理員、湖西鄉公所圖書館管理員及鄉公所秘書；任職年月待核';chenPh.countyBrief.extraBioSource='county-chen-penghu-career-cec2014';
+ d.sources['county-wu-yunlin-career-20260901']={title:'吴炳辉登记参选与律师经历',url:'https://www.ftvnews.com.tw/news/detail/2026901w0316',date:'2026-09-01',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'新闻报道候选人经历'};
+ const wuCareer=d.people.find(p=>p.city==='yunlin'&&p.name==='吳炳輝');if(!wuCareer?.countyBrief)throw new Error('Missing biography: 吳炳輝');
+ wuCareer.countyBrief.work='執業律師；民視2026年報導指其在雲林與台南設有事務所，已執業逾30年；具體任職時間待核';wuCareer.countyBrief.extraBioSource='county-wu-yunlin-career-20260901';
+ d.sources['county-wu-taitung-interview-20261031']={title:'吴秀华专访：台东观光与在地产业',url:'https://city.gvm.com.tw/article/134189',date:'2026-10-31',checkedAt:'2026-11-12',publisherId:'other',publisherName:'远见城市学（倾向待核定）',kind:'媒体专访候选人'};
+ const wuTt=d.people.find(p=>p.city==='taitung'&&p.name==='吳秀華');if(!wuTt?.countyBrief)throw new Error('Missing biography: 吳秀華');
+ wuTt.countyBrief.work='遠見城市學報導其早年曾在吳俊立議員服務處工作；具體職稱與任職年月待核';wuTt.countyBrief.extraBioSource='county-wu-taitung-interview-20261031';
+ if(!wuTt.policies.some(x=>x.sources?.includes('county-wu-taitung-interview-20261031')))wuTt.policies.push(
+  {topic:'tourism',text:'吴秀华提出发展四季观光，结合原住民部落文化与路跑、铁人三项、冲浪等运动，减少对单一大型活动的依赖。',type:'本届政见（媒体专访）',basis:'campaign',electionYear:2026,date:'2026-10-31（报道日）',sources:['county-wu-taitung-interview-20261031'],note:'报道转述候选人的发展构想，具体项目、预算及实施时程待核。'},
+  {topic:'economy',text:'吴秀华主张通过包装、冷链、品牌行销与通路合作，提高台东农渔产品的市场价值，并结合观光体验。',type:'本届政见（媒体专访）',basis:'campaign',electionYear:2026,date:'2026-10-31（报道日）',sources:['county-wu-taitung-interview-20261031'],note:'属于候选人的产业方向；补助对象、资金来源及可量化目标尚待公布。'}
+ );
  d.sources['county-chou-penghu-agriculture-20261110']={title:'周倪安提出澎湖农地复耕与农经学院构想',url:'https://www.cna.com.tw/news/aloc/202611100294.aspx',date:'2026-11-10',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'新闻报道候选人政策记者会'};
  const chouPh=d.people.find(p=>p.city==='penghu'&&p.name==='周倪安');if(!chouPh)throw new Error('Missing candidate: 周倪安');
  d.sources['county-chou-penghu-career-ly']={title:'立法院第八届立法委员名鉴：周倪安',url:'https://lis.ly.gov.tw/lghtml/work/_K5_ttsbooke3.pdf?421739156=',date:'第八届委员名鉴',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院',kind:'官方立法委员名鉴所列经历'};
