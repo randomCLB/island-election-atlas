@@ -107,7 +107,7 @@ function history(id, year, results) {
 function brief(p) {
   const b=p.countyBrief;
   const field=(title,value)=>'<dt>'+title+'</dt><dd>'+escape(value||'暂未确认（已查登记表及中央社登记日人物资料）')+'</dd>';
-  return '<section class="profile-section county-brief"><h3>人物履历</h3><dl class="county-industries">'+field('学历',b.education)+field('工作及社会经历',b.work)+field('从政及公职经历',b.office)+'</dl><p>履历摘自登记期资料，未注明的起止年月待确认。</p>'+refs(['county-bio',...(b.extraBioSource?[b.extraBioSource]:[]),D.counties[p.city].registerSource])+'</section>';
+  return '<section class="profile-section county-brief"><h3>人物履历</h3><dl class="county-industries">'+field('学历',b.education)+field('工作及社会经历',b.work)+field('从政及公职经历',b.office)+'</dl><p>履历按下列来源整理，未注明的起止年月待确认。</p>'+refs(['county-bio',...(b.extraBioSource?[b.extraBioSource]:[]),D.counties[p.city].registerSource])+'</section>';
 }
 window.AtlasCountyGuide={options,render,timeline,history,brief};
 })();

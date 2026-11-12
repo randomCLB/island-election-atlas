@@ -1785,6 +1785,9 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-luo-hualien-career-20260903']={title:'罗佩秦登记参选花莲县长',url:'https://www.tainantimes.com/archives/77906',date:'2026-09-03',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台南时报（媒体倾向待核定）',kind:'媒体报道候选人军旅背景'};
+ const luo=d.people.find(p=>p.city==='hualien'&&p.name==='羅佩秦');if(!luo?.countyBrief)throw new Error('Missing biography: 羅佩秦');
+ luo.countyBrief.work='媒體報導其為陸軍中校退伍；具體任職單位與服役年月待核';luo.countyBrief.extraBioSource='county-luo-hualien-career-20260903';
  d.sources['county-liang-peace-20260716']={title:'梁文韬提出金门停战与两岸谈判构想',url:'https://www.cna.com.tw/news/aipl/202607160349.aspx',date:'2026-07-16',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道候选人宣布参选时的主张'};
  const liang=d.people.find(p=>p.city==='kinmen'&&p.name==='梁文韜');if(!liang)throw new Error('Missing candidate: 梁文韜');
  if(!liang.evidence.some(x=>x.source==='county-liang-peace-20260716'))liang.evidence.push({region:'cn',date:'2026-07-16',topic:'提出金门停战及两岸谈判',text:'梁文韬提出在两岸福建省政府获得授权后商谈金门永久停战，相关协议再交县议会或公民投票确认。',limit:'这是候选人的政治主张；谈判授权、国防权限及法律可行性均须另行确认，不表示已有协议。',source:'county-liang-peace-20260716'});
@@ -1797,6 +1800,8 @@ function apply(d){
  const linYl=d.people.find(p=>p.city==='yunlin'&&p.name==='林佳瑜');if(!linYl?.countyBrief)throw new Error('Missing candidate: 林佳瑜');
  linYl.countyBrief.work='2018年選舉公報列其自1994年起開業並任牙醫診所院長；其後任職狀況待核';linYl.countyBrief.extraBioSource='county-lin-yunlin-career-cec2018';
  d.sources['county-chen-changhua-council-bio']={title:'彰化县议会议员陈重嘉简介',url:'https://www.chcc.gov.tw/member/details.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C142',date:null,checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'彰化县议会',kind:'现任议员公开人物资料'};
+ if(!chenCh.countyBrief)throw new Error('Missing biography: 陳重嘉');
+ chenCh.countyBrief.work='議會簡介列曾任富慶集團啟華科技及永晉集團永晉燈飾總經理特助、阡富科技執行長；任職年月待核';chenCh.countyBrief.extraBioSource='county-chen-changhua-council-bio';
  if(!linYl.evidenceCoverage)linYl.evidenceCoverage={};
  for(const [region,label] of [['cn','中国大陆／两岸'],['us','美国'],['jp','日本']])if(!linYl.evidence.some(x=>x.region===region))linYl.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'以「林佳瑜」「云林县长」「牙医」及'+label+'为关键词检索公开网页，并查阅2018年选举公报和2026年登记报道；本范围内未找到可明确归属于本人的相关表态。',note:'个人社群历史、全部影片与尚未播出的政见会仍未逐项查核；不能据此推断其立场。',sources:['county-lin-yunlin-career-cec2018','county-bio']};
  if(!chenCh.evidenceCoverage)chenCh.evidenceCoverage={};
@@ -1814,6 +1819,8 @@ function apply(d){
  for(const [name,text,limit] of phViews){const person=d.people.find(p=>p.city==='penghu'&&p.name===name);if(!person)throw new Error('Missing candidate: '+name);if(!person.evidence.some(x=>x.source==='county-penghu-cross-strait-20261019'))person.evidence.push({region:'cn',date:'2026-10-19',topic:'小三通与旅游市场',text,limit,source:'county-penghu-cross-strait-20261019'});}
  d.sources['county-hsu-penghu-japan-2019']={title:'许智富自述赴日本参加海湾年会经历',url:'https://alumni.nptu.edu.tw/var/file/95/1095/img/1938/184481359.pdf',date:'2019年（活动年份）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国立屏东大学校友资料，许智富自述',kind:'大学校友刊物刊载当事人回忆'};
  const hsuPh=d.people.find(p=>p.city==='penghu'&&p.name==='許智富');if(!hsuPh)throw new Error('Missing candidate: 許智富');
+ if(!hsuPh.countyBrief)throw new Error('Missing biography: 許智富');
+ hsuPh.countyBrief.work='本人在校友刊物回憶，2003年畢業後在澎湖從事教育工作六年，2009年離開教育界後經商創業；工作單位待核';hsuPh.countyBrief.extraBioSource='county-hsu-penghu-japan-2019';
  if(!hsuPh.evidence.some(x=>x.source==='county-hsu-penghu-japan-2019'))hsuPh.evidence.push({region:'jp',date:'2019年（活动年份）',topic:'赴日本分享海洋保育经验',text:'许智富在母校校友资料中回忆，担任澎湖副县长期间赴日本参加世界最美丽海湾国际年会，分享澎湖净滩与海洋永续经验。',limit:'当事人回忆只用于记录交流经历，具体会议日期与后续成果待核。',source:'county-hsu-penghu-japan-2019'});
  d.sources['county-wu-pj-career-cec2018']={title:'2018年朴子市民代表选举公报',url:'https://eebulletin.cec.gov.tw/107/13%E5%98%89%E7%BE%A9%E7%B8%A3/04%E9%84%89%E9%8E%AE%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8/%E6%9C%B4%E5%AD%90%E5%B8%82%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历，任职起止年月未载'};
  const wuPj=d.people.find(p=>p.city==='chiayi-county'&&p.name==='吳品叡');
