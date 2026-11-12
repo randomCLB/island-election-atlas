@@ -2390,6 +2390,10 @@ function apply(d){
   const p=d.people.find(x=>x.city==='penghu'&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.evidenceCoverage=p.evidenceCoverage||{};
   for(const region of regions)if(!p.evidence.some(x=>x.region===region)&&!p.evidenceCoverage[region]){const label=region==='cn'?'中国大陆／两岸':region==='us'?'美国':'日本';p.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'以候选人姓名、澎湖及「'+label+'」检索公开网页，并查看所列本人资料；本次未找到可明确归属于本人的相关政策观点。',note:'个人社群及全部影片尚未逐一查核；同名者或其他受访人的发言不归给本人。',sources:refs};}
  }
+ for(const [city,name,refs] of [['yilan','林國漳',['county-lin-yilan-cross-strait-20260423']],['hsinchu-county','鄭朝方',['county-cheng-zhubei-japan-20230907']],['hualien','張峻',['county-chang-hualien-cross-strait-20241008']],['lienchiang','曹爾元',['county-lienchiang-tsao-cec-2022']]]){
+  const p=d.people.find(x=>x.city===city&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.evidenceCoverage=p.evidenceCoverage||{};
+  if(!p.evidence.some(x=>x.region==='us')&&!p.evidenceCoverage.us)p.evidenceCoverage.us={checkedAt:'2026-11-12',scope:'本次以候选人姓名、县市及美国相关词检索公开网页，并查看所列材料；未找到可明确归属于本人的对美政策观点。',note:'所列材料用于交代已查范围，不表示其含有美国立场；个人社群及全部影片尚未逐一查核，不能据此推定其态度。',sources:refs};
+ }
  d.sources['county-foreign-review-changhua-chen']={title:'彰化县议会陈重嘉议员介绍',url:'https://www.chcc.gov.tw/member/details.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C142',date:'议会网站（日期未列）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'彰化县议会',kind:'议员资料；留学经历不能推断政策立场'};
  d.sources['county-foreign-review-kinmen-20261112']={title:'金门县长候选人资料',url:'https://blindvote.app/bio/kinmen',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  for(const [city,name,refs] of [['changhua','陳重嘉',['county-foreign-review-changhua-chen']],['kinmen','張國威',['county-foreign-review-kinmen-20261112']],['kinmen','張火木',['county-foreign-review-kinmen-20261112']]]){
