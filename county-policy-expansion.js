@@ -2577,6 +2577,16 @@ function apply(d){
   {topic:'transport',text:'李文良提出借鉴马祖新台马轮，推动台湾本岛与金门间的客轮交通。',type:'本届政见（登记采访）',basis:'campaign',electionYear:2026,date:'2026-09-02',sources:['county-li-kinmen-register-20260902'],note:'属于交通构想，船型、航线、投资、中央及地方权责与实施时间待进一步说明。'},
   {topic:'tourism',text:'李文良提出整合金门酒厂资源，打造文化体验园区，结合地方产业与观光。',type:'本届政见（登记采访）',basis:'campaign',electionYear:2026,date:'2026-09-02',sources:['county-li-kinmen-register-20260902'],note:'园区选址、资金及与酒厂的合作方式暂未确认。'}
  );
+ d.sources['county-liang-kinmen-ncku-career']={title:'成功大学政治学系：梁文韬经历',url:'https://www.polsci.ncku.edu.tw/team_detail.asp?nid=5',date:'学校资料页（未列更新日期）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国立成功大学政治学系',kind:'大学教师履历'};
+ d.sources['county-liang-kinmen-career-20260717']={title:'梁文韬宣布参选金门县长',url:'https://udn.com/news/story/124652/9633058',date:'2026-07-17',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人经历'};
+ const liangWork=d.people.find(p=>p.city==='kinmen'&&p.name==='梁文韜');if(!liangWork?.countyBrief)throw new Error('Missing candidate: 梁文韜');
+ liangWork.countyBrief.work='成功大学政治系教师，联合报报道其2001年起在该系任教；校方履历列1998年12月至1999年8月任香港大学政治及公共行政学系助理研究主任或高级研究助理、1999年9月至12月任该系访问助理教授、2000年7月至8月任英国爱丁堡大学高级人文科学研究所访问研究员、2000年1月至2001年7月任香港城市大学公共及社会行政学系讲师。';
+ liangWork.countyBrief.extraBioSource='county-liang-kinmen-ncku-career';liangWork.countyBrief.extraBioSources=[...(liangWork.countyBrief.extraBioSources||[]),'county-liang-kinmen-career-20260717'];
+ d.sources['county-you-hualien-career-20260607']={title:'游淑贞从幼教走入地方政治',url:'https://udn.com/news/story/124652/9550313',date:'2026-06-07',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体人物采访'};
+ d.sources['county-you-hualien-career-20260609']={title:'游淑贞幼教及地方从政经历专访',url:'https://news.tvbs.com.tw/politics/3220933',date:'2026-06-09',checkedAt:'2026-11-12',publisherId:'tvbs',publisherName:'TVBS',kind:'媒体人物专访'};
+ const youHualienWork=d.people.find(p=>p.city==='hualien'&&p.name==='游淑貞');if(!youHualienWork?.countyBrief)throw new Error('Missing candidate: 游淑貞');
+ youHualienWork.countyBrief.work='联合报报道她曾负责三间幼儿园和一间补习班；TVBS专访列其曾任幼儿园教师、园长，并从事幼教经营管理。机构名称、各职务起止年月暂未确认。';
+ youHualienWork.countyBrief.extraBioSource='county-you-hualien-career-20260607';youHualienWork.countyBrief.extraBioSources=[...(youHualienWork.countyBrief.extraBioSources||[]),'county-you-hualien-career-20260609'];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
