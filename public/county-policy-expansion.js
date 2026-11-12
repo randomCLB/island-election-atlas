@@ -1785,6 +1785,14 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chang-ivod-20251203']={title:'2025年12月3日外交及国防委员会质询视频',url:'https://ivod.ly.gov.tw/Play/Clip/1M/166128',date:'2025-12-03',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院议事转播',kind:'官方质询视频'};
+ d.sources['county-chang-acta-20251203']={title:'张啓楷质询纪录及发言整理',url:'https://acta.tw/evidence/ev_ivod_166128_c23a0b42893a',date:'2025-12-03',checkedAt:'2026-11-12',publisherId:'other',publisherName:'Acta（葛如钧委员办公室制作）',kind:'基于立法院视频与开放数据的发言整理；可对照官方视频'};
+ const changCy=d.people.find(p=>p.city==='chiayi-city'&&p.name==='張啓楷');if(!changCy)throw new Error('Missing candidate: 張啓楷');
+ const changRecords=[['us','对美国核能采购的质询','张啓楷在立法院质询时要求推进与美国的核能采购，认为可兼顾能源需求和对美贸易问题。'],['jp','关注中日关系对台湾的影响','张啓楷在立法院询问外交部长，中日关系紧张若进一步恶化对台湾有何影响，并要求安全部门持续评估。']];
+ for(const [region,topic,text] of changRecords)if(!changCy.evidence.some(x=>x.region===region&&x.source==='county-chang-ivod-20251203'))changCy.evidence.push({region,date:'2025-12-03',topic,text,limit:'根据民间逐字整理并附立法院官方视频；这是一次国会质询，不等于相关采购或外交政策已经落实。',source:'county-chang-ivod-20251203',sources:['county-chang-ivod-20251203','county-chang-acta-20251203']});
+ d.sources['county-tsao-japan-20070103']={title:'曹尔元陪同日本节目团队拍摄马祖',url:'https://www.matsu.idv.tw/print.php?f=19&p=1&t=38724',date:'2007-01-03',checkedAt:'2026-11-12',publisherId:'other',publisherName:'马祖日报，马祖资讯网转载（媒体倾向待核定）',kind:'地方媒体转载的旅游交流报道'};
+ const tsao=d.people.find(p=>p.city==='lienchiang'&&p.name==='曹爾元');if(!tsao)throw new Error('Missing candidate: 曹爾元');
+ if(!tsao.evidence.some(x=>x.source==='county-tsao-japan-20070103'))tsao.evidence.push({region:'jp',date:'2007-01-03',topic:'盼与日本节目团队合作推广马祖',text:'时任连江县观光局长曹尔元陪同电视节目团队拜会县长，并希望合作拍摄介绍马祖的旅游节目，面向日本观众推广。',limit:'地方新闻转载的当时发言；具体合作成果及节目播出情况未核实。',source:'county-tsao-japan-20070103'});
  d.sources['county-penghu-cross-strait-20261019']={title:'澎湖县长候选人讨论小三通与观光客源',url:'https://www.cna.com.tw/news/aloc/202610190213.aspx',date:'2026-10-19',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道并分别转述候选人及竞选团队的说法'};
  const phViews=[['陳振中','陈振中表示将厘清恢复小三通的环节，并争取包括大陆在内的多地观光客源。','这是就旅游与客源提出的说法，不表示恢复小三通已获批准。'],['吳淑瑾','吴淑瑾竞选团队主张两岸双向平等开放，并指出过度依赖单一旅游市场存在风险。','报道引述的是竞选团队声明，团队的政治判断应归于团队。']];
  for(const [name,text,limit] of phViews){const person=d.people.find(p=>p.city==='penghu'&&p.name===name);if(!person)throw new Error('Missing candidate: '+name);if(!person.evidence.some(x=>x.source==='county-penghu-cross-strait-20261019'))person.evidence.push({region:'cn',date:'2026-10-19',topic:'小三通与旅游市场',text,limit,source:'county-penghu-cross-strait-20261019'});}
