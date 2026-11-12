@@ -1822,9 +1822,11 @@ function apply(d){
   {topic:'health',text:'李吴颖智提出长者假牙补助、偏乡就医交通补助，以及学童免费鲜乳和弱势照护构想。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'资格、补助标准、预算及实施时间暂未确认。'},
   {topic:'economy',text:'李吴颖智提出发展农渔产品加值、影视文化基地和观光特区，并以职训支持在地就业及创业。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'报道记录政策方向，具体选址、经费及执行机制暂未确认。'}
  );
- d.sources['county-chen-penghu-career-cec2014']={title:'2009年澎湖县湖西乡长选举公报：陈振中',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/06%E7%B8%A3%E5%B8%82%E8%AD%B0%E5%93%A1/098%E5%B9%B4/27%E6%BE%8E%E6%B9%96%E7%B8%A3/%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%AC%AC1%E3%80%812%E9%81%B8%E8%88%89%E5%8D%80%E8%AD%B0%E5%93%A1.pdf',date:'2009年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'澎湖县选举委员会',kind:'候选人自行填报的经历'};
+ d.sources['county-chen-penghu-career-cec2014']={title:'湖西乡公所：乡长陈振中经历小传',url:'https://www.penghu.gov.tw/Thuhsi/ch/home.jsp?id=19',date:'2022-12-26（页面更新）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'澎湖县湖西乡公所',kind:'政府网站人物履历'};
  const chenPh=d.people.find(p=>p.city==='penghu'&&p.name==='陳振中');if(!chenPh?.countyBrief)throw new Error('Missing biography: 陳振中');
- chenPh.countyBrief.work='2009年選舉公報自列業務經理、村幹事、人事助理員、圖書館管理員與湖西鄉公所秘書；前四項的具體單位及任職年月待核';chenPh.countyBrief.extraBioSource='county-chen-penghu-career-cec2014';
+ chenPh.countyBrief.work='鄉公所履歷列業務經理、村幹事、縣政府人事室助理員、湖西鄉圖書館館長、湖西鄉公所秘書與老人之家秘書；具體任職年月及部分單位待核';chenPh.countyBrief.extraBioSource='county-chen-penghu-career-cec2014';
+ d.sources['county-chen-penghu-tourism-20261019']={title:'陈振中谈澎湖观光及妈祖文化园区',url:'https://knowledge.kmt.org.tw/articles/2468fd31-683a-4dea-a516-e5dae5329ef6/',date:'2026-10-19',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中国国民党知识库（政党整理）',kind:'政党知识库转载候选人专页'};
+ if(!chenPh.policies.some(x=>x.sources?.includes('county-chen-penghu-tourism-20261019')))chenPh.policies.push({topic:'tourism',text:'陈振中提出活化妈祖文化园区，结合海上迎妈祖、陆上绕境与特色餐车，增加游客参与活动和餐饮的机会。',type:'本届政见（候选人专页）',basis:'campaign',electionYear:2026,date:'2026-10-19',sources:['county-chen-penghu-tourism-20261019'],note:'国民党知识库转载候选人专页内容；具体经费、活动安排及实施时间暂未确认。'});
  d.sources['county-wu-yunlin-career-20260901']={title:'吴炳辉登记参选与律师经历',url:'https://www.ftvnews.com.tw/news/detail/2026901w0316',date:'2026-09-01',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'新闻报道候选人经历'};
  const wuCareer=d.people.find(p=>p.city==='yunlin'&&p.name==='吳炳輝');if(!wuCareer?.countyBrief)throw new Error('Missing biography: 吳炳輝');
  wuCareer.countyBrief.work='執業律師；民視2026年報導指其在雲林與台南設有事務所，已執業逾30年；具體任職時間待核';wuCareer.countyBrief.extraBioSource='county-wu-yunlin-career-20260901';
