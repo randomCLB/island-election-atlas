@@ -2181,6 +2181,8 @@ function apply(d){
  ];
  for(const r of changhuaWelfare){const p=d.people.find(x=>x.city==='changhua'&&x.name===r.name);if(!p)throw new Error('Missing candidate: '+r.name);if(!p.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))p.policies.push({topic:'health',text:r.text,type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-11（报道日）',sources:['county-chen-changhua-welfare-20261111'],note:r.note});}
  const foreign=[
+  {city:'kinmen',name:'洪和成',region:'us',key:'county-hung-kinmen-us-20240105',date:'2024-01-04（政见会）',title:'洪和成在立委政见会谈金门发展限制',url:'https://www.kmdn.gov.tw/1117/1271/1272/562589',publisherId:'other',publisherName:'金门日报（县政府所属媒体）',kind:'地方媒体报道往届公办政见会',topic:'美国与金门发展限制',text:'洪和成在2024年立委选举政见会上认为，美国、中国大陆及台湾政府都对金门设下多重限制，地方需要在现行规则中寻找发展空间。',limit:'这是候选人对金门处境的政治判断；报道未逐项解释所称美国限制，也未提出具体对美政策。本届是否沿用暂未确认。'},
+
   {city:'miaoli',name:'陳品安',region:'cn',key:'county-chen-miaoli-sovereignty-20260221',date:'2026-02-21（报道日）',title:'陈品安谈社会运动经历与台湾国家认同',url:'https://newtalk.tw/news/view/2026-02-21/1018839',publisherId:'other',publisherName:'Newtalk新闻（倾向待核定）',kind:'媒体人物采访与转述',topic:'台湾国家认同',text:'Newtalk采访报道，陈品安谈及接触法律与政治经历时，表达她认为台湾是国家。',limit:'报道未详细说明她对两岸交流、具体政策或法律地位的完整主张；不据此推断其他立场。'},
   {city:'yilan',name:'吳宗憲',region:'us',key:'county-wu-yilan-us-midterms-20261110',date:'2026-11-10',title:'吴宗宪谈美国期中选举与两岸局势',url:'https://video.udn.com/news/1331892',publisherId:'udn',publisherName:'联合报（联合影音）',kind:'媒体采访候选人',topic:'美国选举与台湾面临的局势',text:'吴宗宪谈美国期中选举时，认为结果会影响国际和台湾，并称两岸关系紧张之际政府应更关注相关经济及国际问题。',limit:'这是回应总统赴宜兰辅选时的政治判断，报道未提出具体对美政策；不能把其影响判断当作已证实结果。'},
 
