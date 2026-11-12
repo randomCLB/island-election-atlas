@@ -682,9 +682,398 @@ const rows = [
     "url": "https://www.facebook.com/ChenfuChanghua/posts/pfbid036vSePREpU6mDonWuvhyVSLLp2BybSzB2xbPrGTZV4p3Pq2it5gRS5ATpGXq3ysChl",
     "cut": "2026-10-23",
     "database": "https://blindvote.app/sources/changhua#ch-chiu-agriculture"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-eldercare",
+    "name": "張嘉郡",
+    "topic": "health",
+    "text": "张嘉郡提出补助65岁以上长者健保费，结合远距健康管理发展居家医疗。",
+    "admin": false,
+    "url": "https://www.facebook.com/reel/4086454118323703/",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-eldercare"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-eldercare",
+    "name": "劉建國",
+    "topic": "health",
+    "text": "刘建国提出为符合需求的65岁以上长者提供免费假牙与带状疱疹疫苗。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid0vSoHvznxT1nAiozQ8ECJ9tQ5yC7UtSfVjfgyMfhQRp1MZjHVnTaFudNb9WYszTT5l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-eldercare"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-jobs",
+    "name": "張嘉郡",
+    "topic": "economy",
+    "text": "张嘉郡提出以褒忠产业园区为核心规划大型整合科学园区，带动在地就业。",
+    "admin": false,
+    "url": "https://www.facebook.com/Sweet.Yunlin/posts/pfbid02Li5ckaJoRMJhf1Jjke5g4EqabPonkhTmj9XBGre8nQDzVwbVySQCdzCi1VfeoiuJl",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-jobs"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-jobs",
+    "name": "劉建國",
+    "topic": "economy",
+    "text": "刘建国提出初次返乡并稳定在云林就业的青年，每月补助5000元、每人最高6万元。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid0264eHrzLeinZ3RuGznzYvuyiUSzcWF2UGz26ysrSkLFHm8PCXaY6mxK3o4zNx2TB2l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-jobs"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-school",
+    "name": "張嘉郡",
+    "topic": "education",
+    "text": "张嘉郡提出依国中教育会考与作文成绩提供6万至12万元留乡升学奖学金。",
+    "admin": false,
+    "url": "https://www.facebook.com/Sweet.Yunlin/posts/pfbid0Vu8pFnRpPG3hatk2aGWKBL7jqeUDWghwDSWNeRcy6YZ8axPGeJeYoJcvRAVEeLx5l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-school"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-school",
+    "name": "劉建國",
+    "topic": "education",
+    "text": "刘建国提出精简学校重复表单，利用人工智能辅助文书并逐步增聘专职行政人力。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid02dZ9uyzmaU4ya1vSj8qBvH3QKZaVok4ns83kurXqutny97jpyT8LSwJLkjq5GmzEl",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-school"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-housing",
+    "name": "劉建國",
+    "topic": "economy",
+    "text": "刘建国提出符合资格的就业青年租屋或分担家庭自住房贷，可获每月3000元补贴，最长3年。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid0264eHrzLeinZ3RuGznzYvuyiUSzcWF2UGz26ysrSkLFHm8PCXaY6mxK3o4zNx2TB2l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-housing"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-flood",
+    "name": "張嘉郡",
+    "topic": "water",
+    "text": "张嘉郡提出改善乡镇排水、升级抽水设施与沿海防洪，并结合灾害监测预警。",
+    "admin": false,
+    "url": "https://www.facebook.com/Sweet.Yunlin/videos/1553150626868212/",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-flood"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-agriculture",
+    "name": "張嘉郡",
+    "topic": "economy",
+    "text": "张嘉郡提出导入智慧农业技术，整合农产生产、加工和销售资讯。",
+    "admin": false,
+    "url": "https://www.facebook.com/Sweet.Yunlin/posts/pfbid02Li5ckaJoRMJhf1Jjke5g4EqabPonkhTmj9XBGre8nQDzVwbVySQCdzCi1VfeoiuJl",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-agriculture"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-agriculture",
+    "name": "劉建國",
+    "topic": "economy",
+    "text": "刘建国提出AI农业双技园区，结合智慧农机、冷链、加工及外销。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid023krwMxRqK1jhaEZRvpG7t5iteAHsuRcTrNZWQFA3YbvMfgpVXAxAq2RER2nv1uiJl",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-agriculture"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-wu-healthcare",
+    "name": "吳炳輝",
+    "topic": "health",
+    "text": "吴炳辉提出扩大山地与沿海偏乡的远距医疗、医消联防和长青食堂服务。",
+    "admin": false,
+    "url": "https://www.facebook.com/wu.bing.hui.568221/posts/pfbid0RYKCVqrf3nWDmDJxgyRQkWwBhcXKjNsNKpSjcMjfHms8wKdpYTomC8NRnVtwJNVJl",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-wu-healthcare"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-chang-healthcare",
+    "name": "張嘉郡",
+    "topic": "health",
+    "text": "张嘉郡提出与大学及在地医疗团队合作，将学童健康评估和健康促进引入校园。",
+    "admin": false,
+    "url": "https://www.facebook.com/Sweet.Yunlin/posts/pfbid0Vu8pFnRpPG3hatk2aGWKBL7jqeUDWghwDSWNeRcy6YZ8axPGeJeYoJcvRAVEeLx5l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-chang-healthcare"
+  },
+  {
+    "city": "yunlin",
+    "anchor": "yu-liu-healthcare",
+    "name": "劉建國",
+    "topic": "health",
+    "text": "刘建国提出0至6岁儿童就医免部分负担，并免费接种肠病毒A71型疫苗。",
+    "admin": false,
+    "url": "https://www.facebook.com/liucnko.fans/posts/pfbid03D5kSChaazdWXnsjYnyAMDxCx7bDEdzMxTmBRZk9c8tKbWi7stpR7a4VwqxHBf75l",
+    "cut": "2026-10-24",
+    "database": "https://blindvote.app/sources/yunlin#yu-liu-healthcare"
+  },
+  {
+    "city": "pingtung",
+    "anchor": "pt-chou-school",
+    "name": "周春米",
+    "topic": "education",
+    "text": "屏东县府表示将继续推动高中职、大专院校合作，衔接学习、升学和就业。",
+    "admin": true,
+    "url": "https://www.facebook.com/RiceChouChunMi/posts/1665104198573165",
+    "cut": "2026-10-13",
+    "database": "https://blindvote.app/sources/pingtung#pt-chou-school"
+  },
+  {
+    "city": "pingtung",
+    "anchor": "pt-su-school",
+    "name": "蘇清泉",
+    "topic": "education",
+    "text": "苏清泉提出幼儿园至高中学生，无论学校公私立均享相同营养午餐补助。",
+    "admin": false,
+    "url": "https://www.facebook.com/ptdrsu/posts/1629389771887074",
+    "cut": "2026-10-13",
+    "database": "https://blindvote.app/sources/pingtung#pt-su-school"
+  },
+  {
+    "city": "pingtung",
+    "anchor": "pt-chou-flood",
+    "name": "周春米",
+    "topic": "water",
+    "text": "屏东县府规划更新塭仔、羌园等沿海老旧抽水站，预计2027年汛期前完成。",
+    "admin": true,
+    "url": "https://www.pthg.gov.tw/News_Content.aspx?n=EC690F93E81FF22D&sms=90586F8A7E5F4397&s=4DD989635FE87DDC",
+    "cut": "2026-10-13",
+    "database": "https://blindvote.app/sources/pingtung#pt-chou-flood"
+  },
+  {
+    "city": "pingtung",
+    "anchor": "pt-chou-healthcare",
+    "name": "周春米",
+    "topic": "health",
+    "text": "屏东县府规划补助65岁以上长者及55岁以上原住民健保费，不排富，每月最高826元。",
+    "admin": true,
+    "url": "https://www.facebook.com/RiceChouChunMi/posts/1650076136742638",
+    "cut": "2026-10-13",
+    "database": "https://blindvote.app/sources/pingtung#pt-chou-healthcare"
+  },
+  {
+    "city": "pingtung",
+    "anchor": "pt-su-healthcare",
+    "name": "蘇清泉",
+    "topic": "health",
+    "text": "苏清泉主张长者健保费补助不排富，并取消设籍满一年的限制。",
+    "admin": false,
+    "url": "https://www.facebook.com/ptdrsu/posts/1610337030459015",
+    "cut": "2026-10-13",
+    "database": "https://blindvote.app/sources/pingtung#pt-su-healthcare"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-eldercare",
+    "name": "游淑貞",
+    "topic": "health",
+    "text": "游淑贞提出优化敬老爱心计程车及偏乡免费接驳，方便长者就医和参与社区活动。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid0Hoa17r1cYH1gUNqwTuH1K9sHr8uw84ceefFXDpr7W1992c17LfVSoheQTcauCA8Ll",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-eldercare"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-bus",
+    "name": "魏嘉賢",
+    "topic": "transport",
+    "text": "魏嘉贤提出规划15分钟一班的市区循环公交，并协商与宜兰、台东跨县使用敬老卡。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/pfbid02XuLMXSCxaVaA6LZLY53NdL8ko2Zg6t2xMm5HT7fsqfP2DWnaM3yH2NZ3dHtW53yvl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-bus"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-jobs",
+    "name": "游淑貞",
+    "topic": "economy",
+    "text": "游淑贞提出提供青年创业贷款、辅导与空间，并吸引影像和数位创作团队进驻。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid02GhgSi4bJ1eDuayekq4THbTb1TfPyBGWBEAnifdqTctZTk9hNkkXUZHZe5WY7Sw8Dl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-jobs"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-chang-jobs",
+    "name": "張峻",
+    "topic": "economy",
+    "text": "张峻提出由投资专案办公室盘点合法空域及实证场地，先做防灾、农业示范和人才培训。",
+    "admin": false,
+    "url": "https://www.facebook.com/100064292910692/posts/pfbid0xus5QVVicYA176mjizMXNNUgimWhXARkD9CcNXFDuT9WGWVrk1Xz4qaCMbTJNtddl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-chang-jobs"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-school",
+    "name": "游淑貞",
+    "topic": "education",
+    "text": "游淑贞提出减少重复行政表单，导入数字系统并增加行政与专业人员支持教师。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid0EHZmUVoiBh344b276wMwdeqtyCi2rmefwH4iJCnLzbvJsooBZagxQFCs4JVPh21il",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-school"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-chang-school",
+    "name": "張峻",
+    "topic": "education",
+    "text": "张峻提出改善偏乡教师宿舍与留任支持，并推动学区共享、课后照顾及数字学习。",
+    "admin": false,
+    "url": "https://www.facebook.com/100064292910692/posts/pfbid0yBNXmGfiShiN2yjqeF2igTaasYEW4j3qRQFBaWvdbfauLCkeAZP7ue9goVipfGFvl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-chang-school"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-school",
+    "name": "魏嘉賢",
+    "topic": "education",
+    "text": "魏嘉贤提出为国小至高中学生每年提供1.2万元课后学习额度。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/1683793523108585",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-school"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-flood",
+    "name": "游淑貞",
+    "topic": "water",
+    "text": "游淑贞提出研议学校及偏乡据点的10天灾害备援，盘点粮食、饮水、能源和紧急供餐。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid0iN78RSmrC4omX2FinGyWM8pX5KhiJ2FUHgwHzsr4yVDfYfBwewHH82aQBrh6M6uyl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-flood"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-chang-flood",
+    "name": "張峻",
+    "topic": "water",
+    "text": "张峻提出整合水位、无人机与河川资料，建立专责防灾体系，公开紧急工程与重建进度。",
+    "admin": false,
+    "url": "https://www.facebook.com/100064292910692/posts/pfbid037fFeSs6UPX6fC9Z716zQasFFuDs1L6qsPeH2iz5xk1vBMJsqm7KoVQcgRHa4DQrFl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-chang-flood"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-flood",
+    "name": "魏嘉賢",
+    "topic": "water",
+    "text": "魏嘉贤主张成立跨部门防灾专责单位，整合公私资源并加强灾前准备。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/1592822102205728",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-flood"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-agriculture",
+    "name": "游淑貞",
+    "topic": "economy",
+    "text": "游淑贞提出建立县级食材媒合平台，连接学校与农民，增加本地农产品进入校园。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid0iN78RSmrC4omX2FinGyWM8pX5KhiJ2FUHgwHzsr4yVDfYfBwewHH82aQBrh6M6uyl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-agriculture"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-chang-healthcare",
+    "name": "張峻",
+    "topic": "health",
+    "text": "张峻提出补助0至18岁健保自付保费，每人每月最高826元。",
+    "admin": false,
+    "url": "https://www.facebook.com/100064292910692/posts/pfbid02X5wHxF1fpupuq1LNCtfrqZFiyZu2p89MnvJSQQ3GtyBHHgqRqDDFqcphEoM9yNW6l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-chang-healthcare"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-healthcare",
+    "name": "魏嘉賢",
+    "topic": "health",
+    "text": "魏嘉贤提出优化主要医院救护路线、推动救护车优先通行，并建立替代道路及偏乡后送机制。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/pfbid02XuLMXSCxaVaA6LZLY53NdL8ko2Zg6t2xMm5HT7fsqfP2DWnaM3yH2NZ3dHtW53yvl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-healthcare"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-yu-tourism",
+    "name": "游淑貞",
+    "topic": "tourism",
+    "text": "游淑贞提出结合山林、海洋与当地农食发展疗愈观光，吸引较长时间停留。",
+    "admin": false,
+    "url": "https://www.facebook.com/CandyHualien/posts/pfbid0itghcC6k8nMXzkPmUTDXWxtAG6eKToJ94NKDeDkZGXbmwk5i4Ha2ZyKBraRXuhFGl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-yu-tourism"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-chang-tourism",
+    "name": "張峻",
+    "topic": "tourism",
+    "text": "张峻提出在秀林、万荣及卓溪结合高山运动和部落文化，拓展旅游选项。",
+    "admin": false,
+    "url": "https://www.facebook.com/100064292910692/posts/pfbid0mDfkkgxBbjjK8723KRH3cP2tDgWB5ix8zsWNLgzE2Sfk6DCT5EjHZuuJfxiJfPFel",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-chang-tourism"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-tourism",
+    "name": "魏嘉賢",
+    "topic": "tourism",
+    "text": "魏嘉贤提出每位花莲居民每年3600元县内旅游额度，用于住宿及游程。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/1679056313582306",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-tourism"
+  },
+  {
+    "city": "hualien",
+    "anchor": "hl-wei-island-transport",
+    "name": "魏嘉賢",
+    "topic": "exchange",
+    "text": "魏嘉贤提出从与那国开始推动花莲与日本离岛的海空直航。",
+    "admin": false,
+    "url": "https://www.facebook.com/sunwei038563787/posts/pfbid0SVuJM11wb57ndYVz1yYWB9RnV95cvARgVhnPGW9hbctsPWMZ64GenLVgyKXKYUGMl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/hualien#hl-wei-island-transport"
   }
 ];
 function apply(d){
+ d.sources['county-chou-japan-20260312']={title:'屏东农产品在大阪近铁百货推广',url:'https://japan.focustaiwan.tw/economy/202603120005',date:'2026-03-12',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社 Focus Taiwan 日文版',kind:'新闻报道县长赴日推广农产品'};
+ const chou=d.people.find(x=>x.city==='pingtung'&&x.name==='周春米');
+ if(!chou)throw new Error('Missing candidate: 周春米');
+ if(!chou.evidence.some(x=>x.source==='county-chou-japan-20260312'))chou.evidence.push({region:'jp',date:'2026-03-12',topic:'赴大阪推广屏东农产品',text:'周春米率团在大阪近铁百货介绍屏东水果及加工品，推动农产销售和地方交流。',limit:'新闻记录一次市场推广活动；销售成果及长期合作效果需另查。',source:'county-chou-japan-20260312'});
  d.sources['county-tsai-japan-20250518']={title:'蔡易余赴日本交流阿里山森林铁路文化遗产议题',url:'https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54133&pid=252860',date:'2025-05-18（刊载日）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院网站，陈冠廷委员刊载',kind:'同行委员发布的交流说明'};
  d.sources['county-tsai-us-20240910']={title:'立法院接见史丹佛大学胡佛研究所访问团',url:'https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=117&pid=243067',date:'2024-09-10',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院',kind:'立法院接待与交流纪要'};
  const tsai=d.people.find(x=>x.city==='chiayi-county'&&x.name==='蔡易餘');
@@ -704,6 +1093,7 @@ function apply(d){
   d.sources[excerpt]={title:r.name+' · 政见对照资料库摘录',url:r.database,date:'资料库截点 '+r.cut,checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所',kind:'民间政见资料库摘录；截点不是发言日期'};
   d.sources[original]={title:r.name+' · 资料库所附原发链接',url:r.url,date:null,checkedAt:'2026-11-12',publisherId:r.url.includes('facebook.com')?'candidate-site':'official-tw',publisherName:r.url.includes('facebook.com')?'候选人公开页面':'县政府公开页面',kind:'原发链接由资料库列出，原文发布日期与后续执行情况待核'};
   if(!p.policies.some(x=>x.sources?.includes(excerpt)))p.policies.push({topic:r.topic,text:r.text,type:r.admin?'任内县府计划或说明':'本届公开主张（资料库摘要）',basis:r.admin?'administration':'campaign',electionYear:2026,date:'资料库截至 '+r.cut+'，原发日期待核',sources:[excerpt,original],note:r.admin?'县府计划或任内说明；实际完成时间与结果须另核。':'公开提案，预算、实施条件及后续进度须另核。'});
+  if(r.anchor==='hl-wei-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'jp',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'提出花莲与日本离岛直航',text:r.text,limit:'候选人公开提案，资料库提供原发链接；航线可行性及跨境审批仍待确认。',source:excerpt});
  }
 }
 if(typeof module!=='undefined')module.exports={apply};else apply(root.ATLAS);
