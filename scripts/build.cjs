@@ -68,6 +68,7 @@ require('../public/foreign-hung-f-coverage-round88.js').apply(D);
 require('../public/profile-coverage-wang-round89.js').apply(D);
 const M=require('../public/election-map-data.js');M.apply(D);
 require('../public/county-model.js').apply(D);
+require('../public/county-photo-index.js').apply(D);
 const profileErrors=P.validate(D);if(profileErrors.length)throw new Error(profileErrors.join('\n'));
 if(process.env.ATLAS_PUBLIC_RELEASE==='1')for(const p of D.people.filter(p=>p.city==='taipei')){
  if(p.photo?.delivery!=='bundled-file'||!['open-license','editorial-quotation'].includes(p.photo.publicationBasis)||!p.photo.credit||!p.photo.note)throw new Error('Missing publication basis: '+p.id);
