@@ -1785,6 +1785,12 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-huang-kinmen-industry-20261024']={title:'黄世团成立竞选总部提出产业与老街构想',url:'https://udn.com/vote2026/story/124652/9835310',date:'2026-10-24',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'新闻报道候选人竞选活动'};
+ const huangKm=d.people.find(p=>p.city==='kinmen'&&p.name==='黃世團');if(!huangKm)throw new Error('Missing candidate: 黃世團');
+ if(!huangKm.policies.some(x=>x.sources?.includes('county-huang-kinmen-industry-20261024')))huangKm.policies.push(
+  {topic:'economy',text:'黄世团提出研究设立金门产业经济特区，盘点闲置或低度利用土地，研议吸引台商与外商合法投资。',type:'本届政见（竞选活动报道）',basis:'campaign',electionYear:2026,date:'2026-10-24',sources:['county-huang-kinmen-industry-20261024'],note:'候选人称特区涉及税制、关务、土地及中央法规，仍需规划并争取中央支持。'},
+  {topic:'tourism',text:'黄世团主张活化金城、沙美和山外老街商圈，结合特色市集、夜间经济与文化活动，延长游客停留时间。',type:'本届政见（竞选活动报道）',basis:'campaign',electionYear:2026,date:'2026-10-24',sources:['county-huang-kinmen-industry-20261024'],note:'这是候选人提出的方向；预算、实施方式与成效尚未确定。'}
+ );
  d.sources['county-chen-jinchuan-career-20200608']={title:'陈尽川：剩下的生命留给海洋',url:'https://visionproject.org.tw/article_detail.php?id=5933',date:'2020-06-08',checkedAt:'2026-11-12',publisherId:'other',publisherName:'愿景工程基金会（倾向待核定）',kind:'记者采访与人物经历报道'};
  const chenJc=d.people.find(p=>p.city==='penghu'&&p.name==='陳盡川');if(!chenJc?.countyBrief)throw new Error('Missing biography: 陳盡川');
  chenJc.countyBrief.work='受訪表示曾在空軍學習機工技術、退伍後從事冷凍工程，並推廣水上運動與海洋保育；具體服務單位及年月待核';chenJc.countyBrief.extraBioSource='county-chen-jinchuan-career-20200608';
@@ -1908,6 +1914,9 @@ function apply(d){
  chenSu.countyBrief.work='曾任國立空中大學講師、大葉大學兼任講師及拓展文教基金會執行長；另任立委國會助理';chenSu.countyBrief.extraBioSource='county-chen-su-yue-cec';
  weiPing.countyBrief.work='政和律師事務所主持律師；曾任台北市政府及大同區公所法律諮詢律師，並在輔仁大學及中正大學相關課程授課';weiPing.countyBrief.office='曾任彰化縣選舉委員會委員、國民黨考紀會主委';weiPing.countyBrief.extraBioSource='county-wei-career-kmt';
  const foreign=[
+  {city:'kinmen',name:'張火木',region:'cn',key:'county-chang-kinmen-minithree-20080119',date:'2008-01-19（报道日）',title:'张火木谈小三通与家族经历',url:'https://www.kmdn.gov.tw/1117/1271/4189/46670/',publisherId:'other',publisherName:'金门日报（倾向待核定）',kind:'地方报纸人物采访与书籍序言',topic:'小三通与两岸家族往来',text:'张火木在小三通专题著作序言中认为通航拉近两岸往来距离；报道也记载，他2001年经小三通到福建惠安探访父亲故乡。',limit:'这是2001年经历及2008年著作中的看法，不代表他对2026年全部两岸政策的立场。'},
+  {city:'kinmen',name:'洪和成',region:'cn',key:'county-hung-kinmen-cross-strait-20240104',date:'2024-01-04（政见会）',title:'洪和成在立委政见会谈金厦交通与离岛法制',url:'https://www.kmdn.gov.tw/1117/1271/1272/562589',publisherId:'other',publisherName:'金门日报（倾向待核定）',kind:'新闻报道往届公办政见会',topic:'金厦大桥、陆客与地方自主',text:'洪和成在2024年立委选举政见会主张，争取将金厦大桥、陆客来金和两岸和平示范区等议题纳入离岛基本法；他强调不损害台湾利益及没有安全问题的前提。',limit:'属于往届立委竞选主张；相关立法、建设与安全条件均未由这篇报道证实达成，本届是否沿用须另核。'},
+  {city:'kinmen',name:'黃世團',region:'jp',key:'county-huang-kinmen-okinawa-art-2014',date:'2014年',title:'黄世团参加冲绳版画联展',url:'https://www.emuseum.com.tw/Artist2.aspx?id=G300_AA_101248',publisherId:'other',publisherName:'桃园网络美术馆（倾向不适用）',kind:'美术馆艺术家展览履历',topic:'日本冲绳版画展览',text:'桃园网络美术馆的展览履历列黄世团参加2014年日本冲绳佐喜真美术馆东亚艺术家版画联展。',limit:'这是艺术展览经历，不能据此推断他对日本政治或外交的立场；展览具体日期待核。'},
   {city:'taitung',name:'王志偉',region:'cn',key:'county-wang-taitung-cross-strait-20231020',date:'2023-10-20（报道日）',title:'王志伟谈凤梨释迦销往大陆',url:'https://news.pts.org.tw/article/662861',publisherId:'pts',publisherName:'公视新闻',kind:'媒体采访农产合作社负责人',topic:'凤梨释迦出口与检疫',text:'王志伟作为台东释迦合作社负责人，表示农民应做好生产履历，并认为大陆对凤梨释迦的限制与部分开放有政治因素。',limit:'这是他在2023年受访时对检疫与贸易的个人判断，不将动机判断作为已证实事实，也不推定他对所有两岸议题的立场。'},
   {city:'taitung',name:'王志偉',region:'cn',key:'county-wang-taitung-variety-20260629',date:'2026-06-29（报道日）',title:'王志伟谈释迦品种权保护',url:'https://news.pts.org.tw/article/815187',publisherId:'pts',publisherName:'公视新闻',kind:'媒体报道农业团体与农改场意见',topic:'两岸农产竞争与品种权',text:'大陆释迦生产与技术外流争议中，王志伟主张确立品种权，争取对农民权益的保护。',limit:'王的发言是对品种权的主张，不代表他指控农会转移技术；农改场说明品种权具有地域性，海外保护需另行申请。'},
   {city:'hualien',name:'魏嘉賢',region:'jp',key:'county-wei-hualien-morioka-20220916',date:'2022-09-16（报道日）',title:'魏嘉贤谈花莲与盛冈城市交流',url:'https://ocacnews.net/article/320079',publisherId:'official-tw',publisherName:'僑新闻（僑务委员会）',kind:'机构媒体采访时任花莲市长',topic:'花莲与日本盛冈市交流',text:'时任花莲市长魏嘉贤受访时希望扩展与盛冈在文化、运动、教育和经济方面的交流，并提出在花莲举办盛冈物产展的想法。',limit:'报道记载当时交流与本人期待，未证实物产展已举办；不将城市交流扩展为对日本所有政策的立场。'},
