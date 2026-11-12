@@ -1785,6 +1785,18 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chen-changhua-welfare-20261111']={title:'彰化县长候选人讨论长者福利',url:'https://udn.com/vote2026/story/124652/9870449',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'新闻报道转述候选人说法'};
+ const chenCh=d.people.find(p=>p.city==='changhua'&&p.name==='陳重嘉');if(!chenCh)throw new Error('Missing candidate: 陳重嘉');
+ if(!chenCh.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))chenCh.policies.push({topic:'health',text:'陈重嘉主张福利应优先照顾有需要的人，不倾向普发现金；支持现行长青幸福卡，并认为长者健保费补助须视财源而定。',type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:'2026-11-11',sources:['county-chen-changhua-welfare-20261111'],note:'对长者健保费补助附有财源条件，并非承诺无条件实施。'});
+ chenCh.policyCoverage=null;
+ d.sources['county-lin-yunlin-career-cec2018']={title:'2018年云林县长选举公报',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/107%E5%B9%B4/11%E9%9B%B2%E6%9E%97%E7%B8%A3/%E7%AC%AC18%E5%B1%86%E7%B8%A3%E9%95%B7%E5%80%99%E9%81%B8%E4%BA%BA%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'云林县选举委员会',kind:'候选人登记的当时经历'};
+ const linYl=d.people.find(p=>p.city==='yunlin'&&p.name==='林佳瑜');if(!linYl?.countyBrief)throw new Error('Missing candidate: 林佳瑜');
+ linYl.countyBrief.work='2018年選舉公報列其自1994年起開業並任牙醫診所院長；其後任職狀況待核';linYl.countyBrief.extraBioSource='county-lin-yunlin-career-cec2018';
+ d.sources['county-chen-changhua-council-bio']={title:'彰化县议会议员陈重嘉简介',url:'https://www.chcc.gov.tw/member/details.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C142',date:null,checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'彰化县议会',kind:'现任议员公开人物资料'};
+ if(!linYl.evidenceCoverage)linYl.evidenceCoverage={};
+ for(const [region,label] of [['cn','中国大陆／两岸'],['us','美国'],['jp','日本']])if(!linYl.evidence.some(x=>x.region===region))linYl.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'以「林佳瑜」「云林县长」「牙医」及'+label+'为关键词检索公开网页，并查阅2018年选举公报和2026年登记报道；本范围内未找到可明确归属于本人的相关表态。',note:'个人社群历史、全部影片与尚未播出的政见会仍未逐项查核；不能据此推断其立场。',sources:['county-lin-yunlin-career-cec2018','county-bio']};
+ if(!chenCh.evidenceCoverage)chenCh.evidenceCoverage={};
+ if(!chenCh.evidence.some(x=>x.region==='cn'))chenCh.evidenceCoverage.cn={checkedAt:'2026-11-12',scope:'以「陈重嘉」「彰化」搭配中国大陆、两岸和交流检索公开网页，并查看议会简介；本范围内未找到可明确归属本人的两岸表态。',note:'个人社群历史、全部影片及未来政见会仍未逐项查核；不能据此推断其立场。',sources:['county-chen-changhua-council-bio','county-chen-changhua-welfare-20261111']};
  d.sources['county-chang-ivod-20251203']={title:'2025年12月3日外交及国防委员会质询视频',url:'https://ivod.ly.gov.tw/Play/Clip/1M/166128',date:'2025-12-03',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院议事转播',kind:'官方质询视频'};
  d.sources['county-chang-acta-20251203']={title:'张啓楷质询纪录及发言整理',url:'https://acta.tw/evidence/ev_ivod_166128_c23a0b42893a',date:'2025-12-03',checkedAt:'2026-11-12',publisherId:'other',publisherName:'Acta（葛如钧委员办公室制作）',kind:'基于立法院视频与开放数据的发言整理；可对照官方视频'};
  const changCy=d.people.find(p=>p.city==='chiayi-city'&&p.name==='張啓楷');if(!changCy)throw new Error('Missing candidate: 張啓楷');
