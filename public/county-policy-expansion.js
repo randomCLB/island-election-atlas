@@ -2360,6 +2360,27 @@ function apply(d){
   for(const [topic,text] of r.items)if(!person.policies.some(x=>x.sources?.includes(r.source)&&x.topic===topic))person.policies.push({topic,text,type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:r.date,sources:[r.source],note:'属于候选人提出的方案；预算、合法性及执行条件须另核。'});
   person.policyCoverage=null;
  }
+ d.sources['county-su-pingtung-platform-20261112']={title:'苏清泉竞选总部：六大政策',url:'https://ptdrsu2026.tw/',date:'竞选网站，查阅2026-11-12',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'苏清泉竞选总部',kind:'候选人竞选网站公布的政策'};
+ const suPt=d.people.find(p=>p.city==='pingtung'&&p.name==='蘇清泉');if(!suPt)throw new Error('Missing candidate: 蘇清泉');
+ const suPtItems=[
+  ['childcare','苏清泉提出每胎生育补助合计20万元，构想为中央10万元、县府加码10万元；另主张每月增加托育补助1500元，合格祖父母带孙可领津贴。','中央补助与县府加码依各自政策及预算执行，祖父母津贴资格和金额待说明。'],
+  ['childcare','苏清泉提出0至18岁每月提供5000元成长津贴，并主张0至6岁健保免费及增加公托、准公共托婴服务。','年龄边界、户籍资格、财源及不同补助是否并领待说明。'],
+  ['health','苏清泉提出推动长者免费共餐，并优先补助50岁以上糖尿病、洗肾及其他高风险族群免费接种带状疱疹疫苗。','候选人网站未列完整资格和预算；疫苗适用条件应依医疗评估。'],
+  ['economy','苏清泉提出招商和补助优先支持加薪企业，补助青年职业训练及技术证照，并协助传统产业导入智慧科技。','加薪认定、补助金额、资格和预算待说明。'],
+  ['water','苏清泉提出邀集专家检讨淹水热点，推动治水工程并公开预算、进度和成果；另提出补助社区道路、排水和公共设施修缮。','工程清单、补助条件、财源及完成期限待说明。'],
+  ['transport','苏清泉提出整合幸福巴士、小黄公车、复康巴士与敬老卡，并优先改善学校、医院及人潮密集地区的道路和行人安全。','路线、服务对象、改善地点和经费待说明。']
+ ];
+ for(const [topic,text,note] of suPtItems)if(!suPt.policies.some(x=>x.text===text&&x.sources?.includes('county-su-pingtung-platform-20261112')))suPt.policies.push({topic,text,type:'本届主张（竞选网站）',basis:'campaign',electionYear:2026,date:'网站查阅2026-11-12，原发日期未列',sources:['county-su-pingtung-platform-20261112'],note});
+ d.sources['county-wu-penghu-rally-20260912']={title:'吴淑瑾造势大会提出福利与交通主张',url:'https://udn.com/vote2026/story/124652/9750530',date:'2026-09-12',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'新闻报道候选人公开演说'};
+ d.sources['county-wu-penghu-health-20260617']={title:'吴淑瑾接受征召时谈医疗与离岛修法',url:'https://news.pts.org.tw/article/813506',date:'2026-06-17',checkedAt:'2026-11-12',publisherId:'pts',publisherName:'公视新闻',kind:'新闻报道候选人公开发言'};
+ const wuPh=d.people.find(p=>p.city==='penghu'&&p.name==='吳淑瑾');if(!wuPh)throw new Error('Missing candidate: 吳淑瑾');
+ const wuPhItems=[
+  ['health','吴淑瑾提出把原先全县健保免费构想改为挹注1亿元提升地方医疗，并主张改善医护待遇、留住人才。','1亿元的筹措、使用期限及分配方式需进一步核实。','county-wu-penghu-health-20260617','2026-06-17'],
+  ['health','吴淑瑾提出三节敬老金每节6000元，加上每月1000元敬老县民卡，合称每年3万元敬老乐活福利。','现金礼金与县民卡用途不同；适用资格及财源待说明。','county-wu-penghu-rally-20260912','2026-09-12'],
+  ['education','吴淑瑾提出澎湖科技大学免学费、儿童课后全照顾及室内全龄生活馆。','受益资格、服务内容及财源待说明；涉及大学收费需与主管机关和校方协调。','county-wu-penghu-rally-20260912','2026-09-12'],
+  ['transport','吴淑瑾主张促成第三家航空公司投入澎湖航线，并推动国际与国内航线联运。','航线是否开办涉及航空公司及主管机关，班次与时程尚未确定。','county-wu-penghu-rally-20260912','2026-09-12']
+ ];
+ for(const [topic,text,note,source,date] of wuPhItems)if(!wuPh.policies.some(x=>x.topic===topic&&x.sources?.includes(source)))wuPh.policies.push({topic,text,type:'本届主张（媒体报道）',basis:'campaign',electionYear:2026,date,sources:[source],note});
  d.sources['county-chen-chiayi-campaign-20261112']={title:'陈愷璜竞选网站：经历与经济政见',url:'https://chiayi-mayor.duckdns.org/',date:'竞选网站，查阅2026-11-12',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'陈愷璜竞选网站',kind:'候选人竞选团队自述与政策说明'};
  const chenChiayi=d.people.find(p=>p.city==='chiayi-city'&&p.name==='陳愷璜');if(!chenChiayi?.countyBrief)throw new Error('Missing candidate: 陳愷璜');
  chenChiayi.countyBrief.work='竞选网站列其2005年任北艺大学务长、2006至2010年任美术系主任及研究所所长、2013至2016年任美术学院院长、2017至2025年任校长；另自列2000年任网络科技公司CEO、1996年任设计工作室艺术总监。';chenChiayi.countyBrief.extraBioSource='county-chen-chiayi-campaign-20261112';
