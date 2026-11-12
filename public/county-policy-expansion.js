@@ -2587,6 +2587,14 @@ function apply(d){
  const youHualienWork=d.people.find(p=>p.city==='hualien'&&p.name==='游淑貞');if(!youHualienWork?.countyBrief)throw new Error('Missing candidate: 游淑貞');
  youHualienWork.countyBrief.work='联合报报道她曾负责三间幼儿园和一间补习班；TVBS专访列其曾任幼儿园教师、园长，并从事幼教经营管理。机构名称、各职务起止年月暂未确认。';
  youHualienWork.countyBrief.extraBioSource='county-you-hualien-career-20260607';youHualienWork.countyBrief.extraBioSources=[...(youHualienWork.countyBrief.extraBioSources||[]),'county-you-hualien-career-20260609'];
+ d.sources['county-su-pingtung-career-ly8']={title:'立法院第八届委员名鉴：苏清泉经历',url:'https://lis.ly.gov.tw/lghtml/work/_K5_ttsbooke3.pdf?1049273891=',date:'第八届立法委员名鉴',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院',kind:'立法院历史委员名鉴'};
+ const suPingtungCareer=d.people.find(p=>p.city==='pingtung'&&p.name==='蘇清泉');if(!suPingtungCareer?.countyBrief)throw new Error('Missing candidate: 蘇清泉');
+ suPingtungCareer.countyBrief.work='立法院第八届委员名鉴列其1984年9月至1991年7月任台北马偕纪念医院医师、1990年7月至1992年8月任国立台北护理学院附设医院外科主任、1992年10月至2012年1月任安泰医院院长；另于2008年12月至2014年12月任区域医院协会理事长，2013年6月起任医师公会全国联合会理事长，结束时间待核。';
+ suPingtungCareer.countyBrief.extraBioSource='county-su-pingtung-career-ly8';
+ d.sources['county-wu-yilan-prosecutor-20200325']={title:'吴宗宪由检察官转任新北法制局长',url:'https://www.cna.com.tw/news/aloc/202003250289.aspx',date:'2020-03-25',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道职务转任'};
+ const wuYilanCareer=d.people.find(p=>p.city==='yilan'&&p.name==='吳宗憲');if(!wuYilanCareer?.countyBrief)throw new Error('Missing candidate: 吳宗憲');
+ wuYilanCareer.countyBrief.work='中央社2020年报道，吴宗宪历任南投、士林和桃园地检署检察官，并曾任检肃黑金专组检察官；2020年3月25日宣誓接任新北市政府法制局长。各地检署任职起止年月暂未确认。';
+ wuYilanCareer.countyBrief.extraBioSource='county-wu-yilan-prosecutor-20200325';
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
