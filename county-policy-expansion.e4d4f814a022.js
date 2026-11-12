@@ -1441,9 +1441,361 @@ const rows = [
     "url": "https://to-to.win/wp-transport.html",
     "cut": "2026-10-19",
     "database": "https://blindvote.app/sources/kinmen#km-liang-island-transport"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-eldercare",
+    "name": "陳振中",
+    "topic": "health",
+    "text": "陈振中提出依法聘雇外籍看护的家庭，每户每月补助1万元。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid0ctJftv8nUUXCyX1Dtuc7GuacX4PE8Cv2SxPAi8sCn47m8hNH7tkQi8gPpBgobqH9l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-eldercare"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-bus",
+    "name": "陳振中",
+    "topic": "transport",
+    "text": "陈振中提出按村里实际需求调整公交路线与班次，改善通学及就医接驳。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid0FFGChrimensCsqXLZd3oS3xcKtGk2vvfBgXNNALkb1FG2xbFTpeC3Txj2qvKN9Bjl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-bus"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-jobs",
+    "name": "陳振中",
+    "topic": "economy",
+    "text": "陈振中提出发展数字游牧、活化闲置公共空间，并结合青年居住和创业。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid0eAMFSKqyume22AJij69VBLDSZ2HV9oRocwPtLU3tDpYi47Vb1AmtvDs5mdHjStq6l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-jobs"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-hsu-jobs",
+    "name": "許智富",
+    "topic": "labor",
+    "text": "许智富提出补助符合资格居民的技术士训练和考试费用，金额依证照等级区分。",
+    "admin": false,
+    "url": "https://www.facebook.com/xu.zhi.fu.408382/posts/pfbid0EP2UcdYSbpRwoh1gD97wjAob5NUsMVJDAVjarhi1Br8EaJmGVrmVnEbJimTNLfVMl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-hsu-jobs"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-yeh-jobs",
+    "name": "葉竹林",
+    "topic": "economy",
+    "text": "叶竹林提出远距工作中心、数字能力培训和青年接案媒合。",
+    "admin": false,
+    "url": "https://www.facebook.com/YEHCHULINinPENGHU/posts/pfbid0KnTZq3zXBbPVh6Tbb6KoYtga3bVzQQBHrhFZnFM42PcqWWSYAqnuftJHcGuMKzQdl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-yeh-jobs"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-wu-school",
+    "name": "吳淑瑾",
+    "topic": "education",
+    "text": "吴淑瑾提出减少重复行政工作，合理安排教师行政工时，并提供数字工具支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/wushuchin.penghu/posts/pfbid0qaSKRcYts4KVFZ8D3qSU4D6KuzoN1ukvV8Sb5UaP79xtNWPQokkjD4haaFTFCErl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-wu-school"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-school",
+    "name": "陳振中",
+    "topic": "education",
+    "text": "陈振中提出由县府整合专业人力，协助学校处理工程、财务与劳务招标。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid024P1Z53FEbm6tTDvAT8Uonk2bQDrGs8AaQ1122tycRvamPgwwh1pAhfxyZxzzqnpUl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-school"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-hsu-school",
+    "name": "許智富",
+    "topic": "education",
+    "text": "许智富提出由县府专责团队处理100万元以上学校工程的发包与管理。",
+    "admin": false,
+    "url": "https://www.facebook.com/xu.zhi.fu.408382/posts/pfbid022Fbu4nkohhPVdHGQWRJBLLy6yVPyxHtMA7d2zskVPtaaL8ED6pxLDxgfXbG4H3gHl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-hsu-school"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-hsu-waste",
+    "name": "許智富",
+    "topic": "water",
+    "text": "许智富提出以民间参与方式兴建垃圾焚化设施，结合资源回收和能源再生。",
+    "admin": false,
+    "url": "https://www.facebook.com/xu.zhi.fu.408382/posts/pfbid02fXCUMRs6mDrQRSwfvrvDz9w2YAxkMdCEP5z8JkVZCkcM3VKFREiPM7JphuvtkXvEl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-hsu-waste"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-yeh-waste",
+    "name": "葉竹林",
+    "topic": "water",
+    "text": "叶竹林提出在环境安全及地方沟通前提下，推动兴建垃圾焚化设施。",
+    "admin": false,
+    "url": "https://www.facebook.com/YEHCHULINinPENGHU/posts/pfbid0b7YBEyHm3Mr3dZJur6sxBsjFyrWgtDyRrYN2w1TJ4b7nLkF1CwatyEM4n76ZkhW5l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-yeh-waste"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-wu-healthcare",
+    "name": "吳淑瑾",
+    "topic": "health",
+    "text": "吴淑瑾提出补助设籍澎湖50岁以上居民接种带状疱疹疫苗的第二剂，须符合医疗评估条件。",
+    "admin": false,
+    "url": "https://www.facebook.com/wushuchin.penghu/posts/pfbid02pXzCQN992VEAb8jH2GonaRtLiJqDrWaWh3kGtDpa4n4UNjX3Ep3zkabBUyReLkCkl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-wu-healthcare"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-healthcare",
+    "name": "陳振中",
+    "topic": "health",
+    "text": "陈振中提出服务满三年的医护人员每月5000元留任津贴。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid0tCBc6c8W7ubyr5iBMmXGqmn3iCTrgawEvRhqSwtdk9e4Gy4UqBdZA8YxZixoUYMml",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-healthcare"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-yeh-healthcare",
+    "name": "葉竹林",
+    "topic": "health",
+    "text": "叶竹林提出在西屿外垵设置紧急救护站，并加强离岛急救备援。",
+    "admin": false,
+    "url": "https://www.facebook.com/YEHCHULINinPENGHU/posts/pfbid023Anfvix9fBsVCWmYpQccqm8ZZqpE3RMQdPnygi2pQXx7VU83XZUAtZ8rB3tgns9Sl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-yeh-healthcare"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-wu-island-transport",
+    "name": "吳淑瑾",
+    "topic": "transport",
+    "text": "吴淑瑾提出将儿童优惠机票适用年龄从12岁延长至18岁。",
+    "admin": false,
+    "url": "https://www.facebook.com/wushuchin.penghu/posts/pfbid04SweKZKHTKZczeCaMDnFZKCKx6dRE1Gvwx8hbpj649KaNSYWBT7b6LgDf4kxqYual",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-wu-island-transport"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-chenzc-island-transport",
+    "name": "陳振中",
+    "topic": "transport",
+    "text": "陈振中提出提高居民机船票补贴，学生、长者和身障者享更高优惠，并争取中央分担。",
+    "admin": false,
+    "url": "https://www.facebook.com/chen.zhen.zhong.67701/posts/pfbid027k4Qm1Cifh7UQVJ5b9jjo8SvSECU1EM9z9ukquGBKuEoWgGwXzRd2V2wgripoiSnl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-chenzc-island-transport"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-hsu-island-transport",
+    "name": "許智富",
+    "topic": "transport",
+    "text": "许智富提出导入交通船智慧售票，结合身份验证及行动支付。",
+    "admin": false,
+    "url": "https://www.facebook.com/xu.zhi.fu.408382/posts/pfbid0347HNUdfXV2z3B5BjHFv2boQkUvFpKdp9EM4Z7MgHAPsAFXi5mz3iTqyQeB14MQR7l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-hsu-island-transport"
+  },
+  {
+    "city": "penghu",
+    "anchor": "ph-yeh-island-transport",
+    "name": "葉竹林",
+    "topic": "transport",
+    "text": "叶竹林提出增加七美与马公船班，并推动西屿至马公海上交通。",
+    "admin": false,
+    "url": "https://www.facebook.com/yehchulin/posts/pfbid0DBtwJLo6wktE6L5Gb8axSNAB9P7tNdeu8be1pUon8rWghwpADBcWoxk9jTeVV9Dzl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/penghu#ph-yeh-island-transport"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-wang-housing",
+    "name": "王忠銘",
+    "topic": "economy",
+    "text": "连江县府规划南竿、北竿及莒光多处住宅，并推进东引住宅计划。",
+    "admin": true,
+    "url": "https://www.facebook.com/wang.zhong.ming.957663/posts/pfbid03voQfd1VDskX2NwnzhDsDL6csucnF5k7F8LUVoxuTMEMAJGujNG31UoBAkEjudGKl",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-wang-housing"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-wang-healthcare",
+    "name": "王忠銘",
+    "topic": "health",
+    "text": "连江县府表示向中央争取在下一期直升机合约纳入备援和夜航能力。",
+    "admin": true,
+    "url": "https://www.matsu.gov.tw/chhtml/Detail/371030000A/25?mcid=113705",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-wang-healthcare"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-tsao-healthcare",
+    "name": "曹爾元",
+    "topic": "health",
+    "text": "曹尔元提出重新评估争取连江县立医院改隶卫生福利部，以争取医疗人力与专科支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/100003452332048/posts/pfbid0EpagC49hqkUQmwF73CKY98GnE9NG9EctH8W91VFwfvKTSHkVJneKuG4CkU9nAH7Gl",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-tsao-healthcare"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-wang-island-transport",
+    "name": "王忠銘",
+    "topic": "transport",
+    "text": "连江县府表示将与中央评估引进更大型船舶，以改善各岛及台马间运能。",
+    "admin": true,
+    "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0odnYKwv8Y43n9HJdGDJunoFVvwwDS7exx8t7TEfX8Ly1dvJraYjqsg53TieHoqCpl&id=100071514671190",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-wang-island-transport"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-tsao-island-transport",
+    "name": "曹爾元",
+    "topic": "transport",
+    "text": "曹尔元主张北竿机场施工应在不停航前提下规划，并要求与居民面对面讨论。",
+    "admin": false,
+    "url": "https://www.facebook.com/100003452332048/posts/pfbid02Hi7EWVNih1EJ9f9Noq7bMzhkYuk5s2yUM4QiWTAzYRiyu4UMpddMRPtLFfRJjiNzl",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-tsao-island-transport"
+  },
+  {
+    "city": "lienchiang",
+    "anchor": "lc-tsao-tourism",
+    "name": "曹爾元",
+    "topic": "tourism",
+    "text": "曹尔元提出争取大陆游客来马祖，并建议向中央争取跨区域旅游开放。",
+    "admin": false,
+    "url": "https://www.facebook.com/100003452332048/posts/pfbid02v1a32xYrZqFP7VgnKjk5ji8ZxLdgebMyREdQNyyVqouuhAzr5h9Q3UZdTjMGKtP6l",
+    "cut": "2026-10-18",
+    "database": "https://blindvote.app/sources/lienchiang#lc-tsao-tourism"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chang-bus",
+    "name": "張啓楷",
+    "topic": "transport",
+    "text": "张啓楷提出推动嘉义蓝线轻轨，由嘉义县市共同向中央争取。",
+    "admin": false,
+    "url": "https://www.facebook.com/qikai.zhang01/posts/pfbid07289EQHRc6HvC44NXUPi1jnjNaRK9n35EkTuTZJijVV7QjtooEDjGpKvFH45Kvgml",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chang-bus"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chang-jobs",
+    "name": "張啓楷",
+    "topic": "economy",
+    "text": "张啓楷提出给符合资格、返乡稳定就业的青年最长一年、最高6万元补贴。",
+    "admin": false,
+    "url": "https://www.facebook.com/qikai.zhang01/posts/pfbid02VeAzn2mdc5n361Ym1f9qVTmVUXUAyuvgWUpe4L9KSNBDKTBmzakaMMz3ZXvNy94Bl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chang-jobs"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-wangmh-jobs",
+    "name": "王美惠",
+    "topic": "economy",
+    "text": "王美惠提出推动北港路沿线及后湖工业区周边发展，争取科技产业投资。",
+    "admin": false,
+    "url": "https://www.facebook.com/ahueimoto/posts/pfbid0FmWmjznLp141td9U8ii35LABxqFDypLYKaUUX2WtxoWfdybSfyuzDL2VQDWJyMAPl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-wangmh-jobs"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chen-jobs",
+    "name": "陳愷璜",
+    "topic": "economy",
+    "text": "陈愷璜提出结合数字制造与传统工艺，安排相关科系学生参与老屋修复实习。",
+    "admin": false,
+    "url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chen-jobs"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chang-housing",
+    "name": "張啓楷",
+    "topic": "economy",
+    "text": "张啓楷提出在嘉北车站及北港路周边开发区配置可负担住宅，长期目标逾2000户。",
+    "admin": false,
+    "url": "https://www.facebook.com/qikai.zhang01/posts/pfbid02ZLZ1DsKDzdwwUZ1DTKU3ymanofqgUsSHyfzzYMm9DBkYmmMCyeBGm1KkQG3mkQvxl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chang-housing"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-wangmh-housing",
+    "name": "王美惠",
+    "topic": "economy",
+    "text": "王美惠提出盘点土地，推动由嘉义市府兴建社会婚育住宅。",
+    "admin": false,
+    "url": "https://www.facebook.com/ahueimoto/posts/pfbid0etWFCZAzGABT7w8hhLWBYigb7LZ1eHUkw2QLXk9dcpum4ag8o1AReHuwk4x2QepUl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-wangmh-housing"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chen-housing",
+    "name": "陳愷璜",
+    "topic": "economy",
+    "text": "陈愷璜提出由屋主让渡一定年限使用权，再透过修缮机制活化空间。",
+    "admin": false,
+    "url": "https://chiayi-mayor.duckdns.org/assets/docs/chiayi-policy-whitepaper.pdf",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chen-housing"
+  },
+  {
+    "city": "chiayi-city",
+    "anchor": "cy-chang-healthcare",
+    "name": "張啓楷",
+    "topic": "health",
+    "text": "张啓楷提出针对长期高工时劳工提供健康检查补贴，增加过劳风险相关检查。",
+    "admin": false,
+    "url": "https://www.facebook.com/qikai.zhang01/posts/pfbid02VeAzn2mdc5n361Ym1f9qVTmVUXUAyuvgWUpe4L9KSNBDKTBmzakaMMz3ZXvNy94Bl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicity#cy-chang-healthcare"
   }
 ];
 function apply(d){
+ const additional=[
+  {city:'taitung',name:'王志偉',source:'county-wang-taitung-20260912',title:'台东县长候选人王志伟提出教育及农业政见',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',publisherId:'cna',publisherName:'中央社',items:[['education','王志伟提出由县府注资5000万元成立劝学基金，并设置依成绩进步与升学表现发放的奖学金。'],['economy','王志伟提出订定农渔产品等级、对顶级品保价收购，并规划运用无人机施肥及防治。']]},
+  {city:'penghu',name:'陳盡川',source:'county-chen-penghu-20260104',title:'陈尽川公布海洋、土地、道路与观光愿景',url:'https://penghudaily.blogspot.com/2026/01/blog-post_476.html',date:'2026-01-04',publisherId:'other',publisherName:'澎湖日报（倾向待核定）',items:[['water','陈尽川提出复育渔业资源与保护海洋生态，并推动银合欢资源化。'],['transport','陈尽川提出全面检查县道和产业道路，改善路面品质。'],['accountability','陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。']]},
+  {city:'hualien',name:'羅佩秦',source:'county-luo-hualien-20260718',title:'罗佩秦说明光复乡灾民求偿与防灾专业主张',url:'https://www.cnma.org.tw/page/news/show.aspx?kind=8&lang=TW&num=52735',date:'2026-07-18',publisherId:'other',publisherName:'CNMA新闻联合网（倾向待核定）',items:[['accountability','罗佩秦表示将与法律人士合作，协助光复乡受灾者循国家赔偿程序争取权益。'],['water','罗佩秦提出当选后邀请防灾专业人士担任县府国土及河川防制顾问。']]}
+ ];
+ for(const r of additional){
+  d.sources[r.source]={title:r.title,url:r.url,date:r.date,checkedAt:'2026-11-12',publisherId:r.publisherId,publisherName:r.publisherName,kind:'媒体报道转述候选人公开主张'};
+  const person=d.people.find(p=>p.city===r.city&&p.name===r.name);if(!person)throw new Error('Missing candidate: '+r.name);
+  for(const [topic,text] of r.items)if(!person.policies.some(x=>x.sources?.includes(r.source)&&x.topic===topic))person.policies.push({topic,text,type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:r.date,sources:[r.source],note:'属于候选人提出的方案；预算、合法性及执行条件须另核。'});
+  person.policyCoverage=null;
+ }
  d.sources['county-chen-taitung-japan-20250411']={title:'台东数字游牧活动及台日合作意向书',url:'https://ws.ndc.gov.tw/Download.ashx?icon=.pdf&n=5ZyL55m85pyDMTE0MDQxMeaWsOiBnueovy3pgYrniafoh7rngaMg6Ie65p2x5ZWf6Iiq5YSA5byPIOebm%2BWkp%2BiIieihjCDlnIvnmbzmnIPkv4PmiJDoh7rml6XnsL3nvbLmlbjkvY3pgYrniaflkIjkvZzmhI%2FlkJHmm7gucGRm&u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvNjIwMi8zODk1NC83NDIzZjc1NC00MmY4LTQ2ZWEtOWIwYS1jZTkzYjQ4YmZmZDEucGRm',date:'2025-04-11',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国家发展委员会',kind:'官方活动新闻稿'};
  const chen=d.people.find(x=>x.city==='taitung'&&x.name==='陳瑩');
  if(!chen)throw new Error('Missing candidate: 陳瑩');
@@ -1473,6 +1825,7 @@ function apply(d){
   if(!p.policies.some(x=>x.sources?.includes(excerpt)))p.policies.push({topic:r.topic,text:r.text,type:r.admin?'任内县府计划或说明':'本届公开主张（资料库摘要）',basis:r.admin?'administration':'campaign',electionYear:2026,date:'资料库截至 '+r.cut+'，原发日期待核',sources:[excerpt,original],note:r.admin?'县府计划或任内说明；实际完成时间与结果须另核。':'公开提案，预算、实施条件及后续进度须另核。'});
   if(r.anchor==='hl-wei-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'jp',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'提出花莲与日本离岛直航',text:r.text,limit:'候选人公开提案，资料库提供原发链接；航线可行性及跨境审批仍待确认。',source:excerpt});
   if(r.anchor==='km-li-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'建议评估增加两岸直航',text:'李文良建议在安全、对等与市场需求前提下，由中央评估恢复或增加台湾本岛与大陆主要城市的直航航点及班次。',limit:'候选人提出评估建议，不代表已核准航线或其全部两岸立场。',source:excerpt});
+  if(r.anchor==='lc-tsao-tourism'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'争取大陆游客赴马祖',text:'曹尔元提出吸引大陆游客赴马祖旅游，并向中央争取跨区域旅游开放。',limit:'资料库摘录的候选人主张；具体政策可行性和原发日期须另核。',source:excerpt});
  }
 }
 if(typeof module!=='undefined')module.exports={apply};else apply(root.ATLAS);
