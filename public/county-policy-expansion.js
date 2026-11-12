@@ -1785,6 +1785,22 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-wei-keelung-issues-20261027']={title:'魏造文抽签时谈基隆人口与淹水',url:'https://udn.com/vote2026/story/124652/9839561',date:'2026-10-27',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者采访候选人公开说法'};
+ const weiKl=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');if(!weiKl)throw new Error('Missing candidate: 魏造文');
+ weiKl.policyCoverage={checkedAt:'2026-11-12',note:'已查：联合报10月27日采访中，魏造文谈及基隆人口减少、年轻人外出就业及市区道路淹水，表示会在公办公布政见的场合说明想法。暂未确认：该报道没有列出对应的具体措施、预算或时程；本届详细政见仍待核实。尚未查核：个人社群完整发言及后续政见发表会内容。',sources:['county-wei-keelung-issues-20261027','county-policy-index-keelung']};
+ d.sources['county-ho-hsinchu-baseball-20261106']={title:'何志勇提出新竹棒球发展与巨蛋构想',url:'https://udn.com/news/story/124652/9862161',date:'2026-11-06',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人政策记者会'};
+ const hoBall=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');if(!hoBall)throw new Error('Missing candidate: 何志勇');
+ if(!hoBall.policies.some(x=>x.sources?.includes('county-ho-hsinchu-baseball-20261106')))hoBall.policies.push(
+  {topic:'tourism',text:'何志勇提出兴建可容纳1.5万人的新竹智慧巨蛋，供棒球、演唱会和展会使用，列出三处候选基地，目标约五年完工。',type:'本届政见（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-11-06',sources:['county-ho-hsinchu-baseball-20261106'],note:'选址仍须评估及公众讨论；建设经费、审批及五年工期并未核定。'},
+  {topic:'education',text:'何志勇主张在较大公园增设投打练习空间、扩充三级和社区棒球，并参考美国少棒联盟与日本球队培养模式。',type:'本届政见（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-11-06',sources:['county-ho-hsinchu-baseball-20261106'],note:'这是棒球培训与场地构想；场地安全、土地、经费和执行安排待核。'}
+ );
+ for(const [region,topic,text] of [['us','参考美国少棒制度','何志勇提出发展社区棒球，参考美国威廉波特及小马联盟模式，让家长也能担任基层教练。'],['jp','参考日本球队培养模式','何志勇提出新竹城市队可参考日本德岛短蓝袜队模式培育选手，并以此为基础争取成立职棒球队。']])if(!hoBall.evidence.some(x=>x.region===region&&x.source==='county-ho-hsinchu-baseball-20261106'))hoBall.evidence.push({region,date:'2026-11-06',topic,text,limit:'这是地方棒球政策中引用外国经验的主张，非对美日外交或政治立场；实际合作与可行性尚待确认。',source:'county-ho-hsinchu-baseball-20261106'});
+ d.sources['county-liwu-taitung-20260912']={title:'李吴颖智接受中央社访问谈竞选主张',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'新闻报道候选人政见'};
+ const liwuTt=d.people.find(p=>p.city==='taitung'&&p.name==='李吳穎智');if(!liwuTt)throw new Error('Missing candidate: 李吳穎智');
+ if(!liwuTt.policies.some(x=>x.sources?.includes('county-liwu-taitung-20260912')))liwuTt.policies.push(
+  {topic:'accountability',text:'李吴颖智提出县长廉政契约，承诺不买票、不贿选、不贪污，公开重大工程、会议与公共资产信息，并要求家人与关系人利益回避。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'属于候选人承诺；具体公开范围、执行办法与监督机制待核。'},
+  {topic:'transport',text:'李吴颖智提出推动台9线拓宽、快速道路与高速公路延伸，并把宜花东屏高铁列为长期建设方向。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'相关路线、经费、中央权限与可行性均待评估，不表示建设已核定。'}
+ );
  d.sources['county-chen-penghu-career-cec2014']={title:'2014年澎湖县议员选举公报：陈振中',url:'https://eebulletin.cec.gov.tw/103/18%E6%BE%8E%E6%B9%96%E7%B8%A3/%E9%84%89%E5%B8%82%E9%95%B7/%E6%BE%8E%E6%B9%96%E7%B8%A3%E8%A5%BF%E5%B6%BC%E9%84%89%E9%95%B7.pdf',date:'2014年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'澎湖县选举委员会',kind:'候选人自行填报的经历'};
  const chenPh=d.people.find(p=>p.city==='penghu'&&p.name==='陳振中');if(!chenPh?.countyBrief)throw new Error('Missing biography: 陳振中');
  chenPh.countyBrief.work='2014年選舉公報列曾任業務經理、村幹事、澎湖縣政府人事助理員、湖西鄉公所圖書館管理員及鄉公所秘書；任職年月待核';chenPh.countyBrief.extraBioSource='county-chen-penghu-career-cec2014';
