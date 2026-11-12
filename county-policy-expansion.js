@@ -2499,6 +2499,17 @@ function apply(d){
  d.sources['county-luo-hualien-education-20260904']={title:'罗佩秦登记时学历查核及选务机关回应',url:'https://news.ipcf.org.tw/210333',date:'2026-09-04',checkedAt:'2026-11-12',publisherId:'other',publisherName:'原视新闻（原住民族文化事业基金会）',kind:'媒体报道当事人陈述及县府回应'};
  luo.countyBrief.education='自述陆军官校正期班毕业。2026年登记时因学校更名涉及证书查核；原视报道县府称并非退件，经与中选会确认后完成登记。';
  luo.countyBrief.extraBioSources=[...(luo.countyBrief.extraBioSources||[]),'county-luo-hualien-education-20260904'];
+ d.sources['county-hsinchu-xu-workers-index-20261023']={title:'新竹县长候选人清洁工作政见摘录',url:'https://blindvote.app/sources/hsinchucounty',date:'资料库截至2026-10-23，原发日期未核',checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所（倾向待核定）',kind:'民间政见资料库摘录，社群原帖未单独读取'};
+ d.sources['county-hsinchu-xu-workers-original']={title:'徐欣莹清洁队员政见原发链接',url:'https://www.facebook.com/shesinging.tw/posts/1644067800415443',date:'发布日期未核',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'徐欣莹公开专页',kind:'资料库所列原发链接，原帖未单独读取'};
+ d.sources['county-hsinchu-xu-hakka-index-20261023']={title:'新竹县长候选人客语政见摘录',url:'https://blindvote.app/sources/hsinchucounty',date:'资料库截至2026-10-23，原发日期未核',checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所（倾向待核定）',kind:'民间政见资料库摘录，社群原帖未单独读取'};
+ d.sources['county-hsinchu-xu-hakka-original']={title:'徐欣莹客语保存政见原发链接',url:'https://www.facebook.com/shesinging.tw/posts/pfbid0K8MBafzBaSSuNVdVk8uGe4zksr7kS5VeYdKReUrNB7CorER3eTQJcM4rjRChbLLml',date:'发布日期未核',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'徐欣莹公开专页',kind:'资料库所列原发链接，原帖未单独读取'};
+ const xuHc=d.people.find(x=>x.city==='hsinchu-county'&&x.name==='徐欣瑩');if(!xuHc)throw new Error('Missing candidate: 徐欣瑩');
+ for(const [topic,text,source,original,note] of [
+  ['labor','徐欣莹提出为清洁队员提供风扇衣，增加清洁及回收车辆设备补助，并增加健康检查补助。','county-hsinchu-xu-workers-index-20261023','county-hsinchu-xu-workers-original','资料库摘录候选人社群内容，原帖未单独读取；适用人员、补助金额及财源待说明。'],
+  ['education','徐欣莹提出整合客语语音辨识、发音练习、字幕与数字教材，并保存长辈的客语故事、童谣及地名。','county-hsinchu-xu-hakka-index-20261023','county-hsinchu-xu-hakka-original','资料库摘录候选人社群内容，原帖未单独读取；合作机构、预算与执行期程待说明。']
+ ])if(!xuHc.policies.some(x=>x.sources?.includes(source)))xuHc.policies.push({topic,text,type:'本届公开主张（资料库摘录）',basis:'campaign',electionYear:2026,date:'资料库截至2026-10-23，原发日期未核',sources:[source,original],note});
+ const liwu=d.people.find(x=>x.city==='taitung'&&x.name==='李吳穎智');if(!liwu)throw new Error('Missing candidate: 李吳穎智');
+ const retention=liwu.policies.find(x=>x.sources?.includes('county-policy-taitung-1-1-excerpt'));if(retention){retention.text='李吴颖智提出台东合法工作的劳工服务满3个月、6个月及1年可分阶段获留任奖励，之后每6个月奖励；企业须依法投保、正常给薪且无重大违法劳工纪录。';retention.note='资料库摘录社群内容，原帖未单独读取；奖励金额、资格细节、财源及实施期程暂未确认。';}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
