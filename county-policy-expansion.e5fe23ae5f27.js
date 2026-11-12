@@ -1785,6 +1785,10 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-liang-peace-20260716']={title:'梁文韬提出金门停战与两岸谈判构想',url:'https://www.cna.com.tw/news/aipl/202607160349.aspx',date:'2026-07-16',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道候选人宣布参选时的主张'};
+ const liang=d.people.find(p=>p.city==='kinmen'&&p.name==='梁文韜');if(!liang)throw new Error('Missing candidate: 梁文韜');
+ if(!liang.evidence.some(x=>x.source==='county-liang-peace-20260716'))liang.evidence.push({region:'cn',date:'2026-07-16',topic:'提出金门停战及两岸谈判',text:'梁文韬提出在两岸福建省政府获得授权后商谈金门永久停战，相关协议再交县议会或公民投票确认。',limit:'这是候选人的政治主张；谈判授权、国防权限及法律可行性均须另行确认，不表示已有协议。',source:'county-liang-peace-20260716'});
+ if(!liang.policies.some(x=>x.sources?.includes('county-liang-peace-20260716')))liang.policies.push({topic:'exchange',text:'梁文韬提出推动金门永久停战，通过获授权的两岸福建省政府商谈，并由金门县议会或公投确认。',type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:'2026-07-16',sources:['county-liang-peace-20260716'],note:'涉及两岸谈判与国防权限，地方政府能否推动及协议法律效力须另核。'});
  d.sources['county-chen-changhua-welfare-20261111']={title:'彰化县长候选人讨论长者福利',url:'https://udn.com/vote2026/story/124652/9870449',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'新闻报道转述候选人说法'};
  const chenCh=d.people.find(p=>p.city==='changhua'&&p.name==='陳重嘉');if(!chenCh)throw new Error('Missing candidate: 陳重嘉');
  if(!chenCh.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))chenCh.policies.push({topic:'health',text:'陈重嘉主张福利应优先照顾有需要的人，不倾向普发现金；支持现行长青幸福卡，并认为长者健保费补助须视财源而定。',type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:'2026-11-11',sources:['county-chen-changhua-welfare-20261111'],note:'对长者健保费补助附有财源条件，并非承诺无条件实施。'});
