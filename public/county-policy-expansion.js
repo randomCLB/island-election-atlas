@@ -1793,7 +1793,7 @@ function apply(d){
  );
  d.sources['county-chen-jinchuan-career-20200608']={title:'陈尽川：剩下的生命留给海洋',url:'https://visionproject.org.tw/article_detail.php?id=5933',date:'2020-06-08',checkedAt:'2026-11-12',publisherId:'other',publisherName:'愿景工程基金会（倾向待核定）',kind:'记者采访与人物经历报道'};
  const chenJc=d.people.find(p=>p.city==='penghu'&&p.name==='陳盡川');if(!chenJc?.countyBrief)throw new Error('Missing biography: 陳盡川');
- chenJc.countyBrief.work='受訪表示曾在空軍學習機工技術、退伍後從事冷凍工程，並推廣水上運動與海洋保育；具體服務單位及年月待核';chenJc.countyBrief.extraBioSource='county-chen-jinchuan-career-20200608';
+ chenJc.countyBrief.work='愿景工程采访记载，他曾是风浪板国手，之后回空军学习机工技术，退伍后从事冷冻工程并推广水上运动；2011年造船调查海域生态，后来投入海洋保育。具体服务单位与大部分任职年月暂未确认。';chenJc.countyBrief.extraBioSource='county-chen-jinchuan-career-20200608';
  d.sources['county-chang-huomu-career-20230619']={title:'张火木争取民众党提名选金门立委',url:'https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=B8496EBE34D0491F&sms=BF7D6D478B935644',date:'2023-06-19',checkedAt:'2026-11-12',publisherId:'other',publisherName:'金门日报（县政府网站转载；倾向待核定）',kind:'地方报纸报道候选人公开履历'};
  const changHm=d.people.find(p=>p.city==='kinmen'&&p.name==='張火木');if(!changHm?.countyBrief)throw new Error('Missing biography: 張火木');
  changHm.countyBrief.work='金門日報報導曾任實踐家專執行秘書，在實踐大學長期教學後退休，並撰寫金門文史著作；任職起訖年月待核';changHm.countyBrief.extraBioSource='county-chang-huomu-career-20230619';
@@ -2225,7 +2225,7 @@ function apply(d){
  }
  const additional=[
   {city:'taitung',name:'王志偉',source:'county-wang-taitung-20260912',title:'台东县长候选人王志伟提出教育及农业政见',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',publisherId:'cna',publisherName:'中央社',items:[['education','王志伟提出由县府注资5000万元成立劝学基金并接受捐款，学生总分每进步1分发100元；考上台大、清大、交大、成大等校的台东学子获10万元奖学金。'],['economy','王志伟提出订定农渔产品等级、对顶级品保价收购，并规划运用100架无人机施肥及防治。'],['childcare','王志伟提出结婚、生育和送终由县府每案补助2万元。']]},
-  {city:'penghu',name:'陳盡川',source:'county-chen-penghu-20260104',title:'陈尽川公布海洋、土地、道路与观光愿景',url:'https://penghudaily.blogspot.com/2026/01/blog-post_476.html',date:'2026-01-04',publisherId:'other',publisherName:'澎湖日报（倾向待核定）',items:[['water','陈尽川提出复育渔业资源与保护海洋生态，并推动银合欢资源化。'],['transport','陈尽川提出全面检查县道和产业道路，改善路面品质。'],['accountability','陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。']]},
+  {city:'penghu',name:'陳盡川',source:'county-chen-penghu-20260104',title:'陈尽川公布海洋、土地、道路与观光愿景',url:'https://penghudaily.blogspot.com/2026/01/blog-post_476.html',date:'2026-01-04',publisherId:'other',publisherName:'澎湖日报（倾向待核定）',items:[['water','陈尽川提出复育渔业资源与保护海洋生态，希望兼顾渔业和观光。'],['economy','陈尽川提出盘点和活化土地、发展地方特色农业，并推动银合欢资源化。'],['transport','陈尽川提出全面检查县道和产业道路，改善路面品质。'],['tourism','陈尽川提出结合田园风光、海洋、传统产业及水上运动，发展四季多元观光活动。'],['accountability','陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。']]},
   {city:'hualien',name:'羅佩秦',source:'county-luo-hualien-20260718',title:'罗佩秦说明光复乡灾民求偿与防灾专业主张',url:'https://www.cnma.org.tw/page/news/show.aspx?kind=8&lang=TW&num=52735',date:'2026-07-18',publisherId:'other',publisherName:'CNMA新闻联合网（倾向待核定）',items:[['accountability','罗佩秦表示将与法律人士合作，协助光复乡受灾者循国家赔偿程序争取权益。'],['water','罗佩秦提出当选后邀请防灾专业人士担任县府国土及河川防制顾问。']]}
  ];
  for(const r of additional){
