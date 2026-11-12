@@ -2630,6 +2630,15 @@ function apply(d){
  hsuPenghuBio.countyBrief.education='国立屏东师范学院体育系；国立中山大学公共事务管理研究所硕士。2018年论文从地方行销角度研究西屿观光，透过资料分析与访谈提出公私沟通及闲置空间利用等建议；这是当时研究，不等于本届竞选承诺。';
  hsuPenghuBio.countyBrief.office='本人校友刊物自述2014年出任西屿乡公所秘书、2018年任澎湖县副县长，曾兼任县府民政处长，后任建设处长；各职务离任年月暂未确认。';
  hsuPenghuBio.countyBrief.extraBioSources=[...(hsuPenghuBio.countyBrief.extraBioSources||[]),'county-hsu-penghu-thesis-2018'];
+ d.sources['tainan-chen-rural-fund-cna-20261105']={title:'中央社：陈亭妃承诺捐三成选举补助款成立偏乡基金',url:'https://www.cna.com.tw/news/aipl/202611050186.aspx',date:'2026-11-05',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道候选人公开承诺'};
+ const chenTainanFund=d.people.find(p=>p.id==='chen-t');if(!chenTainanFund)throw new Error('Missing candidate: 陳亭妃');
+ chenTainanFund.policies=chenTainanFund.policies||[];
+ if(!chenTainanFund.policies.some(x=>x.sources?.includes('tainan-chen-rural-fund-cna-20261105')))chenTainanFund.policies.push({topic:'education',text:'承诺当选上任后捐出30%选举补助款，交由台南市政府成立偏乡教育与偏乡医疗基金，改善偏乡教育及医疗资源。',date:'2026-11-05',sources:['tainan-chen-rural-fund-cna-20261105'],note:'这是候选人的竞选承诺；基金设立方式、具体用途、经费规模及后续执行暂未确认。',type:'竞选政见（媒体报道）',electionYear:2026});
+ d.sources['tainan-hsieh-campaign-site-20261105']={title:'谢龙介竞选网站：十大政见入口',url:'https://www.longuy.com/',date:'2026-11-05（网站上线）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'谢龙介竞选网站（候选人自述）',kind:'候选人竞选网站',note:'候选人发布的政策和竞选材料，属于当事方自述；具体预算、执行及成果仍需独立核查。'};
+ const hsiehTainanSite=d.people.find(p=>p.id==='hsieh');if(!hsiehTainanSite)throw new Error('Missing candidate: 謝龍介');
+ hsiehTainanSite.policyCoverage=hsiehTainanSite.policyCoverage||{checkedAt:'2026-11-12',note:'',sources:[]};
+ hsiehTainanSite.policyCoverage.note+=' 候选人政见网站已于2026年11月5日上线，可查看其公开政见；各项执行细节与财源仍须分别核实。';
+ hsiehTainanSite.policyCoverage.sources=[...new Set([...(hsiehTainanSite.policyCoverage.sources||[]),'tainan-hsieh-campaign-site-20261105'])];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
