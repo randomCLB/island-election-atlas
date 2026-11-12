@@ -82,6 +82,9 @@ const portraits = {
   "賴瑞隆": "https://img.ltn.com.tw/Upload/elect/2026/candidate/1/41.jpg"
 };
 function apply(d){
+ d.sources['county-wei-keelung-photo']={title:'基隆市长候选人魏造文抽签照片',url:'https://www.cna.com.tw/news/aloc/202610270082.aspx',date:'2026-10-27',checkedAt:'2026-11-12',publisherId:'cna',kind:'中央社新闻报道及现场照片，记者王朝钰摄影'};
+ const wei=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');
+ if(wei&&!wei.photo)wei.photo={url:'https://imgcdn.cna.com.tw/www/WebPhotos/800/20261027/1335x768_wmky_0_C20261027000067.jpg',source:'county-wei-keelung-photo',credit:'中央社记者王朝钰',capturedAt:'2026-10-27',note:'候选人抽签现场照片，链接至中央社图片；以原图画面为准。'};
  d.sources["county-ltn-photos"]={title:"2026县市长候选人照片及档案",url:"https://election.ltn.com.tw/2026/candidate",date:null,checkedAt:"2026-11-12",publisherId:"ltn",kind:"自由时报候选人名录，照片由该媒体网站提供，拍摄日期与原始摄影者未列"};
  d.sources["county-kao-japan-20260316"]={title:"新竹市政府赴日本市政考察",url:"https://www.cna.com.tw/postwrite/chi/428126",date:"2026-03-16",checkedAt:"2026-11-12",publisherId:"official-tw",publisherName:"新竹市政府（中央社讯息平台承载）",kind:"市政府发布的访问计划与本人发言"};
  d.sources["county-chang-japan-2025"]={title:"桃园市长访问香川县政府",url:"https://www.tycg.gov.tw/NewsPage_Content.aspx?n=10&s=1565780",date:"2025年（具体日期待核）",checkedAt:"2026-11-12",publisherId:"official-tw",publisherName:"桃园市政府",kind:"市政府发布的城市交流记录"};

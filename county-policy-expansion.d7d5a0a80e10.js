@@ -1067,9 +1067,387 @@ const rows = [
     "url": "https://www.facebook.com/sunwei038563787/posts/pfbid0SVuJM11wb57ndYVz1yYWB9RnV95cvARgVhnPGW9hbctsPWMZ64GenLVgyKXKYUGMl",
     "cut": "2026-10-20",
     "database": "https://blindvote.app/sources/hualien#hl-wei-island-transport"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-kao-eldercare",
+    "name": "高虹安",
+    "topic": "health",
+    "text": "新竹市府在社区据点导入健康量测设备，并规划逐步扩大至全市88处。",
+    "admin": true,
+    "url": "https://www.facebook.com/DrAnnKao/posts/pfbid0gGtCwif7YNxw2kkqogCoKmxRFzSxinCgA9Jbcmp1b4uwwFqXD5rKWKP79T8GgvWFl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-kao-eldercare"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-eldercare",
+    "name": "何志勇",
+    "topic": "health",
+    "text": "何志勇主张放宽敬老爱心卡用途，让长者自行选择交通、医疗、购物及运动支出。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid0ecT7vmE7noWCBL7Aku8jKJLYithAnrS8gSWy2h1KFzie8akgq8EEWjwT2L17sFEjl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-eldercare"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-kao-bus",
+    "name": "高虹安",
+    "topic": "transport",
+    "text": "高虹安提出2028年市区公交全面电动化，结合中央补助与公共充电设施。",
+    "admin": true,
+    "url": "https://www.facebook.com/DrAnnKao/posts/pfbid0dXmJCS1UucrsajmFjj2Wc2DyVhoMz1Ew6Rk6ExNDTUzP7ziszUtGRvRKMdGKDoawl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-kao-bus"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-chuang-bus",
+    "name": "莊競程",
+    "topic": "transport",
+    "text": "庄竞程提出以短区间、高频率通学巴士连接学府路学校与后火车站，并逐步扩展路网。",
+    "admin": false,
+    "url": "https://www.facebook.com/Power3C/posts/1560772805420726",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-chuang-bus"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-bus",
+    "name": "何志勇",
+    "topic": "transport",
+    "text": "何志勇提出在主要干道设置公交专用或优先道，并用智慧号志调整车流。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid02jq56D8hSsX3LXn4bvkggji4mQ53s9AZz8ykc1sbwnVmtPcV4GRouDaifdPD8ATddl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-bus"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-chuang-jobs",
+    "name": "莊競程",
+    "topic": "economy",
+    "text": "庄竞程提出青年技能账户、分阶段创业资金与在地导师支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/Power3C/posts/1623142995850373",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-chuang-jobs"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-jobs",
+    "name": "何志勇",
+    "topic": "economy",
+    "text": "何志勇提出活化闲置校舍和公有房舍，作为创业孵化及共同工作空间。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid0Tb2Tc9FgBteFh7q2e8BWaK9wncG9E7uGSWmBF9iJPX7FoEa3MbSsZ7GVpEbfZD9cl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-jobs"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-chuang-school",
+    "name": "莊競程",
+    "topic": "education",
+    "text": "庄竞程提出初任教师前三年每月5000元租屋津贴，以及依服务年资发放留任奖金。",
+    "admin": false,
+    "url": "https://www.facebook.com/Power3C/posts/1572508874247119",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-chuang-school"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-school",
+    "name": "何志勇",
+    "topic": "education",
+    "text": "何志勇提出减少教师行政负担，增加学校心理辅导人力并推动学生心理健康假。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid02kvjvPHi47TgfsQR5v9fuXNkUo8Nb6cutQJHEDEG3JE9TPRxht8i25DyEcEutB4mSl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-school"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-chuang-housing",
+    "name": "莊競程",
+    "topic": "economy",
+    "text": "庄竞程提出增加可负担社会住宅，并结合托育、公共空间和社区服务。",
+    "admin": false,
+    "url": "https://www.facebook.com/Power3C/posts/1623142995850373",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-chuang-housing"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-housing",
+    "name": "何志勇",
+    "topic": "economy",
+    "text": "何志勇提出放宽青年租屋补助门槛，简化在新竹就学或就业者的申请。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid0ecT7vmE7noWCBL7Aku8jKJLYithAnrS8gSWy2h1KFzie8akgq8EEWjwT2L17sFEjl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-housing"
+  },
+  {
+    "city": "hsinchu-city",
+    "anchor": "hcc-ho-flood",
+    "name": "何志勇",
+    "topic": "water",
+    "text": "何志勇提出改善道路排水、检查地下道抽水设备并设置备援电源。",
+    "admin": false,
+    "url": "https://www.facebook.com/HoChihyung/posts/pfbid0HNEUJpuuA6gxt3BdYwZjxfS21YhRaZwv2xe4stwmrrfk1HD7DXTgPQ5sXShjPmkTl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/hsinchucity#hcc-ho-flood"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-li-healthcare",
+    "name": "李吳穎智",
+    "topic": "health",
+    "text": "李吴颖智提出依距离分级，全额补助偏乡就医计程车费，并依家庭所得和财产补助假牙。",
+    "admin": false,
+    "url": "https://www.facebook.com/groups/1241866853050917/posts/2111162872787973/",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-li-healthcare"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-chen-flood",
+    "name": "陳瑩",
+    "topic": "water",
+    "text": "陈莹提出建立分散式灾害备援，储备粮、水、电、通讯与医疗资源，并加强跨县协作。",
+    "admin": false,
+    "url": "https://www.facebook.com/11YIG/posts/pfbid02As8VT2Z3uWaKgSgeBFBQVhRZ3nWPt1ZXd4HX19fKkKphJuUwgQGCLmpnq9kamGdEl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-chen-flood"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-wu-flood",
+    "name": "吳秀華",
+    "topic": "water",
+    "text": "吴秀华提出在乡镇、部落建立自主防灾网，准备人员训练、避难场所、物资与紧急通讯。",
+    "admin": false,
+    "url": "https://www.facebook.com/100090624231494/posts/pfbid0KjjDFz89yTBXbw2jKcBZsspUZ5GA9fKVwiC3Ujns9yxz3vs1t9n97yXBU656NEh9l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-wu-flood"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-chen-agriculture",
+    "name": "陳瑩",
+    "topic": "economy",
+    "text": "陈莹提出为水稻和释迦产区建立防风林服务队，协助设置复层防风带。",
+    "admin": false,
+    "url": "https://www.facebook.com/11YIG/posts/pfbid02K63tA5Ur6Y5XF5vY9fbMfjw4NyRj2qyUySY99KKtTY4T6AAmREqkFcRXQMGJxCm9l",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-chen-agriculture"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-wu-agriculture",
+    "name": "吳秀華",
+    "topic": "economy",
+    "text": "吴秀华提出青年农民培训和智慧农业教育，协助农民使用设备与数据。",
+    "admin": false,
+    "url": "https://www.facebook.com/100090624231494/posts/pfbid0PBN9tw4NiHQNXbmh6PoX5heizGMmwDCUzc9WSss1NuafzUkQjdxn98XHAryqA1Kzl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-wu-agriculture"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-chen-healthcare",
+    "name": "陳瑩",
+    "topic": "health",
+    "text": "陈莹提出加强外地就医的后送、交通及住宿补助，并提供病友与家属咨询。",
+    "admin": false,
+    "url": "https://www.facebook.com/11YIG/posts/pfbid0DXmkyEA5ubNjYXibuN3CKkXT1pzHR5SPXGYw3SjGPZFLdQdFeUuDP6nPUNaaUwwHl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-chen-healthcare"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-chen-island-transport",
+    "name": "陳瑩",
+    "topic": "transport",
+    "text": "陈莹提出争取增加航班、调整早班机，并改善铁路与候车设施。",
+    "admin": false,
+    "url": "https://www.facebook.com/11YIG/posts/pfbid0DeS9KbCLYJ6Y1n56y4sDZ8ihCmSXsjtJJzLkkrvaDxzGFfajAhgPumgJGjfSiQZrl",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-chen-island-transport"
+  },
+  {
+    "city": "taitung",
+    "anchor": "tt-wu-island-transport",
+    "name": "吳秀華",
+    "topic": "transport",
+    "text": "吴秀华提出争取延长离岛机场跑道、改善港口动线，并增加热门时段铁路直达班次。",
+    "admin": false,
+    "url": "https://www.facebook.com/100090624231494/posts/pfbid0u46L3E3WPH3tjjg89WbgUmswR8oyEGnJVzUS5NpNom3wVChBpT3Ncj8oh2e48ozal",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/taitung#tt-wu-island-transport"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-childcare",
+    "name": "梁文韜",
+    "topic": "childcare",
+    "text": "梁文韬提出减少托育候补，并在金城、金湖试办夜间、假日及紧急临托。",
+    "admin": false,
+    "url": "https://to-to.win/wp-children.html",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-childcare"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-bus",
+    "name": "梁文韜",
+    "topic": "transport",
+    "text": "梁文韬提出整合公交、桥梁接驳及共享电动车的旅游交通票券。",
+    "admin": false,
+    "url": "https://to-to.win/wp-transport.html",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-bus"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-hung-jobs",
+    "name": "洪和成",
+    "topic": "labor",
+    "text": "洪和成提出在金门开办大客车驾驶训练，降低居民赴台受训成本。",
+    "admin": false,
+    "url": "https://www.facebook.com/honghercheng/posts/pfbid0wxc19BErhctSLwSF8nmpP3zd2g1AuarRSNLhLMhqRwwPShMPvAQVDtztQtc2Evxbl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-hung-jobs"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-li-jobs",
+    "name": "李文良",
+    "topic": "economy",
+    "text": "李文良提出由县府媒合高职毕业青年与当地企业，支持培训与实习。",
+    "admin": false,
+    "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0BYZAgBGkduLCb58JjXCqVRk5DQjBZY5r261T85e2DNGg6UdieFTYLweu39hRQkBJl&id=61588799889987",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-li-jobs"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-chen-school",
+    "name": "陳玉珍",
+    "topic": "education",
+    "text": "陈玉珍提出减少教师行政表单、建立法律支持，并检讨工时、加班及课后照顾制度。",
+    "admin": false,
+    "url": "https://www.facebook.com/KinmenMyLove/posts/pfbid0gCxBARVE7xPtFuL81iTT8p6AiDAc3LST23aAzH1vyTL27Xe9wbjQrydkfePGkHhjl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-chen-school"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-huang-school",
+    "name": "黃世團",
+    "topic": "education",
+    "text": "黄世团提出以跨校整合、混龄开班及社区据点，维持人数不足学校的课后照顾。",
+    "admin": false,
+    "url": "https://www.facebook.com/huang.shi.tuan/posts/pfbid05GtMNXeM1NKyj3DXhpTbdrEHudVksLkSdxGC7BoGaXyB9wdcYhXM3LPCxDPaWhkRl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-huang-school"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-school",
+    "name": "梁文韜",
+    "topic": "education",
+    "text": "梁文韬提出从艺术及非考试科目试办跨年级主题教学。",
+    "admin": false,
+    "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02TjS8cXUAEtASyTc5AqFV2W6fGHLTMB1csYwZYyuSVzhVDNHd9Zw94jGPXcQznoJFl&id=61594179176285",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-school"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-hung-housing",
+    "name": "洪和成",
+    "topic": "economy",
+    "text": "洪和成提出规划青年自建住宅与优惠贷款，并设置一定年限的处分限制。",
+    "admin": false,
+    "url": "https://www.facebook.com/honghercheng/posts/pfbid02QMcuoub9qJm13eZaEp971ocEQREifU5VLyir3Mc9pAZjh1Dv45ytEeHEUsQp7YVal",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-hung-housing"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-housing",
+    "name": "梁文韜",
+    "topic": "economy",
+    "text": "梁文韬提出面向符合设籍年限及无房条件青年的低租金住宅。",
+    "admin": false,
+    "url": "https://to-to.win/wp-land.html",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-housing"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-chen-healthcare",
+    "name": "陳玉珍",
+    "topic": "health",
+    "text": "陈玉珍提出增加医护住宿空间，并争取中央补助离岛医事人员住宿。",
+    "admin": false,
+    "url": "https://www.facebook.com/KinmenMyLove/posts/pfbid0ra9sW7JYo7yAEMFmg39qJVpLTG1jSPiLNQMQ6YCAMWmnifm8i3RBsZKvq55TWwiJl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-chen-healthcare"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-healthcare",
+    "name": "梁文韜",
+    "topic": "health",
+    "text": "梁文韬提出由固定医师组成专科责任团队，共享治疗计划和追踪名单。",
+    "admin": false,
+    "url": "https://to-to.win/wp-medical.html",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-healthcare"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-chen-island-transport",
+    "name": "陳玉珍",
+    "topic": "transport",
+    "text": "陈玉珍提出推动兴建台金客轮，称若中央未能提供，将由县府推动。",
+    "admin": false,
+    "url": "https://www.facebook.com/reel/2194764348085885/",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-chen-island-transport"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-li-island-transport",
+    "name": "李文良",
+    "topic": "transport",
+    "text": "李文良提出短期争取航班扩容及居民机位，中长期建议中央评估增加两岸直航。",
+    "admin": false,
+    "url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0o8dK7qQJfTf2giPb67vWN2o2XUBK8bbsF4TznX7NXDcR5jbpfBpg4cUER3XfMydvl&id=61588799889987",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-li-island-transport"
+  },
+  {
+    "city": "kinmen",
+    "anchor": "km-liang-island-transport",
+    "name": "梁文韜",
+    "topic": "transport",
+    "text": "梁文韬提出在雾季及连续假期，为金门居民保留台金航班部分座位。",
+    "admin": false,
+    "url": "https://to-to.win/wp-transport.html",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/kinmen#km-liang-island-transport"
   }
 ];
 function apply(d){
+ d.sources['county-chen-taitung-japan-20250411']={title:'台东数字游牧活动及台日合作意向书',url:'https://ws.ndc.gov.tw/Download.ashx?icon=.pdf&n=5ZyL55m85pyDMTE0MDQxMeaWsOiBnueovy3pgYrniafoh7rngaMg6Ie65p2x5ZWf6Iiq5YSA5byPIOebm%2BWkp%2BiIieihjCDlnIvnmbzmnIPkv4PmiJDoh7rml6XnsL3nvbLmlbjkvY3pgYrniaflkIjkvZzmhI%2FlkJHmm7gucGRm&u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvNjIwMi8zODk1NC83NDIzZjc1NC00MmY4LTQ2ZWEtOWIwYS1jZTkzYjQ4YmZmZDEucGRm',date:'2025-04-11',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国家发展委员会',kind:'官方活动新闻稿'};
+ const chen=d.people.find(x=>x.city==='taitung'&&x.name==='陳瑩');
+ if(!chen)throw new Error('Missing candidate: 陳瑩');
+ if(!chen.evidence.some(x=>x.source==='county-chen-taitung-japan-20250411'))chen.evidence.push({region:'jp',date:'2025-04-11',topic:'参加台日数字游牧交流活动',text:'陈莹出席台东数字游牧启动活动；国发会表示活动有日本地方代表参加，并促成台日合作意向书。',limit:'这是活动参与记录，资料未载陈莹对日本政策的具体发言，也不表示她本人签署意向书。',source:'county-chen-taitung-japan-20250411'});
  d.sources['county-chou-japan-20260312']={title:'屏东农产品在大阪近铁百货推广',url:'https://japan.focustaiwan.tw/economy/202603120005',date:'2026-03-12',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社 Focus Taiwan 日文版',kind:'新闻报道县长赴日推广农产品'};
  const chou=d.people.find(x=>x.city==='pingtung'&&x.name==='周春米');
  if(!chou)throw new Error('Missing candidate: 周春米');
@@ -1091,9 +1469,10 @@ function apply(d){
   if(!p) throw new Error('Missing candidate: '+r.city+' '+r.name);
   const excerpt='county-policy-more-'+r.anchor, original=excerpt+'-original';
   d.sources[excerpt]={title:r.name+' · 政见对照资料库摘录',url:r.database,date:'资料库截点 '+r.cut,checkedAt:'2026-11-12',publisherId:'other',publisherName:'留白投票所',kind:'民间政见资料库摘录；截点不是发言日期'};
-  d.sources[original]={title:r.name+' · 资料库所附原发链接',url:r.url,date:null,checkedAt:'2026-11-12',publisherId:r.url.includes('facebook.com')?'candidate-site':'official-tw',publisherName:r.url.includes('facebook.com')?'候选人公开页面':'县政府公开页面',kind:'原发链接由资料库列出，原文发布日期与后续执行情况待核'};
+  d.sources[original]={title:r.name+' · 资料库所附原发链接',url:r.url,date:null,checkedAt:'2026-11-12',publisherId:r.url.includes('.gov.tw/')?'official-tw':'candidate-site',publisherName:r.url.includes('.gov.tw/')?'政府公开页面':'候选人公开页面',kind:'原发链接由资料库列出，原文发布日期与后续执行情况待核'};
   if(!p.policies.some(x=>x.sources?.includes(excerpt)))p.policies.push({topic:r.topic,text:r.text,type:r.admin?'任内县府计划或说明':'本届公开主张（资料库摘要）',basis:r.admin?'administration':'campaign',electionYear:2026,date:'资料库截至 '+r.cut+'，原发日期待核',sources:[excerpt,original],note:r.admin?'县府计划或任内说明；实际完成时间与结果须另核。':'公开提案，预算、实施条件及后续进度须另核。'});
   if(r.anchor==='hl-wei-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'jp',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'提出花莲与日本离岛直航',text:r.text,limit:'候选人公开提案，资料库提供原发链接；航线可行性及跨境审批仍待确认。',source:excerpt});
+  if(r.anchor==='km-li-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'建议评估增加两岸直航',text:'李文良建议在安全、对等与市场需求前提下，由中央评估恢复或增加台湾本岛与大陆主要城市的直航航点及班次。',limit:'候选人提出评估建议，不代表已核准航线或其全部两岸立场。',source:excerpt});
  }
 }
 if(typeof module!=='undefined')module.exports={apply};else apply(root.ATLAS);
