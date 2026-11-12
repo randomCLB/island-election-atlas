@@ -2697,6 +2697,18 @@ function apply(d){
  const changJunCareer=d.people.find(p=>p.city==='hualien'&&p.name==='張峻');if(!changJunCareer?.countyBrief)throw new Error('Missing candidate: 張峻');
  changJunCareer.countyBrief.work='花莲县议会2011年人物简介列曾任国小家长会长及公益协会顾问；学校和协会名称、任期、是否受薪及现况暂未确认。其他具体工作单位和职务仍待核实。';
  changJunCareer.countyBrief.extraBioSources=[...new Set([...(changJunCareer.countyBrief.extraBioSources||[]),'county-changjun-hualien-council-20110826'])];
+ d.sources['career-kao-iii-moea']={title:'经济部资料：高虹安在资策会的职务',url:'https://www.moea.gov.tw/MNS/doit/publication/wHandPublication_File.ashx?pub_id=5986&serial_no=6',date:'文章日期待核',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'经济部',kind:'刊物文章署名及作者职务'};
+ d.sources['career-kao-tabf-202001']={title:'台湾银行家：高虹安谈大数据工作经历',url:'https://taiwanbanker.tabf.org.tw/paperDetail?id=2107',date:'2020年（刊物）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾金融研训院《台湾银行家》（倾向待核定）',kind:'人物采访；部分为受访者自述'};
+ d.sources['career-ho-ntu']={title:'台湾大学通识教育平台：何志勇教师简介',url:'https://oge.ntu.edu.tw/course/teacher/c1toi?h_type=3&school=c1tjc',date:'页面未列日期',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国立台湾大学通识教育平台',kind:'教师简介；职务状态可能随时间变化'};
+ d.sources['career-ho-campaign-2026']={title:'何志勇竞选网站：个人经历',url:'https://chihyungho.github.io/',date:'2026年竞选网站',checkedAt:'2026-11-12',publisherId:'other',publisherName:'何志勇竞选团队',kind:'候选人竞选网站自述'};
+ d.sources['career-chung-miaoli-government-20221225']={title:'苗栗县政府：钟东锦县长简介',url:'https://www.miaoli.gov.tw/cp.aspx?n=265',date:'2022-12-25（页面日期）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'苗栗县政府',kind:'县政府人物简介'};
+ d.sources['career-wu-chiayi-cec-2022']={title:'2022年朴子市长选举公报：吴品叡自列经历',url:'https://eebulletin.cec.gov.tw/111/13%E5%98%89%E7%BE%A9%E7%B8%A3/05%E6%9D%91%E9%87%8C%E9%95%B7/%E6%9C%B4%E5%AD%90%E5%B8%82%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80%E9%87%8C%E9%95%B7.pdf',date:'2022年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'嘉义县选举委员会',kind:'选举公报刊载候选人自填履历'};
+ for(const [city,name,work,education,refs] of [
+  ['hsinchu-city','高虹安','曾任资讯工业策进会中区产业服务处智慧加值组组长、鸿海科技集团副总经理。她受访时表示2018年3月成立鸿海大数据办公室，并负责将大数据与人工智能应用于制造、医疗及农业；各职务起止年月暂未确认。',null,['career-kao-iii-moea','career-kao-tabf-202001']],
+  ['hsinchu-city','何志勇','台湾大学通识教育平台列其任清华大学通识教育中心兼任助理教授，曾任国家政策研究基金会国家安全组助理研究员及广播节目主持人；各职务起止年月暂未确认。','台湾大学政治学系学士、美国乔治梅森大学政治学硕士、美国加州大学圣塔芭芭拉分校政治学硕士及博士。',['career-ho-ntu','career-ho-campaign-2026']],
+  ['miaoli','鍾東錦','苗栗县政府简介列曾任南庄乡农会常务监事及理事长；任期起止年月暂未确认。',null,['career-chung-miaoli-government-20221225']],
+  ['chiayi-county','吳品叡','2022年朴子市长选举公报自列台湾嘉农国际生物科技企划部副总经理，以及汉唐补习班、汉特美语副班主任；各项任期起止年月暂未确认。',null,['career-wu-chiayi-cec-2022']]
+ ]){const p=d.people.find(x=>x.city===city&&x.name===name);if(!p?.countyBrief)throw new Error('Missing candidate: '+name);p.countyBrief.work=work;if(education)p.countyBrief.education=education;p.countyBrief.extraBioSources=[...new Set([...(p.countyBrief.extraBioSources||[]),...refs])];}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
