@@ -2283,6 +2283,9 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'chiayi-city',name:'張啓楷',source:'county-chang-chiayi-housing-20261112',title:'张啓楷提出可负担住宅与婚育租金补贴',url:'https://www.cna.com.tw/news/aipl/202611120242.aspx',date:'2026-11-12',publisherId:'cna',publisherName:'中央社',items:[['housing','张啓楷主张借鉴桃园经验，鼓励建商捐建社会住宅，并提出青年可负担住宅及婚育租金补贴；适用资格与执行细节尚待说明。']]},
+  {city:'yunlin',name:'張嘉郡',source:'county-chang-yunlin-forum-20261109',title:'云林县长候选人公办政见发表会录影',url:'https://udn.com/news/story/124652/9866284',date:'2026-11-09',publisherId:'udn',publisherName:'联合报',items:[['education','张嘉郡在公办政见发表会录影中提出儿童吃饭、读书免费，以及从小学一年级开始学英语；实施范围和经费待进一步说明。'],['economy','张嘉郡提出青年创业加码1亿元，具体补助资格、分配方式和财源待进一步说明。']]},
+
   {city:'hualien',name:'張峻',source:'county-chang-hualien-market-20261111',title:'张峻提出花莲果菜市场改善方案',url:'https://www.cna.com.tw/news/aloc/202611110250.aspx',date:'2026-11-11',publisherId:'cna',publisherName:'中央社',items:[['economy','张峻提出改善花莲果菜市场的集货拍卖空间、交通动线、停车与冷链设施，并推动产销资讯透明、供需预警及价格调节。']]},
   {city:'hualien',name:'魏嘉賢',source:'county-wei-hualien-rescue-20260921',title:'魏嘉贤提出偏乡救援强化措施',url:'https://www.cna.com.tw/news/aipl/202609210250.aspx',date:'2026-09-21',publisherId:'cna',publisherName:'中央社',items:[['water','魏嘉贤提出补足消防人力、推动无人机送药常态化，并向中央争取驻地紧急后送直升机及整备玉里夜航起降条件。']]},
   {city:'hualien',name:'張峻',source:'county-chang-hualien-disaster-20260921',title:'张峻提出花莲防灾整备方案',url:'https://www.cna.com.tw/news/aipl/202609210250.aspx',date:'2026-09-21',publisherId:'cna',publisherName:'中央社',items:[['water','张峻提出盘点高风险区并建立改善清单、整合公私部门常态演练及强化物资备援，也呼吁建立中央与地方单一协调窗口。']]},
