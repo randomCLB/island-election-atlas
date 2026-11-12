@@ -2639,6 +2639,18 @@ function apply(d){
  hsiehTainanSite.policyCoverage=hsiehTainanSite.policyCoverage||{checkedAt:'2026-11-12',note:'',sources:[]};
  hsiehTainanSite.policyCoverage.note+=' 候选人政见网站已于2026年11月5日上线，可查看其公开政见；各项执行细节与财源仍须分别核实。';
  hsiehTainanSite.policyCoverage.sources=[...new Set([...(hsiehTainanSite.policyCoverage.sources||[]),'tainan-hsieh-campaign-site-20261105'])];
+ d.sources['county-cheng-zhubei-trade-20220812']={title:'郑朝方办公室谈农产品输入限制及竹北产业',url:'https://www.nownews.com/news/5902722',date:'2022-08-12',checkedAt:'2026-11-12',publisherId:'other',publisherName:'NOWnews今日新闻（倾向待核定）',kind:'媒体综合候选人办公室新闻稿与公开活动'};
+ const chengTrade=d.people.find(p=>p.city==='hsinchu-county'&&p.name==='鄭朝方');if(!chengTrade?.countyBrief)throw new Error('Missing candidate: 鄭朝方');
+ if(!chengTrade.evidence.some(x=>x.source==='county-cheng-zhubei-trade-20220812'))chengTrade.evidence.push({region:'cn',date:'2022-08-12',topic:'团队回应大陆限制台湾食品输入',text:'郑朝方2022年参选竹北市长时，其办公室将大陆限制台湾食品输入描述为「以商围政」，并称郑走访当地产业、联系农委会协助对接业者需求。',limit:'政治定性来自当时办公室，报道没有提供各项协助的可验证成果；这是针对当时事件的回应，不能扩大为对全部两岸政策的立场。',source:'county-cheng-zhubei-trade-20220812'});
+ chengTrade.countyBrief.work='2018年选举公报自列曾任人间卫视及环宇广播电台节目主持人、新竹新闻电视主播；NOWnews 2022年报道另列其曾任阳明交通大学客座讲师。各职务起止年月暂未确认。';
+ chengTrade.countyBrief.extraBioSources=[...new Set([...(chengTrade.countyBrief.extraBioSources||[]),'county-cheng-zhubei-trade-20220812'])];
+ d.sources['county-liwu-taitung-ipcf-20260225']={title:'原住民族文化事业基金会：李吴颖智宣布参选及自述经历',url:'https://www.ipcf.org.tw/getMenuByLevel/Radio/Radio_News_Page?newsId=26022512104014976',date:'2026-02-25',checkedAt:'2026-11-12',publisherId:'other',publisherName:'原住民族文化事业基金会（公共媒体；倾向待核定）',kind:'记者采访及候选人自述'};
+ const liwuCareer=d.people.find(p=>p.city==='taitung'&&p.name==='李吳穎智');if(!liwuCareer?.countyBrief)throw new Error('Missing candidate: 李吳穎智');
+ liwuCareer.countyBrief.work='本人自述曾任粗工、清洁工、记者，亦从事饭店公关及餐厅管理；原住民族文化事业基金会采访另载其曾任国会助理，中央社候选人资料列工会副秘书长和不动产业务。各工作单位、服务对象、任职起止年月及现况暂未确认。';
+ liwuCareer.countyBrief.extraBioSources=[...new Set([...(liwuCareer.countyBrief.extraBioSources||[]),'county-liwu-taitung-ipcf-20260225'])];
+ d.sources['county-chang-kinmen-xiangan-ftv-20261009']={title:'民视：张国威谈厦门机场与小三通观光构想',url:'https://health.ftvnews.com.tw/news/detail/2026A09P01M1',date:'2026-10-09',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访及候选人竞选构想'};
+ const changTourism=d.people.find(p=>p.city==='kinmen'&&p.name==='張國威');if(!changTourism)throw new Error('Missing candidate: 張國威');
+ if(!changTourism.evidence.some(x=>x.source==='county-chang-kinmen-xiangan-ftv-20261009'))changTourism.evidence.push({region:'cn',date:'2026-10-09',topic:'借小三通衔接厦门机场',text:'张国威向民视表示，希望在厦门翔安国际机场启用后，利用小三通吸引国际游客中转金门，并同步提升餐饮和接待服务。',limit:'机场启用时间、旅客通关与转运安排及预估客流需另核；这是候选人的观光构想，并非已核定或已实现的计划。',source:'county-chang-kinmen-xiangan-ftv-20261009'});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
