@@ -1799,6 +1799,10 @@ function apply(d){
  d.sources['county-lin-yunlin-career-cec2018']={title:'2018年云林县长选举公报',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/107%E5%B9%B4/11%E9%9B%B2%E6%9E%97%E7%B8%A3/%E7%AC%AC18%E5%B1%86%E7%B8%A3%E9%95%B7%E5%80%99%E9%81%B8%E4%BA%BA%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'云林县选举委员会',kind:'候选人登记的当时经历'};
  const linYl=d.people.find(p=>p.city==='yunlin'&&p.name==='林佳瑜');if(!linYl?.countyBrief)throw new Error('Missing candidate: 林佳瑜');
  linYl.countyBrief.work='2018年選舉公報列其自1994年起開業並任牙醫診所院長；其後任職狀況待核';linYl.countyBrief.extraBioSource='county-lin-yunlin-career-cec2018';
+ if(!linYl.policies.some(x=>x.sources?.includes('county-lin-yunlin-career-cec2018')))linYl.policies.push(
+  {topic:'health',text:'林佳瑜在2018年选举公报提出居家长照和居家照护，提到让义工与培训人员参与，并以「长照4.0」描述其构想。',type:'往届竞选政见（2018年选举公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-lin-yunlin-career-cec2018'],note:'这是2018年主张，公报未列出经费、服务规模和执行细节；本届是否沿用暂未确认。'},
+  {topic:'water',text:'林佳瑜在2018年选举公报提到当年8月下旬大雨，追问地方水文资源、应变能力及整体治水规划。',type:'往届竞选政见（2018年选举公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-lin-yunlin-career-cec2018'],note:'公报主要提出治理问题，并未列出可核实的工程方案；本届是否沿用暂未确认。'}
+ );
  d.sources['county-chen-changhua-council-bio']={title:'彰化县议会议员陈重嘉简介',url:'https://www.chcc.gov.tw/member/details.aspx?Parser=99%2C6%2C40%2C%2C%2C%2C142',date:null,checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'彰化县议会',kind:'现任议员公开人物资料'};
  if(!chenCh.countyBrief)throw new Error('Missing biography: 陳重嘉');
  chenCh.countyBrief.work='議會簡介列曾任富慶集團啟華科技及永晉集團永晉燈飾總經理特助、阡富科技執行長；任職年月待核';chenCh.countyBrief.extraBioSource='county-chen-changhua-council-bio';
