@@ -2609,6 +2609,14 @@ function apply(d){
  const weiHualienJapan=d.people.find(p=>p.city==='hualien'&&p.name==='魏嘉賢');if(!weiHualienJapan)throw new Error('Missing candidate: 魏嘉賢');
  if(!weiHualienJapan.evidence.some(x=>x.source==='county-wei-hualien-japan-agriculture-20250310'))weiHualienJapan.evidence.push({region:'jp',date:'2025-03-10（刊载日）',topic:'考察香川温室后谈花莲农业',text:'花莲县议会议政报道刊载，魏嘉贤参访日本香川县草莓农场后，提出借鉴高架栽培及智慧监控技术，结合观光与青年创业资源发展花莲农业。',limit:'报道未列访日确切日期；这是地方农业建议，不代表相关技术已在花莲实施，也不代表对日本整体政策的立场。',source:'county-wei-hualien-japan-agriculture-20250310'});
  if(!weiHualienJapan.evidence.some(x=>x.source==='county-wei-hualien-takachiho-20191008'))weiHualienJapan.evidence.push({region:'jp',date:'2019-10-08',topic:'花莲与高千穗町缔结姐妹市',text:'时任花莲市长魏嘉贤与日本高千穗町长签订姐妹市盟约，并表示希望持续推动观光、产业、教育和文化交流。',limit:'盟约与当时交流愿景不等于后续各项合作均已落实。',source:'county-wei-hualien-takachiho-20191008'});
+ d.sources['county-wei-hualien-radiology-20200301']={title:'魏嘉贤回忆放射师及SARS防疫经历',url:'https://www.cna.com.tw/news/aloc/202003010069.aspx',date:'2020-03-01',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道及当事人回忆'};
+ const weiHualienCareer=d.people.find(p=>p.city==='hualien'&&p.name==='魏嘉賢');if(!weiHualienCareer?.countyBrief)throw new Error('Missing candidate: 魏嘉賢');
+ weiHualienCareer.countyBrief.work='医事放射师，曾服务花莲县卫生局、富里乡卫生所及苏澳荣民医院。中央社报道他曾参与偏乡X光巡回服务；2003年服役于国军805医院台东分院期间，投入SARS防疫一线。各职务起止年月暂未确认。';
+ weiHualienCareer.countyBrief.extraBioSources=[...(weiHualienCareer.countyBrief.extraBioSources||[]),'county-wei-hualien-radiology-20200301'];
+ d.sources['county-wang-chiayi-city-career-20200328']={title:'王美惠早年工作与地方服务经历',url:'https://www.nownews.com/news/4009351',date:'2020-03-28',checkedAt:'2026-11-12',publisherId:'other',publisherName:'NOWnews今日新闻（倾向待核定）',kind:'媒体人物经历报道'};
+ const wangChiayiCareer=d.people.find(p=>p.city==='chiayi-city'&&p.name==='王美惠');if(!wangChiayiCareer?.countyBrief)throw new Error('Missing candidate: 王美惠');
+ wangChiayiCareer.countyBrief.work='NOWnews报道她早年因家庭经济困难曾在药房工作，后来担任嘉义市议员江熙哲地方服务处助理；立法院委员简介列其曾任该服务处主任。药房名称及各职位起止年月暂未确认。';
+ wangChiayiCareer.countyBrief.extraBioSources=[...(wangChiayiCareer.countyBrief.extraBioSources||[]),'county-wang-chiayi-city-career-20200328'];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
