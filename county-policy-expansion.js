@@ -1785,6 +1785,15 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chen-jinchuan-career-20200608']={title:'陈尽川：剩下的生命留给海洋',url:'https://visionproject.org.tw/article_detail.php?id=5933',date:'2020-06-08',checkedAt:'2026-11-12',publisherId:'other',publisherName:'愿景工程基金会（倾向待核定）',kind:'记者采访与人物经历报道'};
+ const chenJc=d.people.find(p=>p.city==='penghu'&&p.name==='陳盡川');if(!chenJc?.countyBrief)throw new Error('Missing biography: 陳盡川');
+ chenJc.countyBrief.work='受訪表示曾在空軍學習機工技術、退伍後從事冷凍工程，並推廣水上運動與海洋保育；具體服務單位及年月待核';chenJc.countyBrief.extraBioSource='county-chen-jinchuan-career-20200608';
+ d.sources['county-chang-huomu-career-20230619']={title:'张火木争取民众党提名选金门立委',url:'https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=B8496EBE34D0491F&sms=BF7D6D478B935644',date:'2023-06-19',checkedAt:'2026-11-12',publisherId:'other',publisherName:'金门日报（县政府网站转载；倾向待核定）',kind:'地方报纸报道候选人公开履历'};
+ const changHm=d.people.find(p=>p.city==='kinmen'&&p.name==='張火木');if(!changHm?.countyBrief)throw new Error('Missing biography: 張火木');
+ changHm.countyBrief.work='金門日報報導曾任實踐家專執行秘書，在實踐大學長期教學後退休，並撰寫金門文史著作；任職起訖年月待核';changHm.countyBrief.extraBioSource='county-chang-huomu-career-20230619';
+ d.sources['county-hung-kinmen-career-cec2024']={title:'2024年金门立委选举公报：洪和成',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/113%E5%B9%B4%E7%AC%AC11%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E5%A7%94%E5%93%A1/19%E9%87%91%E9%96%80%E7%B8%A3/%E9%87%91%E9%96%80%E7%B8%A3%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2024年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'金门县选举委员会',kind:'候选人自行填报的经历'};
+ const hungKm=d.people.find(p=>p.city==='kinmen'&&p.name==='洪和成');if(!hungKm?.countyBrief)throw new Error('Missing biography: 洪和成');
+ hungKm.countyBrief.work='電腦工程師；2024年選舉公報列其為麒麟旅店企業社負責人，該職起迄及現況待核';hungKm.countyBrief.extraBioSource='county-hung-kinmen-career-cec2024';
  d.sources['county-wei-keelung-issues-20261027']={title:'魏造文抽签时谈基隆人口与淹水',url:'https://udn.com/vote2026/story/124652/9839561',date:'2026-10-27',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者采访候选人公开说法'};
  const weiKl=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');if(!weiKl)throw new Error('Missing candidate: 魏造文');
  weiKl.policyCoverage={checkedAt:'2026-11-12',note:'已查：联合报10月27日采访中，魏造文谈及基隆人口减少、年轻人外出就业及市区道路淹水，表示会在公办公布政见的场合说明想法。暂未确认：该报道没有列出对应的具体措施、预算或时程；本届详细政见仍待核实。尚未查核：个人社群完整发言及后续政见发表会内容。',sources:['county-wei-keelung-issues-20261027','county-policy-index-keelung']};
