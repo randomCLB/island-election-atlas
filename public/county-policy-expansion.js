@@ -1957,6 +1957,8 @@ function apply(d){
  d.sources['county-yang-yilan-policy-20261104']={title:'宜兰县长候选人政见对照与缺漏',url:'https://n.yam.com/article/20261104622723',date:'2026-11-04',checkedAt:'2026-11-12',publisherId:'other',publisherName:'蕃新闻（倾向待核定）',kind:'候选人政见整理；说明未见杨鉯婷具体政见'};
  d.sources['county-yang-yilan-photo-search']={title:'2026候选人名录：杨鉯婷照片状态',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:null,checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'民间候选人名录；照片未收录'};
  const yangYilan=d.people.find(p=>p.city==='yilan'&&p.name==='楊鉯婷');if(!yangYilan)throw new Error('Missing candidate: 楊鉯婷');
+ d.sources['county-yang-yilan-bio-index-20261112']={title:'宜兰县长候选人背景资料',url:'https://civicwind.app/yilan',date:'资料更新至2026-11-11',checkedAt:'2026-11-12',publisherId:'other',publisherName:'公民风向观测站（资料汇编；倾向待核定）',kind:'候选人背景汇编，原始经历资料未取得'};
+ if(yangYilan.countyBrief){yangYilan.countyBrief.work='公民风向观测站资料汇编称曾在不同产业工作；具体单位、职务与起止年月暂未确认，原始经历资料尚未取得。';yangYilan.countyBrief.extraBioSource='county-yang-yilan-bio-index-20261112';}
  if(!yangYilan.photo)yangYilan.photoCoverage={label:'暂未确认',checkedAt:'2026-11-12',note:'已查自由时报候选人名录、台湾选举懒人包及宜兰登记报道；本次未找到可明确对应本人的照片。尚未查核候选人全部社群及后续选举公报。',sources:['county-ltn-photos','county-yang-yilan-photo-search','county-yang-yilan-roster-20260904']};
  yangYilan.policyCoverage={checkedAt:'2026-11-12',note:'已查宜兰登记报道、候选人政见对照及公开姓名检索；暂未找到可归属于本人的具体本届政见。个人社群完整内容及后续选举公报尚未逐项核查。',sources:['county-yang-yilan-roster-20260904','county-yang-yilan-policy-20261104']};
  if(!yangYilan.evidenceCoverage)yangYilan.evidenceCoverage={};
