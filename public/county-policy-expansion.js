@@ -2724,6 +2724,11 @@ function apply(d){
  const chenMarine=d.people.find(p=>p.city==='penghu'&&p.name==='陳盡川');if(!chenMarine?.countyBrief)throw new Error('Missing candidate: 陳盡川');
  chenMarine.countyBrief.work+=' 高雄高分院2025年二审新闻稿记载，他曾驾船协助执法人员取缔非法电鱼，其船于2020年遭纵火；二审判决一名被告有罪，并维持另一名被告无罪，后续程序及是否确定暂未确认。';
  chenMarine.countyBrief.extraBioSources=[...new Set([...(chenMarine.countyBrief.extraBioSources||[]),'county-chen-penghu-boat-court-20250508'])];
+ const wangTaitungEducation=d.people.find(p=>p.city==='taitung'&&p.name==='王志偉');const liwuTraining=d.people.find(p=>p.city==='taitung'&&p.name==='李吳穎智');if(!wangTaitungEducation||!liwuTraining)throw new Error('Missing Taitung candidate');
+ const wangFund=wangTaitungEducation.policies.find(x=>x.sources?.includes('county-wang-taitung-20260912')&&x.topic==='education');if(!wangFund)throw new Error('Missing Wang education policy');
+ wangFund.text='王志伟提出县府注资5000万元成立励学基金并接受捐款，学生总分每进步1分发100元、无上限；考上台大、清大、交大、成大等校的台东学子获10万元奖学金。';
+ wangFund.note='基金名称及无上限条件依中央社报道；适用年级、比较方式、预算与后续执行办法待说明。';
+ if(!liwuTraining.policies.some(x=>x.sources?.includes('county-liwu-taitung-20260912')&&x.topic==='labor'))liwuTraining.policies.push({topic:'labor',text:'李吴颖智提出「以需定训、以训代赈、以赈兴创」的职业训练方向，希望支持在地就业与创业。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'这是职业训练与就业政策方向；训练对象、补助金额、执行方式和财源暂未说明。'});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
