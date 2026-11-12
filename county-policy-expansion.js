@@ -2567,6 +2567,16 @@ function apply(d){
   {topic:'transport',text:'朱定瑀提出除酒驾、毒驾和闯红灯外，交通违规者可登记原因及改善方法，申请免罚撤单。',type:'本届政见（媒体整理）',basis:'campaign',electionYear:2026,date:'2026-10-11（活动）',sources:['county-zhu-hsinchu-policy-20261102'],note:'属于候选人构想；道路交通裁罚涉及中央法令，地方权限、合法性与安全影响须进一步核实。'},
   {topic:'housing',text:'朱定瑀提出以征收土地交换遭公共使用的私人土地，并为育婴父母提供无地价房或免费社会住宅。',type:'本届政见（媒体整理）',basis:'campaign',electionYear:2026,date:'2026-10-11（活动）',sources:['county-zhu-hsinchu-policy-20261102'],note:'依据媒体整理；具体土地来源、征收条件、资格及财源暂未确认。'}
  );
+ d.sources['county-li-kinmen-appointment-20221225']={title:'金门县政府副县长人事任命',url:'https://www.kinmen.gov.tw/News_Content2.aspx?Create=1&n=98E3CA7358C89100&s=4A6B87D7D0085595&sms=BF7D6D478B935644',date:'2022-12-25（人事令生效）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'金门日报（金门县政府网站转载）',kind:'地方媒体报道县府人事'};
+ d.sources['county-li-kinmen-departure-20260620']={title:'李文良卸任金门副县长',url:'https://www.cna.com.tw/news/aloc/202606290063.aspx',date:'2026-06-29（报道日）',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道人事异动'};
+ d.sources['county-li-kinmen-register-20260902']={title:'李文良登记参选并提出四领域政策',url:'https://www.cna.com.tw/news/aipl/202609020279.aspx',date:'2026-09-02',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道参选登记与政策'};
+ const liKinmenUpdate=d.people.find(p=>p.city==='kinmen'&&p.name==='李文良');if(!liKinmenUpdate?.countyBrief)throw new Error('Missing candidate: 李文良');
+ liKinmenUpdate.countyBrief.work='曾任国立金门大学运动与休闲学系助理教授、总务长及金门县政府教育处长；2022年12月25日借调出任副县长，2026年6月20日卸职。其余职务具体任期待核。';
+ liKinmenUpdate.countyBrief.extraBioSources=[...(liKinmenUpdate.countyBrief.extraBioSources||[]),'county-li-kinmen-appointment-20221225','county-li-kinmen-departure-20260620'];
+ if(!liKinmenUpdate.policies.some(x=>x.sources?.includes('county-li-kinmen-register-20260902')))liKinmenUpdate.policies.push(
+  {topic:'transport',text:'李文良提出借鉴马祖新台马轮，推动台湾本岛与金门间的客轮交通。',type:'本届政见（登记采访）',basis:'campaign',electionYear:2026,date:'2026-09-02',sources:['county-li-kinmen-register-20260902'],note:'属于交通构想，船型、航线、投资、中央及地方权责与实施时间待进一步说明。'},
+  {topic:'tourism',text:'李文良提出整合金门酒厂资源，打造文化体验园区，结合地方产业与观光。',type:'本届政见（登记采访）',basis:'campaign',electionYear:2026,date:'2026-09-02',sources:['county-li-kinmen-register-20260902'],note:'园区选址、资金及与酒厂的合作方式暂未确认。'}
+ );
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
