@@ -2181,6 +2181,8 @@ function apply(d){
  ];
  for(const r of changhuaWelfare){const p=d.people.find(x=>x.city==='changhua'&&x.name===r.name);if(!p)throw new Error('Missing candidate: '+r.name);if(!p.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))p.policies.push({topic:'health',text:r.text,type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-11（报道日）',sources:['county-chen-changhua-welfare-20261111'],note:r.note});}
  const foreign=[
+  {city:'nantou',name:'温世政',region:'jp',key:'county-wen-japan-training-20260723',date:'2026-07-23（报道日）',title:'温世政谈赴日进修与铁路模型兴趣',url:'https://www.nownews.com/amp/news/6851227',publisherId:'other',publisherName:'NOWnews今日新闻（倾向待核定）',kind:'媒体人物专访',topic:'赴日进修经历',text:'温世政受访自述曾在日本进修一年，并在当地旅行时接触铁路模型；他后来继续制作铁路模型。',limit:'这是个人经历，不是对日本政治、外交或其他政策的表态；具体进修机构和年份在该报道中未列出。'},
+
   {city:'kinmen',name:'洪和成',region:'us',key:'county-hung-kinmen-us-20240105',date:'2024-01-04（政见会）',title:'洪和成在立委政见会谈金门发展限制',url:'https://www.kmdn.gov.tw/1117/1271/1272/562589',publisherId:'other',publisherName:'金门日报（县政府所属媒体）',kind:'地方媒体报道往届公办政见会',topic:'美国与金门发展限制',text:'洪和成在2024年立委选举政见会上认为，美国、中国大陆及台湾政府都对金门设下多重限制，地方需要在现行规则中寻找发展空间。',limit:'这是候选人对金门处境的政治判断；报道未逐项解释所称美国限制，也未提出具体对美政策。本届是否沿用暂未确认。'},
 
   {city:'miaoli',name:'陳品安',region:'cn',key:'county-chen-miaoli-sovereignty-20260221',date:'2026-02-21（报道日）',title:'陈品安谈社会运动经历与台湾国家认同',url:'https://newtalk.tw/news/view/2026-02-21/1018839',publisherId:'other',publisherName:'Newtalk新闻（倾向待核定）',kind:'媒体人物采访与转述',topic:'台湾国家认同',text:'Newtalk采访报道，陈品安谈及接触法律与政治经历时，表达她认为台湾是国家。',limit:'报道未详细说明她对两岸交流、具体政策或法律地位的完整主张；不据此推断其他立场。'},
@@ -2378,6 +2380,11 @@ function apply(d){
   if(r.anchor==='hl-wei-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'jp',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'提出花莲与日本离岛直航',text:r.text,limit:'候选人公开提案，资料库提供原发链接；航线可行性及跨境审批仍待确认。',source:excerpt});
   if(r.anchor==='km-li-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'建议评估增加两岸直航',text:'李文良建议在安全、对等与市场需求前提下，由中央评估恢复或增加台湾本岛与大陆主要城市的直航航点及班次。',limit:'候选人提出评估建议，不代表已核准航线或其全部两岸立场。',source:excerpt});
   if(r.anchor==='lc-tsao-tourism'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'争取大陆游客赴马祖',text:'曹尔元提出吸引大陆游客赴马祖旅游，并向中央争取跨区域旅游开放。',limit:'资料库摘录的候选人主张；具体政策可行性和原发日期须另核。',source:excerpt});
+ }
+ d.sources['county-foreign-review-wei-japan-20261112']={title:'魏平政接受国民党节目专访',url:'https://knowledge.kmt.org.tw/articles/76115ffc-cc3e-4406-85fc-a349bafc14c2/',date:'2026年（资料库未明列访谈日）',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'国民党知识库（政党资料）',kind:'节目文字整理，自动转写可能有误'};
+ for(const [city,name,regions,refs] of [['hsinchu-county','朱定瑀',['us','jp'],['county-zhu-land-20260905']],['changhua','魏平政',['jp'],['county-foreign-review-wei-japan-20261112']]]){
+  const person=d.people.find(x=>x.city===city&&x.name===name);if(!person)throw new Error('Missing candidate: '+name);person.evidenceCoverage=person.evidenceCoverage||{};
+  for(const region of regions)if(!person.evidence.some(x=>x.region===region)&&!person.evidenceCoverage[region]){const label=region==='us'?'美国':'日本';person.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'本次以候选人姓名、县市及「'+label+'」检索公开网页，并查看所列采访或转写；未找到可明确归属于本人且内容足以核实的相关政策观点。',note:'尚未逐一核查个人社群及全部视频；自动转写可能存在错字，不以不明含义片段推断立场。',sources:refs};}
  }
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
