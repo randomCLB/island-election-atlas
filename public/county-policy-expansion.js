@@ -2531,6 +2531,15 @@ function apply(d){
  wangTt.countyBrief.extraBioSources=[...(wangTt.countyBrief.extraBioSources||[]),'county-taitung-bio-cna-20261027'];
  liwu.countyBrief.work='本人自述曾任粗工、清洁工、记者，亦从事饭店公关及餐厅管理；中央社候选人资料另列工会副秘书长和不动产业务。各工作单位、任职起止年月及现况暂未确认。';
  liwu.countyBrief.extraBioSources=[...(liwu.countyBrief.extraBioSources||[]),'county-taitung-bio-cna-20261027'];
+ d.sources['county-chen-kinmen-whitepaper-20261104']={title:'陈玉珍发表金门政策白皮书',url:'https://www.kmdn.gov.tw/1117/1271/1272/591447',date:'2026-11-04（报道日）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'金门日报（金门县政府所属媒体）',kind:'地方媒体报道候选人政策白皮书'};
+ const chenKinmenWhitepaper=d.people.find(x=>x.city==='kinmen'&&x.name==='陳玉珍');if(!chenKinmenWhitepaper)throw new Error('Missing candidate: 陳玉珍');
+ if(!chenKinmenWhitepaper.policies.some(x=>x.sources?.includes('county-chen-kinmen-whitepaper-20261104')))chenKinmenWhitepaper.policies.push(
+  {topic:'health',text:'陈玉珍提出规划第二大同之家，并建立家户远程智慧照护系统。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'媒体报道白皮书方向；选址、服务资格、经费及实施时间暂未确认。'},
+  {topic:'childcare',text:'陈玉珍提出公办民营坐月子中心和一站式育儿智慧平台。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'具体地点、收费、使用资格及预算暂未确认。'},
+  {topic:'health',text:'陈玉珍提出研议在台湾本岛设陪病住宿会馆，减轻跨海就医家庭负担。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'报道使用研议措辞；选址、入住资格、费用与时程暂未确认。'},
+  {topic:'economy',text:'陈玉珍提出青年创业种子天使基金和青年返乡实习，并发展酒糟牛羊产业链。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'资金规模、申请资格与配套机制暂未确认。'},
+  {topic:'tourism',text:'陈玉珍提出发展音乐、运动及夜间观光，以增加旅客在金门停留的时间。',type:'本届政见（政策白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-11-03（发布）',sources:['county-chen-kinmen-whitepaper-20261104'],note:'具体活动、预算及执行时程暂未确认；预期效果并非已实现成果。'}
+ );
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
