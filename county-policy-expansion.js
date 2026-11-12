@@ -1907,6 +1907,9 @@ function apply(d){
  if(!hsuPh.countyBrief)throw new Error('Missing biography: 許智富');
  hsuPh.countyBrief.work='本人在校友刊物回憶，2003年畢業後在澎湖從事教育工作六年，2009年離開教育界後經商創業；工作單位待核';hsuPh.countyBrief.extraBioSource='county-hsu-penghu-japan-2019';
  if(!hsuPh.evidence.some(x=>x.source==='county-hsu-penghu-japan-2019'))hsuPh.evidence.push({region:'jp',date:'2019年（活动年份）',topic:'赴日本分享海洋保育经验',text:'许智富在母校校友资料中回忆，担任澎湖副县长期间赴日本参加世界最美丽海湾国际年会，分享澎湖净滩与海洋永续经验。',limit:'当事人回忆只用于记录交流经历，具体会议日期与后续成果待核。',source:'county-hsu-penghu-japan-2019'});
+ d.sources['county-hsu-penghu-toyama-20191020']={title:'澎湖代表团赴日本富山湾海湾年会',url:'https://tnr.com.tw/?p=116832',date:'2019-10-20',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾新论（倾向待核定）',kind:'媒体报道澎湖代表团交流活动'};
+ const hsuJapan=hsuPh.evidence.find(x=>x.source==='county-hsu-penghu-japan-2019');
+ if(hsuJapan){hsuJapan.date='2019-10-15至20日（会议期间）';hsuJapan.topic='赴日本富山湾分享海洋保育经验';hsuJapan.text='媒体报道，时任澎湖副县长许智富率团赴日本富山湾参加世界最美丽海湾国际年会，介绍澎湖净滩、减塑与海洋保育。';hsuJapan.limit='这是当次国际会议的交流记录；后续合作成果暂未确认，不能推断其对日本政策的整体立场。';hsuJapan.source='county-hsu-penghu-toyama-20191020';}
  d.sources['county-wu-pj-career-cec2018']={title:'2018年朴子市民代表选举公报',url:'https://eebulletin.cec.gov.tw/107/13%E5%98%89%E7%BE%A9%E7%B8%A3/04%E9%84%89%E9%8E%AE%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8/%E6%9C%B4%E5%AD%90%E5%B8%82%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历，任职起止年月未载'};
  const wuPj=d.people.find(p=>p.city==='chiayi-county'&&p.name==='吳品叡');
  if(!wuPj?.countyBrief)throw new Error('Missing candidate: 吳品叡');
@@ -1969,6 +1972,9 @@ function apply(d){
  const yangYilan=d.people.find(p=>p.city==='yilan'&&p.name==='楊鉯婷');if(!yangYilan)throw new Error('Missing candidate: 楊鉯婷');
  d.sources['county-yang-yilan-bio-index-20261112']={title:'宜兰县长候选人背景资料',url:'https://civicwind.app/yilan',date:'资料更新至2026-11-11',checkedAt:'2026-11-12',publisherId:'other',publisherName:'公民风向观测站（资料汇编；倾向待核定）',kind:'候选人背景汇编，原始经历资料未取得'};
  if(yangYilan.countyBrief){yangYilan.countyBrief.work='公民风向观测站资料汇编称曾在不同产业工作；具体单位、职务与起止年月暂未确认，原始经历资料尚未取得。';yangYilan.countyBrief.extraBioSource='county-yang-yilan-bio-index-20261112';}
+ d.sources['county-chen-yilan-engineer-20260901']={title:'宜兰县长选举登记与陈宏毅工作背景',url:'https://org-today.line-apps.com/tw/v3/article/LXyzMgn',date:'2026-09-01',checkedAt:'2026-11-12',publisherId:'ltn',publisherName:'自由时报（LINE TODAY转载）',kind:'媒体报道候选人登记及工作经历'};
+ const chenYilan=d.people.find(p=>p.city==='yilan'&&p.name==='陳宏毅');if(!chenYilan?.countyBrief)throw new Error('Missing biography: 陳宏毅');
+ chenYilan.countyBrief.work='自由时报2026年9月报道，陈宏毅在北部科技公司担任资深设计工程师；公司名称、具体工作内容及任职起止年月暂未确认。';chenYilan.countyBrief.extraBioSource='county-chen-yilan-engineer-20260901';
  if(!yangYilan.photo)yangYilan.photoCoverage={label:'暂未确认',checkedAt:'2026-11-12',note:'已查自由时报候选人名录、台湾选举懒人包及宜兰登记报道；本次未找到可明确对应本人的照片。尚未查核候选人全部社群及后续选举公报。',sources:['county-ltn-photos','county-yang-yilan-photo-search','county-yang-yilan-roster-20260904']};
  yangYilan.policyCoverage={checkedAt:'2026-11-12',note:'已查宜兰登记报道、候选人政见对照及公开姓名检索；暂未找到可归属于本人的具体本届政见。个人社群完整内容及后续选举公报尚未逐项核查。',sources:['county-yang-yilan-roster-20260904','county-yang-yilan-policy-20261104']};
  if(!yangYilan.evidenceCoverage)yangYilan.evidenceCoverage={};
