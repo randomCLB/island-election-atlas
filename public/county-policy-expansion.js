@@ -330,9 +330,367 @@ const rows = [
     "url": "https://www.facebook.com/shesinging.tw/posts/1613555060133384",
     "cut": "2026-10-23",
     "database": "https://blindvote.app/sources/hsinchucounty#hcn-hsu-roads"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-bus",
+    "name": "吳宗憲",
+    "topic": "transport",
+    "text": "吴宗宪主张将宜兰纳入北北基桃1200元交通月票范围。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid02tEGGRSJoiZ1V92K2FbtyGHk9iTAL7UajiDHTvu83icVR8iK6P2N1Jj5JEAZTTA7Rl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-bus"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-bus",
+    "name": "林國漳",
+    "topic": "transport",
+    "text": "林国漳提出补贴通勤月票：城际票补贴300元、县内票补贴250元。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid032wvEzNe9aMeb5UovjDEdPKg7bXoQjnRKTKKXVFLdqi9KewbnaDUv2hMNtof9Egbcl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-bus"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-jobs",
+    "name": "吳宗憲",
+    "topic": "economy",
+    "text": "吴宗宪提出以宜兰科技园区为基础，争取低污染、高附加价值的矽光子封测与数位产业。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid02h4nTdCHFMLrN9UF2EFUUQefUsmUKtLJ7QHQwefYxPuQt9y7zwGyodwJGvjmKS2LEl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-jobs"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-jobs",
+    "name": "林國漳",
+    "topic": "economy",
+    "text": "林国漳提出以苏澳为核心发展人工智能、无人船等智慧海洋产业。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid023avW6H7EzFqZm8gJaFpVtAKtKkZF7D8q7zxSpYWJ576DxePHbLKQ2zrQinDzs24sl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-jobs"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-school",
+    "name": "吳宗憲",
+    "topic": "education",
+    "text": "吴宗宪提出定期召集学校、教师与家长讨论教育，推动降低师生比及减少行政报告。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid0D6dvxScze3RWgsMcq3zzLvLjhy7nHCRL94MZykNQiFD7mQFF81Rhmd9bNMcxYdBXl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-school"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-school",
+    "name": "林國漳",
+    "topic": "education",
+    "text": "林国漳提出检查全县学校照明，汰换旧灯，并以8年内增加一倍校园藏书为目标。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid0k4rM3uyt1ysyWJLRH6Tnk9wyJzzniErMvoCvvyTmdj5hnfPw1R8QcT6D5ihto288l",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-school"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-traffic-safety",
+    "name": "吳宗憲",
+    "topic": "transport",
+    "text": "吴宗宪提出安排义交协助学校重点路口，并主动盘点通学交通热点及必要管制措施。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid02CdPbDbUTwGyjycdxGub4bjGW4TbJiCA1pt6dUj7a2oquWLiMzwojxp5N8qjqRd3Cl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-traffic-safety"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-traffic-safety",
+    "name": "林國漳",
+    "topic": "transport",
+    "text": "林国漳提出改善交通标志、号志和通学步道，扩大偏乡弹性接驳。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid0bzKaFDExjW1qb6NBntQjAhyZytzU9XyK42cLgvibf7xmNtKQageUZxb5zCq4UMuUl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-traffic-safety"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-housing",
+    "name": "吳宗憲",
+    "topic": "economy",
+    "text": "吴宗宪提出先调查原住民族居住需求，再评估在原乡或交通便利地区设置社会住宅。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid02gVCMKak983UiGbgjJQiCaBkc7GRZXWMNdVmkoLnASCsof3XRjQsVboRG87vQ891Jl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-housing"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-housing",
+    "name": "林國漳",
+    "topic": "economy",
+    "text": "林国漳规划在县政中心兴建400户青年及婚育住宅，并提出青年住宅自治条例。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid032wvEzNe9aMeb5UovjDEdPKg7bXoQjnRKTKKXVFLdqi9KewbnaDUv2hMNtof9Egbcl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-housing"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-flood",
+    "name": "林國漳",
+    "topic": "water",
+    "text": "林国漳提出上游植树保水、中游滞洪、下游增设抽水站，并以8年新增10座为目标。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid021ihMAfogpAcmB1iTHUb4DWV88kVN7GB3BKcGQmQbJJLKt11cgMa8TKvYPxthuX1nl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-flood"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-wu-healthcare",
+    "name": "吳宗憲",
+    "topic": "health",
+    "text": "吴宗宪提出在有急诊能力的医院周边设电子围栏，让救护车接近时联动沿途交通号志。",
+    "admin": false,
+    "url": "https://www.facebook.com/jameswu88/posts/pfbid0VD6bQT8Px5meFudGZTxUf85zRECijvBzQnAUhe1rEPXRSfsm4EXQiFaj2uub8QTWl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-wu-healthcare"
+  },
+  {
+    "city": "yilan",
+    "anchor": "yl-lin-healthcare",
+    "name": "林國漳",
+    "topic": "health",
+    "text": "林国漳提出补助0至6岁儿童挂号费：一般门诊100元、急诊200元。",
+    "admin": false,
+    "url": "https://www.facebook.com/linkuochang.yilan/posts/pfbid0cqNjhU3Y9T6nrUJgU5fBuJNyeiKzfGSFaDYpNDfDutaT8jRfJ3ozX2V8LeqVTT1nl",
+    "cut": "2026-10-19",
+    "database": "https://blindvote.app/sources/yilan#yl-lin-healthcare"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-tsai-jobs",
+    "name": "蔡易餘",
+    "topic": "economy",
+    "text": "蔡易余提出设置青年留嘉服务窗口与职涯地图，支持就业、创业及产业接班。",
+    "admin": false,
+    "url": "https://www.facebook.com/chiayionefish/posts/1634924788003195",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-tsai-jobs"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-wu-jobs",
+    "name": "吳品叡",
+    "topic": "economy",
+    "text": "吴品叡提出8年50亿元青年创业融资及投资支持，提供最高500万元低利贷款并设孵化基地。",
+    "admin": false,
+    "url": "https://www.facebook.com/100063479239691/posts/1717709233688368",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-wu-jobs"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-tsai-school",
+    "name": "蔡易餘",
+    "topic": "education",
+    "text": "蔡易余提出4年以100亿元改善校园，分阶段推动小学三年级起一人一平板。",
+    "admin": false,
+    "url": "https://www.facebook.com/chiayionefish/posts/1634924788003195",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-tsai-school"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-wu-school",
+    "name": "吳品叡",
+    "topic": "education",
+    "text": "吴品叡提出成立AI教育中心与国际教育交流委员会，并改善老旧校舍及技职教育与产业衔接。",
+    "admin": false,
+    "url": "https://www.facebook.com/100063479239691/posts/1678351180957507",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-wu-school"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-tsai-housing",
+    "name": "蔡易餘",
+    "topic": "economy",
+    "text": "蔡易余提出另行盘点社会住宅基地，并评估与托育、长照等公共设施共构。",
+    "admin": false,
+    "url": "https://www.facebook.com/chiayionefish/posts/1600203524808655",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-tsai-housing"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-wu-housing",
+    "name": "吳品叡",
+    "topic": "economy",
+    "text": "吴品叡提出4年朝3000户社会住宅目标推进，并提供每月最高8000元租金支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/100063479239691/posts/1743937791065512",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-wu-housing"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-tsai-agriculture",
+    "name": "蔡易餘",
+    "topic": "economy",
+    "text": "蔡易余提出扩大植物医师巡回及远距咨询，并改善农业设施防灾与灾后复产支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/chiayionefish/posts/1642660393896301",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-tsai-agriculture"
+  },
+  {
+    "city": "chiayi-county",
+    "anchor": "cyc-wu-agriculture",
+    "name": "吳品叡",
+    "topic": "economy",
+    "text": "吴品叡提出整合农产生产、价格预警、冷链、加工及销售通路。",
+    "admin": false,
+    "url": "https://www.facebook.com/100063479239691/posts/1725230929602865",
+    "cut": "2026-10-20",
+    "database": "https://blindvote.app/sources/chiayicounty#cyc-wu-agriculture"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chen-bus",
+    "name": "陳素月",
+    "topic": "transport",
+    "text": "陈素月提出优先盘点交通缺口地区，扩展幸福小黄接驳，服务就医和通学。",
+    "admin": false,
+    "url": "https://www.facebook.com/chengSayYes/posts/pfbid0KoYw6KBNJqi6uUQzbSehVyh4vbhL75Z8G3N34P3KkbWdLs6TDRdHUGKnXXKmCXKFl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chen-bus"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-wei-bus",
+    "name": "魏平政",
+    "topic": "transport",
+    "text": "魏平政提出整合中彰投客运、干线公交和乡镇接驳，并升级幸福小黄服务。",
+    "admin": false,
+    "url": "https://www.facebook.com/WeiPingCheng2026/posts/pfbid0TwntsaxgUqe3eZFoRhA45jDF8AaGbDsDeoCgUdN41ZsGLSTSXjZSW5yBXSUSmkf9l",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-wei-bus"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chiu-bus",
+    "name": "邱建富",
+    "topic": "transport",
+    "text": "邱建富提出支持TPASS补贴、检讨公交路线班次，并推动台中捷运延伸彰化。",
+    "admin": false,
+    "url": "https://www.facebook.com/ChenfuChanghua/posts/pfbid02gLAAxaQBxZz68zT1aGn2nar2UhjSF4aKKAVMT2B3QU59tfdF7zHkaT85JM5Z56tfl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chiu-bus"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chen-jobs",
+    "name": "陳素月",
+    "topic": "economy",
+    "text": "陈素月提出补贴青年创业贷款利息两年，并提供数位营销与品牌培训。",
+    "admin": false,
+    "url": "https://www.facebook.com/chengSayYes/posts/pfbid02DEJCpLrt6gTJk3KSHeYYhKnf7J22T4WyeQ77iXLNJXjoiSupGJdeT5UAtUKnj3ycl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chen-jobs"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-wei-jobs",
+    "name": "魏平政",
+    "topic": "economy",
+    "text": "魏平政提出建设AI智慧园区，争取先进封装与无人机产业，并设招商单一窗口。",
+    "admin": false,
+    "url": "https://www.facebook.com/WeiPingCheng2026/posts/pfbid0Yjw6ucKjJ3EAT7nqnixFzEusQrqEmmpvM5EpKgEvba4BqHwNG9svoiF3wigXrGnfl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-wei-jobs"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chiu-jobs",
+    "name": "邱建富",
+    "topic": "economy",
+    "text": "邱建富提出3亿元青年基金，支持创业和青年返乡务农。",
+    "admin": false,
+    "url": "https://www.facebook.com/ChenfuChanghua/posts/pfbid02Wt9E3b97QDiGCtH8SSr5kL5LjHzy2iuBGmJ9aH1XzSmuReDey6XR2kNcUMYinQY8l",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chiu-jobs"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chen-school",
+    "name": "陳素月",
+    "topic": "education",
+    "text": "陈素月提出扩大课后照顾、减轻学校行政负担，并规划校园保全与法律支持。",
+    "admin": false,
+    "url": "https://www.facebook.com/chengSayYes/posts/pfbid037yP7zWP4Vuk6jamuNnFsH8iCbXXa15jUYCjmN31W5xgrqBJzhekoroE7rC4ePdENl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chen-school"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-wei-school",
+    "name": "魏平政",
+    "topic": "education",
+    "text": "魏平政提出由县府全额补助家长承担的学生团体保险、教科书等代收费用。",
+    "admin": false,
+    "url": "https://www.facebook.com/WeiPingCheng2026/posts/pfbid02BefvPFCNZ4jpmczQM4DsFEe24cXWq9dK11gHbAXhFoPbGDfCeedZfh2yTseBkVPel",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-wei-school"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chiu-school",
+    "name": "邱建富",
+    "topic": "education",
+    "text": "邱建富提出以行政数位化减轻教师负担，增加心理、社工及特殊教育支持人员。",
+    "admin": false,
+    "url": "https://www.facebook.com/ChenfuChanghua/posts/pfbid06zp8dyE8TtB58iZScNkcz5DxzsMJ6MNnFSXWc55Ykhi2j1twSjzkwmMXni32EZAwl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chiu-school"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chen-agriculture",
+    "name": "陳素月",
+    "topic": "economy",
+    "text": "陈素月提出补助农民职业灾害保险、提高公粮运费补助，并建立农产冷链。",
+    "admin": false,
+    "url": "https://www.facebook.com/chengSayYes/posts/pfbid0AVBMYH7QtmYQak3zYRGCjuwrghLdMecwFBiaib8h3a6HnNEHigEU3rMnszxNFpipl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chen-agriculture"
+  },
+  {
+    "city": "changhua",
+    "anchor": "ch-chiu-agriculture",
+    "name": "邱建富",
+    "topic": "economy",
+    "text": "邱建富提出推动台中区农业改良场正名，并发展智慧农业及农产品品牌。",
+    "admin": false,
+    "url": "https://www.facebook.com/ChenfuChanghua/posts/pfbid036vSePREpU6mDonWuvhyVSLLp2BybSzB2xbPrGTZV4p3Pq2it5gRS5ATpGXq3ysChl",
+    "cut": "2026-10-23",
+    "database": "https://blindvote.app/sources/changhua#ch-chiu-agriculture"
   }
 ];
 function apply(d){
+ d.sources['county-tsai-japan-20250518']={title:'蔡易余赴日本交流阿里山森林铁路文化遗产议题',url:'https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=54133&pid=252860',date:'2025-05-18（刊载日）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院网站，陈冠廷委员刊载',kind:'同行委员发布的交流说明'};
+ d.sources['county-tsai-us-20240910']={title:'立法院接见史丹佛大学胡佛研究所访问团',url:'https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=117&pid=243067',date:'2024-09-10',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'立法院',kind:'立法院接待与交流纪要'};
+ const tsai=d.people.find(x=>x.city==='chiayi-county'&&x.name==='蔡易餘');
+ if(!tsai)throw new Error('Missing candidate: 蔡易餘');
+ if(!tsai.evidence.some(x=>x.source==='county-tsai-japan-20250518'))tsai.evidence.push({region:'jp',date:'2025-05-18（刊载日）',topic:'阿里山森林铁路与日本文化交流',text:'据同行立委陈冠廷发布的说明，蔡易余赴东京参与日台交流，向日本人士介绍阿里山森林铁路并推动文化遗产国际合作。',limit:'刊载日不是活动确切日期；此为倡议与交流记录，不表示申遗已经成功。',source:'county-tsai-japan-20250518'});
+ if(!tsai.evidence.some(x=>x.source==='county-tsai-us-20240910'))tsai.evidence.push({region:'us',date:'2024-09-10',topic:'会见美国研究机构访问团',text:'蔡易余接待史丹佛大学胡佛研究所访团时，感谢美国在国际场合的支持，并期待台美在产业与政治议题深化交流。',limit:'立法院的当次会谈纪要；不能据此推断其对所有美国政策的立场。',source:'county-tsai-us-20240910'});
  d.sources['county-zhu-land-20260905']={title:'朱定瑀说明参选与土地政策',url:'https://video.ltn.com.tw/article/_NWoVn8W8og/PLI7xntdRxhw1gDu9DJwSWvhyraLk-de62',date:'2026-09-05',checkedAt:'2026-11-12',publisherId:'ltn',kind:'自由时报采访，内容为候选人受访说法'};
  const zhu=d.people.find(x=>x.city==='hsinchu-county'&&x.name==='朱定瑀');
  if(!zhu)throw new Error('Missing candidate: 朱定瑀');
