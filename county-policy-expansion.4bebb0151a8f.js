@@ -1785,6 +1785,12 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-penghu-cross-strait-20261019']={title:'澎湖县长候选人讨论小三通与观光客源',url:'https://www.cna.com.tw/news/aloc/202610190213.aspx',date:'2026-10-19',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道并分别转述候选人及竞选团队的说法'};
+ const phViews=[['陳振中','陈振中表示将厘清恢复小三通的环节，并争取包括大陆在内的多地观光客源。','这是就旅游与客源提出的说法，不表示恢复小三通已获批准。'],['吳淑瑾','吴淑瑾竞选团队主张两岸双向平等开放，并指出过度依赖单一旅游市场存在风险。','报道引述的是竞选团队声明，团队的政治判断应归于团队。']];
+ for(const [name,text,limit] of phViews){const person=d.people.find(p=>p.city==='penghu'&&p.name===name);if(!person)throw new Error('Missing candidate: '+name);if(!person.evidence.some(x=>x.source==='county-penghu-cross-strait-20261019'))person.evidence.push({region:'cn',date:'2026-10-19',topic:'小三通与旅游市场',text,limit,source:'county-penghu-cross-strait-20261019'});}
+ d.sources['county-hsu-penghu-japan-2019']={title:'许智富自述赴日本参加海湾年会经历',url:'https://alumni.nptu.edu.tw/var/file/95/1095/img/1938/184481359.pdf',date:'2019年（活动年份）',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'国立屏东大学校友资料，许智富自述',kind:'大学校友刊物刊载当事人回忆'};
+ const hsuPh=d.people.find(p=>p.city==='penghu'&&p.name==='許智富');if(!hsuPh)throw new Error('Missing candidate: 許智富');
+ if(!hsuPh.evidence.some(x=>x.source==='county-hsu-penghu-japan-2019'))hsuPh.evidence.push({region:'jp',date:'2019年（活动年份）',topic:'赴日本分享海洋保育经验',text:'许智富在母校校友资料中回忆，担任澎湖副县长期间赴日本参加世界最美丽海湾国际年会，分享澎湖净滩与海洋永续经验。',limit:'当事人回忆只用于记录交流经历，具体会议日期与后续成果待核。',source:'county-hsu-penghu-japan-2019'});
  d.sources['county-wu-pj-career-cec2018']={title:'2018年朴子市民代表选举公报',url:'https://eebulletin.cec.gov.tw/107/13%E5%98%89%E7%BE%A9%E7%B8%A3/04%E9%84%89%E9%8E%AE%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8/%E6%9C%B4%E5%AD%90%E5%B8%82%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历，任职起止年月未载'};
  const wuPj=d.people.find(p=>p.city==='chiayi-county'&&p.name==='吳品叡');
  if(!wuPj?.countyBrief)throw new Error('Missing candidate: 吳品叡');
