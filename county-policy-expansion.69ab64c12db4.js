@@ -1785,6 +1785,26 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chen-su-yue-cec']={title:'2024年彰化第四选区选举公报',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/113%E5%B9%B4%E7%AC%AC11%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/10%E5%BD%B0%E5%8C%96%E7%B8%A3/%E7%AC%AC4%E9%81%B8%E8%88%89%E5%8D%80/%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%AB%8B%E5%A7%94%E7%AC%AC4%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2024年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历'};
+ d.sources['county-wei-career-kmt']={title:'魏平政经历与参选资料',url:'https://knowledge.kmt.org.tw/articles/5e17436b-b56f-449f-befe-d74a3455ad13/',date:'2026-10-21',checkedAt:'2026-11-12',publisherId:'party',publisherName:'中国国民党知识库',kind:'所属政党整理的候选人经历，部分年月仍待独立核对'};
+ const chenSu=d.people.find(p=>p.city==='changhua'&&p.name==='陳素月');
+ const weiPing=d.people.find(p=>p.city==='changhua'&&p.name==='魏平政');
+ if(!chenSu?.countyBrief||!weiPing?.countyBrief)throw new Error('Missing Changhua biographies');
+ chenSu.countyBrief.work='曾任國立空中大學講師、大葉大學兼任講師及拓展文教基金會執行長；另任立委國會助理';chenSu.countyBrief.extraBioSource='county-chen-su-yue-cec';
+ weiPing.countyBrief.work='政和律師事務所主持律師；曾任台北市政府及大同區公所法律諮詢律師，並在輔仁大學及中正大學相關課程授課';weiPing.countyBrief.office='曾任彰化縣選舉委員會委員、國民黨考紀會主委';weiPing.countyBrief.extraBioSource='county-wei-career-kmt';
+ const foreign=[
+  {city:'pingtung',name:'周春米',region:'us',key:'county-chou-us-20240318',date:'2024-03-18（美国时间）',title:'屏东县府说明赴美国交流航太产业',url:'https://www.cna.com.tw/postwrite/chi/365777',publisherId:'official-tw',publisherName:'屏东县政府（中央社讯息平台承载）',kind:'县政府发布的行程说明',topic:'赴美交流航太产业',text:'屏东县府表示，周春米拜会美国国务院相关部门，就屏东航太和卫星产业发展交流。',limit:'县府新闻稿记录访问及讨论，不表示已签约或完成产业投资。'},
+  {city:'lienchiang',name:'王忠銘',region:'cn',key:'county-wang-fuzhou-202601',date:'2026-01-01 至 01-04',title:'马祖小三通首航25周年交流出访报告',url:'https://eip.matsu.gov.tw/matsuopen/chhtml/report_det/2?sysid=C115AY111',publisherId:'official-tw',publisherName:'连江县政府',kind:'县政府公差报告',topic:'赴福州参加小三通纪念交流',text:'连江县政府出访报告列王忠铭赴福州参加小三通首航25周年活动，讨论往来航线和旅游市场拓展。',limit:'县府出访资料说明行程及目的，不等于已实现新的交通政策或对全部两岸议题的立场。'},
+  {city:'lienchiang',name:'王忠銘',region:'us',key:'county-wang-ait-202306',date:'2023-06-28',title:'美国在台协会处长访问马祖',url:'https://www.cna.com.tw/news/aipl/202306290111.aspx',publisherId:'cna',publisherName:'中央社',kind:'新闻报道并引述县府说明',topic:'与美国在台协会讨论通信与应变',text:'美国在台协会处长孙晓雅拜会王忠铭，讨论小三通、战备及海缆中断；县府称王介绍应变演练与扩大微波频宽的安排。',limit:'记录一次会谈及县府转述，不代表双方在所有安全议题上的共同立场。'},
+  {city:'hsinchu-county',name:'徐欣瑩',region:'us',key:'county-hsu-us-invitation-2014',date:'2014-04-29',title:'徐欣莹办公室说明美国交流邀请',url:'https://www.shesinging.tw/singing2012/news.php?id=2350',publisherId:'candidate-site',publisherName:'徐欣莹办公室',kind:'本人办公室发布的信息',topic:'收到美国访问交流计划邀请',text:'徐欣莹办公室称，美国在台协会于2014年邀请她参加美国国际访问者领导计划。',limit:'来源是本人办公室；仅证实其公开的邀请说明，未确认最终出访及交流成果。'},
+  {city:'yunlin',name:'劉建國',region:'jp',key:'county-liu-japan-20230307',date:'2023-03-07（报道日）',title:'刘建国率团赴日本交流长照',url:'https://www.mirrormedia.mg/story/20230307soc011',publisherId:'other',publisherName:'镜周刊（倾向待核定）',kind:'媒体报道本人及访问团说明',topic:'访日交流长期照顾',text:'据镜周刊报道，刘建国率团考察日本长照与医疗设施，并与日本官员交流高龄照护经验；他希望日本支持台湾参与世界卫生组织。',limit:'报道日不一定是全部活动发生日期；访问与倡议不等于已达成具体政策协议。'},
+  {city:'miaoli',name:'鍾東錦',region:'cn',key:'county-chung-mainland-20241204',date:'2024-12-04（行程结束）',title:'钟东锦赴大陆考察地方产业',url:'https://www.cna.com.tw/news/aloc/202412040338.aspx',publisherId:'cna',publisherName:'中央社',kind:'新闻报道并引述县府说明',topic:'赴大陆考察及推介苗栗',text:'钟东锦率团赴大陆考察农业、工商及观光等领域；县府称希望借鉴产业经验并推介苗栗。',limit:'记述县府所述的考察目的，不表示合作成果已完成或可概括其全部两岸立场。'}
+ ];
+ for(const r of foreign){
+  d.sources[r.key]={title:r.title,url:r.url,date:r.date,checkedAt:'2026-11-12',publisherId:r.publisherId,publisherName:r.publisherName,kind:r.kind};
+  const p=d.people.find(x=>x.city===r.city&&x.name===r.name);if(!p)throw new Error('Missing candidate: '+r.name);
+  if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
+ }
  const additional=[
   {city:'taitung',name:'王志偉',source:'county-wang-taitung-20260912',title:'台东县长候选人王志伟提出教育及农业政见',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',publisherId:'cna',publisherName:'中央社',items:[['education','王志伟提出由县府注资5000万元成立劝学基金，并设置依成绩进步与升学表现发放的奖学金。'],['economy','王志伟提出订定农渔产品等级、对顶级品保价收购，并规划运用无人机施肥及防治。']]},
   {city:'penghu',name:'陳盡川',source:'county-chen-penghu-20260104',title:'陈尽川公布海洋、土地、道路与观光愿景',url:'https://penghudaily.blogspot.com/2026/01/blog-post_476.html',date:'2026-01-04',publisherId:'other',publisherName:'澎湖日报（倾向待核定）',items:[['water','陈尽川提出复育渔业资源与保护海洋生态，并推动银合欢资源化。'],['transport','陈尽川提出全面检查县道和产业道路，改善路面品质。'],['accountability','陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。']]},
