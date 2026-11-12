@@ -2303,6 +2303,8 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'taitung',name:'王志偉',source:'county-wang-taitung-education-farming-20260912',title:'王志伟提出教育及农机与品种政策',url:'https://udn.com/news/amp/story/124652/9749859',date:'2026-09-12',publisherId:'udn',publisherName:'联合报',items:[['education','王志伟提出依学生性向与志向，引导进入理工、军警、护理及农业等领域，并鼓励就读农校、投入在地农业；课程和经费待说明。'],['agriculture','王志伟提出成立农机合作社，争取中央及县府补助大型农机使用，并由县府购买热带水果新品种，免费授权县民栽种；品种、资格和经费待说明。']]},
+
   {city:'chiayi-county',name:'蔡易餘',source:'county-chiayi-rural-water-20261112',title:'蔡易余争取偏乡接自来水并提出大埔交通方案',url:'https://udn.com/news/story/124652/9872860',date:'2026-11-12（报道日）',publisherId:'udn',publisherName:'联合报',items:[['water','蔡易余表示将与立委推动修正偏乡自来水接管标准，降低大埔山区居民接管困难；调整标准须经相关主管机关依法处理。'],['transport','蔡易余提出拓宽台三线、争取台82线快速道路延伸，以改善大埔对外交通；路线、经费与核定时间尚待说明。']]},
   {city:'chiayi-county',name:'吳品叡',source:'county-chiayi-senior-care-20261112',title:'吴品叡提出敬老照护加码方案',url:'https://udn.com/news/story/124652/9872860',date:'2026-11-12（报道日）',publisherId:'udn',publisherName:'联合报',items:[['health','吴品叡提出将假牙补助提高至4.4万元，推动巡回医疗与远距照护，并补足日间照护服务不足的乡镇；适用条件和财源待说明。']]},
   {city:'miaoli',name:'陳品安',source:'county-miaoli-youth-20260928',title:'陈品安提出青年住房、创业与参与政策',url:'https://udn.com/news/story/124652/9781166',date:'2026-09-28（报道日）',publisherId:'udn',publisherName:'联合报',items:[['housing','陈品安提出老屋修缮最高补助50万元，并由县府协助代租代管；补助对象、屋龄条件及预算待说明。'],['economy','陈品安提出青年创业及留学贷款利息补贴，并成立苗栗天使基金投资在地新创团队；基金规模及资格待说明。'],['accountability','陈品安提出推动青年参与式预算，让青年提出提案并参与预算决定；审议程序及金额待说明。']]},
@@ -2363,6 +2365,7 @@ function apply(d){
  const zhu=d.people.find(x=>x.city==='hsinchu-county'&&x.name==='朱定瑀');
  if(!zhu)throw new Error('Missing candidate: 朱定瑀');
  if(!zhu.policies.some(x=>x.sources?.includes('county-zhu-land-20260905')))zhu.policies.push({topic:'economy',text:'朱定瑀提出对私有土地进行区段征收，配回地主四成建地，其余土地用于租赁或支持青年与企业使用；他认为这有助于分散发展及抑制炒地。',type:'媒体采访转述本人主张',basis:'campaign',electionYear:2026,date:'2026-09-05',sources:['county-zhu-land-20260905'],note:'这是候选人提出的方案；征收权限、法律条件与可行性尚待核实。'});
+ if(!zhu.policies.some(x=>x.topic==='housing'&&x.sources?.includes('county-zhu-land-20260905')))zhu.policies.push({topic:'housing',text:'朱定瑀提出在其土地改革构想下，给予育婴县民一定年限的免费土地建房，并附一个免费车位。',type:'本届主张（媒体采访）',basis:'campaign',electionYear:2026,date:'2026-09-05',sources:['county-zhu-land-20260905'],note:'属于候选人构想；适用资格、年限、财源以及土地征收和使用的法律条件均待说明，不代表已实施。'});
  if(!zhu.evidence.some(x=>x.source==='county-zhu-land-20260905'))zhu.evidence.push({region:'cn',date:'2026-09-05',topic:'两岸政治与统一的个人判断',text:'据自由时报采访，朱定瑀表达对中国政治未来的预测，并认为两岸统一将由台湾一方主导。',limit:'这是受访者个人判断，并非已发生的事实，也不构成可验证的预测。',source:'county-zhu-land-20260905'});
  zhu.policyCoverage=null;
  for(const r of rows){
