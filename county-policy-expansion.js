@@ -1785,6 +1785,23 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-chou-penghu-agriculture-20261110']={title:'周倪安提出澎湖农地复耕与农经学院构想',url:'https://www.cna.com.tw/news/aloc/202611100294.aspx',date:'2026-11-10',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'新闻报道候选人政策记者会'};
+ const chouPh=d.people.find(p=>p.city==='penghu'&&p.name==='周倪安');if(!chouPh)throw new Error('Missing candidate: 周倪安');
+ if(!chouPh.policies.some(x=>x.sources?.includes('county-chou-penghu-agriculture-20261110')))chouPh.policies.push(
+  {topic:'economy',text:'周倪安提出荒地代管委托经营办法，鼓励废耕农地复耕，并以培育800名农业工作者为目标。',type:'本届政见（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-11-10',sources:['county-chou-penghu-agriculture-20261110'],note:'候选人提出的目标；土地权利、代管依据、经费与执行条件尚待说明。'},
+  {topic:'education',text:'周倪安提出争取澎湖科技大学成为台湾大学澎湖分校，并增设农业经济学院，培养当地农业人才。',type:'本届政见（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-11-10',sources:['county-chou-penghu-agriculture-20261110'],note:'这是争取方向；学校整并、设院权限及双方是否同意尚待确认。'}
+ );
+ chouPh.policyCoverage=null;
+ d.sources['county-liu-yilan-yuanshan-2022']={title:'2022年宜兰员山乡长选举公报',url:'https://eebulletin.cec.gov.tw/111/15%E5%AE%9C%E8%98%AD%E7%B8%A3/03%E9%84%89%E9%8E%AE%E5%B8%82%E9%95%B7/%E5%93%A1%E5%B1%B1%E9%84%89%E9%84%89%E9%95%B7%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/%E5%93%A1%E5%B1%B1%E9%84%89%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1.pdf',date:'2022年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'宜兰县选举委员会',kind:'候选人填报的经历及往届政见'};
+ const liuYl=d.people.find(p=>p.city==='yilan'&&p.name==='劉燦輝');if(!liuYl?.countyBrief)throw new Error('Missing candidate: 劉燦輝');
+ liuYl.countyBrief.work='2022年選舉公報列其曾務農、任工人與鐵工，並列員山社區發展協會理事及宜蘭縣星相學會理事長；任職年月待核';liuYl.countyBrief.extraBioSource='county-liu-yilan-yuanshan-2022';
+ if(!liuYl.policies.some(x=>x.sources?.includes('county-liu-yilan-yuanshan-2022')))liuYl.policies.push(
+  {topic:'transport',text:'刘灿辉2022年参选员山乡长时提出延伸复兴路至岚峰路及岚峰路至永同路，经征收后分配部分建地，并以剩余土地拍卖所得筹措道路经费。',type:'往届乡长选举政见（2022年公报）',basis:'campaign',electionYear:2022,date:'2022年选举公报',sources:['county-liu-yilan-yuanshan-2022'],note:'属于当年乡长选举构想；征收条件、土地权利、经费及本届是否沿用暂未确认。'},
+  {topic:'economy',text:'刘灿辉2022年主张推广设施栽培、协助农民拟定经营计划，并邀请农业推广中心介绍高经济价值作物。',type:'往届乡长选举政见（2022年公报）',basis:'campaign',electionYear:2022,date:'2022年选举公报',sources:['county-liu-yilan-yuanshan-2022'],note:'属于2022年员山乡长选举主张；本届县长选举是否沿用暂未确认。'}
+ );
+ d.sources['county-wu-yunlin-fiscal-20260831']={title:'吴炳辉登记参选云林县长并谈财政分配',url:'https://udn.com/news/story/124652/9724893',date:'2026-08-31',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'新闻报道候选人登记时的说法'};
+ const wuYl=d.people.find(p=>p.city==='yunlin'&&p.name==='吳炳輝');if(!wuYl)throw new Error('Missing candidate: 吳炳輝');
+ if(!wuYl.policies.some(x=>x.sources?.includes('county-wu-yunlin-fiscal-20260831')))wuYl.policies.push({topic:'accountability',text:'吴炳辉主张修改财政收支划分法，认为云林分配的中央资源相较六都不足；他将财政分配改革列为县长选举的重要议题。',type:'本届政见（登记时受访）',basis:'campaign',electionYear:2026,date:'2026-08-31',sources:['county-wu-yunlin-fiscal-20260831'],note:'资源差距是候选人的判断；修改法律涉及中央权限，报道未给出具体条文与分配公式。'});
  d.sources['county-luo-hualien-career-20260903']={title:'罗佩秦登记参选花莲县长',url:'https://www.tainantimes.com/archives/77906',date:'2026-09-03',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台南时报（媒体倾向待核定）',kind:'媒体报道候选人军旅背景'};
  const luo=d.people.find(p=>p.city==='hualien'&&p.name==='羅佩秦');if(!luo?.countyBrief)throw new Error('Missing biography: 羅佩秦');
  luo.countyBrief.work='媒體報導其為陸軍中校退伍；具體任職單位與服役年月待核';luo.countyBrief.extraBioSource='county-luo-hualien-career-20260903';
