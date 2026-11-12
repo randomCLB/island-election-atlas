@@ -2119,6 +2119,12 @@ function apply(d){
   {topic:'transport',text:'洪和成2018年提出开辟沙美小三通第二码头，并让浯江轮渡公司加入营运。',type:'往届县长选举政见（2018年公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-hung-kinmen-cec-2018'],note:'往届竞选构想，不代表工程已完成；本届是否沿用暂未确认。'},
   {topic:'education',text:'洪和成2018年提出小学、幼儿园提早半小时放学，并由学校负责接送。',type:'往届县长选举政见（2018年公报）',basis:'campaign',electionYear:2018,date:'2018年选举公报',sources:['county-hung-kinmen-cec-2018'],note:'往届竞选构想，适用方式、经费及本届是否沿用暂未确认。'}
  );
+ const changhuaWelfare=[
+  {name:'魏平政',text:'魏平政提出每名长者每年发放1万元敬老金，并将长青幸福卡在农渔会的消费折抵额度提高至500元。',note:'这是候选人提出的福利方案；适用年龄、发放细则、财源与实施时间仍待核实。'},
+  {name:'陳素月',text:'陈素月竞选团队提出将长青幸福卡扩大用于特约计程车折抵，并在偏远乡镇结合车队提供预约就医接驳。',note:'这是竞选团队提出的规划；补助额度、适用范围与经费仍待核实。'},
+  {name:'邱建富',text:'邱建富提出70岁以上长者每人发放6000元春节敬老礼金，并将长青幸福卡每月点数提高至1500点。',note:'他估计相关社福政见每年增加约80亿元预算；该数字涵盖相关福利方案，并非这两项的单独成本。'}
+ ];
+ for(const r of changhuaWelfare){const p=d.people.find(x=>x.city==='changhua'&&x.name===r.name);if(!p)throw new Error('Missing candidate: '+r.name);if(!p.policies.some(x=>x.sources?.includes('county-chen-changhua-welfare-20261111')))p.policies.push({topic:'health',text:r.text,type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-11（报道日）',sources:['county-chen-changhua-welfare-20261111'],note:r.note});}
  const foreign=[
   {city:'hsinchu-county',name:'徐欣瑩',region:'cn',key:'county-hsu-hsinchu-referendum-20250321',date:'2025-03-21（议案印发）',title:'两岸与避免战争公投提案',url:'https://lis.ly.gov.tw/lygazettec/mtcdoc?PD110306%3ALCEWA01_110306_00302=',publisherId:'official-tw',publisherName:'立法院',kind:'立法院议案关系文书',topic:'连署两岸与避免战争公投案',text:'徐欣莹连署许宇甄等委员提出的公投案；该案针对总统将中国称为境外敌对势力的说法，主张以公投询问政府避免战争。',limit:'她是连署人，并非案列提案人；提案理由中的政治判断属于提案方，不能据此认定公投已举行或通过。'},
   {city:'chiayi-city',name:'張啓楷',region:'cn',key:'county-chang-chiayi-cross-strait-20250304',date:'2025-03-04',title:'张啓楷质询国防与两岸关系',url:'https://lawmaker.twreporter.org/congress/a/158982',publisherId:'other',publisherName:'报导者观察站（立法院议事逐字资料）',kind:'立法院院会质询逐字记录',topic:'国防准备与两岸和平',text:'张啓楷在立法院质询时支持提高国防预算，并主张政府推动两岸和平、避免战争；他批评执政党的两岸路线。',limit:'这是2025年院会质询时的政治主张；行政院长当场反对他对官员子女的相关说法，不代表双方达成共识。'},
