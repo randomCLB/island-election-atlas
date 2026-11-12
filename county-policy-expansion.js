@@ -2379,6 +2379,12 @@ function apply(d){
   if(r.anchor==='km-li-island-transport'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'建议评估增加两岸直航',text:'李文良建议在安全、对等与市场需求前提下，由中央评估恢复或增加台湾本岛与大陆主要城市的直航航点及班次。',limit:'候选人提出评估建议，不代表已核准航线或其全部两岸立场。',source:excerpt});
   if(r.anchor==='lc-tsao-tourism'&&!p.evidence.some(x=>x.source===excerpt))p.evidence.push({region:'cn',date:'资料库截至 '+r.cut+'，原发日期待核',topic:'争取大陆游客赴马祖',text:'曹尔元提出吸引大陆游客赴马祖旅游，并向中央争取跨区域旅游开放。',limit:'资料库摘录的候选人主张；具体政策可行性和原发日期须另核。',source:excerpt});
  }
+ d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
+ d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
+ for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
+  const p=d.people.find(x=>x.city===city&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.evidenceCoverage=p.evidenceCoverage||{};
+  for(const [region,label] of [['cn','中国大陆／两岸'],['us','美国'],['jp','日本']])if(!p.evidence.some(x=>x.region===region)&&!p.evidenceCoverage[region])p.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'本次以候选人姓名、县市及「'+label+'」相关词检索公开网页，并查看所列候选人报道或资料索引；未找到可明确归属于本人的相关观点。',note:'未逐一核查个人社群、所有视频及后续选举公报；同名结果不自动视为本人，不能据此推定立场。',sources:refs};
+ }
 }
 if(typeof module!=='undefined')module.exports={apply};else apply(root.ATLAS);
 })(typeof window==='undefined'?globalThis:window);
