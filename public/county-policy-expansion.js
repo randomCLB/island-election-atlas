@@ -2040,8 +2040,18 @@ function apply(d){
  d.sources['county-wei-keelung-civic-20261108']={title:'基隆民间团体公布市长候选人承诺回应',url:'https://udn.com/news/story/7328/9865646',date:'2026-11-08（报道日）',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道民间团体公布的候选人回应'};
  d.sources['county-wei-keelung-interview-20261027']={title:'魏造文抽签后谈参选原因',url:'https://udn.com/vote2026/story/124652/9839561',date:'2026-10-27',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体采访候选人'};
  const weiCivicKl=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');if(!weiCivicKl)throw new Error('Missing candidate: 魏造文');
+ if(!weiCivicKl.policies.some(x=>x.sources?.includes('county-wei-keelung-interview-20261027')))weiCivicKl.policies.push(
+  {topic:'economy',text:'魏造文认为基隆产业没落、年轻人外出就业与少子化有关，希望找出人口流失的原因。',type:'本届施政观点（媒体采访）',basis:'campaign',electionYear:2026,date:'2026-10-27',sources:['county-wei-keelung-interview-20261027'],note:'这是候选人对问题的判断；报道没有列出具体就业或人口政策，因果关系也须另行检验。'},
+  {topic:'water',text:'魏造文认为基隆市政建设不足，并指出台风或大雨时市区道路淹水的问题。',type:'本届施政观点（媒体采访）',basis:'campaign',electionYear:2026,date:'2026-10-27',sources:['county-wei-keelung-interview-20261027'],note:'报道没有列出具体防洪措施、工程、预算或时程；不能把问题判断当作已提出解决方案。'}
+ );
  if(!weiCivicKl.policies.some(x=>x.sources?.includes('county-wei-keelung-civic-20261108')))weiCivicKl.policies.push({topic:'accountability',text:'民间团体表示，魏造文签署其政策承诺，对12项诉求中「文化资产与水岸活化」保留，其余11项表示同意；诉求涵盖生态、教育、劳工安全及财政纪律等领域。',type:'本届政见（回应民团诉求）',basis:'campaign',electionYear:2026,date:'2026-11-03（签署）',sources:['county-wei-keelung-civic-20261108'],note:'这是对民间团体诉求的回应；报道未逐一刊出其余11项条文，不能自行扩写细节、预算或执行时程。'});
  weiCivicKl.policyCoverage={checkedAt:'2026-11-12',note:'已查：本人10月27日谈及人口流失与道路淹水；民团11月公布其承诺回应。暂未确认：其余11项诉求的逐条原文，以及人口和防洪措施的具体方案、预算与时程。尚未查核：个人社群完整发言及后续公办政见会。',sources:['county-wei-keelung-interview-20261027','county-wei-keelung-civic-20261108']};
+ d.sources['county-liang-registration-20260904']={title:'梁文韬登记参选金门县长',url:'https://www.kmdn.gov.tw/1117/1271/1272/589923?cprint=pt',date:'2026-09-04',checkedAt:'2026-11-12',publisherId:'other',publisherName:'金门日报（金门县政府所属报社）',kind:'媒体报道候选人登记时的主张'};
+ if(!liang.policies.some(x=>x.sources?.includes('county-liang-registration-20260904')))liang.policies.push(
+  {topic:'education',text:'梁文韬提出推动混级教育、因材施教，回应金门少子化问题。',type:'本届政见（登记时受访）',basis:'campaign',electionYear:2026,date:'2026-09-04（报道日）',sources:['county-liang-registration-20260904'],note:'报道没有列出适用学校、师资安排、预算及执行时间。'},
+  {topic:'economy',text:'梁文韬提出在金门酒厂的基础上发展观光和轻工业，回应产业空洞化。',type:'本届政见（登记时受访）',basis:'campaign',electionYear:2026,date:'2026-09-04（报道日）',sources:['county-liang-registration-20260904'],note:'属于产业发展方向；报道未列具体项目、投资及财源。'},
+  {topic:'health',text:'梁文韬提出重建社区并增加健康公园，营造高龄友善环境。',type:'本届政见（登记时受访）',basis:'campaign',electionYear:2026,date:'2026-09-04（报道日）',sources:['county-liang-registration-20260904'],note:'报道未列具体地点、设施、预算及执行时间。'}
+ );
  d.sources['county-huang-taoyuan-career-cec2020']={title:'2020年桃园市第二选区立委选举公报',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/109%E5%B9%B4%E7%AC%AC10%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/04%E6%A1%83%E5%9C%92%E5%B8%82/%E6%A1%83%E5%9C%92%E5%B8%82%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1%E7%AC%AC2%E9%81%B8%E5%8D%80%20.pdf',date:'2020年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人自列学历及经历'};
  huangTy.countyBrief.work='曾任国际通商法律事务所律师；2020年选举公报自列桃园市政府参议、顾问，桃园市客家文化基金会监察人及农业工程研究中心董事；各职起止年月暂未确认。';huangTy.countyBrief.extraBioSource='county-huang-taoyuan-career-cec2020';
  d.sources['county-chang-yunlin-work-20260622']={title:'张嘉郡人物侧写与工作经历',url:'https://udn.com/vote2026/story/124652/9579725',date:'2026-06-22',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体人物侧写'};
