@@ -1921,6 +1921,13 @@ function apply(d){
  if(!hsuPh.countyBrief)throw new Error('Missing biography: 許智富');
  hsuPh.countyBrief.work='本人在校友刊物回憶，2003年畢業後在澎湖從事教育工作六年，2009年離開教育界後經商創業；工作單位待核';hsuPh.countyBrief.extraBioSource='county-hsu-penghu-japan-2019';
  if(!hsuPh.evidence.some(x=>x.source==='county-hsu-penghu-japan-2019'))hsuPh.evidence.push({region:'jp',date:'2019年（活动年份）',topic:'赴日本分享海洋保育经验',text:'许智富在母校校友资料中回忆，担任澎湖副县长期间赴日本参加世界最美丽海湾国际年会，分享澎湖净滩与海洋永续经验。',limit:'当事人回忆只用于记录交流经历，具体会议日期与后续成果待核。',source:'county-hsu-penghu-japan-2019'});
+ d.sources['county-hsu-penghu-20260302']={title:'许智富宣布参选与医疗、地方建设主张',url:'https://ctinews.com/news/items/14a1Brz0xk',date:'2026-03-02',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中天新闻网（倾向待核定）',kind:'媒体报道候选人参选宣言'};
+ if(!hsuPh.policies.some(x=>x.sources?.includes('county-hsu-penghu-20260302')))hsuPh.policies.push(
+  {topic:'health',text:'许智富提出离岛急重症医疗强化计划，争取增设急诊与重症病床，并改善空中转诊机制。',type:'本届政见（参选宣言报道）',basis:'campaign',electionYear:2026,date:'2026-03-02',sources:['county-hsu-penghu-20260302'],note:'媒体转述候选人主张；床位数量、医疗人力、经费及实施时间暂未确认。'},
+  {topic:'tourism',text:'许智富提出推动重光园区转型，结合文化与观光发展。',type:'本届政见（参选宣言报道）',basis:'campaign',electionYear:2026,date:'2026-03-02',sources:['county-hsu-penghu-20260302'],note:'报道未说明园区具体改造方式、预算或时程。'},
+  {topic:'health',text:'许智富提出营造高龄友善环境，鼓励住宅加装电梯，改善长者居住条件。',type:'本届政见（参选宣言报道）',basis:'campaign',electionYear:2026,date:'2026-03-02',sources:['county-hsu-penghu-20260302'],note:'补助对象、金额及执行方式暂未确认。'},
+  {topic:'accountability',text:'许智富主张县府优先延揽在地人才，强调施政延续性。',type:'本届政见（参选宣言报道）',basis:'campaign',electionYear:2026,date:'2026-03-02',sources:['county-hsu-penghu-20260302'],note:'属于用人方向，具体资格与选任办法暂未确认。'}
+ );
  d.sources['county-hsu-penghu-toyama-20191020']={title:'澎湖代表团赴日本富山湾海湾年会',url:'https://tnr.com.tw/?p=116832',date:'2019-10-20',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾新论（倾向待核定）',kind:'媒体报道澎湖代表团交流活动'};
  const hsuJapan=hsuPh.evidence.find(x=>x.source==='county-hsu-penghu-japan-2019');
  if(hsuJapan){hsuJapan.date='2019-10-15至20日（会议期间）';hsuJapan.topic='赴日本富山湾分享海洋保育经验';hsuJapan.text='媒体报道，时任澎湖副县长许智富率团赴日本富山湾参加世界最美丽海湾国际年会，介绍澎湖净滩、减塑与海洋保育。';hsuJapan.limit='这是当次国际会议的交流记录；后续合作成果暂未确认，不能推断其对日本政策的整体立场。';hsuJapan.source='county-hsu-penghu-toyama-20191020';}
