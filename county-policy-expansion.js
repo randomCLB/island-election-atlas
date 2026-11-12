@@ -1805,6 +1805,7 @@ function apply(d){
  hungKm.countyBrief.work='電腦工程師；2024年選舉公報列其為麒麟旅店企業社負責人，該職起迄及現況待核';hungKm.countyBrief.extraBioSource='county-hung-kinmen-career-cec2024';
  d.sources['county-wei-keelung-issues-20261027']={title:'魏造文抽签时谈基隆人口与淹水',url:'https://udn.com/vote2026/story/124652/9839561',date:'2026-10-27',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者采访候选人公开说法'};
  const weiKl=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');if(!weiKl)throw new Error('Missing candidate: 魏造文');
+ if(weiKl.countyBrief){weiKl.countyBrief.work='已查联合报抽签采访及候选人资料汇编；具体工作单位、职务及任职年月暂未确认。';weiKl.countyBrief.extraBioSource='county-wei-keelung-issues-20261027';}
  weiKl.policyCoverage={checkedAt:'2026-11-12',note:'已查：联合报10月27日采访中，魏造文谈及基隆人口减少、年轻人外出就业及市区道路淹水，表示会在公办公布政见的场合说明想法。暂未确认：该报道没有列出对应的具体措施、预算或时程；本届详细政见仍待核实。尚未查核：个人社群完整发言及后续政见发表会内容。',sources:['county-wei-keelung-issues-20261027','county-policy-index-keelung']};
  d.sources['county-ho-hsinchu-baseball-20261106']={title:'何志勇提出新竹棒球发展与巨蛋构想',url:'https://udn.com/news/story/124652/9862161',date:'2026-11-06',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人政策记者会'};
  const hoBall=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');if(!hoBall)throw new Error('Missing candidate: 何志勇');
@@ -1926,6 +1927,11 @@ function apply(d){
  const chiu=d.people.find(p=>p.city==='changhua'&&p.name==='邱建富');
  if(!chiu?.countyBrief)throw new Error('Missing candidate: 邱建富');
  chiu.countyBrief.office='2002至2010年任彰化縣議員；2010至2018年任彰化市長；2026年6月退黨並以無黨籍參選縣長';chiu.countyBrief.extraBioSource='county-chiu-career-2026';
+ chiu.countyBrief.work='已查竞选团队人物介绍及大叶大学杰出校友资料；从政前的具体工作单位、职务与任职年月暂未确认。';
+ d.sources['county-chiu-platform-site-20261112']={title:'邱建富核心政见：产业、福利与青年住宅',url:'https://chiuchienfu.tw/policies/',date:'2026年（页面未列发布日期）',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'邱建富竞选团队',kind:'候选人竞选网站政见'};
+ const chiuPlatform=[['housing','邱建富提出首年兴办200户、四年累计1000户社会住宅，评估校地再生、土地重划及保四旁土地的都市计划变更。','这是竞选团队的供给目标；选址、土地变更、经费与建设进度需另行审议。'],['water','邱建富提出建设沿海海水淡化厂，结合现有供水系统，达到每日16万吨供水能力，以支持产业用水。','竞选网站描述的是结合现有系统的总供水能力；并未说明新厂单独产能、选址、经费或环评。'],['childcare','邱建富提出设置24小时临时托育中心、提升托育量能，并将生育补助提高至20万元。','属于竞选方案；资格、服务规模、中央与地方分担及经费待进一步确认。']];
+ for(const [topic,text,note] of chiuPlatform)if(!chiu.policies.some(x=>x.sources?.includes('county-chiu-platform-site-20261112')&&x.topic===topic))chiu.policies.push({topic,text,type:'本届政见（竞选网站）',basis:'campaign',electionYear:2026,date:'2026年（页面未列发布日期）',sources:['county-chiu-platform-site-20261112'],note});
+
  d.sources['county-ho-cross-strait-20260923']={title:'何志勇接受中评社访问谈中美关系',url:'https://www.crntt.tw/touch/detail.jsp?coluid=5&docid=160271396&kindid=0',date:'2026-09-23',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中评社（媒体倾向待核定）',kind:'媒体专访转述候选人评论'};
  const ho=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');
  if(!ho)throw new Error('Missing candidate: 何志勇');
