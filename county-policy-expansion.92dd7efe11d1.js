@@ -1785,6 +1785,22 @@ const rows = [
   }
 ];
 function apply(d){
+ d.sources['county-wu-pj-career-cec2018']={title:'2018年朴子市民代表选举公报',url:'https://eebulletin.cec.gov.tw/107/13%E5%98%89%E7%BE%A9%E7%B8%A3/04%E9%84%89%E9%8E%AE%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8/%E6%9C%B4%E5%AD%90%E5%B8%82%E5%B8%82%E6%B0%91%E4%BB%A3%E8%A1%A8%E7%AC%AC3%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2018年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历，任职起止年月未载'};
+ const wuPj=d.people.find(p=>p.city==='chiayi-county'&&p.name==='吳品叡');
+ if(!wuPj?.countyBrief)throw new Error('Missing candidate: 吳品叡');
+ wuPj.countyBrief.work='曾任台灣嘉農國際生物科技企劃部副總經理，及漢唐補習班、漢特美語副班主任';wuPj.countyBrief.extraBioSource='county-wu-pj-career-cec2018';
+ d.sources['county-chiu-career-2026']={title:'邱建富个人介绍与经历',url:'https://chiuchienfu.tw/about/',date:'2026年（具体发布日期未列）',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'邱建富竞选团队',kind:'候选人团队自述经历'};
+ const chiu=d.people.find(p=>p.city==='changhua'&&p.name==='邱建富');
+ if(!chiu?.countyBrief)throw new Error('Missing candidate: 邱建富');
+ chiu.countyBrief.office='2002至2010年任彰化縣議員；2010至2018年任彰化市長；2026年6月退黨並以無黨籍參選縣長';chiu.countyBrief.extraBioSource='county-chiu-career-2026';
+ d.sources['county-ho-cross-strait-20260923']={title:'何志勇接受中评社访问谈中美关系',url:'https://www.crntt.tw/touch/detail.jsp?coluid=5&docid=160271396&kindid=0',date:'2026-09-23',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中评社（媒体倾向待核定）',kind:'媒体专访转述候选人评论'};
+ const ho=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');
+ if(!ho)throw new Error('Missing candidate: 何志勇');
+ for(const region of ['cn','us'])if(!ho.evidence.some(x=>x.region===region&&x.source==='county-ho-cross-strait-20260923'))ho.evidence.push({region,date:'2026-09-23',topic:'受访谈中美关系与台湾处境',text:'何志勇接受中评社访问时认为，台湾应与大陆和美国维持他所称的等距关系，并主张加强自身能力。',limit:'这是候选人在特定采访中的判断，报道中的国际局势判断均归于受访者，不是本站事实结论。',source:'county-ho-cross-strait-20260923'});
+ d.sources['county-chang-hl-japan-20260914']={title:'张峻率花莲县议会访问日本龟冈市',url:'https://tcpttw.com/local/2026/09/14/310491/',date:'2026-09-14',checkedAt:'2026-11-12',publisherId:'other',publisherName:'警政时报（媒体倾向待核定）',kind:'媒体报道议会访问与议长发言'};
+ const changHl=d.people.find(p=>p.city==='hualien'&&p.name==='張峻');
+ if(!changHl)throw new Error('Missing candidate: 張峻');
+ if(!changHl.evidence.some(x=>x.source==='county-chang-hl-japan-20260914'))changHl.evidence.push({region:'jp',date:'2026-09-14',topic:'率议会访问日本龟冈市',text:'张峻率花莲县议会访问团拜会龟冈市政府与市议会，表示希望借鉴当地环境、农业与观光治理经验。',limit:'媒体报道一次地方交流；访问和学习意愿不等于双方已有具体合作成果。',source:'county-chang-hl-japan-20260914'});
  d.sources['county-chen-su-yue-cec']={title:'2024年彰化第四选区选举公报',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/02%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/113%E5%B9%B4%E7%AC%AC11%E5%B1%86/02%E5%8D%80%E5%9F%9F%E7%AB%8B%E6%B3%95%E5%A7%94%E5%93%A1/10%E5%BD%B0%E5%8C%96%E7%B8%A3/%E7%AC%AC4%E9%81%B8%E8%88%89%E5%8D%80/%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%AB%8B%E5%A7%94%E7%AC%AC4%E9%81%B8%E8%88%89%E5%8D%80.pdf',date:'2024年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'中央选举委员会',kind:'候选人选举公报所列经历'};
  d.sources['county-wei-career-kmt']={title:'魏平政经历与参选资料',url:'https://knowledge.kmt.org.tw/articles/5e17436b-b56f-449f-befe-d74a3455ad13/',date:'2026-10-21',checkedAt:'2026-11-12',publisherId:'party',publisherName:'中国国民党知识库',kind:'所属政党整理的候选人经历，部分年月仍待独立核对'};
  const chenSu=d.people.find(p=>p.city==='changhua'&&p.name==='陳素月');
