@@ -78,9 +78,6 @@ additionalPeople.tang=[
 additionalPeople['hsiao-l']=[
   {topic:'campaign',text:'2024年立委选举公报写明“得票目标为0票”，并请选民把总统票与立委票投给其属意的其他候选人。',date:'2024-01-13',sources:['policy-hsiao-l-tainan-2024-bulletin'],note:'这是上一届公报中的参选及投票声明，不是市政政策，也不代表他对2026台南市长选举的立场。',type:'往届参选声明（非市政政策）',electionYear:2024}
 ];
-additionalPeople['hung-l']=[
-  {topic:'health',text:'2024年立委选举公报自填政见：“拒食莱猪、日本核食，保障国民健康。”',date:'2024-01-13',sources:['foreign-hung-l-bulletin'],note:'旧届公报中的食品安全表述，不是2026台中市长平台。原句未说明是个人消费选择或进口管制，也未列产品范围、检测标准和执行办法。',type:'往届政见（本人自填原文）',electionYear:2024}
-];
 function apply(d){d.policyTopics=pack.topics;Object.assign(d.sources,additionalSources);for(const p of d.people)p.policies=[...(pack.people[p.id]||[]),...(additionalPeople[p.id]||[])];}
 if(typeof module!=='undefined')module.exports={pack,apply};else{root.AtlasPolicyData={pack,apply};apply(root.ATLAS);}
 })(typeof window==='undefined'?globalThis:window);
