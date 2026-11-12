@@ -2298,6 +2298,10 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'chiayi-county',name:'蔡易餘',source:'county-chiayi-rural-water-20261112',title:'蔡易余争取偏乡接自来水并提出大埔交通方案',url:'https://udn.com/news/story/124652/9872860',date:'2026-11-12（报道日）',publisherId:'udn',publisherName:'联合报',items:[['water','蔡易余表示将与立委推动修正偏乡自来水接管标准，降低大埔山区居民接管困难；调整标准须经相关主管机关依法处理。'],['transport','蔡易余提出拓宽台三线、争取台82线快速道路延伸，以改善大埔对外交通；路线、经费与核定时间尚待说明。']]},
+  {city:'chiayi-county',name:'吳品叡',source:'county-chiayi-senior-care-20261112',title:'吴品叡提出敬老照护加码方案',url:'https://udn.com/news/story/124652/9872860',date:'2026-11-12（报道日）',publisherId:'udn',publisherName:'联合报',items:[['health','吴品叡提出将假牙补助提高至4.4万元，推动巡回医疗与远距照护，并补足日间照护服务不足的乡镇；适用条件和财源待说明。']]},
+  {city:'miaoli',name:'陳品安',source:'county-miaoli-youth-20260928',title:'陈品安提出青年住房、创业与参与政策',url:'https://udn.com/news/story/124652/9781166',date:'2026-09-28（报道日）',publisherId:'udn',publisherName:'联合报',items:[['housing','陈品安提出老屋修缮最高补助50万元，并由县府协助代租代管；补助对象、屋龄条件及预算待说明。'],['economy','陈品安提出青年创业及留学贷款利息补贴，并成立苗栗天使基金投资在地新创团队；基金规模及资格待说明。'],['accountability','陈品安提出推动青年参与式预算，让青年提出提案并参与预算决定；审议程序及金额待说明。']]},
+
   {city:'chiayi-city',name:'張啓楷',source:'county-chang-chiayi-housing-20261112',title:'张啓楷提出可负担住宅与婚育租金补贴',url:'https://www.cna.com.tw/news/aipl/202611120242.aspx',date:'2026-11-12',publisherId:'cna',publisherName:'中央社',items:[['housing','张啓楷主张借鉴桃园经验，鼓励建商捐建社会住宅，并提出青年可负担住宅及婚育租金补贴；适用资格与执行细节尚待说明。']]},
   {city:'yunlin',name:'張嘉郡',source:'county-chang-yunlin-forum-20261109',title:'云林县长候选人公办政见发表会录影',url:'https://udn.com/news/story/124652/9866284',date:'2026-11-09',publisherId:'udn',publisherName:'联合报',items:[['education','张嘉郡在公办政见发表会录影中提出儿童吃饭、读书免费，以及从小学一年级开始学英语；实施范围和经费待进一步说明。'],['economy','张嘉郡提出青年创业加码1亿元，具体补助资格、分配方式和财源待进一步说明。']]},
 
