@@ -2693,6 +2693,10 @@ function apply(d){
  const wangVideo=d.people.find(p=>p.city==='kaohsiung'&&p.name==='王肇民');if(!wangVideo?.policyCoverage)throw new Error('Missing candidate: 王肇民');
  wangVideo.policyCoverage.note='已查中央社登记资料、民视11月5日活动报道及有影仪表板公开影片目录。目录列有王肇民自办说明会录像并提供原始视频入口，但本次未取得字幕或可核验的音视频内容；报道也未逐项刊出市政措施，因此具体政见暂未确认。个人社群、完整说明会演讲、11月14日预定的公办政见会及后续选举公报尚未逐一核查；不能据此断言他没有提出政见。';
  wangVideo.policyCoverage.sources=[...new Set([...(wangVideo.policyCoverage.sources||[]),'kaohsiung-wang-forum-video-20261101'])];
+ d.sources['county-changjun-hualien-council-20110826']={title:'花莲县议会2011年议政报道：张峻简介',url:'https://www.hlcc.gov.tw/upfile/20110915102122-142.pdf',date:'2011-08-26',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'花莲县议会',kind:'议会刊物人物简介；已核对原刊版面',note:'张峻简介列国小家长会长、公益协会顾问；原刊未写学校、协会名称、任期或是否受薪。'};
+ const changJunCareer=d.people.find(p=>p.city==='hualien'&&p.name==='張峻');if(!changJunCareer?.countyBrief)throw new Error('Missing candidate: 張峻');
+ changJunCareer.countyBrief.work='花莲县议会2011年人物简介列曾任国小家长会长及公益协会顾问；学校和协会名称、任期、是否受薪及现况暂未确认。其他具体工作单位和职务仍待核实。';
+ changJunCareer.countyBrief.extraBioSources=[...new Set([...(changJunCareer.countyBrief.extraBioSources||[]),'county-changjun-hualien-council-20110826'])];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
