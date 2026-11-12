@@ -2313,6 +2313,7 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
+  {city:'chiayi-city',name:'陳愷璜',source:'county-chen-chiayi-digital-20260901',title:'陈愷璜登记参选并说明数字孪生及教育主张',url:'https://udn.com/news/story/124652/9726784',date:'2026-09-01',publisherId:'udn',publisherName:'联合报',items:[['accountability','陈愷璜提出运用数字孪生整合城市资讯，作为分析交通、公共建设、社会福利与人口需求的辅助工具；数据来源、隐私保护、预算与执行时间仍待说明。'],['education','陈愷璜主张国中小学教育除知识传授外，也应重视多元学习和人格启发；具体课程、师资与经费待说明。']]},
   {city:'kinmen',name:'張國威',source:'county-chang-kinmen-income-20261025',title:'张国威竞选总部成立时谈县政主张',url:'https://udn.com/vote2026/story/124652/9836320',date:'2026-10-25',publisherId:'udn',publisherName:'联合报',items:[['economy','张国威提出四年内让乡亲收入加倍的目标，并希望借助金门观光、金酒品牌和产业发展创造青年就业机会；收入衡量基准、对象及实现方式尚待说明。'],['accountability','张国威主张建立清廉、公开透明的政府，让公共资源用于民众福祉；具体公开机制和监督措施尚待公布。']]},
   {city:'kinmen',name:'張國威',source:'county-chang-kinmen-service-20260928',title:'张国威成立服务处谈县府服务',url:'https://www.cna.com.tw/news/aipl/202609280094.aspx',date:'2026-09-28',publisherId:'cna',publisherName:'中央社',items:[['accountability','张国威表示希望把旅游和餐饮业服务经验带入县府，让民众办理事务时感受到更好的服务；具体流程、考核指标和预算待说明。']]},
   {city:'chiayi-county',name:'吳品叡',source:'county-wu-chiayi-animal-20261109',title:'吴品叡提出宠物友善与动物防疫方案',url:'https://udn.com/news/story/124652/9867191',date:'2026-11-09',publisherId:'udn',publisherName:'联合报',items:[['health','吴品叡提出串联兽医师、动保团体及社区，推动宠物登记、狂犬病疫苗接种和巡回健康服务，并加强查处违法弃养；实施规模和预算待说明。']]},
@@ -2359,6 +2360,10 @@ function apply(d){
   for(const [topic,text] of r.items)if(!person.policies.some(x=>x.sources?.includes(r.source)&&x.topic===topic))person.policies.push({topic,text,type:'媒体报道转述本人主张',basis:'campaign',electionYear:2026,date:r.date,sources:[r.source],note:'属于候选人提出的方案；预算、合法性及执行条件须另核。'});
   person.policyCoverage=null;
  }
+ d.sources['county-chen-chiayi-campaign-20261112']={title:'陈愷璜竞选网站：经历与经济政见',url:'https://chiayi-mayor.duckdns.org/',date:'竞选网站，查阅2026-11-12',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'陈愷璜竞选网站',kind:'候选人竞选团队自述与政策说明'};
+ const chenChiayi=d.people.find(p=>p.city==='chiayi-city'&&p.name==='陳愷璜');if(!chenChiayi?.countyBrief)throw new Error('Missing candidate: 陳愷璜');
+ chenChiayi.countyBrief.work='竞选网站列其2005年任北艺大学务长、2006至2010年任美术系主任及研究所所长、2013至2016年任美术学院院长、2017至2025年任校长；另自列2000年任网络科技公司CEO、1996年任设计工作室艺术总监。';chenChiayi.countyBrief.extraBioSource='county-chen-chiayi-campaign-20261112';
+ for(const [topic,text] of [['transport','陈愷璜提出打造行人友好街区和步行廊道，并导入低底盘公共运具及观光接驳，以改善通行和无障碍移动。'],['tourism','陈愷璜提出串联嘉义宗教场域，发展祈福观光和文化节庆，并以影像及故事推广古城。'],['environment','陈愷璜提出发展资源回收与循环经济，将废弃物再利用与地方产业结合。']])if(!chenChiayi.policies.some(x=>x.topic===topic&&x.sources?.includes('county-chen-chiayi-campaign-20261112')))chenChiayi.policies.push({topic,text,type:'本届主张（竞选网站）',basis:'campaign',electionYear:2026,date:'网站查阅2026-11-12，原发日期未列',sources:['county-chen-chiayi-campaign-20261112'],note:'竞选团队提出的方向；具体地点、预算、实施步骤及完成时间待说明。'});
  d.sources['county-wang-taitung-agriculture-20260912']={title:'王志伟说明农业升级方案',url:'https://udn.com/news/story/124652/9749859',date:'2026-09-12',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体报道候选人政见'};
  const wangTt=d.people.find(p=>p.city==='taitung'&&p.name==='王志偉');if(!wangTt)throw new Error('Missing candidate: 王志偉');
  const wangAgriculture=wangTt.policies.find(p=>p.topic==='economy'&&p.sources?.includes('county-wang-taitung-20260912'));
