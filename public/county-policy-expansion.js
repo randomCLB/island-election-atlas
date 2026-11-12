@@ -1814,7 +1814,9 @@ function apply(d){
  const liwuTt=d.people.find(p=>p.city==='taitung'&&p.name==='李吳穎智');if(!liwuTt)throw new Error('Missing candidate: 李吳穎智');
  if(!liwuTt.policies.some(x=>x.sources?.includes('county-liwu-taitung-20260912')))liwuTt.policies.push(
   {topic:'accountability',text:'李吴颖智提出县长廉政契约，承诺不买票、不贿选、不贪污，公开重大工程、会议与公共资产信息，并要求家人与关系人利益回避。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'属于候选人承诺；具体公开范围、执行办法与监督机制待核。'},
-  {topic:'transport',text:'李吴颖智提出推动台9线拓宽、快速道路与高速公路延伸，并把宜花东屏高铁列为长期建设方向。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'相关路线、经费、中央权限与可行性均待评估，不表示建设已核定。'}
+  {topic:'transport',text:'李吴颖智提出推动台9线拓宽、快速道路与高速公路延伸，并把宜花东屏高铁列为长期建设方向。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'相关路线、经费、中央权限与可行性均待评估，不表示建设已核定。'},
+  {topic:'health',text:'李吴颖智提出长者假牙补助、偏乡就医交通补助，以及学童免费鲜乳和弱势照护构想。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'资格、补助标准、预算及实施时间暂未确认。'},
+  {topic:'economy',text:'李吴颖智提出发展农渔产品加值、影视文化基地和观光特区，并以职训支持在地就业及创业。',type:'本届政见（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-liwu-taitung-20260912'],note:'报道记录政策方向，具体选址、经费及执行机制暂未确认。'}
  );
  d.sources['county-chen-penghu-career-cec2014']={title:'2009年澎湖县湖西乡长选举公报：陈振中',url:'https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/06%E7%B8%A3%E5%B8%82%E8%AD%B0%E5%93%A1/098%E5%B9%B4/27%E6%BE%8E%E6%B9%96%E7%B8%A3/%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%AC%AC1%E3%80%812%E9%81%B8%E8%88%89%E5%8D%80%E8%AD%B0%E5%93%A1.pdf',date:'2009年选举公报',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'澎湖县选举委员会',kind:'候选人自行填报的经历'};
  const chenPh=d.people.find(p=>p.city==='penghu'&&p.name==='陳振中');if(!chenPh?.countyBrief)throw new Error('Missing biography: 陳振中');
@@ -2217,7 +2219,7 @@ function apply(d){
   if(!p.evidence.some(x=>x.source===r.key))p.evidence.push({region:r.region,date:r.date,topic:r.topic,text:r.text,limit:r.limit,source:r.key});
  }
  const additional=[
-  {city:'taitung',name:'王志偉',source:'county-wang-taitung-20260912',title:'台东县长候选人王志伟提出教育及农业政见',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',publisherId:'cna',publisherName:'中央社',items:[['education','王志伟提出由县府注资5000万元成立劝学基金，并设置依成绩进步与升学表现发放的奖学金。'],['economy','王志伟提出订定农渔产品等级、对顶级品保价收购，并规划运用无人机施肥及防治。']]},
+  {city:'taitung',name:'王志偉',source:'county-wang-taitung-20260912',title:'台东县长候选人王志伟提出教育及农业政见',url:'https://www.cna.com.tw/news/aloc/202609120079.aspx',date:'2026-09-12',publisherId:'cna',publisherName:'中央社',items:[['education','王志伟提出由县府注资5000万元成立劝学基金并接受捐款，学生总分每进步1分发100元；考上台大、清大、交大、成大等校的台东学子获10万元奖学金。'],['economy','王志伟提出订定农渔产品等级、对顶级品保价收购，并规划运用100架无人机施肥及防治。'],['childcare','王志伟提出结婚、生育和送终由县府每案补助2万元。']]},
   {city:'penghu',name:'陳盡川',source:'county-chen-penghu-20260104',title:'陈尽川公布海洋、土地、道路与观光愿景',url:'https://penghudaily.blogspot.com/2026/01/blog-post_476.html',date:'2026-01-04',publisherId:'other',publisherName:'澎湖日报（倾向待核定）',items:[['water','陈尽川提出复育渔业资源与保护海洋生态，并推动银合欢资源化。'],['transport','陈尽川提出全面检查县道和产业道路，改善路面品质。'],['accountability','陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。']]},
   {city:'hualien',name:'羅佩秦',source:'county-luo-hualien-20260718',title:'罗佩秦说明光复乡灾民求偿与防灾专业主张',url:'https://www.cnma.org.tw/page/news/show.aspx?kind=8&lang=TW&num=52735',date:'2026-07-18',publisherId:'other',publisherName:'CNMA新闻联合网（倾向待核定）',items:[['accountability','罗佩秦表示将与法律人士合作，协助光复乡受灾者循国家赔偿程序争取权益。'],['water','罗佩秦提出当选后邀请防灾专业人士担任县府国土及河川防制顾问。']]}
  ];
