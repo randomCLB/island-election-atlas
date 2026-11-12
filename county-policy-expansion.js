@@ -2480,6 +2480,17 @@ function apply(d){
  huangCc.countyBrief.extraBioSources=['county-huang-chiayi-cec-2016'];
  if(!huangCc.evidence.some(x=>x.source==='county-huang-chiayi-cec-2016'))huangCc.evidence.push({region:'cn',date:'2016年选举公报',topic:'往届选举提出两岸隧道及政治构想',text:'黄宏成在2016年嘉义市区域立委选举公报提出由布袋连接澎湖、金门与厦门的隧道构想，并主张两岸告别统独争议、建立其所称的民主共和国。',limit:'这是2016年候选人自填的往届主张，不代表工程可行、已经实施或他在2026年仍持相同立场。',source:'county-huang-chiayi-cec-2016'});
  if(!huangCc.policies.some(x=>x.sources?.includes('county-huang-chiayi-cec-2016')))huangCc.policies.push({topic:'transport',text:'黄宏成2016年参选嘉义市区域立委时提出连接布袋、澎湖、金门与厦门的隧道构想，并称嘉义市可作为隧道营运中心。',type:'往届立委选举政见（2016年公报）',basis:'campaign',electionYear:2016,date:'2016年选举公报',sources:['county-huang-chiayi-cec-2016'],note:'属于当年构想；工程可行性、经费、相关主管机关及本届是否沿用暂未确认。'});
+ d.sources['county-chen-penghu-canoe-2010']={title:'渔业推广报道：陈尽川与传统舢舨文化',url:'https://kmweb.moa.gov.tw/files/document/1160/98ccc774a63f86a0398b431a6b38c4ab_v3.pdf',date:'2010年刊物',checkedAt:'2026-11-12',publisherId:'official-tw',publisherName:'农业部农业知识入口网（渔业推广刊物）',kind:'刊物人物报道，记载当时职务及活动'};
+ d.sources['county-chen-penghu-diving-20250624']={title:'陈尽川海洋巡查后获救',url:'https://news.tvbs.com.tw/local/2912480',date:'2025-06-24',checkedAt:'2026-11-12',publisherId:'tvbs',publisherName:'TVBS新闻',kind:'媒体对海洋巡查与搜救的报道'};
+ chenJc.countyBrief.work+=' 农业知识入口网所载2010年刊物称他当时担任澎湖县轻艇协会理事长，筹办传统舢舨摇橹活动；起讫年月尚未确认。2025年他带队海洋巡查时失联，海空搜救后平安获救。';
+ chenJc.countyBrief.extraBioSources=['county-chen-penghu-canoe-2010','county-chen-penghu-diving-20250624'];
+ const chenFarm=chenJc.policies.find(x=>x.text==='陈尽川提出盘点和活化土地、发展地方特色农业，并推动银合欢资源化。');
+ if(chenFarm)chenFarm.text='陈尽川提出盘点与活化土地，发展澎湖特色咸水烟农业，结合田园绿化与观光，并推动银合欢资源化。';
+ const chenGovernance=chenJc.policies.find(x=>x.text==='陈尽川提出邀请各界参与县政规划，并称将捐出县长薪资及津贴支持该委员会。');
+ if(chenGovernance)chenGovernance.text='陈尽川提出成立治县委员会，邀请各界参与县政规划，并称将捐出县长薪资及津贴作委员会运作基金；另提出设置「我若是县长」公共对话窗口。';
+ const repeated=wuYl.policies.find(x=>x.text==='吴炳辉提出扩大山地与沿海偏乡的远距医疗、医消联防和长青食堂服务。');
+ const retained=wuYl.policies.find(x=>x.text==='吴炳辉提出在草岭等山区和沿海偏乡扩大远距医疗、医消联防及长青食堂。');
+ if(repeated&&retained){for(const source of repeated.sources||[])if(!retained.sources.includes(source))retained.sources.push(source);wuYl.policies.splice(wuYl.policies.indexOf(repeated),1);}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
