@@ -2668,6 +2668,10 @@ function apply(d){
  const chenEducation=d.people.find(p=>p.city==='changhua'&&p.name==='陳重嘉');if(!chenEducation?.countyBrief)throw new Error('Missing candidate: 陳重嘉');
  chenEducation.countyBrief.education='中央社候选人资料列美国海斯堡州立大学通识学士、大叶大学电机工程学系硕士。彰化县议会简介另列瑞士莱辛美国学校、美国沃斯特综合理工学院资工系及美国东北大学财经系；后面三项的就读或毕业情况及各阶段年月暂未确认。';
  chenEducation.countyBrief.extraBioSources=[...new Set([...(chenEducation.countyBrief.extraBioSources||[]),'county-chen-changhua-education-cna-20260904'])];
+ d.sources['county-zhu-hsinchu-career-cna-20260904']={title:'中央社：2026年新竹县长候选人朱定瑀经历',url:'https://www.cna.com.tw/news/aipl/202609045002.aspx',date:'2026-09-04',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体汇编候选人登记资料',note:'资料列航欣科技管理代表及生物多样性研究所相关社区生态导览经历，未说明任职形式、起止时间或现况。'};
+ const zhuCareer=d.people.find(p=>p.city==='hsinchu-county'&&p.name==='朱定瑀');if(!zhuCareer?.countyBrief)throw new Error('Missing candidate: 朱定瑀');
+ zhuCareer.countyBrief.work='中央社候选人资料列航欣科技管理代表，以及农业部生物多样性研究所（原特有生物研究保育中心）社区生态导览员经历。导览员与该机构的具体关系、两项经历起止年月及现况暂未确认。';
+ zhuCareer.countyBrief.extraBioSources=[...new Set([...(zhuCareer.countyBrief.extraBioSources||[]),'county-zhu-hsinchu-career-cna-20260904'])];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
