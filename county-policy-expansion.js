@@ -2617,6 +2617,14 @@ function apply(d){
  const wangChiayiCareer=d.people.find(p=>p.city==='chiayi-city'&&p.name==='王美惠');if(!wangChiayiCareer?.countyBrief)throw new Error('Missing candidate: 王美惠');
  wangChiayiCareer.countyBrief.work='NOWnews报道她早年因家庭经济困难曾在药房工作，后来担任嘉义市议员江熙哲地方服务处助理；立法院委员简介列其曾任该服务处主任。药房名称及各职位起止年月暂未确认。';
  wangChiayiCareer.countyBrief.extraBioSources=[...(wangChiayiCareer.countyBrief.extraBioSources||[]),'county-wang-chiayi-city-career-20200328'];
+ d.sources['county-lin-yilan-cals-profile-2024']={title:'华航2024年股东会议手册：林国漳履历',url:'https://www.china-airlines.com/us/zh/Images/2024_Shareholder_03-zh_tcm342-63058.pdf',date:'2024年股东会议手册',checkedAt:'2026-11-12',publisherId:'other',publisherName:'中华航空（公司股东会资料）',kind:'公司公开的独立董事候选人履历'};
+ const linYilanCareerDetail=d.people.find(p=>p.city==='yilan'&&p.name==='林國漳');if(!linYilanCareerDetail?.countyBrief)throw new Error('Missing candidate: 林國漳');
+ linYilanCareerDetail.countyBrief.work='律师，曾任宜兰县律师公会理事长、法律扶助基金会宜兰分会会长、国立宜兰大学兼任讲师及宜兰社区大学讲师。经济部名册列其为林国漳律师事务所所长及国光电力公股监察人，名册所列本届董事会任期为2024年1月24日至2027年1月23日；其他任职起止年月及是否中途变动暂未确认。';
+ linYilanCareerDetail.countyBrief.extraBioSources=[...(linYilanCareerDetail.countyBrief.extraBioSources||[]),'county-lin-yilan-cals-profile-2024'];
+ d.sources['county-chang-kuowei-career-cna-20260904']={title:'2026县市长参选人资料：张国威',url:'https://www.cna.com.tw/news/aipl/202609045002.aspx',date:'2026-09-04',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体汇编候选人登记资料'};
+ const changKinmenCareer=d.people.find(p=>p.city==='kinmen'&&p.name==='張國威');if(!changKinmenCareer?.countyBrief)throw new Error('Missing candidate: 張國威');
+ changKinmenCareer.countyBrief.work='中央社2026年候选人资料列二毛旅行社董事长、光华园光华文创餐厅董事长；任职起止年月及后续现况暂未确认。';
+ changKinmenCareer.countyBrief.extraBioSources=[...(changKinmenCareer.countyBrief.extraBioSources||[]),'county-chang-kuowei-career-cna-20260904'];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
