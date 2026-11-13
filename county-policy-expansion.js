@@ -2767,6 +2767,16 @@ function apply(d){
   ['health','柯志恩提出补助符合设籍条件的25至40岁女性及25岁以下罹癌女性冻卵，包括1000元AMH检验、首年2万元及后续两年每年6000元保存费，最高3.3万元。','数字按联合报报道；适用条件、申请细则及财源尚待确认。'],
   ['labor','柯志恩提出鼓励企业让育儿员工每日缩短工时1小时，并由政府补贴代班人力；另加强怀孕歧视和职场性骚扰的劳动检查与申诉协助。','企业参与条件、补助标准与主管机关分工暂未说明。']
  ])if(!koWomen.policies.some(x=>x.sources?.includes('kaohsiung-ko-women-20260918')&&x.text===text))koWomen.policies.push({topic,text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-18',sources:['kaohsiung-ko-women-20260918'],note});
+ d.sources['county-trena-energy-resilience-20261112']={title:'台湾再生能源推动联盟：2026县市首长候选人韧性城市调查',url:'https://www.trena.org.tw/post/%E3%80%8E%E9%9F%8C%E6%80%A7%E5%9F%8E%E5%B8%82%E8%AA%B0%E4%BE%86%E6%89%9B%EF%BC%9F%E7%B8%A3%E5%B8%82%E9%A6%96%E9%95%B7%E5%80%99%E9%81%B8%E4%BA%BA%E4%BA%A4%E8%80%83%E5%8D%B7%EF%BC%81%E3%80%8F%E8%A8%98%E8%80%85%E6%9C%83',date:'2026-11-12',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾再生能源推动联盟（再生能源倡议团体）',kind:'倡议团体公布候选人问卷回复的摘要',note:'截至11月10日邀请45人、18人回复；未回复不代表没有能源政策。本文为联盟对回复的摘要及评价。'};
+ for(const [city,name,text,note] of [
+  ['tainan','陳亭妃','陈亭妃在能源问卷提出「一区一韧性中心、一里一防灾光电站」，结合光电、储能和微电网，让防灾据点停电时维持至少72小时必要供电。','这是候选人的规划目标；据点选址、建设成本、设备容量和完成期限暂未确认。'],
+  ['tainan','謝龍介','谢龙介在能源问卷提出让居民及早参与绿能规划、公开投资风险，并让未出资居民也共享地方回馈。','台湾再生能源推动联盟概述其问卷回复；收益分配办法、预算和执行时间暂未确认。'],
+  ['hsinchu-city','莊競程','庄竞程在能源问卷提出制定2035能源转型路线图，结合屋顶光电、竹科资源、弱势节能及绿领人才培育。','这是候选人的规划方向；各项规模、预算和实施进度暂未确认。'],
+  ['hsinchu-city','莊競程','庄竞程提出绿能参与式预算，让居民共同决定韧性建设与收益用途，并提供行政协助。','依据倡议团体对问卷的摘要；参与资格、预算与决策程序暂未确认。'],
+  ['taoyuan','張善政','张善政在能源问卷提出结合水圳与工业放流水发展小水力，并设定再生能源、储能和产业脱煤目标。','依据倡议团体对问卷的摘要；量化目标、个别场址和完成日期须进一步核对。'],
+  ['new-taipei','李四川','李四川在能源问卷提出企业节能、绿电辅导及信息公开措施。','倡议团体认为韧性中心、公民电厂、收益共享及阶段时程尚未完整交代；具体措施与预算须查看完整回复。'],
+  ['kaohsiung','柯志恩','柯志恩在能源问卷提出由副市长统筹、分三阶段推动，并用公开仪表板呈现发电、审查及回馈金流向，纳入公民团体监督。','依据倡议团体对问卷的摘要；各阶段日期、权责和预算须进一步核对。']
+ ]){const p=d.people.find(x=>x.city===city&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.policies=p.policies||[];if(!p.policies.some(x=>x.text===text))p.policies.push({topic:'environment',text,type:'本届主张（回应民间问卷）',basis:'campaign',electionYear:2026,date:'2026-11-12（调查公布日）',sources:['county-trena-energy-resilience-20261112'],note});}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
