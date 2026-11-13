@@ -2859,6 +2859,14 @@ function apply(d){
  weiHealth.note='两家报道的未满25岁金额不同，报新闻的25岁年龄分界亦有重叠；是否方案调整或报道有误暂未确认。均为限定用途的竞选额度，资格、财源与执行细节待核。';
  weiHealth.sources=[...new Set([...weiHealth.sources,'county-wei-hualien-first-plan-20260916'])];
  if(!weiFuture.policies.some(x=>x.sources?.includes('county-wei-hualien-first-plan-20260916')&&x.topic==='tourism'))weiFuture.policies.push({topic:'tourism',text:'魏嘉贤提出每人每年3600元县内旅游额度，用于花莲县内观光住宿，以鼓励在地旅游。',type:'本届竞选主张（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-09-16',sources:['county-wei-hualien-first-plan-20260916'],note:'报道指出存摺记载的是限定用途额度而非现金；适用条件、核销办法和财源仍需确认。'});
+ d.sources['county-chen-taitung-family-20261112']={title:'联合报：陈莹提出亲子与教育政策',url:'https://udn.com/news/story/124652/9874948',date:'2026-11-12',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者报道候选人竞选政策'};
+ const chenTaitungFamily=d.people.find(p=>p.city==='taitung'&&p.name==='陳瑩');if(!chenTaitungFamily)throw new Error('Missing candidate: 陳瑩');
+ for(const [topic,text,note] of [
+  ['childcare','陈莹提出一乡镇一公托，盘点学校与公共场馆空间增设托育据点，并增加坐月子补助。','公托布建地点、人力、补助金额、资格与财源暂未确认。'],
+  ['labor','陈莹提出育儿弹性工时，让家长按照照顾需求提前或延后半小时、一小时上下班，或因临时照顾需要调整出勤；雇主增加的人事成本由政府补助分摊。','这是竞选构想；企业参与条件、补助标准、适用对象及与劳动法规衔接待说明。'],
+  ['education','陈莹提出盘点教职员宿舍并优先改善偏乡住宿，为初任教师提供搬家及租屋补助；另以跨校共聘行政人力减轻教师负担，并提供亲师冲突心理与法律咨询。','补助金额、适用年限、人力配置与预算暂未确认。'],
+  ['childcare','陈莹提出增加亲子友善空间与特色公园，并引入儿童参与设计，让孩子表达对游戏环境的需求。','具体场址、参与机制、经费及完成时间尚待说明。']
+ ])if(!chenTaitungFamily.policies.some(x=>x.sources?.includes('county-chen-taitung-family-20261112')&&x.text===text))chenTaitungFamily.policies.push({topic,text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-12（报道日）',sources:['county-chen-taitung-family-20261112'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
