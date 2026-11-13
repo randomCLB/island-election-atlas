@@ -2815,6 +2815,15 @@ function apply(d){
   ['labor','徐欣莹提出为因育儿或家庭照顾离开职场、准备再就业或创业的女性提供职业训练与托育资源，并设最高5万元创业启动金。','创业补助资格、名额、资金和培训实施方式暂未确认。'],
   ['health','徐欣莹提出为65岁以上长者规划智慧健康手环，监测健康指标并在异常或跌倒时发出提醒。','这是竞选规划；装置性能、告警责任、使用者同意、个人资料保护及预算均待说明。']
  ])if(!hsuCountyCare.policies.some(x=>x.sources?.includes('county-hsu-hsinchu-care-site-20261112')&&x.text===text))hsuCountyCare.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列，查阅2026-11-12',sources:['county-hsu-hsinchu-care-site-20261112'],note});
+ d.sources['county-cheng-hsinchu-student-20261103']={title:'中央社：郑朝方提出学生逐梦计划',url:'https://www.cna.com.tw/news/aipl/202611030135.aspx',date:'2026-11-03',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'媒体报道候选人及竞选办公室提出的政策'};
+ d.sources['county-cheng-hsinchu-baoshan-20261018']={title:'中央社：郑朝方提出宝山交通教育等政见',url:'https://www.cna.com.tw/news/aipl/202610180102.aspx',date:'2026-10-18',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道候选人竞选服务处成立活动'};
+ const chengCounty=d.people.find(p=>p.city==='hsinchu-county'&&p.name==='鄭朝方');if(!chengCounty)throw new Error('Missing candidate: 鄭朝方');
+ for(const [topic,text,source,date,note] of [
+  ['education','郑朝方提出学生「逐梦计划」：支持竞赛师资、教材和培训；补助县外及全国赛事的交通、住宿、道具等费用；并为取得国际赛资格的学生和团队提供出国支持。','county-cheng-hsinchu-student-20261103','2026-11-03','竞选团队列体育、音乐、艺术、科学、语言及各类技艺等范围；申请资格、补助上限与经费仍待说明。'],
+  ['transport','郑朝方提出系统规划宝山交流道、双园路与村落道路，优化交通号志并推动电动公车，以改善通勤。','county-cheng-hsinchu-baoshan-20261018','2026-10-18','这是候选人的交通方向；具体线路、工程范围、预算和实施时间暂未确认。'],
+  ['health','郑朝方提出在宝山推动巡回医疗、就医接驳和长照服务，并提高敬老卡点数。','county-cheng-hsinchu-baoshan-20261018','2026-10-18','巡诊频率、接驳对象、服务量及点数增额暂未确认。'],
+  ['tourism','郑朝方提出完善宝山水库周边观光与集水区环境，串联双胞胎井、客庄茶亭及打中午文化祭，并协助当地农产的品牌、加工与销售。','county-cheng-hsinchu-baoshan-20261018','2026-10-18','水源保护、农产行销的执行细节及经费暂未确认；候选人表示需兼顾农用水和生态。']
+ ])if(!chengCounty.policies.some(x=>x.sources?.includes(source)&&x.text===text))chengCounty.policies.push({topic,text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date,sources:[source],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
