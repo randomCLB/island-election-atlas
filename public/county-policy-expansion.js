@@ -2909,6 +2909,19 @@ function apply(d){
  const tsaoCareer2007=d.people.find(p=>p.city==='lienchiang'&&p.name==='曹爾元');if(!tsaoCareer2007?.countyBrief)throw new Error('Missing candidate: 曹爾元');
  tsaoCareer2007.countyBrief.work='马祖日报报道，曹尔元1980年大学毕业后返乡进入公职，曾在农业改良场、自来水厂及县府多个部门任职，2022年6月8日退休。2007年8月报道记载他时任连江县观光局长，代表县府与泳渡团队讨论安全和欢迎安排；该报道只能确认当时任职，完整起止年月暂未确认。';
  tsaoCareer2007.countyBrief.extraBioSources=[...new Set([...(tsaoCareer2007.countyBrief.extraBioSources||[]),'county-tsao-lienchiang-tourism-20070814'])];
+ d.sources['county-yilan-education-forum-cna-20260912']={title:'中央社：宜兰县长候选人教育论坛政见',url:'https://www.cna.com.tw/news/aloc/202609120131.aspx',date:'2026-09-12',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道两位候选人在教育论坛的发言'};
+ d.sources['county-wu-yilan-science-udn-20261109']={title:'联合报：吴宗宪考察宜科与北宜双科构想',url:'https://udn.com/vote2026/story/124652/9866975',date:'2026-11-09',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者报道候选人参与立法院考察时的说法'};
+ const linYilanForum=d.people.find(p=>p.city==='yilan'&&p.name==='林國漳'),wuYilanForum=d.people.find(p=>p.city==='yilan'&&p.name==='吳宗憲');if(!linYilanForum||!wuYilanForum)throw new Error('Missing Yilan forum candidate');
+ for(const [candidate,topic,text,note] of [
+  [linYilanForum,'education','林国漳提出补助每校15万元升级营养午餐保温设备，并整合0至6岁托育和早期疗育网络。','这是教育论坛的竞选提案；适用学校、补助批次、经费及实施时间待确认。'],
+  [linYilanForum,'education','林国漳提出建构「宜兰学」并普及数字教育，同时希望引入AI校务系统，为教师建立法律支持和校园安全应变程序。','课程内容、资料保护、师资、设备与实际预算尚待说明。'],
+  [wuYilanForum,'education','吴宗宪提出教职员及私立幼儿园中低收入户学生营养午餐免费，并设置公职律师和心理咨询师支持教师。','报道及竞选网站所列对象有明确范围，不代表全体私幼学生免费；实施资格、人员配置与经费待确认。'],
+  [wuYilanForum,'education','吴宗宪提出由县长主持教育平台，与学校、教师团体及家长定期沟通，并以跨校、跨县市合作共享人才、教材和社团活动。','平台成员、会议机制、跨县市合作对象和经费尚待确定。']
+ ])if(!candidate.policies.some(x=>x.sources?.includes('county-yilan-education-forum-cna-20260912')&&x.text===text))candidate.policies.push({topic,text,type:'本届竞选主张（教育论坛报道）',basis:'campaign',electionYear:2026,date:'2026-09-12',sources:['county-yilan-education-forum-cna-20260912'],note});
+ const wuYilanIndustry=wuYilanForum.policies.find(x=>x.text.includes('宜兰科技园区为基础')&&x.topic==='economy');if(!wuYilanIndustry)throw new Error('Missing Wu Yilan industry proposal');
+ wuYilanIndustry.text='吴宗宪提出「北宜双科联动」，让北士科与宜兰科学园区合作，并串联竹竹苗科技产业，争取矽光子封装测试、生医及精密机械等产业。';
+ wuYilanIndustry.note='这是招商与区域合作目标；具体企业、投资额、工作数量、交通配套及环保审查均待确认。';
+ wuYilanIndustry.sources=[...new Set([...wuYilanIndustry.sources,'county-wu-yilan-science-udn-20261109'])];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
