@@ -2798,6 +2798,14 @@ function apply(d){
   {region:'us',date:'2023-08-07（刊载日）',topic:'美国国会法案与台湾国际参与',text:'何志勇分析当时美国众议院通过、待参议院审议的「台湾国际团结法案」，认为即使通过也不足以改变美国政府长期两岸政策；他主张由美国及盟友在国际组织中提案争取台湾的观察员地位。',limit:'法案进度与美国政策均为2023年文章的语境，不代表目前状态；文章观点归于作者，国际法及主权问题存在不同解释。',source:'county-ho-us-taiwan-solidarity-20230807'},
   {region:'us',date:'2020-08-04（刊载日）',topic:'主张台美税务与贸易合作',text:'何志勇撰文呼吁在政治承诺之外推动具体台美合作，提出洽签租税协定与自由贸易协定，并以台湾留学生税务负担及产业竞争力为例。',limit:'这是2020年的政策建议及当时描述，不代表协定已经签署，也不能推定现行税务规则。',source:'county-ho-us-tax-trade-20200804'}
  ])if(!hoOriginal.evidence.some(x=>x.source===record.source))hoOriginal.evidence.push(record);
+ d.sources['county-chen-penghu-interview-20260911']={title:'联合报专访：陈振中谈澎湖医疗、交通与环境',url:'https://udn.com/news/story/124652/9747401',date:'2026-09-11',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者专访候选人'};
+ const chenIsland=d.people.find(p=>p.city==='penghu'&&p.name==='陳振中');if(!chenIsland)throw new Error('Missing candidate: 陳振中');
+ for(const [topic,text,note] of [
+  ['health','陈振中提出建立二级离岛空中及海上紧急后送标准程序，争取直升机落地后直接进入高雄大型医院，并预备台风或机械故障时的应急方案。','这是竞选构想；医院合作、航机资源、恶劣天气可行性与经费尚未确定。'],
+  ['transport','陈振中主张评估延伸七美、望安机场跑道，让中型客机可起降，以改善离岛运能与紧急救护。','跑道延伸涉及机场主管机关、航空安全与环境评估；报道未给出工程、预算及完成期限。'],
+  ['transport','针对台澎航线高峰期一位难求，陈振中提出争取常态化加班机，并建立本地居民优先预约及候补机制。','这属于候选人提出的航班与预约安排；航司、主管机关、适用条件及财源未确认。'],
+  ['environment','陈振中表示绿能开发应审查程序合法性，并落实地方同意与景观规划；他说没有共识不应贸然推动。','报道为候选人对开发争议的表态；地方同意机制、适用项目和执行办法须进一步说明。']
+ ])if(!chenIsland.policies.some(x=>x.sources?.includes('county-chen-penghu-interview-20260911')&&x.text===text))chenIsland.policies.push({topic,text,type:'本届竞选主张（媒体专访）',basis:'campaign',electionYear:2026,date:'2026-09-11（报道日）',sources:['county-chen-penghu-interview-20260911'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
