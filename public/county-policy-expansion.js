@@ -2944,6 +2944,16 @@ function apply(d){
   ['economy','何志勇提出让大学社会责任项目与市政合作，为学生专题提供实地验证场域，并定期举办科技业与创投的投资媒合。','学校参与意愿、成果评估、投资安排及经费尚待具体协议。']
  ])if(!hoHsinchuPlatform.policies.some(x=>x.sources?.includes('county-ho-hsinchu-platform-20261112')&&x.text===text))hoHsinchuPlatform.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列；2026-11-12查阅',sources:['county-ho-hsinchu-platform-20261112'],note});
  if(!hoHsinchuPlatform.policies.some(x=>x.sources?.includes('county-ho-hsinchu-transit-20261030')))hoHsinchuPlatform.policies.push({topic:'transport',text:'何志勇提出新竹市区台铁高架化，目标4年内动工、8年内完工；并规划中華路、經國路及公道五路公交专用道或优先道。',type:'本届竞选主张（白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-10-30',sources:['county-ho-hsinchu-transit-20261030'],note:'时程是竞选目标，铁路工程及经费须经中央与地方评估、核定；道路空间和公交路线亦待规划。'});
+ d.sources['county-hsu-hsinchu-education-platform-20261112']={title:'徐欣莹竞选网站：前瞻教育政见',url:'https://www.shesinging.tw/politics/edu/',date:'原发日期未列；2026-11-12查阅',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'徐欣莹竞选团队',kind:'候选人竞选网站教育政策原文；网页可能更新'};
+ const hsuHsinchuEducation=d.people.find(p=>p.city==='hsinchu-county'&&p.name==='徐欣瑩');if(!hsuHsinchuEducation)throw new Error('Missing candidate: 徐欣瑩');
+ for(const [topic,text,note] of [
+  ['childcare','徐欣莹提出优先在入园供需紧张地区增加2岁专班、公立及非营利幼儿园名额，并补充教保人力。','这是竞选构想；各区增额、师资来源、预算及完成时间尚未说明。'],
+  ['childcare','徐欣莹提出整合幼儿园延托、寒暑假加托与居家托育资讯，建立时段、收费及名额查询媒合平台，并逐步增加弹性照顾时段。','平台建置、服务区域、收费和教保人员排班条件仍待确认。'],
+  ['education','徐欣莹提出在既有平板计划基础上逐步扩大中小学生设备与网络，并建立维修、汰换及教师培训机制；另提出AI工具使用补助。','设备覆盖、补助金额、隐私保护、使用规范及经费尚未确定。'],
+  ['education','徐欣莹提出整合辅导教师、心理师、社工及医疗资源，并把网络霸凌、AI诈骗与个人资料保护纳入数字素养教育。','人员配置、课程内容、跨机构合作与预算尚待说明。'],
+  ['education','徐欣莹提出延续现有国中小免费营养午餐，并随物价与食材成本适时调整经费，增加在地友善食材、来源追溯和菜单资讯公开。','免费午餐是既有政策；加码金额、采购规则与调整机制尚待确认。'],
+  ['labor','徐欣莹提出精简学校评鉴、公文和填报，补充行政与资讯人力，并提供亲师争议协调、教师法律咨询及心理支持。','人力配置、聘用条件、服务范围和经费仍待公布；属于竞选提案。']
+ ])if(!hsuHsinchuEducation.policies.some(x=>x.sources?.includes('county-hsu-hsinchu-education-platform-20261112')&&x.text===text))hsuHsinchuEducation.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列；2026-11-12查阅',sources:['county-hsu-hsinchu-education-platform-20261112'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
