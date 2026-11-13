@@ -2789,6 +2789,15 @@ function apply(d){
  changCareer8.countyBrief.extraBioSources=[...new Set([...(changCareer8.countyBrief.extraBioSources||[]),'county-chang-yunlin-career-ly8'])];
  liuCareerInterview.countyBrief.work='刘建国接受知新闻专访时回忆，求学时期曾送报、在超商打工，暑假在卡拉OK店端盘，后来兼做吧台与厨房工作；镜周刊专访也记载其曾在卡拉OK店打工。具体工作单位及任职年月暂未确认。';
  liuCareerInterview.countyBrief.extraBioSources=[...new Set([...(liuCareerInterview.countyBrief.extraBioSources||[]),'county-liu-yunlin-career-knews-20260122'])];
+ d.sources['county-ho-japan-security-20210611']={title:'何志勇：从哥吉拉政治学看日本出兵援台的可能',url:'https://www.npf.org.tw/1/24023',date:'2021-06-11（基金会刊载日）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'国家政策研究基金会（国民党智库）',kind:'本人署名评论；文末注明2021年6月3日曾发表于奔腾思潮、Yahoo论坛'};
+ d.sources['county-ho-us-taiwan-solidarity-20230807']={title:'何志勇：剖析美国会审议中的台湾国际团结法案',url:'https://www.npf.org.tw/1/25911',date:'2023-08-07（基金会刊载日）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'国家政策研究基金会（国民党智库）',kind:'本人署名评论；文末注明2023年8月1日发表于奔腾思潮'};
+ d.sources['county-ho-us-tax-trade-20200804']={title:'何志勇：台湾要顺势当棋手',url:'https://www.npf.org.tw/1/23027',date:'2020-08-04（基金会刊载日）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'国家政策研究基金会（国民党智库）；原刊中国时报',kind:'本人署名评论；文末注明2020年7月31日发表于中国时报'};
+ const hoOriginal=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');if(!hoOriginal)throw new Error('Missing candidate: 何志勇');
+ for(const record of [
+  {region:'jp',date:'2021-06-11（刊载日）',topic:'对日本军事介入的判断',text:'何志勇撰文认为，不能因2021年美日领导人提及台海和平稳定，就推论日本一定会军事介入台海冲突；他强调日本法律和政治决定存在不确定性。',limit:'这是他在2021年的分析，并非日本政府保证或对未来局势的事实预测；不能直接推定其2026年完整立场。',source:'county-ho-japan-security-20210611'},
+  {region:'us',date:'2023-08-07（刊载日）',topic:'美国国会法案与台湾国际参与',text:'何志勇分析当时美国众议院通过、待参议院审议的「台湾国际团结法案」，认为即使通过也不足以改变美国政府长期两岸政策；他主张由美国及盟友在国际组织中提案争取台湾的观察员地位。',limit:'法案进度与美国政策均为2023年文章的语境，不代表目前状态；文章观点归于作者，国际法及主权问题存在不同解释。',source:'county-ho-us-taiwan-solidarity-20230807'},
+  {region:'us',date:'2020-08-04（刊载日）',topic:'主张台美税务与贸易合作',text:'何志勇撰文呼吁在政治承诺之外推动具体台美合作，提出洽签租税协定与自由贸易协定，并以台湾留学生税务负担及产业竞争力为例。',limit:'这是2020年的政策建议及当时描述，不代表协定已经签署，也不能推定现行税务规则。',source:'county-ho-us-tax-trade-20200804'}
+ ])if(!hoOriginal.evidence.some(x=>x.source===record.source))hoOriginal.evidence.push(record);
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
