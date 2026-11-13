@@ -2843,6 +2843,15 @@ function apply(d){
   ['tourism','两人提出整合阿里山、故宫南院、嘉义市木都文化、桧意森活村及地方美食，发展跨县市观光。','这是合作方向；路线、经费和参与机构暂未确认。'],
   ['accountability','两人承诺若双双当选，于上任100天内启动跨县市合作平台，定期协商重大建设并公开进度。','承诺以两人双双当选为条件；这是竞选期间签署的备忘录，不是既有政府间协议。']
  ])if(!p.policies.some(x=>x.sources?.includes('county-greater-chiayi-mou-20261012')&&x.text===text))p.policies.push({topic,text,type:'本届共同竞选主张（备忘录报道）',basis:'campaign',electionYear:2026,date:'2026-10-12',sources:['county-greater-chiayi-mou-20261012'],note});
+ d.sources['county-su-pingtung-detailed-platform-20261112']={title:'苏清泉竞选总部：利民政见详情',url:'https://ptdrsu2026.tw/keyPolicies',date:'竞选网站，原发日期未列',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'苏清泉竞选总部',kind:'候选人竞选网站政策原文',note:'网页可能更新；查阅日不代表各政见提出日。'};
+ const suDetails=d.people.find(p=>p.city==='pingtung'&&p.name==='蘇清泉');if(!suDetails)throw new Error('Missing candidate: 蘇清泉');
+ for(const [topic,text,note] of [
+  ['education','苏清泉提出扩编国中小行政人力：国中4至6班增加1名组长、7至12班增加2名，13班以上配置11名组长；国小7至12班配置3名主任及3名组长。','这是竞选网站所列编制目标；各校现行编制、经费、适用规定与增聘条件须逐项核对。'],
+  ['education','苏清泉提出建设营养午餐食材物流平台，优先采用屏东农产品，并加强食材品质与安全管理。','采购规则、覆盖学校、检测和冷链安排、预算及实施时间暂未确认。'],
+  ['economy','苏清泉提出补助养猪、养鸡等畜牧场设置水帘降温与环境控制设备，并规划畜牧养殖专区。','补助金额、资格、专区位置及环境审查等条件暂未确认。'],
+  ['tourism','苏清泉提出发展恒春半岛科技观光，结合国家太空设施推广科技教育与特色旅游；并改善垦丁、大鹏湾、小琉球及原乡与客庄之间的旅游接驳。','属于竞选构想；设施开放权限、路线、主管机关合作及财源尚未确定。'],
+  ['transport','苏清泉提出检讨测速与科技执法设置，公开设置依据和事故数据，并结合道路工程、交通教育及执法改善安全。','具体设备位置、检讨标准和主管机关分工未说明；不是取消所有测速设备的承诺。']
+ ])if(!suDetails.policies.some(x=>x.sources?.includes('county-su-pingtung-detailed-platform-20261112')&&x.text===text))suDetails.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列，查阅2026-11-12',sources:['county-su-pingtung-detailed-platform-20261112'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
