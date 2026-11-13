@@ -2933,6 +2933,17 @@ function apply(d){
  tsaoMatsuDetail.countyBrief.extraBioSources=[...new Set([...(tsaoMatsuDetail.countyBrief.extraBioSources||[]),'county-tsao-matsu-cec-nangan-2022'])];
  if(!tsaoMatsuDetail.evidence.some(x=>x.source==='county-tsao-matsu-gutian-20080708'))tsaoMatsuDetail.evidence.push({region:'cn',date:'2008-07-08（报道日）',topic:'经马祖赴福建的宗教旅游交流',text:'时任连江县观光局长曹尔元随进香团赴福建古田时表示，将推动台湾信众经台湾、马祖和宁德的直航模式赴古田进香。',limit:'这是2008年针对宗教和旅游线路的发言；后续是否持续实施需另核，不能据此推断他对全部两岸议题的立场。',source:'county-tsao-matsu-gutian-20080708'});
  if(!tsaoMatsuDetail.policies.some(x=>x.sources?.includes('county-tsao-matsu-cec-nangan-2022')))tsaoMatsuDetail.policies.push({topic:'economy',text:'曹尔元在2022年连江县长选举公报提出设立「社会青年处」、推动青年公共参与及青创一条街，并建立青年创业无息贷款计划。',type:'往届县长选举政见（2022年公报）',basis:'campaign',electionYear:2022,date:'2022年选举公报',sources:['county-tsao-matsu-cec-nangan-2022'],note:'这是往届竞选主张；组织设置、人事任用、贷款额度和资金来源未说明，本届是否沿用暂未确认。'});
+ d.sources['county-ho-hsinchu-platform-20261112']={title:'何志勇竞选网站：新竹城市政策',url:'https://chihyungho.github.io/',date:'原发日期未列；2026-11-12查阅',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'何志勇竞选团队',kind:'候选人竞选网站政策原文；页面可能更新'};
+ d.sources['county-ho-hsinchu-transit-20261030']={title:'中央社：新竹市长候选人交通主张',url:'https://www.cna.com.tw/news/aloc/202610300195.aspx',date:'2026-10-30',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道候选人白皮书与竞选团队说明'};
+ const hoHsinchuPlatform=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='何志勇');if(!hoHsinchuPlatform)throw new Error('Missing candidate: 何志勇');
+ for(const [topic,text,note] of [
+  ['tourism','何志勇提出以循环巴士串联新竹州厅、新竹公园、城隍庙、将军村及辛志平校长故居，并规划夜间展演、古迹光雕与庙埕音乐会。','路线、班次、文资保护、活动许可与运营经费尚待说明。'],
+  ['education','何志勇提出发放儿童文化券、开设免费文化体验课程，并升级演艺厅灯光和音响设备。','文化券金额、年龄、适用项目及场馆工程预算暂未确认。'],
+  ['accountability','何志勇提出1000万元参与式预算，让市民投票决定音乐祭、市集或展览等文化活动。','投票资格、提案筛选、资金来源及投票结果如何执行尚待说明；金额属于提案。'],
+  ['economy','何志勇提出国际人才一站式服务，协助处理居留、租屋与子女教育，并改善双语标示和公共服务环境。','服务窗口、机构分工、人员及预算暂未确认；居留许可仍涉及中央权限。'],
+  ['economy','何志勇提出让大学社会责任项目与市政合作，为学生专题提供实地验证场域，并定期举办科技业与创投的投资媒合。','学校参与意愿、成果评估、投资安排及经费尚待具体协议。']
+ ])if(!hoHsinchuPlatform.policies.some(x=>x.sources?.includes('county-ho-hsinchu-platform-20261112')&&x.text===text))hoHsinchuPlatform.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列；2026-11-12查阅',sources:['county-ho-hsinchu-platform-20261112'],note});
+ if(!hoHsinchuPlatform.policies.some(x=>x.sources?.includes('county-ho-hsinchu-transit-20261030')))hoHsinchuPlatform.policies.push({topic:'transport',text:'何志勇提出新竹市区台铁高架化，目标4年内动工、8年内完工；并规划中華路、經國路及公道五路公交专用道或优先道。',type:'本届竞选主张（白皮书报道）',basis:'campaign',electionYear:2026,date:'2026-10-30',sources:['county-ho-hsinchu-transit-20261030'],note:'时程是竞选目标，铁路工程及经费须经中央与地方评估、核定；道路空间和公交路线亦待规划。'});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
