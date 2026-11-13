@@ -2835,6 +2835,14 @@ function apply(d){
   [tsaiEducation,'蔡易余提出为中正大学筹设的矽光子半导体学院，向教育部、国科会及经济部争取师资、研究计划及试制、封装和量测共享设备。','候选人提出跨机关争取资源；是否获补助、设备规格和设院完成时间须另核。'],
   [wuEducation,'吴品叡提出成立嘉义县国际教育交流委员会，结合教育、文化与产业资源，引进外籍教师、发展双语课程并扩大海外姊妹校合作。','依据其竞选团队声明的媒体报道；师资来源、课程规模、合作学校和预算暂未确认。']
  ])if(!candidate.policies.some(x=>x.sources?.includes('county-chiayi-education-20260910')&&x.text===text))candidate.policies.push({topic:'education',text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-10',sources:['county-chiayi-education-20260910'],note});
+ d.sources['county-greater-chiayi-mou-20261012']={title:'联合报：张启楷、吴品叡签署大嘉义合作备忘录',url:'https://udn.com/vote2026/story/124652/9809170',date:'2026-10-12',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者报道两位候选人签署跨县市竞选合作备忘录'};
+ const greaterChiayiCity=d.people.find(p=>p.city==='chiayi-city'&&p.name==='張啓楷'),greaterChiayiCounty=d.people.find(p=>p.city==='chiayi-county'&&p.name==='吳品叡');if(!greaterChiayiCity||!greaterChiayiCounty)throw new Error('Missing Greater Chiayi candidates');
+ for(const p of [greaterChiayiCity,greaterChiayiCounty])for(const [topic,text,note] of [
+  ['transport','张启楷与吴品叡共同签署跨县市合作备忘录，提出争取高铁嘉义站至台铁嘉义站轻轨，并研议延伸朴子、东石及布袋。','这是两位候选人的共同主张；路线、可行性、经费分担及中央核定均未确定。'],
+  ['housing','两人共同提出研议成立大嘉义住宅及都市更新中心；张启楷提出嘉义市增建2000户社宅，吴品叡提出嘉义县再兴建3000户。','数字是分别针对市、县的竞选目标，土地、财源与时程须进一步说明，不代表已核定或建成。'],
+  ['tourism','两人提出整合阿里山、故宫南院、嘉义市木都文化、桧意森活村及地方美食，发展跨县市观光。','这是合作方向；路线、经费和参与机构暂未确认。'],
+  ['accountability','两人承诺若双双当选，于上任100天内启动跨县市合作平台，定期协商重大建设并公开进度。','承诺以两人双双当选为条件；这是竞选期间签署的备忘录，不是既有政府间协议。']
+ ])if(!p.policies.some(x=>x.sources?.includes('county-greater-chiayi-mou-20261012')&&x.text===text))p.policies.push({topic,text,type:'本届共同竞选主张（备忘录报道）',basis:'campaign',electionYear:2026,date:'2026-10-12',sources:['county-greater-chiayi-mou-20261012'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
