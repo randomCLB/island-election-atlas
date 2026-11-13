@@ -2963,6 +2963,27 @@ function apply(d){
  if(!hsuForeign.evidence.some(x=>x.source==='county-hsu-hsinchu-us-trade-20260120'))hsuForeign.evidence.push({region:'us',date:'2026-01-20（报道日）',topic:'对美投资与新竹产业留台',text:'徐欣莹质疑台美关税谈判相关投资安排可能影响新竹半导体产业，要求说明投资内容、评估产业和就业冲击，并主张对美投资时在台湾保留至少相应规模的先进制程与研发能力。',limit:'这是当时立委及党团对谈判的主张与风险判断，投资数字和产业外移后果不视为已证实结果；不代表反对所有对美经贸合作。',source:'county-hsu-hsinchu-us-trade-20260120'});
  for(const region of ['us','jp'])if(!hsuForeign.evidence.some(x=>x.region===region&&x.source==='county-hsu-hsinchu-nuclear-20261105'))hsuForeign.evidence.push({region,date:'2026-11-05',topic:'以美日能源政策为核能主张参照',text:'徐欣莹在核电公投活动表示，美国、日本等经济体重新重视核能发展；她认为稳定电力对桃竹竹苗科技产业重要，支持核能。',limit:'这是她在台湾能源议题中的比较和主张，不等于对美日整体政策的立场；各国核能政策细节并未在这条记录中独立核定。',source:'county-hsu-hsinchu-nuclear-20261105'});
  if(!chengForeign.evidence.some(x=>x.source==='county-cheng-zhubei-us-20260302'))chengForeign.evidence.push({region:'us',date:'2026-03-02（报道日）',topic:'竹北光节与美国城市交流',text:'据竹北市公所向媒体介绍，美国柯林顿港市长麦克·斯奈德参观竹北光节，时任竹北市长郑朝方赠送竹北运动外套。',limit:'这是一次地方活动记录；本人对美国外交或政治政策的具体观点暂未确认，不能据此推定立场或后续合作成果。',source:'county-cheng-zhubei-us-20260302'});
+ d.sources['county-kao-hsinchu-education-20261026']={title:'高虹安提出新竹好学2.0及幼教支持',url:'https://www.cna.com.tw/news/aloc/202610260144.aspx',date:'2026-10-26',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道候选人后援会及本人公开发言'};
+ d.sources['county-kao-hsinchu-welfare-20260916']={title:'新竹市长选战：高虹安与庄竞程谈民生及交通',url:'https://www.cna.com.tw/news/aipl/202609160107.aspx',date:'2026-09-16',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道竞选办公室书面说明'};
+ d.sources['county-kao-hsinchu-care-20260910']={title:'高虹安市议会施政报告与议员质询',url:'https://www.cna.com.tw/news/aloc/202609100166.aspx',date:'2026-09-10',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'报道市府施政报告及议会意见'};
+ d.sources['county-chou-pingtung-vision-20260524']={title:'周春米谈连任、产业发展与能源政策',url:'https://udn.com/vote2026/story/124652/9521616',date:'2026-05-24',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'媒体专访现任县长及连任候选人'};
+ const kaoHc=d.people.find(p=>p.city==='hsinchu-city'&&p.name==='高虹安');
+ const chouPt=d.people.find(p=>p.city==='pingtung'&&p.name==='周春米');
+ if(!kaoHc||!chouPt)throw new Error('Missing candidate');
+ for(const [topic,text,source,date,basis,note] of [
+  ['education','高虹安提出推动「新竹好学2.0」，规划K-12科技双语学校。','county-kao-hsinchu-education-20261026','2026-10-26','campaign','学校形式、课程、师资、位置和预算配置仍待公布。'],
+  ['childcare','高虹安提出补助私立幼儿园监视录影设备、优化教学设施与环境，并增设2岁专班。','county-kao-hsinchu-education-20261026','2026-10-26','campaign','补助资格、金额、新增班数和实施时程尚待说明。'],
+  ['education','高虹安提出未来4年持续育儿津贴和教育支持，并举办80场以上教保专业研习。','county-kao-hsinchu-education-20261026','2026-10-26','campaign','研习对象、课程及资源配置尚待公布；这是候选人未来规划。'],
+  ['education','高虹安竞办表示将续推国中小免费营养午餐，并自2026年11月起把「壮壮卡」乳品、豆浆或优酪乳兑换扩及国中生。','county-kao-hsinchu-welfare-20260916','2026-09-16','campaign','竞办称免费午餐自2026年8月推动；11月扩及国中生是当时公布的安排，实际执行范围须另核。'],
+  ['health','高虹安竞办表示敬老卡及爱心卡使用范围持续扩大，2026年10月起每月点数由800点提高至1200点；符合资格长者及原住民后续每月最高补助健保费826元。','county-kao-hsinchu-welfare-20260916','2026-09-16','administration','这是竞办对当时市府福利的说明，资格、实际执行及与中央制度衔接应以主管机关公告为准。'],
+  ['childcare','高虹安在议会报告规划2027年起每胎生育津贴提高至6万元、临时托育费用降至每小时100元，并增加公托及孕产妇补助。','county-kao-hsinchu-care-20260910','2026-09-10','administration','属于当时提出的后续市政规划；资格、预算及上路情况须核对正式公告。']
+ ])if(!kaoHc.policies.some(x=>x.sources?.includes(source)&&x.text===text))kaoHc.policies.push({topic,text,type:basis==='campaign'?'本届竞选主张（媒体报道）':'任内市府规划或说明',basis,electionYear:2026,date,sources:[source],note});
+ for(const [topic,text,note] of [
+  ['economy','周春米在争取连任专访中提出，以高铁延伸及高铁特定区的大众运输导向开发，配合屏东科学园区等建设带动产业升级。','她将交通建设与产业发展相连；高铁、园区各案的实际核定、完工时间和效果需分别查证。'],
+  ['water','周春米谈农渔业因应极端天气，提出通过香蕉防风柱补助、滞洪池与水患治理等措施提升农业韧性。','报道同时回顾已有措施；各工程覆盖范围、执行成果与新增经费未在此独立核实。'],
+  ['energy','周春米表示，核三重启应厘清安全、资讯公开与核废料去处；发展光电应兼顾城乡景观与产业需求。','这是2026年5月专访中的条件性表态，具体审查及核三后续进度需另核。'],
+  ['childcare','周春米在连任专访中强调延续全人照顾，并介绍县府生育津贴、婴儿营养金和到宅月嫂等支持。','报道将这些作为任内措施介绍；适用对象和当前金额应以县府公告为准，不能视为新增加码。']
+ ])if(!chouPt.policies.some(x=>x.sources?.includes('county-chou-pingtung-vision-20260524')&&x.text===text))chouPt.policies.push({topic,text,type:'连任专访中的治理方向',basis:'administration',electionYear:2026,date:'2026-05-24',sources:['county-chou-pingtung-vision-20260524'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
