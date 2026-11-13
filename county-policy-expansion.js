@@ -2852,6 +2852,13 @@ function apply(d){
   ['tourism','苏清泉提出发展恒春半岛科技观光，结合国家太空设施推广科技教育与特色旅游；并改善垦丁、大鹏湾、小琉球及原乡与客庄之间的旅游接驳。','属于竞选构想；设施开放权限、路线、主管机关合作及财源尚未确定。'],
   ['transport','苏清泉提出检讨测速与科技执法设置，公开设置依据和事故数据，并结合道路工程、交通教育及执法改善安全。','具体设备位置、检讨标准和主管机关分工未说明；不是取消所有测速设备的承诺。']
  ])if(!suDetails.policies.some(x=>x.sources?.includes('county-su-pingtung-detailed-platform-20261112')&&x.text===text))suDetails.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列，查阅2026-11-12',sources:['county-su-pingtung-detailed-platform-20261112'],note});
+ d.sources['county-wei-hualien-first-plan-20260916']={title:'联合报：魏嘉贤公布首波未来存摺方案',url:'https://udn.com/news/amp/story/124652/9758344',date:'2026-09-16',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者报道候选人记者会与本人说明'};
+ const weiFuture=d.people.find(p=>p.city==='hualien'&&p.name==='魏嘉賢');if(!weiFuture)throw new Error('Missing candidate: 魏嘉賢');
+ const weiHealth=weiFuture.policies.find(x=>x.sources?.includes('county-hualien-policy-compare-20261104')&&x.topic==='health');if(!weiHealth)throw new Error('Missing Wei health proposal to correct');
+ weiHealth.text='魏嘉贤提出身心健检额度：联合报9月16日报道，未满25岁每年3600元、25岁以上6000元；报新闻11月4日整理则写25岁以下2500元、25岁以上6000元。';
+ weiHealth.note='两家报道的未满25岁金额不同，报新闻的25岁年龄分界亦有重叠；是否方案调整或报道有误暂未确认。均为限定用途的竞选额度，资格、财源与执行细节待核。';
+ weiHealth.sources=[...new Set([...weiHealth.sources,'county-wei-hualien-first-plan-20260916'])];
+ if(!weiFuture.policies.some(x=>x.sources?.includes('county-wei-hualien-first-plan-20260916')&&x.topic==='tourism'))weiFuture.policies.push({topic:'tourism',text:'魏嘉贤提出每人每年3600元县内旅游额度，用于花莲县内观光住宿，以鼓励在地旅游。',type:'本届竞选主张（记者会报道）',basis:'campaign',electionYear:2026,date:'2026-09-16',sources:['county-wei-hualien-first-plan-20260916'],note:'报道指出存摺记载的是限定用途额度而非现金；适用条件、核销办法和财源仍需确认。'});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
