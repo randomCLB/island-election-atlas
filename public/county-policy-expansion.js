@@ -2867,6 +2867,11 @@ function apply(d){
   ['education','陈莹提出盘点教职员宿舍并优先改善偏乡住宿，为初任教师提供搬家及租屋补助；另以跨校共聘行政人力减轻教师负担，并提供亲师冲突心理与法律咨询。','补助金额、适用年限、人力配置与预算暂未确认。'],
   ['childcare','陈莹提出增加亲子友善空间与特色公园，并引入儿童参与设计，让孩子表达对游戏环境的需求。','具体场址、参与机制、经费及完成时间尚待说明。']
  ])if(!chenTaitungFamily.policies.some(x=>x.sources?.includes('county-chen-taitung-family-20261112')&&x.text===text))chenTaitungFamily.policies.push({topic,text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-12（报道日）',sources:['county-chen-taitung-family-20261112'],note});
+ const wangDroneDetail=d.people.find(p=>p.city==='taitung'&&p.name==='王志偉');if(!wangDroneDetail)throw new Error('Missing candidate: 王志偉');
+ const wangDronePolicy=wangDroneDetail.policies.find(x=>x.sources?.includes('county-wang-taitung-20260912')&&x.topic==='economy');if(!wangDronePolicy)throw new Error('Missing Wang agriculture proposal');
+ wangDronePolicy.text='王志伟提出订定农渔产品等级、对顶级品保价收购；另规划100架无人机提供喷药及施肥代工，由政府补助一半作业成本。';
+ wangDronePolicy.note='无人机代工补助比例来自联合报9月12日报道；农产品收购标准、无人机操作安全、补助对象、财政来源及实施时程暂未确认。';
+ wangDronePolicy.sources=[...new Set([...wangDronePolicy.sources,'county-wang-taitung-education-farming-20260912'])];
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
