@@ -2872,6 +2872,14 @@ function apply(d){
  wangDronePolicy.text='王志伟提出订定农渔产品等级、对顶级品保价收购；另规划100架无人机提供喷药及施肥代工，由政府补助一半作业成本。';
  wangDronePolicy.note='无人机代工补助比例来自联合报9月12日报道；农产品收购标准、无人机操作安全、补助对象、财政来源及实施时程暂未确认。';
  wangDronePolicy.sources=[...new Set([...wangDronePolicy.sources,'county-wang-taitung-education-farming-20260912'])];
+ d.sources['county-matsu-hospital-20261002']={title:'中央社：曹尔元提医院改制，王忠铭盼另设',url:'https://www.cna.com.tw/news/aloc/202610020294.aspx',date:'2026-10-02',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者分别采访两位候选人'};
+ d.sources['county-matsu-pet-care-20261103']={title:'中央社：连江县长候选人宠物医疗主张',url:'https://www.cna.com.tw/news/aipl/202611030297.aspx',date:'2026-11-03',checkedAt:'2026-11-12',publisherId:'cna',publisherName:'中央社',kind:'记者报道候选人社群发文及新闻资料'};
+ for(const [name,topic,text,source,date,note] of [
+  ['曹爾元','health','曹尔元主张将连江县立医院改制为卫福部立医院，认为有助医师流动、专科进驻和医疗品质；他担心保留县立、另设部立可能分散资源。','county-matsu-hospital-20261002','2026-10-02','这是候选人对医院体制的判断与提案；改制须经中央地方协商，实际人力、成本及影响尚未确定。'],
+  ['王忠銘','health','王忠铭表示不反对设立部立医院，但主张保留县立医院，可考虑活用北竿花岗岩军医院旧址另建，并优先完善重大伤病转诊后送。','county-matsu-hospital-20261002','2026-10-02','这是对曹尔元改制构想的回应；选址、中央意愿、经费和后送协议须进一步确认。'],
+  ['王忠銘','health','王忠铭提出符合条件的流浪动物经兽医评估后赴台治疗，急难医疗救助最高2.5万元，并规划南竿上腰山宠物友善公园。','county-matsu-pet-care-20261103','2026-11-03（报道日）','补助针对符合条件的流浪动物，非所有宠物；资格、经费与公园土地拨用结果须核实。'],
+  ['曹爾元','health','曹尔元提出除县府常设兽医外，与大学兽医院等单位合作定期巡诊或驻点，并研议宠物保险和赴台治疗交通、医疗补助。','county-matsu-pet-care-20261103','2026-11-03','合作单位、频次、保险保障与补助标准尚待说明；属于候选人的政策构想。']
+ ]){const p=d.people.find(x=>x.city==='lienchiang'&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);if(!p.policies.some(x=>x.sources?.includes(source)&&x.text===text))p.policies.push({topic,text,type:'本届主张（媒体报道）',basis:'campaign',electionYear:2026,date,sources:[source],note});}
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
