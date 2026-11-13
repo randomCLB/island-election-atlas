@@ -2758,6 +2758,15 @@ function apply(d){
   ['housing','赖瑞隆提出东高雄多功能社会住宅结合托育中心、共融游戏场与长照据点。','kaohsiung-lai-east-policy-20260909','2026-09-09','地点、户数、入住条件与经费暂未确认。'],
   ['transport','赖瑞隆提出短期升级小港机场，中期争取国际航线，长期评估南星计划区外海等场址，以填海方式兴建可24小时营运的海上机场。','kaohsiung-lai-airport-policy-20260909','2026-09-09','海上机场仍为评估构想，选址、环境影响、财源、中央审查和飞航可行性均未确定；不等同核定兴建。']
  ])if(!laiPolicy.policies.some(x=>x.sources?.includes(source)&&x.text===text))laiPolicy.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date,sources:[source,'kaohsiung-lai-policy-island-20261112'],note});
+ d.sources['kaohsiung-ko-women-20260918']={title:'柯志恩提出女性与育儿政策',url:'https://udn.com/vote2026/story/124652/9762722',date:'2026-09-18',checkedAt:'2026-11-12',publisherId:'udn',publisherName:'联合报',kind:'记者报道候选人公开政见'};
+ const koWomen=d.people.find(p=>p.city==='kaohsiung'&&p.name==='柯志恩');if(!koWomen)throw new Error('Missing candidate: 柯志恩');
+ for(const [topic,text,note] of [
+  ['childcare','柯志恩提出2030年前将临时托育据点增至60处、每时段收托量加倍，并为0至6岁家庭每年提供48小时喘息券，特殊需求家庭再增加24小时。','据媒体报道为竞选目标；据点选址、家庭资格、人员与经费仍待说明。'],
+  ['labor','柯志恩提出在中央育婴留职停薪补助之外，由市府补足投保薪资的剩余两成，使期间所得达投保薪资级距100%。','属于竞选主张；适用对象、补助期限、财源和与中央规定的衔接需另核。'],
+  ['childcare','柯志恩提出第二胎生育津贴提高至4万元、第三胎5万元，并使生育津贴与到宅月子服务可同时申请。','这是候选人主张；适用资格、是否与既有补助叠加及预算需进一步核对。'],
+  ['health','柯志恩提出补助符合设籍条件的25至40岁女性及25岁以下罹癌女性冻卵，包括1000元AMH检验、首年2万元及后续两年每年6000元保存费，最高3.3万元。','数字按联合报报道；适用条件、申请细则及财源尚待确认。'],
+  ['labor','柯志恩提出鼓励企业让育儿员工每日缩短工时1小时，并由政府补贴代班人力；另加强怀孕歧视和职场性骚扰的劳动检查与申诉协助。','企业参与条件、补助标准与主管机关分工暂未说明。']
+ ])if(!koWomen.policies.some(x=>x.sources?.includes('kaohsiung-ko-women-20260918')&&x.text===text))koWomen.policies.push({topic,text,type:'本届竞选主张（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-09-18',sources:['kaohsiung-ko-women-20260918'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
