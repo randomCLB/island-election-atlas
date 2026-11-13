@@ -2806,6 +2806,15 @@ function apply(d){
   ['transport','针对台澎航线高峰期一位难求，陈振中提出争取常态化加班机，并建立本地居民优先预约及候补机制。','这属于候选人提出的航班与预约安排；航司、主管机关、适用条件及财源未确认。'],
   ['environment','陈振中表示绿能开发应审查程序合法性，并落实地方同意与景观规划；他说没有共识不应贸然推动。','报道为候选人对开发争议的表态；地方同意机制、适用项目和执行办法须进一步说明。']
  ])if(!chenIsland.policies.some(x=>x.sources?.includes('county-chen-penghu-interview-20260911')&&x.text===text))chenIsland.policies.push({topic,text,type:'本届竞选主张（媒体专访）',basis:'campaign',electionYear:2026,date:'2026-09-11（报道日）',sources:['county-chen-penghu-interview-20260911'],note});
+ d.sources['county-hsu-hsinchu-care-site-20261112']={title:'徐欣莹竞选网站：贴心福利政见',url:'https://www.shesinging.tw/politics/care/',date:'竞选网站，原发日期未列',checkedAt:'2026-11-12',publisherId:'candidate-site',publisherName:'徐欣莹竞选团队',kind:'候选人竞选网站公布的政策主张',note:'网页内容可能更新；查阅日期不是各项政见原始发布日期。'};
+ const hsuCountyCare=d.people.find(p=>p.city==='hsinchu-county'&&p.name==='徐欣瑩');if(!hsuCountyCare)throw new Error('Missing candidate: 徐欣瑩');
+ for(const [topic,text,note] of [
+  ['economy','徐欣莹提出青年创业启动金分两级，一般型每案最高10万元、成长型每案最高30万元，目标每年支持60组团队。','这是竞选网站规划；青年资格、评审方式、两级分配及预算暂未确认。'],
+  ['economy','徐欣莹提出对已取得中央青年创业相关贷款或基金支持的青年，提供最长5年贷款利息补贴。','补贴比例、金额上限、申请条件及与中央方案衔接需另行明确。'],
+  ['childcare','徐欣莹提出整合临托预约、托育媒合、儿童健康检查与早疗申请追踪的育儿资源应用程序，并以发展风险初筛提醒家长进一步寻求专业评估。','方案涉及儿童资料使用；权限、隐私保护、医疗机构协作及预算尚待说明，初筛不等于诊断。'],
+  ['labor','徐欣莹提出为因育儿或家庭照顾离开职场、准备再就业或创业的女性提供职业训练与托育资源，并设最高5万元创业启动金。','创业补助资格、名额、资金和培训实施方式暂未确认。'],
+  ['health','徐欣莹提出为65岁以上长者规划智慧健康手环，监测健康指标并在异常或跌倒时发出提醒。','这是竞选规划；装置性能、告警责任、使用者同意、个人资料保护及预算均待说明。']
+ ])if(!hsuCountyCare.policies.some(x=>x.sources?.includes('county-hsu-hsinchu-care-site-20261112')&&x.text===text))hsuCountyCare.policies.push({topic,text,type:'本届竞选主张（竞选网站）',basis:'campaign',electionYear:2026,date:'原发日期未列，查阅2026-11-12',sources:['county-hsu-hsinchu-care-site-20261112'],note});
  d.sources['county-foreign-review-yilan-20261112']={title:'宜兰县长候选人及公开资料',url:'https://taiwanpoliticalzoo.com/other-cities/yilan/',date:'资料页面（日期未列）',checkedAt:'2026-11-12',publisherId:'other',publisherName:'台湾选举懒人包（倾向待核定）',kind:'候选人资料索引；未收录不等于未曾表态'};
  d.sources['county-foreign-review-keelung-20261112']={title:'基隆候选人魏造文受访',url:'https://www.ftvnews.com.tw/news/detail/2026B11W0525',date:'2026-11-11',checkedAt:'2026-11-12',publisherId:'ftv',publisherName:'民视新闻',kind:'媒体采访；包含其关于改名的说明'};
  for(const [city,name,refs] of [['keelung','魏造文',['county-wei-keelung-issues-20261027','county-foreign-review-keelung-20261112']],['yilan','陳宏毅',['county-chen-yilan-engineer-20260901','county-foreign-review-yilan-20261112']],['yilan','劉燦輝',['county-foreign-review-yilan-20261112','county-bio']]]){
