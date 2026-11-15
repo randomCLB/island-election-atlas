@@ -50,6 +50,8 @@ $('.panel-tabs').addEventListener('keydown',e=>{const tabs=[...document.querySel
 $('#close-dialog').onclick=()=>dialog.close();dialog.addEventListener('close',()=>{if(state.person){state.person=null;history.replaceState(null,'','#/'+state.city);document.title=city().name+' · 岛屿选战';}});$('#close-sources').onclick=()=>$('#sources-dialog').close();for(const d of [dialog,$('#sources-dialog')])d.addEventListener('click',e=>{if(e.target===d){const b=d.getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)d.close();}});
 $('#source-list').innerHTML=AtlasMedia.room();
 const mergerSource=$('#guide-merger-source');if(mergerSource)mergerSource.innerHTML=AtlasMedia.render('merger','县市改制沿革来源');
-setInterval(()=>{AtlasMap.update();if(state.tab==='polls')renderPanel();},60000);
+function refreshPollVisibility(){AtlasPollVisibility.sync();AtlasMap.update();if(state.tab==='polls')renderPanel();}
+window.addEventListener('atlas:blackout-change',()=>{$('#source-list').innerHTML=AtlasMedia.room();AtlasMap.update();if(state.tab==='polls')renderPanel();});
+setInterval(refreshPollVisibility,60000);
 AtlasMap.init(id=>{selectCity(id);if(matchMedia('(max-width:950px)').matches)setTimeout(()=>$('#city-panel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'}),80);});window.addEventListener('hashchange',applyRoute);applyRoute();
 })();

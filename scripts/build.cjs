@@ -79,12 +79,16 @@ const errors=U.validateData(D);if(errors.length)throw new Error(errors.join('\n'
 for(const p of D.people)for(const x of p.policies)if(!D.policyTopics[x.topic]||!x.text||!x.date||!x.electionYear||!x.sources.length||x.sources.some(s=>!D.sources[s]))throw new Error('Invalid policy: '+p.id);
 for(const p of D.people)if(p.policyCoverage?.sources?.some(s=>!D.sources[s]))throw new Error('Invalid policy coverage sources: '+p.id);
 for(const p of D.polls)if(!D.people.some(x=>x.city===p.city)||p.sources.some(s=>!D.sources[s])||p.results.some(r=>!D.people.some(x=>x.id===r.person&&x.city===p.city)))throw new Error('Invalid poll references');
-const dist=path.join(root,'dist');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(path.join(root,'public'),dist,{recursive:true});fs.writeFileSync(path.join(dist,'.nojekyll'),'');
+const releaseDate=new Date(process.env.ATLAS_BUILD_TIME||Date.now());
+if(!Number.isFinite(+releaseDate))throw new Error('Invalid ATLAS_BUILD_TIME');
+const restricted=process.env.ATLAS_POLL_MODE==='restricted'||U.releaseBlackout(releaseDate);
+const dist=path.resolve(process.env.ATLAS_DIST_DIR||path.join(root,'dist'));if(dist===root||dist===path.join(root,'public'))throw new Error('Unsafe output directory');fs.rmSync(dist,{recursive:true,force:true});fs.cpSync(path.join(root,'public'),dist,{recursive:true});fs.writeFileSync(path.join(dist,'.nojekyll'),'');
 // Remove restricted survey data from release bytes, not only the interface.
-if(U.blackout()){
+if(restricted){
  const page=path.join(dist,'index.html');
  fs.writeFileSync(page,fs.readFileSync(page,'utf8').replace(/<section[^>]* id="six-city-polls"[^>]*>[\s\S]*?<\/section>/,''));
- const file=path.join(dist,'election-map-data.js'),pack=M.forRelease();fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
+ const guide=path.join(dist,'taipei.html');fs.writeFileSync(guide,fs.readFileSync(guide,'utf8').replace(/<article data-poll-content="true">[\s\S]*?<\/article>/g,''));
+ const file=path.join(dist,'election-map-data.js'),pack=M.forRelease(new Date(U.blackoutStart));fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace(/const pack=.*?;(?=\nfunction)/s,()=> 'const pack='+JSON.stringify(pack)+';'));}
 // GitHub Pages may keep an old asset when only its query string changes.
 for(const htmlName of ['index.html','taipei.html']){
 const htmlPath=path.join(dist,htmlName);
@@ -95,4 +99,5 @@ fs.writeFileSync(htmlPath,fs.readFileSync(htmlPath,'utf8').replace(/((?:src|href
  return prefix+fingerprinted+suffix;
 }));
 }
-console.log('Built static site: '+dist);
+fs.writeFileSync(path.join(dist,'release-status.json'),JSON.stringify({builtAt:releaseDate.toISOString(),pollMode:restricted?'restricted':'normal',commit:process.env.GITHUB_SHA||null,blackoutStart:new Date(U.blackoutStart).toISOString(),blackoutEnd:new Date(U.blackoutEnd).toISOString()})+'\n');
+console.log('Built static site: '+dist+' ('+(restricted?'restricted':'normal')+')');

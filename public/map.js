@@ -1,6 +1,5 @@
 (function(){
 'use strict';
-if(AtlasDomain.blackout())document.querySelector('#six-city-polls')?.remove();
 const {esc}=AtlasDomain,cityIds=ATLAS.cities.map(c=>c.id),svg=document.getElementById('island-map');
 const rows=MAP_ROWS.map(([id,name,paths])=>({id,name,rings:paths.split(';').map(r=>r.split(' ').map(p=>p.split(',').map(Number)))}));
 const geo={type:'FeatureCollection',features:rows.map(r=>({type:'Feature',properties:{id:r.id,name:r.name},geometry:{type:'Polygon',coordinates:r.rings.map(ring=>ring.map(([x,y])=>[x/197+119.1,25.6-y/215]))}}))};

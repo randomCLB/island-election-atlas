@@ -1,0 +1,64 @@
+name: Poll-window release
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  schedule:
+    # UTC. Repeated checks, beginning two hours before Taiwan's restriction.
+    - cron: '7,27,47 14-16 17 11 *'
+    - cron: '7 0,8,14,16 18-28 11 *'
+    - cron: '7,27,47 8-10 28 11 *'
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: atlas-pages-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Restrict scheduled runs to this election
+        id: window
+        run: |
+          if [ "${{ github.event_name }}" != schedule ] || [ "$(date -u +%Y)" = 2026 ]; then echo 'run=true' >> "$GITHUB_OUTPUT"; fi
+      - name: Verify boundary, runtime, and release controls
+        if: steps.window.outputs.run == 'true'
+        run: node --test tests/domain.test.cjs tests/poll-window.test.cjs
+      - name: Build complete current artifact
+        if: steps.window.outputs.run == 'true'
+        env:
+          ATLAS_PUBLIC_RELEASE: '1'
+        run: npm run build
+      - name: Publish to existing gh-pages branch
+        if: steps.window.outputs.run == 'true'
+        run: |
+          git worktree add /tmp/atlas-pages origin/gh-pages
+          rsync -a --delete --exclude=.git dist/ /tmp/atlas-pages/
+          cd /tmp/atlas-pages
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --quiet || git commit -m "Publish poll-window artifact ${GITHUB_SHA}"
+          git push origin HEAD:gh-pages
+      - name: Explicitly request traditional Pages build
+        if: steps.window.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+      - name: Verify live release receipt
+        if: steps.window.outputs.run == 'true'
+        run: |
+          for attempt in $(seq 1 30); do
+            curl -fsSL "https://randomclb.github.io/island-election-atlas/release-status.json?run=${GITHUB_RUN_ID}-${attempt}" -o /tmp/live-release.json || true
+            if node -e 'const fs=require("fs");const a=JSON.parse(fs.readFileSync("dist/release-status.json")),b=JSON.parse(fs.readFileSync("/tmp/live-release.json"));process.exit(a.commit===b.commit&&a.builtAt===b.builtAt&&a.pollMode===b.pollMode?0:1)' 2>/dev/null; then exit 0; fi
+            sleep 20
+          done
+          echo 'Live release receipt did not match; external verification is required.' >&2
+          exit 1
