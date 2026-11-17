@@ -2,10 +2,10 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const M=require('../public/election-map-data.js'),U=require('../public/domain.js');
 const closing=M.pack.reportedPolls.filter(p=>p.id.startsWith('closing-'));
-test('closing surveys retain provenance and stay separate from map-eligible polls',()=>{
+test('closing surveys retain provenance and join map observations as limited context',()=>{
  assert.equal(closing.length,11);assert.equal(new Set(closing.map(p=>p.city)).size,5);
  const d=structuredClone(require('../public/data.js'));for(const name of ['taipei-research','taipei-profile-data','four-city-data','policy-data','election-map-data','county-model'])require('../public/'+name+'.js').apply(d);
- for(const p of closing){assert.ok(p.start<=p.end&&p.end<=p.publishedAt);assert.ok(p.sampleSize>0&&p.methodSummary&&p.limit);assert.ok(p.sources.length&&p.sources.every(id=>M.pack.sources[id]&&U.isPollSource(id)));assert.ok(p.results.every(r=>d.people.some(person=>person.id===r.person&&person.city===p.city)));assert.ok(!M.pack.polls.some(q=>q.id===p.id));}
+ for(const p of closing){assert.ok(p.start<=p.end&&p.end<=p.publishedAt);assert.ok(p.sampleSize>0&&p.methodSummary&&p.limit);assert.ok(p.sources.length&&p.sources.every(id=>M.pack.sources[id]&&U.isPollSource(id)));assert.ok(p.results.every(r=>d.people.some(person=>person.id===r.person&&person.city===p.city)));assert.ok(!M.pack.polls.some(q=>q.id===p.id));assert.equal(p.mapUse,'context');assert.ok(p.mapSeries);}
 });
 test('subgroups, mixed samples and unresolved categories are not silently normalised',()=>{
  const byId=Object.fromEntries(closing.map(p=>[p.id,p]));
