@@ -3,11 +3,6 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-  schedule:
-    # UTC. Repeated checks, beginning two hours before Taiwan's restriction.
-    - cron: '7,27,47 14-16 17 11 *'
-    - cron: '7 0,8,14,16 18-28 11 *'
-    - cron: '7,27,47 8-10 28 11 *'
 permissions:
   contents: write
   pages: write

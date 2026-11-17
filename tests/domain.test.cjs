@@ -6,7 +6,7 @@ test('all five cities have separately dated 2010 and 2022 records',()=>{for(cons
 test('partial results do not invent a denominator',()=>{const e=D.elections.find(e=>e.city==='taichung'&&e.year===2022);assert.equal(U.percent(e.rows[0],e),null);});
 test('New Taipei percentage is computed from verified counts, not source typo',()=>{const e=D.elections.find(e=>e.city==='new-taipei'&&e.year===2022);assert.equal(U.percent(e.rows[0],e).toFixed(2),'62.42');});
 test('Taipei 2022 reported shares are not normalized to partial total',()=>{const e=D.elections.find(e=>e.city==='taipei'&&e.year===2022);assert.equal(U.percent(e.rows[0],e),42.29);});
-test('blackout uses explicit Taipei UTC+8 boundaries',()=>{assert.equal(U.blackout(new Date('2026-11-17T15:59:59Z')),false);assert.equal(U.blackout(new Date('2026-11-17T16:00:00Z')),true);assert.equal(U.blackout(new Date('2026-11-28T08:00:01Z')),false);});
+test('automatic blackout is disabled by owner request',()=>{assert.equal(U.blackout(new Date('2026-11-17T15:59:59Z')),false);assert.equal(U.blackout(new Date('2026-11-17T16:00:00Z')),false);assert.equal(U.blackout(new Date('2026-11-28T08:00:01Z')),false);});
 test('incomplete polls rejected and no published polls included',()=>{assert.equal(U.validatePoll({reviewed:true,results:[1]}),false);assert.equal(D.polls.length,0);});
 test('deep links cannot select another city person',()=>{assert.deepEqual(U.route('#/taipei/chiang',D),{city:'taipei',person:'chiang'});assert.deepEqual(U.route('#/tainan/chiang',D),{city:'tainan',person:null});assert.equal(U.route('#/unknown',D).city,'taipei');});
 test('HTML escape prevents source data markup injection',()=>assert.equal(U.esc('<img onerror="x">'), '&lt;img onerror=&quot;x&quot;&gt;'));

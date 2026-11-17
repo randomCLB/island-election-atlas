@@ -3,9 +3,10 @@
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function percent(row,election){if(Number.isFinite(row[3]))return row[3];if(!election.complete)return null;const total=election.rows.reduce((n,r)=>n+r[2],0);return total?row[2]/total*100:null;}
 const blackoutStart=Date.parse('2026-11-18T00:00:00+08:00'),blackoutEnd=Date.parse('2026-11-28T16:00:00+08:00');
-function blackout(now=new Date()){return +now>=blackoutStart&&+now<=blackoutEnd;}
-// Publish the stripped artifact two hours early: scheduled deployment is not an exact-time service.
-function releaseBlackout(now=new Date()){return +now>=blackoutStart-2*60*60*1000&&+now<=blackoutEnd;}
+// Automatic poll hiding disabled by owner request on 2026-11-17.
+function blackout(now=new Date()){return false;}
+// Keep public releases complete; do not infer a display policy from the date.
+function releaseBlackout(now=new Date()){return false;}
 function isPollSource(id){return id!=='poll-law'&&/(^poll-|^t-poll-|^county-poll|^county-.*-poll$)/.test(id);}
 function validatePoll(p){const fields=['id','city','pollster','sponsor','director','start','end','population','method','sampling','sampleSize','margin','question','source'];return fields.every(k=>p[k]!==undefined&&p[k]!==null&&p[k]!=='')&&Array.isArray(p.results)&&p.results.length>0&&p.reviewed===true&&['probability','member-panel'].includes(p.sampling)&&((p.sampling==='member-panel'&&Number.isInteger(p.populationSize)&&p.populationSize>0)||(p.sampling==='probability'&&(p.populationSize===undefined||(Number.isInteger(p.populationSize)&&p.populationSize>0))))&&Number.isInteger(p.sampleSize)&&p.sampleSize>0&&Number.isFinite(p.margin)&&p.margin>=0&&p.results.every(r=>typeof r.person==='string'&&Number.isFinite(r.value)&&r.value>=0&&r.value<=100);}
 function validateData(d){const problems=[],ids=new Set(),cities=new Set(d.cities.map(c=>c.id));for(const p of d.people){if(ids.has(p.id))problems.push('Duplicate person: '+p.id);ids.add(p.id);if(!cities.has(p.city))problems.push('Unknown city');if(!d.sources[p.source])problems.push('Missing bio source');for(const e of [...p.evidence,...p.controversies])if(!d.sources[e.source])problems.push('Missing evidence source');if(p.slogan&&!d.sources[p.slogan.source])problems.push('Missing slogan source');}for(const e of d.elections){if(!cities.has(e.city)||!e.rows.length)problems.push('Invalid election');for(const r of e.rows)if(!Number.isInteger(r[2])||r[2]<0)problems.push('Invalid votes');for(const s of e.sources)if(!d.sources[s])problems.push('Missing election source');}for(const p of d.polls)if(!validatePoll(p))problems.push('Unreviewed or incomplete poll');return problems;}
