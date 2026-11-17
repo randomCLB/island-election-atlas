@@ -2990,6 +2990,58 @@ function apply(d){
   const p=d.people.find(x=>x.city===city&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);p.evidenceCoverage=p.evidenceCoverage||{};
   for(const [region,label] of [['cn','中国大陆／两岸'],['us','美国'],['jp','日本']])if(!p.evidence.some(x=>x.region===region)&&!p.evidenceCoverage[region])p.evidenceCoverage[region]={checkedAt:'2026-11-12',scope:'本次以候选人姓名、县市及「'+label+'」相关词检索公开网页，并查看所列候选人报道或资料索引；未找到可明确归属于本人的相关观点。',note:'未逐一核查个人社群、所有视频及后续选举公报；同名结果不自动视为本人，不能据此推定立场。',sources:refs};
  }
+
+ // 2026 candidate bulletins: personal details and platforms are candidate-submitted.
+ for(const [id,name,url] of [["taipei","臺北市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%87%BA%E5%8C%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["new-taipei","新北市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E6%96%B0%E5%8C%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["taoyuan","桃園市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E6%A1%83%E5%9C%92%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["taichung","臺中市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%87%BA%E4%B8%AD%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["tainan","臺南市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%87%BA%E5%8D%97%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["kaohsiung","高雄市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/03%E7%9B%B4%E8%BD%84%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E9%AB%98%E9%9B%84%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["keelung","基隆市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%9F%BA%E9%9A%86%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["hsinchu-city","新竹市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E6%96%B0%E7%AB%B9%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["hsinchu-county","新竹縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E6%96%B0%E7%AB%B9%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["yilan","宜蘭縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["miaoli","苗栗縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%8B%97%E6%A0%97%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["changhua","彰化縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%BD%B0%E5%8C%96%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["nantou","南投縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%8D%97%E6%8A%95%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["yunlin","雲林縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E9%9B%B2%E6%9E%97%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["chiayi-city","嘉義市","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%98%89%E7%BE%A9%E5%B8%82%E5%B8%82%E9%95%B7.pdf"],["chiayi-county","嘉義縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%98%89%E7%BE%A9%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["pingtung","屏東縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E5%B1%8F%E6%9D%B1%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["hualien","花蓮縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%8A%B1%E8%93%AE%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["taitung","臺東縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E8%87%BA%E6%9D%B1%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["penghu","澎湖縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["kinmen","金門縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E9%87%91%E9%96%80%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"],["lienchiang","連江縣","https://bulletin.cec.gov.tw/01%E9%81%B8%E8%88%89%E5%85%AC%E5%A0%B1/04%E7%B8%A3%E5%B8%82%E9%95%B7/115%E5%B9%B4/%E9%80%A3%E6%B1%9F%E7%B8%A3%E7%B8%A3%E9%95%B7.pdf"]]){
+  d.sources['county-bulletin-2026-'+id]={title:name+'2026年首长选举公报',url,date:'2026年选举公报，发布日期未列',checkedAt:'2026-11-17',publisherId:'official-tw',agencyName:'中央选举委员会／地方选举委员会',kind:'选举委员会编印；学历、经历和政见由候选人填报，不等于独立核实或已落实'};
+ }
+ const bulletinYilan='county-bulletin-2026-yilan';
+ const yang2026=d.people.find(p=>p.city==='yilan'&&p.name==='楊鉯婷');
+ const chen2026=d.people.find(p=>p.city==='yilan'&&p.name==='陳宏毅');
+ const wei2026=d.people.find(p=>p.city==='keelung'&&p.name==='魏造文');
+ if(!yang2026?.countyBrief||!chen2026?.countyBrief||!wei2026?.countyBrief)throw new Error('Missing 2026 bulletin candidate');
+ yang2026.bio='崇右影艺科技大学多媒体与游戏发展科学系毕业；选举公报自列跨领域、大数据、设计与传统产业等工作经历。';
+ yang2026.source=bulletinYilan;
+ yang2026.countyBrief.education='崇右影艺科技大学多媒体与游戏发展科学系毕业（2026年选举公报候选人自填）。';
+ yang2026.countyBrief.work='2026年选举公报自填曾从事跨领域、大数据、设计、传统产业及基层工作；具体单位、职务与起止年月暂未确认。';
+ yang2026.countyBrief.extraBioSources=[...new Set([...(yang2026.countyBrief.extraBioSources||[]),bulletinYilan])];
+ yang2026.policyCoverage=null;
+ chen2026.countyBrief.work='2026年选举公报自填曾任大鹏科技股份有限公司资深设计工程师；工作内容及起止年月暂未确认。';
+ chen2026.countyBrief.extraBioSources=[...new Set([...(chen2026.countyBrief.extraBioSources||[]),bulletinYilan])];
+ wei2026.countyBrief.education='2026年选举公报自填陆军官校专修班；毕业细节及年份暂未确认。';
+ wei2026.countyBrief.work='2026年选举公报自列上尉、驻卫警察、省立美术馆员工及南亚员工；单位细节、任期及当前状态暂未确认。';
+ wei2026.countyBrief.extraBioSources=[...new Set([...(wei2026.countyBrief.extraBioSources||[]),'county-bulletin-2026-keelung'])];
+ yang2026.countyBrief.policyReview='已查2026年县长选举公报并录入其五项主张；具体方案与实施条件仍待查。';
+ wei2026.countyBrief.policyReview='已查选举公报及媒体报道；具体防洪方案与执行条件仍待确认。';
+ const wang2026=d.people.find(p=>p.city==='chiayi-city'&&p.name==='王義成');
+ if(!wang2026?.countyBrief)throw new Error('Missing candidate: 王義成');
+ wang2026.countyBrief.policyReview='已查2026年市长选举公报并补充政见细节；执行条件仍待确认。';
+ wang2026.policyCoverage={checkedAt:'2026-11-17',note:'已查2026年选举公报与登记、抽签报道，列出创业、长照及托幼主张；预算、用地与实施细节仍待确认，个人社群和后续政见会尚未逐项查核。',sources:['county-bulletin-2026-chiayi-city','chiayi-wang-yicheng-policies-20261027']};
+ for(const item of wang2026.policies.filter(x=>x.sources?.includes('chiayi-wang-yicheng-policies-20261027')))item.note='2026年10月报道转述其手写政见；选举公报所列细节已在同一档案另行补充，执行条件仍待确认。';
+ const policyRows=[
+  ['yilan','楊鉯婷','accountability','提出组建独立AI团队监看县府预算与工程，并将追回的贪腐所得及防弊节余纳入共享基金，投资支持县民医疗和基本生活。','基金收益、技术效果、资金来源与合法权限尚未确认。'],
+  ['yilan','楊鉯婷','health','提出串联警政、消防与医院的数位存证，并推动高风险术后无线生理监测。','跨机构权限、个人资料保护、费用与执行方式尚未说明。'],
+  ['yilan','楊鉯婷','accountability','提出设立司法服务与律师履历透明平台，推动费用、承办评价与利益回避资讯公开。','律师管理与司法监督涉及中央及专业组织权限；具体法源和实施方式待查。'],
+  ['yilan','楊鉯婷','health','提出争取前瞻神经科技及AI复健机器人，供乡镇卫生所与长照机构运用。','公报提到Neuralink概念，但未表示已与该公司合作；预算及医疗适用性待评估。'],
+  ['yilan','楊鉯婷','economy','提出利用交通枢纽和高铁特定区发展科技贸易展览，并以公私协力和数字工具支持弱势家庭。','高铁及特定区建设进度、土地取得、经费和合作对象需分别确认。'],
+  ['yilan','劉燦輝','water','提出协助农民设置设施栽培，并由农会设立实习农场，让有兴趣的人实际学习农业。','设施成本、补助对象、农会参与与资金来源需进一步说明。'],
+  ['chiayi-city','王義成','economy','提出市府每年辅导300个创业名额，设置7000万元创业贷款利息补贴，并规划特色夜市。','补贴申请资格、资金安排及夜市用地和居民意见尚待说明。'],
+  ['chiayi-city','王義成','childcare','提出增加安全游乐空间与公立托儿名额，并增设24小时公立托顾中心。','具体地点、照顾人力、需求和预算尚待说明。'],
+  ['chiayi-city','王義成','health','提出全龄友善照护及智慧居家网络，定期提供长者长照、针灸等支持。','服务资格、提供方式与经费尚待说明。']
+ ];
+ for(const [city,name,topic,text,note] of policyRows){
+  const p=d.people.find(x=>x.city===city&&x.name===name),source='county-bulletin-2026-'+city;
+  if(!p)throw new Error('Missing bulletin candidate: '+name);
+  if(!p.policies.some(x=>x.sources?.includes(source)&&x.text===text))p.policies.push({topic,text,type:'本届选举公报（候选人自填）',basis:'campaign',electionYear:2026,date:'2026年选举公报；2026-11-17查阅',sources:[source],note});
+ }
+ d.sources['county-taoyuan-platform-pts-20261117']={title:'桃园公办政见会：产业、医疗与住宅',url:'https://news.pts.org.tw/article/836045',date:'2026-11-17',checkedAt:'2026-11-17',publisherId:'pts',kind:'公视对候选人政见发言的报道'};
+ for(const [name,topic,text,note] of [
+  ['黃世杰','health','黄世杰在公办政见会提出重新启动清大医院BOT计划，改善桃园医疗资源。','计划可行性、主管机关、经费与时程待进一步核实。'],
+  ['黃世杰','economy','黄世杰提出布局产业园区创造就业，并推动演唱会经济。','园区选址、产业与投资及活动场馆配套待进一步说明。'],
+  ['張善政','health','张善政在政见会谈及争取病床配额和设立市立医院许可。','这是候选人对任内工作及后续规划的说明；许可、病床和完工进度应以主管机关公告为准。'],
+  ['張善政','economy','张善政提出推动可负担住宅自治条例。','条例内容、适用对象、财政来源与议会审议尚待确认。']
+ ]){const p=d.people.find(x=>x.city==='taoyuan'&&x.name===name);if(!p)throw new Error('Missing candidate: '+name);if(!p.policies.some(x=>x.sources?.includes('county-taoyuan-platform-pts-20261117')&&x.text===text))p.policies.push({topic,text,type:'公办政见会发言（媒体报道）',basis:'campaign',electionYear:2026,date:'2026-11-17',sources:['county-taoyuan-platform-pts-20261117'],note});}
+
 }
 if(typeof module!=='undefined')module.exports={apply};else apply(root.ATLAS);
 })(typeof window==='undefined'?globalThis:window);
