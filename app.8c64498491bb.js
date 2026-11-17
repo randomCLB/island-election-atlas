@@ -18,7 +18,7 @@ function renderCity(){
  document.title=c.fullName+' · 岛屿选战';
  renderCities(); AtlasMap.select(c.id); $('.edition b').textContent=c.index+' / '+D.cities.length;
  const districts=c.id==='taipei'?'<a class="district-guide-link" href="taipei.html"><span>台北十二区导览</span><span>↗</span></a>':'';
- $('#city-heading').innerHTML='<div class="city-title"><div><h2>'+E(c.fullName)+'</h2><div class="en">'+E(c.en)+'</div></div><div class="city-count"><strong>'+n+'</strong><span>首长候选人</span></div></div><p class="city-caption">'+E(c.caption)+'</p><a class="district-guide-link" href="#/'+c.id+'/overview"><span><b>县市档案与两地对照</b><small>人口、所得、产业、地方议题与代表</small></span><span aria-hidden="true">↓</span></a>'+districts;
+ $('#city-heading').innerHTML='<div class="city-title"><div><h2>'+E(c.fullName)+'</h2><div class="en">'+E(c.en)+'</div></div><div class="city-count"><strong>'+n+'</strong><span>首长候选人</span></div></div><p class="city-caption">'+E(c.caption)+'</p><div id="map-signal-summary">'+AtlasMap.signalSummary(c.id)+'</div><a class="district-guide-link" href="#/'+c.id+'/overview"><span><b>县市档案与两地对照</b><small>人口、所得、产业、地方议题与代表</small></span><span aria-hidden="true">↓</span></a>'+districts;
  AtlasCountyGuide.render(c.id);renderPanel();renderHistory();window.AtlasResearch?.renderCity(c.id);AtlasPolicies.render(c.id);
 }
 function normalize(v){const a='蔣萬蘇輝湟蕭啟陳賴龍燐麗謝郭張葉柯純靜豐縣臺',b='蒋万苏辉湟萧启陈赖龙燐丽谢郭张叶柯纯静丰县台';return v.toLowerCase().replace(/[蔣萬蘇輝湟蕭啟陳賴龍燐麗謝郭張葉柯純靜豐縣臺]/g,c=>b[a.indexOf(c)]);}
