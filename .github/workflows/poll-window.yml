@@ -40,7 +40,7 @@ jobs:
         if: steps.window.outputs.run == 'true'
         run: |
           git worktree add /tmp/atlas-pages origin/gh-pages
-          rsync -a --delete --exclude=.git dist/ /tmp/atlas-pages/
+          rsync -ac --delete --exclude=.git dist/ /tmp/atlas-pages/
           cd /tmp/atlas-pages
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
