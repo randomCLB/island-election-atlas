@@ -10,6 +10,7 @@ const partyName = p => ({KMT:'国民党', DPP:'民进党'})[p] || p;
 const refs = ids => AtlasMedia.refs(ids);
 let comparison = null;
 let selected = null;
+let rankingMetric = 0;
 
 function options(selected, omit) {
   const groups = new Map();
@@ -33,6 +34,26 @@ const indicators = [
   ['2022首长选举投票率', '投票数／选举人数', c => { const e=c.history.find(x=>x.year===2022); return 100*e.voted/e.eligible; }, percent],
   ['本届议会应选名额', '2026 · 席', c => c.council, number]
 ];
+
+const rankingIndicators = [0, 4, 5, 2, 8];
+function ranking(c) {
+  const [label, period, value, format] = indicators[rankingIndicators[rankingMetric]];
+  const rows = Object.values(D.counties).map(county => ({county, value:value(county)})).sort((a,b) => b.value-a.value || a.county.id.localeCompare(b.county.id));
+  const middle = (rows[10].value + rows[11].value) / 2;
+  const diverging = rankingIndicators[rankingMetric] === 2;
+  const max = Math.max(...rows.map(row => Math.abs(row.value)), 1);
+  const position = v => diverging ? 50 + 50*v/max : 100*v/max;
+  const zero = diverging ? 50 : 0;
+  const row = ({county, value:v}, index) => '<button type="button" class="county-chart-row'+(county.id===c.id?' selected':'')+'" data-select-city="'+county.id+'" aria-pressed="'+(county.id===c.id)+'" aria-label="'+escape(county.name)+'，'+label+' '+format(v)+'，第'+(index+1)+'位'+(county.id===c.id?'，当前县市':'，查看档案')+'"><span class="county-chart-name"><small>'+(index+1)+'</small>'+escape(county.name)+'</span><span class="county-chart-track" aria-hidden="true"><i class="county-chart-zero" style="left:'+zero+'%"></i><i class="county-chart-middle" style="left:'+position(middle).toFixed(2)+'%"></i><i class="county-chart-fill" style="left:'+Math.min(zero,position(v)).toFixed(2)+'%;width:'+Math.abs(position(v)-zero).toFixed(2)+'%"></i></span><b>'+format(v)+'</b></button>';
+  const chosen = rows.findIndex(row => row.county.id===c.id);
+  const host = document.querySelector('#county-ranking');
+  host.innerHTML = '<div class="county-ranking-heading"><div><p class="eyebrow">22 COUNTIES / 全国比较</p><h3>'+label+'，放在全台看</h3><p>'+period+'</p></div><p class="county-ranking-selected"><strong>'+escape(c.name)+' · '+format(value(c))+'</strong><span>第 '+(chosen+1)+' / 22 位 · 按数值由高到低</span></p></div>'+
+    '<div class="county-ranking-metrics" role="group" aria-label="选择全国比较指标">'+rankingIndicators.map((i,n)=>'<button type="button" data-ranking-metric="'+n+'" aria-pressed="'+(n===rankingMetric)+'">'+indicators[i][0]+'<strong>'+indicators[i][3](indicators[i][2](c))+'</strong></button>').join('')+'</div>'+
+    '<p class="county-chart-note">点击任一县市，同步更新地图、地方档案与政见。<span><i></i>虚线：22县市中位数 '+format(middle)+'（各县市等权）</span></p>'+
+    '<div class="county-chart-columns">'+[rows.slice(0,11),rows.slice(11)].map((group,g)=>'<div><div class="county-chart-axis" aria-hidden="true"><span>'+format(diverging?-max:0)+'</span><span>'+format(max)+'</span></div>'+group.map((r,i)=>row(r,g*11+i)).join('')+'</div>').join('')+'</div>'+
+    '<p class="county-chart-note">'+(diverging?'人口同比以零为中心，左减右增。':'条长从零起算，两列使用同一刻度。')+' 所得按纳税单位统计，不能当作个人工资；不同指标各自标注年份。排序不表示宜居程度或施政评分。</p>';
+  host.querySelectorAll('[data-ranking-metric]').forEach(button => button.onclick = () => { rankingMetric=Number(button.dataset.rankingMetric); ranking(c); host.querySelector('[data-ranking-metric="'+rankingMetric+'"]').focus(); });
+}
 
 function compare(c) {
   if (comparison === c.id || !comparison) comparison = c.id === 'taipei' ? 'new-taipei' : 'taipei';
@@ -74,7 +95,7 @@ function render(id) {
   const voteDay = id==='chiayi-city'?'2022.12.18 重行选举':'2022.11.26';
   const entry= document.querySelector('#county-guide');
   entry.innerHTML = '<div class="county-heading"><div><p class="eyebrow">县市档案</p><h2>'+escape(c.name)+'</h2></div><label>切换县市 <select data-county-select>'+options(id)+'</select></label></div>'+
-    '<p class="county-lead">'+escape(c.place)+'</p><div class="county-columns"><div>'+
+    '<section id="county-ranking" class="county-ranking" aria-label="22县市指标排序"></section><p class="county-lead">'+escape(c.place)+'</p><div class="county-columns"><div>'+
     '<h3>产业与地方生活</h3><p>2021 年，这里的工商及服务业有 <b>'+number(s.workplaces)+'</b> 个工作场所，年底从业者有 <b>'+number(s.employees)+'</b> 人。</p>'+
     '<dl class="county-industries"><dt>按当地产业产出占比</dt><dd>'+topIndustries(s.outputIndustries)+'</dd><dt>按当地从业人数占比</dt><dd>'+topIndustries(s.jobIndustries)+'</dd></dl>'+
     '<h3>本地议题</h3><div class="county-questions">'+topics+'</div><small>以上是依据当地地理与产业资料整理的提问。</small>'+
@@ -85,7 +106,7 @@ function render(id) {
     '<div class="source-line">'+refs(id==='chiayi-city'?['map-chiayi-2022','county-chiayi-redo','county-chiayi-turnout']:['county-votes'])+'</div></div>'+
     '<div><h3>居民选出哪些代表？</h3><p>2026 年县市议员应选 <b>'+c.council+'席</b>。2024 年区域立委在这里选出 '+c.lawmakers.length+' 人。</p><ul class="county-members">'+represent+'</ul><small>按2024年当选时的选区与党籍列示。原住民与不分区立委按其他选制产生。</small><div class="source-line">'+refs(['county-council','county-votes'])+'</div></div></div>'+
     '<div class="county-national"><h3>2024年两张不同的选票</h3>'+nationalVote('总统副总统票',c.president)+nationalVote('立委政党票',c.partyVote)+'</div>';
-  compare(c);
+  ranking(c); compare(c);
 }
 
 function timeline(id) {
