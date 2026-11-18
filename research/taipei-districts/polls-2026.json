@@ -11,6 +11,61 @@
       "note": "地区栏只给支持度题样本的地区占比，未给各地区确切人数。全市总样本1331、支持度题1252不能当作各区样本数。",
       "mediaSourceId": "district-poll-tvbs-context"
     },
+    "district-poll-trust-final-table": {
+      "title": "信民协会原表：11月与10月六个议员选区支持度（民视刊载）",
+      "url": "https://cdn.ftvnews.com.tw/summernotefiles/News/490a160b-f2a2-469b-a111-e42dc687bcbe.jpg",
+      "publicationDate": "2026-11-16",
+      "publisherName": "信民协会提供原图／民视刊载",
+      "mediaBadge": "委托方原表；刊载媒体2010监测称偏泛绿",
+      "mediaSourceId": "district-poll-ftv-context",
+      "note": "已目视核对11/11—13栏；内湖南港蒋万安为35.4%，与民视正文的32.4%不同，采用原图。未给地区人数、未明确回答比例。"
+    },
+    "district-poll-trust-final-method": {
+      "title": "民视：信民协会六区封关调查与执行方法",
+      "url": "https://www.ftvnews.com.tw/news/detail/2026B16W0213",
+      "publicationDate": "2026-11-16",
+      "publisherName": "民视新闻网",
+      "mediaBadge": "2010监测称偏泛绿〔非2026定论〕",
+      "mediaSourceId": "district-poll-ftv-context",
+      "note": "执行时间、1072人及市话750／手机322、出资者按正文；地区支持度按协会原图，文字笔误不照抄。与原图属于同一调查，不增加机构计数。"
+    },
+    "district-poll-zmedia-october-table": {
+      "title": "震传媒原始报告第19页：市长支持度与六个议员选区",
+      "url": "https://www.zmedia.com.tw/Uploads/Temp/Temp/639282587325982858.png",
+      "publicationDate": "2026-10-22",
+      "publisherName": "震传媒 Z.Media",
+      "mediaBadge": "调查委托方自行发布；倾向暂未确认",
+      "note": "已目视核对支持度页，不用第24页看好度。地区N按原表保留，合计1075与全市1074相差1，图表未说明加权前后或舍入方式，不擅自调整。"
+    },
+    "district-poll-zmedia-october-method": {
+      "title": "震传媒：10月18—19日调查结果、问卷图表及方法",
+      "url": "https://www.zmedia.com.tw/Document/PoolDetail/44789",
+      "publicationDate": "2026-10-22",
+      "publisherName": "震传媒 Z.Media",
+      "mediaBadge": "调查委托方自行发布；倾向暂未确认",
+      "note": "山水民意研究执行，震传媒出资；与第19页是同一调查。距最新11月15日访问27天，符合全岛共用30天窗口。"
+    },
+    "district-poll-apollo-final": {
+      "title": "中国时报：台北封关调查及四个已披露双方比例的合并选区",
+      "url": "https://www.chinatimes.com/realtimenews/20261116004555-260407",
+      "publicationDate": "2026-11-16",
+      "publisherName": "中国时报〔委托艾普罗执行〕",
+      "mediaBadge": "路透研究所2024：倾统〔统独维度〕",
+      "mediaSourceId": "district-poll-risj-context",
+      "note": "原发时间11月16日23:00。士林北投、内湖南港、中山大同、大安文山列出双方比例；中正万华、松山信义只给票差，未将票差凑成精确支持率。地区样本数和未表态比例未披露。"
+    },
+    "district-poll-ftv-context": {
+      "title": "Taipei Times：2010年电视选举报道监测及研究争议",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2010/11/21/2003489069",
+      "publicationDate": "2010-11-21",
+      "note": "监测为2010年11月1—17日晚间新闻样本，称民视与三立有利泛绿；同报道提研究者政治背景争议，不作为2026逐篇结论。"
+    },
+    "district-poll-risj-context": {
+      "title": "路透新闻学研究所：2024数字新闻报告·台湾",
+      "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2024/taiwan",
+      "publicationDate": "2024-06-17",
+      "note": "报告以pro-unification描述中国时报的统独倾向；不替代单篇准确性或每位记者立场的判断。"
+    },
     "district-poll-tvbs-context": {
       "title": "Taipei Times：2011年TVBS泛蓝及党属说法争议",
       "url": "https://www.taipeitimes.com/News/taiwan/archives/2011/06/18/2003506080",
@@ -40,6 +95,73 @@
         {"unit": 4, "name": "中山大同", "chiang": 43, "shen": 48, "undecided": 9, "sampleSharePct": 14, "sampleSize": null},
         {"unit": 5, "name": "中正万华", "chiang": 45, "shen": 42, "undecided": 11, "sampleSharePct": 13, "sampleSize": null},
         {"unit": 6, "name": "大安文山", "chiang": 48, "shen": 43, "undecided": 8, "sampleSharePct": 21, "sampleSize": null}
+      ]
+    },
+    {
+      "id": "trust-taipei-final-20261113",
+      "series": "信民协会／毕肯市场研究",
+      "pollster": "信民协会／毕肯市场研究",
+      "metric": "support",
+      "start": "2026-11-11",
+      "end": "2026-11-13",
+      "publishedAt": "2026-11-16",
+      "sampleSize": 1072,
+      "questionSampleSize": null,
+      "population": "设籍台北市、年满20岁民众",
+      "method": "信民协会委托并出资，戴立安设计与分析、毕肯市场研究执行市话750人及手机322人电话访问。",
+      "limit": "全市调查的六个合并选区交叉表，地区人数和未明确回答比例未披露；不将全市误差套到地区。支持度按信民协会原图：内湖南港蒋万安35.4%，正文误写32.4%。不同调查的电话构成、题目及投票意愿筛选可能不同；相反领先是描述性分歧，不是显著性结论。",
+      "sources": ["district-poll-trust-final-table", "district-poll-trust-final-method"],
+      "rows": [
+        {"unit": 1, "name": "士林北投", "chiang": 32.5, "shen": 50.3, "sampleSize": null},
+        {"unit": 2, "name": "内湖南港", "chiang": 35.4, "shen": 52, "sampleSize": null},
+        {"unit": 3, "name": "松山信义", "chiang": 32.8, "shen": 43.6, "sampleSize": null},
+        {"unit": 4, "name": "中山大同", "chiang": 30.6, "shen": 52.5, "sampleSize": null},
+        {"unit": 5, "name": "中正万华", "chiang": 29.1, "shen": 46.1, "sampleSize": null},
+        {"unit": 6, "name": "大安文山", "chiang": 39.5, "shen": 47.3, "sampleSize": null}
+      ]
+    },
+    {
+      "id": "zmedia-taipei-20261019",
+      "series": "震传媒／山水民意研究",
+      "pollster": "震传媒／山水民意研究",
+      "metric": "support",
+      "start": "2026-10-18",
+      "end": "2026-10-19",
+      "publishedAt": "2026-10-22",
+      "sampleSize": 1074,
+      "questionSampleSize": null,
+      "population": "设籍台北市、年满20岁民众",
+      "method": "震传媒出资委托山水民意研究执行；住宅电话CATI，系统抽样及尾两码随机；按地区、性别、年龄、教育加权。",
+      "limit": "采用原始报告第19页市长支持度，不混用看好度。地区N为原图所标，未说明加权前后，六区合计与全市相差1人，保留原数；不将全市误差套到地区。10月调查与11月调查相隔数周，方法与时点均可能造成分歧，不能解释为同一天的区级独立调查。",
+      "sources": ["district-poll-zmedia-october-table", "district-poll-zmedia-october-method"],
+      "rows": [
+        {"unit": 1, "name": "士林北投", "chiang": 32.4, "shen": 46, "undecided": 21.5, "sampleSize": 219},
+        {"unit": 2, "name": "内湖南港", "chiang": 37.4, "shen": 45.1, "undecided": 17.5, "sampleSize": 166},
+        {"unit": 3, "name": "松山信义", "chiang": 42.1, "shen": 41.6, "undecided": 16.3, "sampleSize": 172},
+        {"unit": 4, "name": "中山大同", "chiang": 43.8, "shen": 44.5, "undecided": 11.7, "sampleSize": 147},
+        {"unit": 5, "name": "中正万华", "chiang": 33.4, "shen": 46.1, "undecided": 20.6, "sampleSize": 139},
+        {"unit": 6, "name": "大安文山", "chiang": 44.3, "shen": 35.8, "undecided": 19.4, "sampleSize": 232}
+      ]
+    },
+    {
+      "id": "apollo-taipei-final-20261115",
+      "series": "中国时报／艾普罗",
+      "pollster": "中国时报／艾普罗",
+      "metric": "support",
+      "start": "2026-11-13",
+      "end": "2026-11-15",
+      "publishedAt": "2026-11-16",
+      "sampleSize": 1071,
+      "questionSampleSize": null,
+      "population": "设籍台北市、年满20岁民众",
+      "method": "中国时报出资委托艾普罗执行；以台北市住宅电话簿分层比例随机抽样、尾两码随机；按性别、年龄、行政区、教育加权。",
+      "limit": "全市电话调查的地区交叉结果，地区N及未表态比例暂未确认；不将全市误差套到地区。原文只有四个范围同时披露双方比例；中正万华与松山信义仅给领先差距，暂不填成精确支持度。原报道及他媒转述只计同一系列一次。",
+      "sources": ["district-poll-apollo-final"],
+      "rows": [
+        {"unit": 1, "name": "士林北投", "chiang": 41.1, "shen": 41.9, "sampleSize": null},
+        {"unit": 2, "name": "内湖南港", "chiang": 45.4, "shen": 29.4, "sampleSize": null},
+        {"unit": 4, "name": "中山大同", "chiang": 30.9, "shen": 50.8, "sampleSize": null},
+        {"unit": 6, "name": "大安文山", "chiang": 56.2, "shen": 30.2, "sampleSize": null}
       ]
     }
   ]
