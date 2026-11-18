@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-18",
+  "sources": {
+    "district-poll-tvbs-final": {
+      "title": "TVBS台北封关报告：表2-4，支持度与地区交叉表（第11页）",
+      "url": "https://www-asset.tvbs.com.tw/uploads/opinion-polls/1555/1794815742_1511141_________________________________.pdf#page=11",
+      "publicationDate": "2026-11-16",
+      "publisherName": "TVBS民意调查中心",
+      "mediaBadge": "泛蓝之说〔2011公开争议，非2026定论〕",
+      "sourcePerspective": "TVBS自行调查并出资的原始报告；不是六个选区分别独立进行的民调。",
+      "note": "地区栏只给支持度题样本的地区占比，未给各地区确切人数。全市总样本1331、支持度题1252不能当作各区样本数。",
+      "mediaSourceId": "district-poll-tvbs-context"
+    },
+    "district-poll-tvbs-context": {
+      "title": "Taipei Times：2011年TVBS泛蓝及党属说法争议",
+      "url": "https://www.taipeitimes.com/News/taiwan/archives/2011/06/18/2003506080",
+      "publicationDate": "2011-06-18",
+      "note": "吴宗宪使用泛蓝描述，TVBS发言人反驳国民党持股说法；所有权、编辑倾向和单篇准确性分开，不作为2026定论。"
+    }
+  },
+  "surveys": [
+    {
+      "id": "tvbs-taipei-final-20261115",
+      "series": "TVBS民意调查中心",
+      "pollster": "TVBS民意调查中心",
+      "metric": "support",
+      "start": "2026-11-14",
+      "end": "2026-11-15",
+      "publishedAt": "2026-11-16",
+      "sampleSize": 1331,
+      "questionSampleSize": 1252,
+      "population": "全市调查中20岁以上、有投票意愿的台北市民",
+      "method": "市话673份、手机658份双底册人员电话访问；按电话使用情形及性别、年龄、地区、教育加权。TVBS出资。",
+      "limit": "各行是全市调查的合并地区子样本，不是区级独立抽样；地区人数未披露，地区占比不能反算确切人数。只作口径有限的描述性观察，不将全市±2.7点套到地区，不混入AI推估得票或投票率预测。",
+      "sources": ["district-poll-tvbs-final"],
+      "rows": [
+        {"unit": 1, "name": "士林北投", "chiang": 42, "shen": 49, "undecided": 9, "sampleSharePct": 22, "sampleSize": null},
+        {"unit": 2, "name": "内湖南港", "chiang": 48, "shen": 43, "undecided": 10, "sampleSharePct": 15, "sampleSize": null},
+        {"unit": 3, "name": "松山信义", "chiang": 49, "shen": 39, "undecided": 12, "sampleSharePct": 15, "sampleSize": null},
+        {"unit": 4, "name": "中山大同", "chiang": 43, "shen": 48, "undecided": 9, "sampleSharePct": 14, "sampleSize": null},
+        {"unit": 5, "name": "中正万华", "chiang": 45, "shen": 42, "undecided": 11, "sampleSharePct": 13, "sampleSize": null},
+        {"unit": 6, "name": "大安文山", "chiang": 48, "shen": 43, "undecided": 8, "sampleSharePct": 21, "sampleSize": null}
+      ]
+    }
+  ]
+}

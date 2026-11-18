@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="taipei-guide.css">
   <script defer src="domain.js"></script><script defer src="poll-visibility.js"></script><script defer src="taipei-guide-data.js"></script>
   <script defer src="taipei-guide-map.js"></script>
-  <script defer src="taipei-guide.js"></script>
+  <script defer src="election-map.js"></script><script defer src="taipei-poll-model.js"></script><script defer src="taipei-guide.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#district-dossier">跳到行政区资料</a>
@@ -33,10 +33,11 @@
       </div>
       <div class="map-stage">
         <div class="map-topline"><span class="eyebrow">点击地图，走进一个区</span><span class="map-north" aria-label="上方为北">N ↑</span></div>
-        <div class="map-modes" role="group" aria-label="选择地图图层"><button data-map-mode="district" aria-pressed="true">认识城区</button><button data-map-mode="age" aria-pressed="false">人口年龄</button><button data-map-mode="votes" aria-pressed="false">2022 市长票</button></div>
+        <div class="map-modes" role="group" aria-label="选择地图图层"><button data-map-mode="district" aria-pressed="true">认识城区</button><button data-map-mode="age" aria-pressed="false">人口年龄</button><button data-map-mode="votes" aria-pressed="false">2022 市长票</button><button data-map-mode="polls" aria-pressed="false">本届民调</button></div>
         <svg id="taipei-map" viewBox="0 0 760 620" role="group" aria-label="台北十二行政区互动地图"></svg>
         <div id="map-legend" class="map-legend"></div>
         <div class="map-reading" id="map-reading" aria-live="polite"></div>
+        <div id="map-poll-details" class="map-poll-details" hidden></div>
         <p class="map-source">区界：台北市民政局 2022-09-15 版，经投影显示。<a href="https://data.gov.tw/dataset/121199" target="_blank" rel="noopener noreferrer">数据与授权 ↗</a></p>
       </div>
     </section>
@@ -88,7 +89,7 @@
     <section class="method-section section-wrap" id="method" aria-labelledby="method-title"><div class="section-heading"><div><p class="eyebrow">THE SOURCE NOTEBOOK</p><h2 id="method-title">每个数字，<br>都有时间与出处。</h2></div><p>基础数据以官方统计和原始选举结果为主。<br>解释负责提出问题，不替选民回答。</p></div><div class="method-grid"><article><h3>人口，不等于选民。</h3><p>户籍人口包含未成年人，也不等于实际居住或白天工作的人。选民人数使用当届选务统计，产业家数不能当作本区选民职业分布。</p></article><article><h3>所得，不等于工资或 GDP。</h3><p>所得统计保留资料年与申报单位。申报所得会包含不同来源，也不等于每个居民的收入或家庭可支配所得；本页不编造“行政区 GDP”。</p></article><article><h3>地图，不替换选区。</h3><p>十二行政区使用民政局 2022-09-15 区界资料。立委边界以第 11 届官方范围说明为准；士林、松山、中正须继续查到里。</p></article><article><h3>历史，不是本届民调。</h3><p>历史得票、人口结构与公共建设不能推算当前支持率。议题问题为编辑整理；无分区民调支持的地方，不声称某一议题是居民的“最关心”。</p></article></div><details class="source-notebook"><summary>打开资料目录与更新说明 <span>＋</span></summary><div id="source-index"></div></details></section>
   </main>
 
-  <footer><a href="index.html#/taipei">岛屿选战 <small>ISLAND ELECTION ARCHIVE</small></a><p>台北十二区 · 给外地人的地方选举导览<br>基础资料核对至 2026.10.20 · 选战动态更新至 2026.10.21 · 不提供候选人评分或胜率预测</p><a href="#explore">回到地图 ↑</a></footer>
+  <footer><a href="index.html#/taipei">岛屿选战 <small>ISLAND ELECTION ARCHIVE</small></a><p>台北十二区 · 给外地人的地方选举导览<br>基础资料核对至 2026.10.20 · 选战动态更新至 2026.10.21 · 分区民调更新至 2026.11.18 · 不提供候选人评分或胜率预测</p><a href="#explore">回到地图 ↑</a></footer>
   <div id="toast" role="status" aria-live="polite"></div>
   <noscript><div class="noscript">互动导览需要 JavaScript。原始资料可在<a href="https://db.cec.gov.tw/">中选会选举资料库</a>及<a href="https://data.taipei/">台北市资料大平台</a>查阅。</div></noscript>
 </body>
