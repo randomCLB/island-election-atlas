@@ -1,9 +1,9 @@
 (function(root,factory){
   'use strict';
-  const api=factory();
+  const api=factory(typeof module==='object'&&module.exports?require('./taipei-poll-model.js'):root.TaipeiPollMap);
   if(typeof module==='object'&&module.exports)module.exports=api;
   else {root.TaipeiGuide=api;api.start(root.TaipeiGuideData,root.TaipeiGuideMap);}
-})(typeof globalThis!=='undefined'?globalThis:this,function(){
+})(typeof globalThis!=='undefined'?globalThis:this,function(PollMap){
   'use strict';
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number=n=>Number(n).toLocaleString('en-US');
@@ -48,7 +48,7 @@
     const election=data.elections.find(e=>e.id===params.get('election')&&e.geography==='administrativeDistrict')?.id||'cec-C1-00-2022';
     const peer=data.districts.find(d=>d.id===params.get('peer')&&d.id!==district)?.id||(district==='neihu'?'wanhua':'neihu');
     const compare=data.districts.find(d=>d.id===params.get('compare')&&d.id!==district)?.id||'city';
-    return {district,election,peer,compare,mapMode:['district','age','votes'].includes(params.get('layer'))?params.get('layer'):'district'};
+    return {district,election,peer,compare,mapMode:['district','age','votes','polls'].includes(params.get('layer'))?params.get('layer'):'district'};
   }
   function start(D,G){
     if(!D||!G||typeof document==='undefined')return;
@@ -74,7 +74,9 @@
       $('#ballot-comparison').innerHTML=optionList(true);$('#compare-district').innerHTML=optionList();
       const shapes=G.features.map(f=>{const d=D.districts.find(d=>d.name===f.name);return `<path id="map-${d.id}" class="district-shape" data-district="${d.id}" role="button" tabindex="0" aria-label="查看${e(d.displayName)}区" aria-pressed="false" d="${f.path}" fill="#42615c"><title>${e(d.displayName)}区</title></path>`;}).join('');
       const labels=G.features.map(f=>{const d=D.districts.find(d=>d.name===f.name);return `<text class="district-label" data-label="${d.id}" x="${f.label[0]}" y="${f.label[1]+5}">${e(d.displayName)}</text>`;}).join('');
-      $('#taipei-map').innerHTML=shapes+labels;
+      const patterns='<defs><pattern id="tp-poll-competition" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="10" stroke="#102e42" stroke-width="3"/></pattern><pattern id="tp-poll-disagreement" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M12 0L0 12" stroke="#142c3b" stroke-width="3.5"/><path d="M0 0L12 12M12 0L0 12" stroke="#ffe4ab" stroke-width=".8"/></pattern><pattern id="tp-poll-insufficient" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="2.2" fill="#142c3b"/><circle cx="4" cy="4" r=".9" fill="#f4e7c4"/></pattern></defs>';
+      const overlays=G.features.map(f=>{const d=D.districts.find(d=>d.name===f.name);return `<path class="district-poll-overlay" data-poll-overlay="${d.id}" aria-hidden="true" d="${f.path}" style="display:none"/>`;}).join('');
+      $('#taipei-map').innerHTML=patterns+shapes+overlays+labels;
     }
     function mapFill(d){
       if(state.mapMode==='votes'){const result=D.elections.find(x=>x.year===2022&&x.type==='mayor').districts.find(x=>x.name===d.name);return partyColor(result.candidates[0].party);}
@@ -84,19 +86,29 @@
       return districtColor(d.id);
     }
     function renderMap(){
-      const d=district();
+      const d=district(),polls=state.mapMode==='polls'?PollMap.assessments(D):[],current=polls.find(r=>r.unit.districts.includes(d.id));
       for(const x of D.districts){
-        const shape=$('#map-'+x.id),selected=x.id===d.id;shape.setAttribute('fill',mapFill(x));shape.classList.toggle('selected',selected);shape.setAttribute('aria-pressed',String(selected));
+        const assessment=polls.find(r=>r.unit.districts.includes(x.id)),shape=$('#map-'+x.id),selected=x.id===d.id;shape.setAttribute('fill',assessment?assessment.color:mapFill(x));shape.classList.toggle('selected',selected);shape.setAttribute('aria-pressed',String(selected));
+        shape.classList.toggle('poll-peer',!!assessment&&assessment.unit.id===current.unit.id);shape.dataset.observation=assessment?.state||'';
+        const overlay=$(`[data-poll-overlay="${x.id}"]`);overlay.style.display=assessment&&assessment.pattern!=='none'?'':'none';if(assessment)overlay.setAttribute('fill','url(#tp-poll-'+assessment.pattern+')');
         let detail='';if(state.mapMode==='age')detail=`，65岁以上占${percent(x.demographics.elderlyPct)}%`;
         if(state.mapMode==='votes'){const row=D.elections.find(r=>r.year===2022&&r.type==='mayor').districts.find(r=>r.name===x.name);detail=`，2022市长选举本区最高票${row.districtLeader}`;}
+        if(assessment)detail=`，${assessment.unit.name}合并选区，${assessment.label}，不是本行政区独立民调`;
         shape.setAttribute('aria-label',`查看${x.displayName}区${detail}`);shape.querySelector('title').textContent=x.displayName+'区'+detail;
         $(`[data-label="${x.id}"]`).classList.toggle('selected',selected);
       }
       $$('[data-map-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapMode===state.mapMode)));
-      $('#map-legend').innerHTML=state.mapMode==='age'?'<span>2026.09 · 65 岁以上</span><span>21% <i class="gradient"></i> 28%</span>':state.mapMode==='votes'?'<span><i style="background:#7eacc4"></i>国民党候选人在该区最高票</span><span><i style="background:#83ba9e"></i>民进党候选人在该区最高票</span>':'<span>每区固定一种颜色，下方图表沿用</span><span>面积显示地理大小，不代表人口或票数</span>';
+      $('#map-legend').innerHTML=current?'<span><i style="background:#2879dc"></i>国民党</span><span><i style="background:#24a967"></i>民进党</span><span><i style="background:#fff"></i>其他党派</span><span><i class="tp-key-competition"></i>竞争信号</span><span><i class="tp-key-disagreement"></i>民调分歧</span><span><i class="tp-key-insufficient"></i>资料不足</span><span class="tp-poll-count">6个合并选区 · '+['competition','disagreement','insufficient'].map(s=>({competition:'竞争',disagreement:'分歧',insufficient:'资料不足'})[s]+' '+polls.filter(p=>p.state===s).length).join(' · ')+'</span>':state.mapMode==='age'?'<span>2026.09 · 65 岁以上</span><span>21% <i class="gradient"></i> 28%</span>':state.mapMode==='votes'?'<span><i style="background:#7eacc4"></i>国民党候选人在该区最高票</span><span><i style="background:#83ba9e"></i>民进党候选人在该区最高票</span>':'<span>每区固定一种颜色，下方图表沿用</span><span>面积显示地理大小，不代表人口或票数</span>';
       const row=D.elections.find(r=>r.year===2022&&r.type==='mayor').districts.find(r=>r.name===d.name);
       const extra=state.mapMode==='age'?`65 岁以上 ${percent(d.demographics.elderlyPct)}% · 全市 ${percent(D.cityDemographics.elderlyPct)}%`:state.mapMode==='votes'?`2022 本区最高票 ${row.districtLeader} · 领先 ${percent(row.marginPoints)} 个百分点`:d.tagline;
-      $('#map-reading').innerHTML=`<span class="map-reading-name">${e(d.displayName)}</span><p>${e(extra)}<br>户籍人口 ${number(d.demographics.population)} 人 · 2026.09</p><a href="#district-dossier">展开资料 ↓</a>`;
+      $('#map-reading').classList.toggle('poll-reading',!!current);
+      $('#map-reading').innerHTML=current?`<span class="map-reading-name">${e(current.unit.name)}</span><p><strong>${e(current.label)}</strong> · 口径有限<br>${e(current.reason)}<br>${current.latestEnd?'最新访问 '+e(current.latestEnd)+' · 发布 '+e(current.latestPublishedAt)+' · '+current.evidence.length+' 个调查系列':'暂无符合范围的近期调查'}</p><a href="#district-dossier">${e(d.displayName)}档案 ↓</a>`:`<span class="map-reading-name">${e(d.displayName)}</span><p>${e(extra)}<br>户籍人口 ${number(d.demographics.population)} 人 · 2026.09</p><a href="#district-dossier">展开资料 ↓</a>`;
+      renderPollDetails(current);
+    }
+    function renderPollDetails(result){
+      const host=$('#map-poll-details');host.hidden=!result;if(!result){host.innerHTML='';return;}
+      const facts=p=>p.results.map(r=>(r.person.endsWith('-chiang')?'蒋万安':'沈伯洋')+' '+Number(r.value).toFixed(1)+'%').join(' ／ ');
+      host.innerHTML=`<p>市长支持度按六个合并选区显示，范围与一般议员选区一致；不是议员个人民调，也不能拆成两个行政区各自的支持率。底色按2022市长票在相同合并范围的最高票党籍。</p><details><summary>查看标记依据与调查限制 · ${e(result.unit.name)}</summary><p>与全岛共用判断：90天内、距最新访问日30天的一轮调查，同系列只取最新一份；跨党领先或前两名差距不超过5点为竞争信号，不同系列共同人选出现相反领先为分歧。5点是描述门槛，不是误差检验或胜率；受限资料未触发信号时仍标资料不足。</p>${result.evidence.map(p=>`<article class="district-poll-record" data-district-poll="${e(p.id)}"><h3>${e(p.pollster)} · ${e(result.unit.name)}</h3><time>访问 ${e(p.start)}—${e(p.end)} · 发布 ${e(p.publishedAt)}</time><p class="district-poll-values">${e(facts(p))}</p><p>未决定／未明确回答：${p.undecided===undefined?'来源未披露':p.undecided+'%'}<br>全市调查 ${number(p.parentSampleSize)} 人${p.parentQuestionSampleSize?'；支持度题 '+number(p.parentQuestionSampleSize)+' 人':''}<br>${p.areaSampleSize?'本合并选区样本 '+number(p.areaSampleSize)+' 人':'本合并选区人数暂未确认（原表未披露）'}${p.sampleSharePct!==undefined?'；原表地区占比 '+p.sampleSharePct+'%':''}</p><p>${e(p.method)}</p><p>${e(p.limit)}</p>${p.sources.map(id=>{const s=D.sources[id];return `<div class="district-poll-source">${link(s.url,s.title)}<small>${e(s.publisherName||'来源机构')} · 发布 ${e(s.publicationDate)} · ${e(s.mediaBadge||'机构背景／倾向待核定')}</small>${s.mediaSourceId?link(D.sources[s.mediaSourceId].url,'背景依据与适用年份'):''}</div>`;}).join('')}</article>`).join('')}${!result.evidence.length?'<p>暂未确认符合地域、日期和来源要求的近期记录；不把全市民调平均值、街访或预测填入。</p>':''}</details><p class="tp-poll-updated">分区资料核对 ${e(D.districtPolls.checkedAt)} · 同色纹理对应同一个合并选区，只计算一次。</p>`;
     }
     function renderDossier(){
       const d=district(),p=d.demographics,b=d.businessStats,inc=d.income;
@@ -185,7 +197,7 @@
       for(const [key,s] of Object.entries(D.council.sources))sources.push({title:{registration:'2026 台北市议员登记册',seats:'2026 地方选举选区与名额公告',eligibility:'2026-10-16 候选人资格审查',mayorRegistration:'2026 台北市长登记册',calendar:'2026 地方公职人员选举工作日程'}[key]||key,url:s.url,note:s.published?`公布 ${s.published}`:'核对 2026-10-20'});
       sources.push({title:'台北市民政局 · 十二行政区界图',url:G.source,note:`区界版本 ${G.boundaryDate}；${G.license}。门户更新日期不等于区界重划日期；原始区界转投影，无拓扑简化。`});
       sources.push({title:'中选会 · 第 11 届立委选区范围',url:D.legislativeBoundaries[0].sourceUrl,note:'按完整行政区与里名记录覆盖关系，不以行政区边界代替立委选区。'});
-      $('#source-index').innerHTML=`<p class="source-note">统一核对日：${e(D.checkedAt)}。${e(D.dataNotes.join(' '))}</p>${sources.map(s=>`<article class="source-entry">${link(s.url,s.title)}<p>${e(s.note)}</p></article>`).join('')}`;
+      $('#source-index').innerHTML=`<p class="source-note">基础资料核对：${e(D.checkedAt)}；分区民调核对：${e(D.districtPolls.checkedAt)}。${e(D.dataNotes.join(' '))}</p>${sources.map(s=>`<article class="source-entry">${link(s.url,s.title)}<p>${e(s.note)}</p></article>`).join('')}`;
     }
     function renderAll(){
       $$('[data-district]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.district===state.district)));
